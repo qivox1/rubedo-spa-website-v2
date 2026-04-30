@@ -3,14 +3,17 @@
    Reihenfolge: Tokens → Tailwind → Template-Komponenten → Astro-spezifisch
    ========================================================= */
 
+/* Reihenfolge wichtig:
+   ALLE @import-Statements MÜSSEN vor allem anderen stehen
+   (CSS-Spec). Wenn sie nach @tailwind kommen, werden sie still
+   ignoriert — und alle .rb-*-Komponenten fehlen. */
 @import './tokens.css';
+@import './template.css';
 
 /* Tailwind v3 — Direktiven (Theme-Bridge in tailwind.config.mjs) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './template.css';
 
 /* =========================================================
    Astro-spezifische Korrekturen
