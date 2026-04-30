@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwindcss from '@tailwindcss/vite';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,13 +24,11 @@ export default defineConfig({
       ? { entrypoint: 'astro/assets/services/noop' }
       : { entrypoint: 'astro/assets/services/sharp' },
   },
-  vite: {
-    plugins: [tailwindcss()],
-    build: {
-      cssCodeSplit: true,
-    },
-  },
   integrations: [
+    tailwind({
+      // Wir verwalten unsere globale CSS in src/styles/global.css
+      applyBaseStyles: false,
+    }),
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,

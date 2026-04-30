@@ -4,29 +4,11 @@
    ========================================================= */
 
 @import './tokens.css';
-@import 'tailwindcss';
 
-/* Tailwind v4 — Theme-Bridge zu Rubedo-Tokens.
-   So lassen sich rb-* Tokens auch als Tailwind-Utilities nutzen
-   (z. B. text-rb-gold-700, bg-rb-cream). */
-@theme {
-  --color-rb-gold-900: #6F5421;
-  --color-rb-gold-700: #97783A;
-  --color-rb-gold-500: #B79557;
-  --color-rb-gold-300: #D7BD86;
-  --color-rb-gold-100: #F2E8D2;
-  --color-rb-gold-50:  #FAF5EA;
-  --color-rb-ink-900:  #1A1614;
-  --color-rb-ink-700:  #3A332C;
-  --color-rb-ink-500:  #6B6055;
-  --color-rb-ink-300:  #B5ADA2;
-  --color-rb-ink-100:  #E8E2D6;
-  --color-rb-paper:    #FFFFFF;
-  --color-rb-cream:    #FBF8F1;
-
-  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
-  --font-body: 'Outfit', 'Helvetica Neue', system-ui, sans-serif;
-}
+/* Tailwind v3 — Direktiven (Theme-Bridge in tailwind.config.mjs) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @import './template.css';
 
