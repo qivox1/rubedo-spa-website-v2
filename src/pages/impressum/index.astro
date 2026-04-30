@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Impressum — Rubedo Spa Minden';
+const description = 'Anbieterkennzeichnung gemäß § 5 TMG für rubedo-spa.de.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="impressum">
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap rb-wrap--narrow rb-prose">
+        <h1>Impressum</h1>
+
+        <h2>Anbieter gemäß § 5 TMG</h2>
+        <p>
+          Monica Galletti<br />
+          {site.name}<br />
+          {site.address.street}<br />
+          {site.address.postalCode} {site.address.city}<br />
+          {site.address.countryName}
+        </p>
+
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: <a href={`tel:${site.contact.phoneE164}`}>{site.contact.phoneDisplay}</a><br />
+          E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+        </p>
+
+        <h2>Verantwortlich i. S. d. § 18 Abs. 2 MStV</h2>
+        <p>Monica Galletti — Anschrift wie oben.</p>
+
+        <h2>Streitschlichtung</h2>
+        <p>
+          Plattform der EU-Kommission zur Online-Streitbeilegung:
+          <a href="https://ec.europa.eu/consumers/odr" rel="noopener" target="_blank">ec.europa.eu/consumers/odr</a>.
+          Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>
+          Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+          Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-prose h1 { font-family: var(--rb-font-display); font-size: var(--rb-text-3xl); margin-bottom: 12px; }
+  .rb-prose h2 { font-family: var(--rb-font-display); font-size: var(--rb-text-xl); margin: 32px 0 12px; }
+  .rb-prose p { font-family: var(--rb-font-body); line-height: var(--rb-leading-loose); color: var(--rb-ink-700); margin: 0 0 16px; }
+  .rb-prose a { color: var(--rb-gold-700); }
+</style>

@@ -1,0 +1,151 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const title = 'Philosophie — Smart Beauty for Conscious Humans';
+const description = 'Drei Säulen, ein System. Die Philosophie hinter Rubedo Spa: DNA Skin Intelligence, Kryo Vital und Inner Source — bewusste Schönheit von innen nach außen.';
+const heroImage = '/images/philosophie-hero.webp';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  heroImage={heroImage}
+>
+
+  <article class="rb-page" data-page='philosophie'>
+    <section class="rb-block-hero rb-block-hero--photo">
+        <div class="rb-block-hero__photo">
+          <img src="/images/philosophie-hero.webp" alt="Bogen-Eingang ins Studio mit Dampf und burgunder Robe" />
+          <div class="rb-wrap">
+            <div class="rb-block-hero__copy">
+              <span class="rb-block-hero__eyebrow">Philosophie</span>
+              <h1>Weniger Methoden.<br/>Dafür die richtigen.</h1>
+              <p class="rb-block-hero__subline">Eine Haltung, keine Marketingformel. Drei Säulen, die ineinandergreifen — Innen, Aktivierung, Balance.</p>
+              <div class="rb-block-hero__micro">
+                <span>Longevity-Studio in Minden</span>
+                <span>Von innen nach außen</span>
+                <span>Geführt von Monica Galletti</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rb-block-prose rb-section--paper">
+        <div class="rb-wrap rb-prose">
+          <span class="rb-eyebrow">Warum es Rubedo gibt</span>
+          <h2>Eine Haltung, keine Marketingformel.</h2>
+          <p>Wellness ist heute oft eine Aneinanderreihung von Behandlungen. Eine Massage hier, ein Produkt dort, eine neue Routine, die nach drei Wochen wieder durch eine andere ersetzt wird. Rubedo entstand aus einer anderen Überzeugung: Schönheit, Gesundheit und Wohlbefinden sind nicht zufällig. Sie folgen einem System — und dieses System ist bei jedem Menschen anders.</p>
+          <p>Rubedo Spa ist deshalb kein klassisches Spa, sondern ein <strong>Longevity-Studio</strong>. Wir begleiten Menschen, die ihre Hautpflege nicht jedes Quartal wechseln, sondern wirklich verstehen wollen. Die Regeneration nicht zufällig erleben, sondern bewusst pflegen wollen. Die Tiefenentspannung nicht als Gegenpol zum Alltag suchen, sondern als Werkzeug der eigenen Selbstregulation.</p>
+          <p>„Smart Beauty for Conscious Humans" ist für uns keine Marketingformel, sondern eine Haltung. <strong>Smart</strong>, weil unser Konzept auf moderner Skin Science und epigenetischer Forschung aufbaut. <strong>Conscious</strong>, weil wir mit Menschen arbeiten, die sich bewusst für weniger und besser entscheiden.</p>
+        </div>
+      </section>
+
+      <!-- 3 Säulen detailliert -->
+      <section class="rb-section rb-section--cream">
+        <div class="rb-wrap">
+          <div class="rb-block-pillars__head">
+            <div>
+              <span class="rb-eyebrow">Die drei Säulen</span>
+              <h2>Innen · Aktivierung · Balance.</h2>
+            </div>
+            <p>Drei gleichwertige Säulen. Sie greifen ineinander, sind aber jede für sich erfahrbar — als Einstieg oder als Ergänzung zu einer bestehenden Routine.</p>
+          </div>
+
+          <div class="rb-pillars">
+            <article class="rb-pillar">
+              <div class="rb-pillar__num">01</div>
+              <div class="rb-pillar__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg></div>
+              <div class="rb-pillar__eyebrow">Innen · Haut & Genom</div>
+              <h3 class="rb-pillar__title">DNA Skin Intelligence</h3>
+              <p class="rb-pillar__text">20 Beauty-Gene · 12-Wochen-Plan · Mikronährstoffe · epigenetische Routine. Entwickelt mit Beauty ID Switzerland und dem Genlabor Novogenia (Salzburg).</p>
+              <a class="rb-pillar__link" href="/dna-skin-intelligence/">DNA Skin entdecken →</a>
+            </article>
+
+            <article class="rb-pillar">
+              <div class="rb-pillar__num">02</div>
+              <div class="rb-pillar__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 8l4 4 4-4-4-6zM12 14L8 20l4 2 4-2-4-6zM2 12l6-4 4 4-4 4-6-4zM22 12l-6-4-4 4 4 4 6-4z"/></svg></div>
+              <div class="rb-pillar__eyebrow">Aktivierung · Körper & Energie</div>
+              <h3 class="rb-pillar__title">Kryo Vital</h3>
+              <p class="rb-pillar__text">Ganzkörper- und lokale Kälteanwendung als Reiz für Regeneration. Kryo-Facial. Druckwellen- und Bandagen-Anwendungen als Körper-Aktivierung.</p>
+              <a class="rb-pillar__link" href="/kryo-vital/">Kryo Vital entdecken →</a>
+            </article>
+
+            <article class="rb-pillar">
+              <div class="rb-pillar__num">03</div>
+              <div class="rb-pillar__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M3 12c4-3 14-3 18 0M3 12c4 3 14 3 18 0M12 3v18"/></svg></div>
+              <div class="rb-pillar__eyebrow">Balance · Mind & Körper</div>
+              <h3 class="rb-pillar__title">Inner Source Rituals</h3>
+              <p class="rb-pillar__text">Atem- und neurosomatische Techniken, NLP, Hypnose für Wellness, Meditation. Massage-Rituale (Abhyanga, Hot Stone, Hot Bambu, Balinesisch).</p>
+              <a class="rb-pillar__link" href="/inner-source/">Inner Source entdecken →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Was Rubedo nicht ist -->
+      <section class="rb-block-prose rb-section--paper">
+        <div class="rb-wrap rb-prose">
+          <span class="rb-eyebrow">Klar gesagt</span>
+          <h2>Was Rubedo nicht ist.</h2>
+          <p>Wir verstehen uns als <strong>Studio, nicht als Praxis</strong>. Wir behandeln keine Krankheiten und sprechen keine Heilversprechen aus. Was wir tun, ist Pflege, Aktivierung und Balance — auf Basis dessen, was Monica Galletti in über zehn Jahren internationaler 5-Sterne-Spa-Praxis und in einer Reihe internationaler Zertifizierungen gelernt hat.</p>
+          <p>Wenn du eine medizinische Frage hast, gehörst du in die Hände einer Ärztin oder eines Arztes. Wenn du dich in deiner Pflege, deinem Körpergefühl und deinem inneren Tempo neu sortieren willst, bist du bei uns richtig.</p>
+        </div>
+      </section>
+
+      <section class="rb-block-quote">
+        <div class="rb-block-quote__inner">
+          <blockquote>Wahre Expertise zeigt sich nicht in der Anzahl von Methoden — sondern in der Fähigkeit, sie präzise und bewusst einzusetzen. Für jeden Menschen die richtige Kombination zu wählen, das ist meine Arbeit.</blockquote>
+          <cite>Monica Galletti · Gründerin Rubedo Spa</cite>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="rb-block-faq">
+        <div class="rb-wrap">
+          <div class="rb-faq__head">
+            <div>
+              <span class="rb-eyebrow">Häufige Fragen</span>
+              <h2>Drei Antworten zu Beginn.</h2>
+            </div>
+            <p>Wenn weitere Fragen offen bleiben, beantworten wir sie gerne im kostenfreien 15-Minuten-Erstgespräch.</p>
+          </div>
+          <ul class="rb-faq-list">
+            <li><details class="rb-faq-item" open>
+              <summary>Was unterscheidet Rubedo von einem klassischen Spa?</summary>
+              <div class="rb-faq-item__body">Wir arbeiten mit einem System, nicht mit einem Behandlungs-Katalog. Jede Behandlung wird als Teil einer der drei Säulen verstanden und auf den Menschen abgestimmt — Personalisierung ist bei uns kein Trend, sondern die Grundlage.</div>
+            </details></li>
+            <li><details class="rb-faq-item">
+              <summary>Muss ich alle drei Säulen nutzen?</summary>
+              <div class="rb-faq-item__body">Nein. Viele Gäste beginnen mit einer einzigen Behandlung — etwa einer Ganzkörper-Kryotherapie oder einer Massage in der Rubedo Suite — und entscheiden sich erst nach dem ersten Besuch, ob sie tiefer einsteigen möchten.</div>
+            </details></li>
+            <li><details class="rb-faq-item">
+              <summary>Was bedeutet Longevity-Studio?</summary>
+              <div class="rb-faq-item__body">Longevity beschreibt einen Lebensstil und eine Pflege-Haltung, die auf Vorsorge, Regeneration und Selbstregulation setzen. In einem Longevity-Studio steht die langfristige Vitalität im Mittelpunkt — nicht das schnelle Ergebnis.</div>
+            </details></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="rb-block-cta">
+        <div class="rb-wrap">
+          <div class="rb-cta-band">
+            <div class="rb-cta-band__body">
+              <span class="rb-eyebrow">Bereit anzufangen?</span>
+              <h3>Vereinbare ein kostenfreies 15-Minuten-Videogespräch.</h3>
+              <p>Wir finden gemeinsam heraus, welche Säule für dich der passende Einstieg ist.</p>
+            </div>
+            <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/">Erstgespräch sichern →</a></div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- ============================================================
+         PAGE 3 · DNA SKIN INTELLIGENCE
+         URL: /dna-skin-intelligence/
+         ============================================================ -->
+  </article>
+
+</BaseLayout>

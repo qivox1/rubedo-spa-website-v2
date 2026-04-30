@@ -1,0 +1,117 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+
+const title = 'Magazin — Wohlfühl-Wissen aus dem Rubedo Spa';
+const description =
+  'Beiträge zu Smart Beauty, Longevity, Hautwissen, Kryotherapie und bewussten Wellness-Routinen — von Monica Galletti & dem Rubedo-Team.';
+
+// Alle Artikel laden, Drafts ausschließen, sortiert nach Datum (neueste zuerst)
+const all = await getCollection('magazin', ({ data }) => !data.draft);
+const articles = all.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const featured = articles.find((a) => a.data.featured) ?? articles[0];
+const rest = articles.filter((a) => a.slug !== featured?.slug);
+
+// Kategorien — als Filter-Chips
+const categorySlug = (cat: string) =>
+  cat
+    .toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+const categories = Array.from(new Set(articles.map((a) => a.data.category))).sort();
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="magazin">
+
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap">
+
+        <header class="rb-magazin-header">
+          <span class="rb-eyebrow">Magazin</span>
+          <h1 class="rb-display">Wohlfühl-Wissen aus dem Studio.</h1>
+          <p class="rb-magazin-header__intro">
+            Themen rund um bewusste Schönheit, Longevity und die Methoden, die wir bei
+            Rubedo Spa täglich nutzen — kurz erklärt, ehrlich eingeordnet.
+          </p>
+        </header>
+
+        {categories.length > 0 && (
+          <nav class="rb-magazin-cats" aria-label="Kategorien">
+            <a href="/magazin/" class="is-active">Alle</a>
+            {categories.map((cat) => (
+              <a href={`/magazin/kategorie/${categorySlug(cat)}/`}>{cat}</a>
+            ))}
+          </nav>
+        )}
+
+        {featured && (
+          <div class="rb-magazin-featured" data-reveal>
+            <ArticleCard entry={featured} featured />
+          </div>
+        )}
+
+        {rest.length > 0 && (
+          <div class="rb-magazin-grid">
+            {rest.map((entry) => <ArticleCard entry={entry} />)}
+          </div>
+        )}
+
+        {articles.length === 0 && (
+          <p class="rb-magazin-empty">Noch keine Artikel veröffentlicht.</p>
+        )}
+
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-magazin-header { max-width: 720px; margin: 0 0 48px; }
+  .rb-magazin-header__intro {
+    font-family: var(--rb-font-body);
+    color: var(--rb-ink-500);
+    line-height: var(--rb-leading-loose);
+    font-size: var(--rb-text-md);
+    margin-top: 16px;
+  }
+  .rb-magazin-cats {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rb-ink-100);
+  }
+  .rb-magazin-cats a {
+    padding: 8px 16px;
+    border: 1px solid var(--rb-ink-300);
+    border-radius: var(--rb-radius-pill);
+    text-decoration: none;
+    color: var(--rb-ink-700);
+    font-family: var(--rb-font-body);
+    font-size: var(--rb-text-sm);
+    transition: all var(--rb-dur-1) var(--rb-ease);
+  }
+  .rb-magazin-cats a:hover { border-color: var(--rb-gold-500); color: var(--rb-gold-700); }
+  .rb-magazin-cats a.is-active {
+    background: var(--rb-ink-900);
+    color: var(--rb-gold-100);
+    border-color: var(--rb-ink-900);
+  }
+  .rb-magazin-featured { margin-bottom: 64px; }
+  .rb-magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+  }
+  .rb-magazin-empty {
+    text-align: center;
+    padding: 48px 0;
+    color: var(--rb-ink-500);
+    font-family: var(--rb-font-body);
+  }
+</style>

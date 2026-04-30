@@ -1,0 +1,114 @@
+/* =========================================================
+   Rubedo Spa — Global Stylesheet
+   Reihenfolge: Tokens → Tailwind → Template-Komponenten → Astro-spezifisch
+   ========================================================= */
+
+@import './tokens.css';
+@import 'tailwindcss';
+
+/* Tailwind v4 — Theme-Bridge zu Rubedo-Tokens.
+   So lassen sich rb-* Tokens auch als Tailwind-Utilities nutzen
+   (z. B. text-rb-gold-700, bg-rb-cream). */
+@theme {
+  --color-rb-gold-900: #6F5421;
+  --color-rb-gold-700: #97783A;
+  --color-rb-gold-500: #B79557;
+  --color-rb-gold-300: #D7BD86;
+  --color-rb-gold-100: #F2E8D2;
+  --color-rb-gold-50:  #FAF5EA;
+  --color-rb-ink-900:  #1A1614;
+  --color-rb-ink-700:  #3A332C;
+  --color-rb-ink-500:  #6B6055;
+  --color-rb-ink-300:  #B5ADA2;
+  --color-rb-ink-100:  #E8E2D6;
+  --color-rb-paper:    #FFFFFF;
+  --color-rb-cream:    #FBF8F1;
+
+  --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-body: 'Outfit', 'Helvetica Neue', system-ui, sans-serif;
+}
+
+@import './template.css';
+
+/* =========================================================
+   Astro-spezifische Korrekturen
+   Das Original-Template war eine Single-Page-App mit
+   Page-Switcher; in Astro ist jede Seite eine eigene Route.
+   ========================================================= */
+
+.rb-page {
+  display: block !important;
+}
+.rb-pageswitcher { display: none !important; }
+
+/* View Transitions — ruhig und langsam */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 320ms;
+  animation-timing-function: cubic-bezier(.2,.65,.3,1);
+}
+
+/* Reveal-On-Scroll Helper */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 600ms cubic-bezier(.2,.65,.3,1), transform 600ms cubic-bezier(.2,.65,.3,1);
+  will-change: opacity, transform;
+}
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Visually-hidden Utility (a11y) */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important; height: 1px !important;
+  padding: 0 !important; margin: -1px !important;
+  overflow: hidden !important; clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important; border: 0 !important;
+}
+
+/* Skip-Link */
+.skip-link {
+  position: absolute; left: -9999px;
+  top: 0;
+  background: var(--rb-ink-900);
+  color: var(--rb-gold-100);
+  padding: 12px 16px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus { left: 12px; top: 12px; }
+
+/* Cookie-Consent (Klaro Custom Theming) */
+.klaro .cookie-modal,
+.klaro .context-notice,
+.klaro .cookie-notice {
+  font-family: var(--rb-font-body) !important;
+}
+.klaro .cookie-notice {
+  background: var(--rb-ink-900) !important;
+  color: var(--rb-gold-100) !important;
+}
+.klaro .cookie-notice .cm-btn-success,
+.klaro .cookie-modal .cm-btn-success {
+  background: var(--rb-gold-700) !important;
+  color: var(--rb-paper) !important;
+  border-radius: var(--rb-radius-md) !important;
+}

@@ -1,0 +1,128 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'magazin'>;
+  /** Hervorgehoben — größere Karte, größeres Bild. */
+  featured?: boolean;
+}
+const { entry, featured = false } = Astro.props;
+const { data, slug } = entry;
+
+const author = await getEntry(data.author);
+const url = `/magazin/${slug}/`;
+const excerpt = data.excerpt ?? data.description;
+const formattedDate = new Intl.DateTimeFormat('de-DE', {
+  day: 'numeric', month: 'long', year: 'numeric',
+}).format(data.pubDate);
+---
+
+<article class={`rb-article-card${featured ? ' rb-article-card--featured' : ''}`}>
+  <a href={url} class="rb-article-card__media">
+    <img
+      src={data.heroImage}
+      alt={data.heroImageAlt}
+      loading="lazy"
+      decoding="async"
+      width={featured ? 1200 : 600}
+      height={featured ? 700 : 400}
+    />
+  </a>
+  <div class="rb-article-card__body">
+    <div class="rb-article-card__cat">{data.category}</div>
+    <h3 class="rb-article-card__title">
+      <a href={url}>{data.title}</a>
+    </h3>
+    <p class="rb-article-card__excerpt">{excerpt}</p>
+    <div class="rb-article-card__meta">
+      <span>{author.data.name}</span>
+      <span aria-hidden="true">·</span>
+      <time datetime={data.pubDate.toISOString()}>{formattedDate}</time>
+      {data.readingTime && (
+        <>
+          <span aria-hidden="true">·</span>
+          <span>{data.readingTime} Min. Lesezeit</span>
+        </>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+  .rb-article-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: var(--rb-paper);
+    border-radius: var(--rb-radius-md);
+    overflow: hidden;
+    transition: transform var(--rb-dur-2) var(--rb-ease), box-shadow var(--rb-dur-2) var(--rb-ease);
+  }
+  .rb-article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--rb-shadow-md);
+  }
+  .rb-article-card__media {
+    display: block;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+  }
+  .rb-article-card__media img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform var(--rb-dur-3) var(--rb-ease);
+  }
+  .rb-article-card:hover .rb-article-card__media img {
+    transform: scale(1.04);
+  }
+  .rb-article-card__body { padding: 0 4px 24px; }
+  .rb-article-card__cat {
+    font-family: var(--rb-font-body);
+    font-size: var(--rb-text-xs);
+    letter-spacing: var(--rb-tracking-widest);
+    text-transform: uppercase;
+    color: var(--rb-gold-700);
+    margin-bottom: 8px;
+  }
+  .rb-article-card__title {
+    font-family: var(--rb-font-display);
+    font-size: var(--rb-text-xl);
+    font-weight: 400;
+    line-height: var(--rb-leading-tight);
+    margin: 0 0 12px;
+    text-wrap: balance;
+  }
+  .rb-article-card__title a {
+    color: var(--rb-ink-900);
+    text-decoration: none;
+  }
+  .rb-article-card__title a:hover { color: var(--rb-gold-700); }
+  .rb-article-card__excerpt {
+    font-family: var(--rb-font-body);
+    color: var(--rb-ink-500);
+    line-height: var(--rb-leading-base);
+    margin: 0 0 16px;
+  }
+  .rb-article-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: var(--rb-font-body);
+    font-size: var(--rb-text-sm);
+    color: var(--rb-ink-500);
+  }
+
+  .rb-article-card--featured {
+    grid-column: 1 / -1;
+  }
+  .rb-article-card--featured .rb-article-card__title { font-size: var(--rb-text-2xl); }
+  @media (min-width: 920px) {
+    .rb-article-card--featured {
+      flex-direction: row;
+      align-items: center;
+    }
+    .rb-article-card--featured .rb-article-card__media { flex: 1 1 60%; aspect-ratio: 16 / 10; }
+    .rb-article-card--featured .rb-article-card__body { flex: 1 1 40%; padding: 32px; }
+  }
+</style>

@@ -1,0 +1,311 @@
+/* =========================================================
+   Rubedo Spa — Design Tokens
+   Extracted from the live site rubedo-spa.de
+   Used by Design System.html
+   ========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap");
+
+:root {
+  /* ---------- Color: Brand ---------- */
+  --rb-gold-900:  #6F5421;   /* deep antique gold — accents, dividers */
+  --rb-gold-700:  #97783A;   /* primary gold — buttons, headings rule */
+  --rb-gold-500:  #B79557;   /* signature gold — the website's hero band */
+  --rb-gold-300:  #D7BD86;   /* soft gold — hover states, highlights */
+  --rb-gold-100:  #F2E8D2;   /* champagne tint — section backgrounds */
+  --rb-gold-50:   #FAF5EA;   /* near-white champagne — page background */
+
+  /* ---------- Color: Neutrals ---------- */
+  --rb-ink-900:   #1A1614;   /* near-black, body copy on light */
+  --rb-ink-700:   #3A332C;   /* warm charcoal, secondary text */
+  --rb-ink-500:   #6B6055;   /* muted brown-grey, captions */
+  --rb-ink-300:   #B5ADA2;   /* hairlines, disabled */
+  --rb-ink-100:   #E8E2D6;   /* surface dividers */
+  --rb-paper:     #FFFFFF;   /* card surfaces */
+  --rb-cream:     #FBF8F1;   /* soft warm white — preferred page bg */
+
+  /* ---------- Color: Functional ---------- */
+  --rb-success:   #6E8B5C;
+  --rb-warn:      #C68A2C;
+  --rb-error:     #A33B2E;
+
+  /* ---------- Type ---------- */
+  --rb-font-display: "Cormorant Garamond", "Times New Roman", serif;
+  --rb-font-body:    "Outfit", "Helvetica Neue", system-ui, sans-serif;
+
+  /* Type scale (modular, 1.25 minor third on a 16px base) */
+  --rb-text-xs:   12px;   /* eyebrow, caption */
+  --rb-text-sm:   14px;
+  --rb-text-base: 16px;
+  --rb-text-md:   18px;
+  --rb-text-lg:   22px;
+  --rb-text-xl:   28px;
+  --rb-text-2xl:  36px;
+  --rb-text-3xl:  48px;
+  --rb-text-4xl:  64px;
+  --rb-text-5xl:  88px;
+
+  --rb-leading-tight: 1.1;
+  --rb-leading-snug:  1.25;
+  --rb-leading-base:  1.5;
+  --rb-leading-loose: 1.7;
+
+  --rb-tracking-tight:  -0.01em;
+  --rb-tracking-normal:  0;
+  --rb-tracking-wide:    0.08em;
+  --rb-tracking-wider:   0.18em;
+  --rb-tracking-widest:  0.32em;  /* eyebrow ALL CAPS */
+
+  /* ---------- Spacing (4-point grid) ---------- */
+  --rb-space-1:  4px;
+  --rb-space-2:  8px;
+  --rb-space-3:  12px;
+  --rb-space-4:  16px;
+  --rb-space-5:  24px;
+  --rb-space-6:  32px;
+  --rb-space-7:  48px;
+  --rb-space-8:  64px;
+  --rb-space-9:  96px;
+  --rb-space-10: 128px;
+
+  /* ---------- Radius ---------- */
+  --rb-radius-sm:    2px;
+  --rb-radius-md:    4px;   /* default — restrained, editorial */
+  --rb-radius-lg:    8px;
+  --rb-radius-pill:  999px;
+
+  /* ---------- Elevation ---------- */
+  --rb-shadow-sm: 0 1px 2px rgba(26,22,20,0.05);
+  --rb-shadow-md: 0 6px 18px rgba(111,84,33,0.10), 0 2px 4px rgba(26,22,20,0.04);
+  --rb-shadow-lg: 0 20px 48px rgba(111,84,33,0.14), 0 4px 10px rgba(26,22,20,0.05);
+
+  /* ---------- Motion ---------- */
+  --rb-ease:    cubic-bezier(.2,.65,.3,1);
+  --rb-dur-1:   180ms;
+  --rb-dur-2:   320ms;
+  --rb-dur-3:   600ms;
+}
+
+/* =========================================================
+   Type recipes — apply via classes on real markup
+   ========================================================= */
+
+.rb-eyebrow {
+  font-family: var(--rb-font-body);
+  font-size: var(--rb-text-xs);
+  font-weight: 500;
+  letter-spacing: var(--rb-tracking-widest);
+  text-transform: uppercase;
+  color: var(--rb-gold-700);
+  line-height: var(--rb-leading-snug);
+}
+
+.rb-display {
+  font-family: var(--rb-font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 6vw, var(--rb-text-5xl));
+  line-height: var(--rb-leading-tight);
+  letter-spacing: var(--rb-tracking-tight);
+  color: var(--rb-ink-900);
+  text-wrap: balance;
+}
+
+.rb-h1 {
+  font-family: var(--rb-font-display);
+  font-weight: 400;
+  font-size: var(--rb-text-3xl);
+  line-height: var(--rb-leading-tight);
+  letter-spacing: var(--rb-tracking-tight);
+  color: var(--rb-ink-900);
+  text-wrap: balance;
+}
+.rb-h2 {
+  font-family: var(--rb-font-display);
+  font-weight: 400;
+  font-size: var(--rb-text-2xl);
+  line-height: var(--rb-leading-snug);
+  color: var(--rb-ink-900);
+  text-wrap: balance;
+}
+.rb-h3 {
+  font-family: var(--rb-font-display);
+  font-weight: 500;
+  font-size: var(--rb-text-xl);
+  line-height: var(--rb-leading-snug);
+  color: var(--rb-ink-900);
+}
+.rb-h4 {
+  font-family: var(--rb-font-body);
+  font-weight: 500;
+  font-size: var(--rb-text-md);
+  line-height: var(--rb-leading-snug);
+  letter-spacing: var(--rb-tracking-wide);
+  text-transform: uppercase;
+  color: var(--rb-ink-900);
+}
+
+.rb-lede {
+  font-family: var(--rb-font-body);
+  font-weight: 300;
+  font-size: var(--rb-text-md);
+  line-height: var(--rb-leading-loose);
+  color: var(--rb-ink-700);
+  text-wrap: pretty;
+}
+.rb-body {
+  font-family: var(--rb-font-body);
+  font-weight: 400;
+  font-size: var(--rb-text-base);
+  line-height: var(--rb-leading-base);
+  color: var(--rb-ink-700);
+  text-wrap: pretty;
+}
+.rb-small {
+  font-family: var(--rb-font-body);
+  font-weight: 400;
+  font-size: var(--rb-text-sm);
+  line-height: var(--rb-leading-base);
+  color: var(--rb-ink-500);
+}
+.rb-caption {
+  font-family: var(--rb-font-body);
+  font-weight: 400;
+  font-size: var(--rb-text-xs);
+  line-height: var(--rb-leading-base);
+  letter-spacing: var(--rb-tracking-wide);
+  color: var(--rb-ink-500);
+}
+
+/* =========================================================
+   Components
+   ========================================================= */
+
+/* --- Button --- */
+.rb-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rb-space-3);
+  padding: 14px 28px;
+  font-family: var(--rb-font-body);
+  font-size: var(--rb-text-sm);
+  font-weight: 500;
+  letter-spacing: var(--rb-tracking-wider);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--rb-radius-md);
+  cursor: pointer;
+  transition: background var(--rb-dur-1) var(--rb-ease),
+              color var(--rb-dur-1) var(--rb-ease),
+              border-color var(--rb-dur-1) var(--rb-ease),
+              transform var(--rb-dur-1) var(--rb-ease);
+}
+.rb-btn--primary {
+  background: var(--rb-gold-500);
+  color: var(--rb-paper);
+}
+.rb-btn--primary:hover {
+  background: var(--rb-gold-700);
+}
+.rb-btn--ghost {
+  background: transparent;
+  color: var(--rb-ink-900);
+  border-color: var(--rb-gold-500);
+}
+.rb-btn--ghost:hover {
+  background: var(--rb-gold-100);
+}
+.rb-btn--link {
+  background: transparent;
+  color: var(--rb-gold-700);
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid var(--rb-gold-300);
+  border-radius: 0;
+  letter-spacing: var(--rb-tracking-wide);
+}
+.rb-btn--link:hover { color: var(--rb-gold-900); border-bottom-color: var(--rb-gold-700); }
+
+/* --- Input --- */
+.rb-field { display: flex; flex-direction: column; gap: var(--rb-space-2); }
+.rb-label {
+  font-family: var(--rb-font-body);
+  font-size: var(--rb-text-xs);
+  font-weight: 500;
+  letter-spacing: var(--rb-tracking-wider);
+  text-transform: uppercase;
+  color: var(--rb-ink-700);
+}
+.rb-input, .rb-textarea, .rb-select {
+  font-family: var(--rb-font-body);
+  font-size: var(--rb-text-base);
+  color: var(--rb-ink-900);
+  padding: 12px 14px;
+  background: var(--rb-paper);
+  border: 1px solid var(--rb-ink-300);
+  border-radius: var(--rb-radius-md);
+  transition: border-color var(--rb-dur-1) var(--rb-ease),
+              box-shadow var(--rb-dur-1) var(--rb-ease);
+}
+.rb-input:focus, .rb-textarea:focus, .rb-select:focus {
+  outline: none;
+  border-color: var(--rb-gold-500);
+  box-shadow: 0 0 0 3px rgba(183,149,87,0.18);
+}
+
+/* --- Card --- */
+.rb-card {
+  background: var(--rb-paper);
+  border: 1px solid var(--rb-ink-100);
+  border-radius: var(--rb-radius-md);
+  overflow: hidden;
+  transition: transform var(--rb-dur-2) var(--rb-ease),
+              box-shadow var(--rb-dur-2) var(--rb-ease);
+}
+.rb-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--rb-shadow-md);
+}
+.rb-card__media {
+  aspect-ratio: 4 / 3;
+  background: var(--rb-ink-100);
+  background-size: cover;
+  background-position: center;
+}
+.rb-card__body { padding: var(--rb-space-5); }
+.rb-card__title {
+  font-family: var(--rb-font-display);
+  font-size: var(--rb-text-lg);
+  color: var(--rb-ink-900);
+  margin: 0 0 var(--rb-space-2) 0;
+}
+.rb-card__text {
+  font-size: var(--rb-text-sm);
+  line-height: var(--rb-leading-base);
+  color: var(--rb-ink-500);
+  margin: 0 0 var(--rb-space-4) 0;
+}
+
+/* --- Divider with gold flourish --- */
+.rb-rule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rb-space-3);
+  color: var(--rb-gold-500);
+}
+.rb-rule::before,
+.rb-rule::after {
+  content: "";
+  height: 1px;
+  background: currentColor;
+  flex: 1;
+  max-width: 96px;
+  opacity: 0.6;
+}
+.rb-rule__diamond {
+  width: 6px; height: 6px;
+  background: currentColor;
+  transform: rotate(45deg);
+}

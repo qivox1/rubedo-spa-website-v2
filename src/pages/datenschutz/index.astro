@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Datenschutz — Rubedo Spa Minden';
+const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir personenbezogene Daten verarbeiten, welche Cookies und Drittdienste eingesetzt werden.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="datenschutz">
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap rb-wrap--narrow rb-prose">
+        <h1>Datenschutzerklärung</h1>
+        <p class="rb-eyebrow" style="margin-bottom: 24px;">Stand: {new Date().toLocaleDateString('de-DE', { year: 'numeric', month: 'long' })}</p>
+
+        <h2>1. Verantwortlicher</h2>
+        <p>
+          {site.legalName}<br />
+          {site.address.street}<br />
+          {site.address.postalCode} {site.address.city}<br />
+          Telefon: <a href={`tel:${site.contact.phoneE164}`}>{site.contact.phoneDisplay}</a><br />
+          E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+        </p>
+
+        <h2>2. Hosting</h2>
+        <p>
+          Diese Website wird auf Cloudflare Pages (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA) gehostet.
+          Beim Aufruf werden technische Daten (IP-Adresse, User-Agent, Datum/Uhrzeit) im Server-Log gespeichert.
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb).
+        </p>
+
+        <h2>3. Cookies & Tracking</h2>
+        <p>
+          Wir setzen technisch notwendige Cookies sowie — nach ausdrücklicher Einwilligung — Cookies für anonymisierte Statistik (Google Analytics 4 via Google Tag Manager).
+          Die Einwilligung kannst du jederzeit über das Cookie-Banner unten links widerrufen oder ändern.
+        </p>
+        <p>
+          Bei Google Analytics ist die IP-Anonymisierung aktiv. Wir nutzen Consent Mode v2 — vor deiner Einwilligung werden keine Tracking-Cookies gesetzt.
+        </p>
+
+        <h2>4. Kontaktformular & Termin-Anfrage</h2>
+        <p>
+          Wenn du uns über das Formular schreibst, verarbeiten wir die angegebenen Daten ausschließlich zur Beantwortung deiner Anfrage.
+          Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Anbahnung Vertragsverhältnis).
+          Spam-Schutz erfolgt über Cloudflare Turnstile (datenschutzfreundlich, ohne personenbezogene Profilbildung).
+        </p>
+
+        <h2>5. Deine Rechte</h2>
+        <p>
+          Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+          Datenübertragbarkeit und Widerspruch (Art. 15 ff. DSGVO). Wende dich dazu an oben genannte Adresse.
+          Beschwerderecht bei der zuständigen Aufsichtsbehörde: Landesbeauftragte für Datenschutz NRW.
+        </p>
+
+        <h2>6. Änderung dieser Erklärung</h2>
+        <p>
+          Wir passen diese Erklärung an, wenn sich Funktionen oder Rechtslage ändern.
+          Die jeweils aktuelle Fassung findest du auf dieser Seite.
+        </p>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-prose h1 { font-family: var(--rb-font-display); font-size: var(--rb-text-3xl); margin-bottom: 12px; }
+  .rb-prose h2 { font-family: var(--rb-font-display); font-size: var(--rb-text-xl); margin: 32px 0 12px; }
+  .rb-prose p { font-family: var(--rb-font-body); line-height: var(--rb-leading-loose); color: var(--rb-ink-700); margin: 0 0 16px; }
+  .rb-prose a { color: var(--rb-gold-700); }
+</style>

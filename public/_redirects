@@ -1,0 +1,33 @@
+# Cloudflare Pages — 301-Map vom alten WordPress
+# https://developers.cloudflare.com/pages/configuration/redirects/
+
+# Alte URLs ohne Trailing Slash → mit Slash (sollte automatisch funktionieren,
+# hier explizit für Suchmaschinen-Sicherheit der wichtigsten Seiten)
+
+/kryo                                          /kryo-vital/ganzkoerper/                                301
+/kryo/                                         /kryo-vital/ganzkoerper/                                301
+/kryotherapie                                  /kryo-vital/                                            301
+/kryotherapie/                                 /kryo-vital/                                            301
+/presso-massage                                /kryo-vital/koerperformung/                             301
+/presso-massage/                               /kryo-vital/koerperformung/                             301
+/body-slimming-wrap                            /kryo-vital/koerperformung/                             301
+/body-slimming-wrap/                           /kryo-vital/koerperformung/                             301
+/body-slimming-bandage                         /kryo-vital/koerperformung/                             301
+/body-slimming-bandage/                        /kryo-vital/koerperformung/                             301
+/wellness-und-spa                              /inner-source/                                          301
+/wellness-und-spa/                             /inner-source/                                          301
+/rubedo-suite                                  /inner-source/rubedo-suite/                             301
+/rubedo-suite/                                 /inner-source/rubedo-suite/                             301
+/datenschutzerklaerung                         /datenschutz/                                           301
+/datenschutzerklaerung/                        /datenschutz/                                           301
+/wohlfuehl-wissen                              /magazin/                                               301
+/wohlfuehl-wissen/                             /magazin/                                               301
+/wohlfuehl-wissen/*                            /magazin/:splat                                         301
+
+# Vollqualifizierte Beispiel-Slugs aus dem Audit
+/kryotherapie/die-revolution-der-kaeltetherapie-ganzkoerper-kryotherapie-minden-ihr-bewusster-frischekick/   /magazin/kryotherapie-minden/                301
+/wellness-und-spa/wellness-in-minden-warum-moderne-technologien-den-unterschied-machen/                       /magazin/wellness-minden-technologie/        301
+
+# Übergangs-Redirect der alten statischen Beispielseite (Ordner darf gelöscht werden)
+/magazin/example-artikel                       /magazin/wellness-minden-technologie/                   301
+/magazin/example-artikel/                      /magazin/wellness-minden-technologie/                   301

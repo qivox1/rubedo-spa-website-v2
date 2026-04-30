@@ -1,0 +1,17 @@
+---
+import { site } from '@/lib/site';
+---
+
+<div class="rb-topbar" aria-label="Studio-Information">
+  <div class="rb-wrap rb-topbar__inner">
+    <div class="rb-topbar__meta">
+      <span>{site.address.street} · {site.address.postalCode} {site.address.city}</span>
+      <span>{site.hours[0].days} {site.hours[0].open}–{site.hours[0].close}</span>
+    </div>
+    <div class="rb-topbar__meta">
+      <a href={`tel:${site.contact.phoneE164}`}>{site.contact.phoneDisplay}</a>
+      <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
+      <a href="/termin-buchen/">Termin buchen ›</a>
+    </div>
+  </div>
+</div>

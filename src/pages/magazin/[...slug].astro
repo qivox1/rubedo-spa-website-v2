@@ -1,0 +1,310 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+import { site } from '@/lib/site';
+import { estimateReadingTime } from '@/lib/reading-time';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('magazin', ({ data }) => !data.draft);
+  return entries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props { entry: CollectionEntry<'magazin'>; }
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content, headings } = await entry.render();
+
+// Author auflösen
+const author = await getEntry(data.author);
+
+// Lesezeit — manuell oder geschätzt aus Body-Text
+const bodyText = entry.body ?? '';
+const readingTime = data.readingTime ?? estimateReadingTime(bodyText);
+
+// TOC — manuell aus Frontmatter ODER automatisch aus h2/h3
+const toc =
+  data.toc && data.toc.length > 0
+    ? data.toc
+    : headings.filter((h) => h.depth === 2).map((h) => ({ id: h.slug, label: h.text }));
+
+// Verwandte Artikel auflösen
+let related: CollectionEntry<'magazin'>[] = [];
+if (data.related && data.related.length > 0) {
+  const all = await getCollection('magazin', ({ data }) => !data.draft);
+  related = data.related
+    .map((slug) => all.find((a) => a.slug === slug))
+    .filter((a): a is CollectionEntry<'magazin'> => Boolean(a));
+}
+
+// Daten formatieren
+const fmtDate = (d: Date) =>
+  new Intl.DateTimeFormat('de-DE', { day: 'numeric', month: 'long', year: 'numeric' }).format(d);
+const pubDateFmt = fmtDate(data.pubDate);
+const updatedDateFmt = data.updatedDate ? fmtDate(data.updatedDate) : null;
+
+// Schema.org Article + ggf. FAQPage
+const url = `${site.url}/magazin/${entry.slug}/`;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${url}#article`,
+  headline: data.headline ?? data.title,
+  description: data.description,
+  image: `${site.url}${data.heroImage}`,
+  datePublished: data.pubDate.toISOString(),
+  dateModified: (data.updatedDate ?? data.pubDate).toISOString(),
+  author: {
+    '@type': 'Person',
+    name: author.data.name,
+    url: author.data.page ? `${site.url}${author.data.page}` : undefined,
+    image: `${site.url}${author.data.avatar}`,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: site.name,
+    logo: { '@type': 'ImageObject', url: `${site.url}/logo-rubedo-spa.png` },
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  articleSection: data.category,
+  keywords: data.tags.join(', '),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${site.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Magazin', item: `${site.url}/magazin/` },
+    { '@type': 'ListItem', position: 3, name: data.title, item: url },
+  ],
+};
+
+const schemaExtras: Record<string, unknown>[] = [articleSchema, breadcrumbSchema];
+
+if (data.faq && data.faq.length > 0) {
+  schemaExtras.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: data.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  });
+}
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  heroImage={data.heroImage}
+  ogImage={data.ogImage ?? data.heroImage}
+  canonical={data.canonical}
+  schemaExtras={schemaExtras}
+>
+  <article class="rb-page" data-page="magazin-artikel">
+
+    <div class="rb-mag-progress" aria-hidden="true">
+      <div class="rb-mag-progress__bar" id="rb-mag-bar"></div>
+    </div>
+
+    {/* HERO */}
+    <section class="rb-mag-hero">
+      <div class="rb-mag-hero__photo">
+        <img src={data.heroImage} alt={data.heroImageAlt} fetchpriority="high" />
+      </div>
+      <div class="rb-wrap">
+        <div class="rb-mag-hero__inner">
+          <nav class="rb-mag-hero__crumbs" aria-label="Breadcrumb">
+            <a href="/">Startseite</a>
+            <span class="sep">/</span>
+            <a href="/magazin/">Magazin</a>
+            <span class="sep">/</span>
+            <span>{data.title}</span>
+          </nav>
+          <span class="rb-mag-hero__cat">{data.category}</span>
+          <h1>{data.headline ?? data.title}</h1>
+          <div class="rb-mag-hero__meta">
+            <span class="rb-mag-hero__meta-item">
+              <strong>{author.data.name}</strong>
+            </span>
+            <span class="rb-mag-hero__meta-item">
+              <time datetime={data.pubDate.toISOString()}>{pubDateFmt}</time>
+              {updatedDateFmt && (
+                <> · zuletzt aktualisiert <time datetime={data.updatedDate!.toISOString()}>{updatedDateFmt}</time></>
+              )}
+            </span>
+            <span class="rb-mag-hero__meta-item">{readingTime} Min. Lesezeit</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* BODY: TOC + Prose */}
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap">
+        <div class="rb-mag-body">
+
+          {toc.length > 0 && (
+            <aside class="rb-mag-toc" aria-label="Inhaltsverzeichnis">
+              <div class="rb-mag-toc__label">Inhalt</div>
+              <ul>
+                {toc.map((item) => (
+                  <li><a href={`#${item.id}`} class="rb-mag-toc-link">{item.label}</a></li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
+          <div class="rb-mag-prose">
+            <Content />
+
+            {data.faq && data.faq.length > 0 && (
+              <section class="rb-mag-faq" id="faq">
+                <h2>Häufige Fragen</h2>
+                {data.faq.map((item) => (
+                  <details class="rb-mag-faq__item">
+                    <summary>{item.question}</summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </section>
+            )}
+
+            {data.tags.length > 0 && (
+              <ul class="rb-mag-tags" aria-label="Tags">
+                {data.tags.map((tag) => <li>#{tag}</li>)}
+              </ul>
+            )}
+          </div>
+
+        </div>
+
+        {/* Author-Box */}
+        <aside class="rb-mag-author" aria-label="Über die Autorin">
+          <img class="rb-mag-author__avatar" src={author.data.avatar} alt={author.data.name} loading="lazy" width="96" height="96" />
+          <div class="rb-mag-author__body">
+            <div class="rb-eyebrow">Über die Autorin</div>
+            <h3>{author.data.name}</h3>
+            <p>{author.data.bio}</p>
+            {author.data.page && (
+              <a class="rb-pillar__link" href={author.data.page}>Vita ansehen →</a>
+            )}
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    {/* Verwandte Artikel */}
+    {related.length > 0 && (
+      <section class="rb-section rb-section--cream">
+        <div class="rb-wrap">
+          <header class="rb-magazin-header" style="margin-bottom: 32px;">
+            <span class="rb-eyebrow">Weiterlesen</span>
+            <h2>Mehr zu diesem Thema</h2>
+          </header>
+          <div class="rb-magazin-grid">
+            {related.map((entry) => <ArticleCard entry={entry} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+  </article>
+</BaseLayout>
+
+<script>
+  // Reading-Progress-Bar (lightweight, ohne Framework)
+  const bar = document.getElementById('rb-mag-bar');
+  if (bar) {
+    const onScroll = () => {
+      const h = document.documentElement;
+      const scrolled = h.scrollTop;
+      const max = h.scrollHeight - h.clientHeight;
+      const pct = max > 0 ? (scrolled / max) * 100 : 0;
+      bar.style.width = `${pct}%`;
+    };
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+</script>
+
+<style>
+  .rb-mag-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    list-style: none; padding: 0;
+    margin: 48px 0 0;
+  }
+  .rb-mag-tags li {
+    font-family: var(--rb-font-body);
+    font-size: var(--rb-text-sm);
+    color: var(--rb-ink-500);
+    padding: 4px 12px;
+    background: var(--rb-gold-50);
+    border-radius: var(--rb-radius-pill);
+  }
+  .rb-mag-faq {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 1px solid var(--rb-ink-100);
+  }
+  .rb-mag-faq h2 { font-family: var(--rb-font-display); margin-bottom: 24px; }
+  .rb-mag-faq__item {
+    border-bottom: 1px solid var(--rb-ink-100);
+    padding: 16px 0;
+  }
+  .rb-mag-faq__item summary {
+    font-family: var(--rb-font-body);
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--rb-ink-900);
+    list-style: none;
+    position: relative;
+    padding-right: 32px;
+  }
+  .rb-mag-faq__item summary::-webkit-details-marker { display: none; }
+  .rb-mag-faq__item summary::after {
+    content: '+';
+    position: absolute; right: 0; top: 0;
+    font-size: 24px; line-height: 1;
+    color: var(--rb-gold-700);
+    transition: transform var(--rb-dur-1) var(--rb-ease);
+  }
+  .rb-mag-faq__item[open] summary::after { transform: rotate(45deg); }
+  .rb-mag-faq__item p {
+    margin: 12px 0 0;
+    font-family: var(--rb-font-body);
+    color: var(--rb-ink-700);
+    line-height: var(--rb-leading-loose);
+  }
+  .rb-mag-author {
+    display: flex; gap: 24px;
+    margin-top: 64px;
+    padding: 32px;
+    background: var(--rb-gold-50);
+    border-radius: var(--rb-radius-md);
+    align-items: flex-start;
+  }
+  .rb-mag-author__avatar {
+    width: 96px; height: 96px;
+    border-radius: var(--rb-radius-pill);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .rb-mag-author__body h3 {
+    font-family: var(--rb-font-display);
+    margin: 4px 0 8px;
+  }
+  .rb-mag-author__body p {
+    font-family: var(--rb-font-body);
+    color: var(--rb-ink-700);
+    line-height: var(--rb-leading-loose);
+    margin: 0 0 12px;
+  }
+</style>

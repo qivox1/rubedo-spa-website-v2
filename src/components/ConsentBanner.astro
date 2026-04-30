@@ -1,0 +1,98 @@
+---
+/**
+ * Cookie-Consent — Klaro (kostenfrei, OSS).
+ * Konfiguration entkoppelt vom Banner-Code, damit später leicht
+ * weitere Services (Meta-Pixel, etc.) ergänzt werden können.
+ */
+---
+
+<script is:inline>
+  // Klaro-Konfig — Default: alle nicht-essentiellen Services aus.
+  window.klaroConfig = {
+    version: 1,
+    elementID: 'klaro',
+    storageMethod: 'cookie',
+    cookieName: 'klaro',
+    cookieExpiresAfterDays: 180,
+    default: false,
+    mustConsent: false,
+    acceptAll: true,
+    hideDeclineAll: false,
+    hideLearnMore: false,
+    noticeAsModal: false,
+    htmlTexts: true,
+    lang: 'de',
+    translations: {
+      de: {
+        consentModal: {
+          title: 'Datenschutz-Einstellungen',
+          description:
+            'Wir nutzen Cookies, um diese Webseite zu betreiben und um anonym auszuwerten, wie sie genutzt wird. Bitte triff hier deine Auswahl. Mehr Informationen findest du in unserer <a href="/datenschutz/">Datenschutzerklärung</a>.',
+        },
+        consentNotice: {
+          title: '',
+          description:
+            'Wir nutzen Cookies für anonyme Statistik. {purposes}',
+          changeDescription: '',
+          learnMore: 'Einstellungen',
+        },
+        ok: 'Alle akzeptieren',
+        decline: 'Nur notwendige',
+        save: 'Auswahl speichern',
+        purposes: {
+          analytics: 'Statistik',
+          marketing: 'Marketing',
+          functional: 'Funktional',
+        },
+        purposeItem: { service: 'Service', services: 'Services' },
+      },
+    },
+    services: [
+      {
+        name: 'google-tag-manager',
+        title: 'Google Tag Manager',
+        description: 'Steuert das Laden weiterer Analyse-Werkzeuge.',
+        purposes: ['analytics'],
+        cookies: [['_dc_gtm_*', '/', '.rubedo-spa.de']],
+        onAccept: `
+          if (typeof gtag === 'function') {
+            gtag('consent','update',{
+              ad_storage:'granted',
+              analytics_storage:'granted',
+              ad_user_data:'granted',
+              ad_personalization:'granted'
+            });
+          }
+        `,
+        onDecline: `
+          if (typeof gtag === 'function') {
+            gtag('consent','update',{
+              ad_storage:'denied',
+              analytics_storage:'denied',
+              ad_user_data:'denied',
+              ad_personalization:'denied'
+            });
+          }
+        `,
+      },
+      {
+        name: 'google-analytics',
+        title: 'Google Analytics 4',
+        description: 'Anonymisierte Nutzungsstatistik (IP-Anonymisierung aktiv).',
+        purposes: ['analytics'],
+        cookies: [
+          ['_ga', '/', '.rubedo-spa.de'],
+          [/^_ga_.*/, '/', '.rubedo-spa.de'],
+        ],
+      },
+    ],
+  };
+</script>
+
+<script is:inline async src="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js"></script>
+
+<noscript>
+  <p style="position:fixed;bottom:0;left:0;right:0;padding:12px;background:var(--rb-ink-900);color:var(--rb-gold-100);font-family:var(--rb-font-body);font-size:14px;text-align:center;z-index:9999;">
+    Diese Website nutzt Statistik-Cookies. Ohne JavaScript siehst du diese Hinweis-Zeile dauerhaft.
+  </p>
+</noscript>

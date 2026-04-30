@@ -1,0 +1,161 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const title = 'Körperformung — Druckwellen, Wraps & Bandagen Minden';
+const description = 'Druckwellen-Anwendungen, Body-Wraps mit Botanicals und Salzkristall-Bandagen für ein klares, wohliges Körpergefühl. Im Rubedo Spa Minden.';
+const heroImage = '/images/druckwellen-hero.webp';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  heroImage={heroImage}
+>
+
+  <article class="rb-page" data-page='koerperformung'>
+    <section class="rb-block-hero rb-block-hero--photo">
+        <div class="rb-block-hero__photo">
+          <img src="/images/druckwellen-hero.webp" alt="Druckwellen-Manschette mit Aubergine-Akzent" />
+          <div class="rb-wrap">
+            <div class="rb-block-hero__copy">
+              <span class="rb-block-hero__eyebrow">Kryo Vital · Körperformung</span>
+              <h1>Leichtere Beine. Klareres Körpergefühl.</h1>
+              <p class="rb-block-hero__subline">Druckwellen-Anwendungen, Wraps und Wirkstoff-Bandagen — als ergänzende Anwendungen in deinem Vital-Plan.</p>
+              <div class="rb-block-hero__cta">
+                <a href="/termin-buchen/" class="rb-btn rb-btn--primary rb-btn--lg">Druckwellen-Erstanwendung · 45 €</a>
+                <a href="#" class="rb-btn rb-btn--ghost">Bandagen-Linien</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rb-block-imgtext rb-section--paper">
+        <div class="rb-wrap">
+          <div class="rb-imgtext rb-imgtext--reverse">
+            <div class="rb-imgtext__media">
+              <img src="/images/druckwellen-content-cuff.webp" alt="Druckwellen-Manschette Detail mit Aubergine-Akzent" />
+            </div>
+            <div class="rb-imgtext__body">
+              <span class="rb-eyebrow">Was die Druckwellen-Anwendung ist</span>
+              <h2>Rhythmische Kompressions-Wellness.</h2>
+              <p>Die Druckwellen-Anwendung — international auch als Pressotherapie bekannt — ist eine rhythmische Kompressions-Anwendung, bei der speziell konstruierte Manschetten in einem programmierten Wellenrhythmus Beine, Bauch und Arme bearbeiten. Du liegst entspannt, die Manschetten arbeiten in einem ruhigen Rhythmus, und nach 40 bis 60 Minuten verlässt du den Raum mit einem Körpergefühl, das viele Gäste als „leichter und klarer" beschreiben.</p>
+              <p>Wir verwenden den Begriff „Druckwellen-Anwendung" bewusst — <strong>Lymphdrainage</strong> als Heilmittel-Begriff ist Physiotherapeut*innen und Ärztinnen vorbehalten und beschreibt eine therapeutische, manuelle Methode.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bandagen-Linien -->
+      <section class="rb-section rb-section--cream">
+        <div class="rb-wrap">
+          <div class="rb-block-cards__head">
+            <div><span class="rb-eyebrow">Wirkstoff-Bandagen</span><h2>Fünf Linien für leichtere Beine.</h2></div>
+          </div>
+          <div class="rb-cards">
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--mar rb-tcard__media--photo"><img src="/images/bandage-content-salz.webp" alt="" /></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>40 Min</span><span>Mineralisch</span></div><h3 class="rb-tcard__title">Marine Salt</h3><p class="rb-tcard__text">Mineralisch-frische Linie. Kühler, klarer Charakter — beliebt im Sommer und in warmen Studio-Tagen.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">99 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--slim"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>40 Min</span><span>Pflegend</span></div><h3 class="rb-tcard__title">Slim-Cell</h3><p class="rb-tcard__text">Pflegende Linie mit Schwerpunkt auf Wassereinlagerungen-Empfinden — als ruhige, ergänzende Anwendung.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">99 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--warm"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3c0 4-4 4-4 8s4 4 4 8M16 5c0 3-3 3-3 7s3 3 3 7"/></svg></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>40 Min</span><span>Wärmend</span></div><h3 class="rb-tcard__title">Warme Cell-Effect</h3><p class="rb-tcard__text">Wärmend-aktivierende Linie. Schöne Wahl für die Wahrnehmung eines warmen, weichen Körperempfindens.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">99 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--kryo"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v20M5 5l14 14M5 19L19 5"/></svg></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>40 Min</span><span>Kühl</span></div><h3 class="rb-tcard__title">Kryo Tonic</h3><p class="rb-tcard__text">Frisch-tonisierende Linie. Verbindet das Bandagen-Ritual mit einem leichten Kälteempfinden.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">99 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--legs"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 3v8l-3 10M15 3v8l3 10"/></svg></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>40 Min</span><span>Klassiker</span></div><h3 class="rb-tcard__title">Flying Legs</h3><p class="rb-tcard__text">Klassische Linie für müde wahrgenommene Beine. Beliebt nach langen Stunden auf den Füßen oder nach Reisen.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">99 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+            <article class="rb-tcard"><div class="rb-tcard__media rb-tcard__media--wrap rb-tcard__media--photo"><img src="/images/wrap-content-botanicals.webp" alt="" /></div>
+              <div class="rb-tcard__body"><div class="rb-tcard__meta"><span>60–90 Min</span><span>Wrap</span></div><h3 class="rb-tcard__title">Body Slimming Wrap</h3><p class="rb-tcard__text">Wickel-Anwendung mit pflegenden Wirkstoffen — Total, Fast oder Silhouette. Pflegt das Hautbild.</p><div class="rb-tcard__foot"><span class="rb-tcard__price">130–170 €</span><a href="#" class="rb-tcard__cta">Details</a></div></div></article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Druckwellen -->
+      <section class="rb-block-pricing">
+        <div class="rb-wrap">
+          <div class="rb-pricing__head"><span class="rb-eyebrow">Druckwellen · Konditionen</span><h2>Anwendungen & Karten.</h2></div>
+          <div class="rb-pricing-tables">
+            <div class="rb-pricing-table">
+              <h3>Druckwellen-Total</h3>
+              <p class="rb-pricing-table__caption">60 Min · Beine, Bauch und Arme</p>
+              <ul class="rb-pricing-rows">
+                <li><span>Einzelanwendung</span><span class="rb-pricing-rows__price">66 €</span></li>
+                <li><span>5er-Karte</span><span class="rb-pricing-rows__price">305 €</span></li>
+                <li><span>10er-Karte</span><span class="rb-pricing-rows__price">560 €</span></li>
+              </ul>
+            </div>
+            <div class="rb-pricing-table">
+              <h3>Druckwellen-Fast</h3>
+              <p class="rb-pricing-table__caption">40 Min · Beine</p>
+              <ul class="rb-pricing-rows">
+                <li class="is-highlight"><span>Einzelanwendung <span class="rb-pricing-rows__badge">empfohlen für Einstieg</span></span><span class="rb-pricing-rows__price">45 €</span></li>
+                <li><span>5er-Karte</span><span class="rb-pricing-rows__price">200 €</span></li>
+                <li><span>10er-Karte</span><span class="rb-pricing-rows__price">350 €</span></li>
+              </ul>
+            </div>
+            <div class="rb-pricing-table">
+              <h3>Kombi · Druckwellen + Bandage</h3>
+              <p class="rb-pricing-table__caption">60 Min · in Kombination mit einer Bandagen-Linie</p>
+              <ul class="rb-pricing-rows">
+                <li><span>Einzelanwendung</span><span class="rb-pricing-rows__price">220 €</span></li>
+                <li><span>5er-Karte</span><span class="rb-pricing-rows__price">1.075 €</span></li>
+                <li><span>10er-Karte</span><span class="rb-pricing-rows__price">2.000 €</span></li>
+              </ul>
+            </div>
+            <div class="rb-pricing-table">
+              <h3>Body Slimming Wraps</h3>
+              <p class="rb-pricing-table__caption">Drei Linien · Total · Fast · Silhouette</p>
+              <ul class="rb-pricing-rows">
+                <li><span>Total Wrap (90 Min)</span><span class="rb-pricing-rows__price">170 €</span></li>
+                <li><span>Fast Wrap (60 Min)</span><span class="rb-pricing-rows__price">130 €</span></li>
+                <li><span>Silhouette (90 Min)</span><span class="rb-pricing-rows__price">170 €</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rb-block-duo rb-section--cream">
+        <div class="rb-wrap">
+          <div class="rb-duo">
+            <div class="rb-duo__panel rb-duo__panel--check">
+              <h3>Wann die Anwendung sinnvoll sein kann</h3>
+              <ul>
+                <li>Wenn du häufig stehst oder sitzt und am Abend ein Spannungsgefühl in den Beinen wahrnimmst.</li>
+                <li>Als Begleitung zu einer Vitalitäts- oder Körperformungs-Routine.</li>
+                <li>Im Rahmen eines Wellness-Tages — gerne in Kombination mit Bandage oder Kryo-Suite.</li>
+              </ul>
+            </div>
+            <div class="rb-duo__panel rb-duo__panel--cross">
+              <h3>Wann die Anwendung nicht passt</h3>
+              <ul>
+                <li>Bei akuten Thrombosen oder bekannten Gefäßerkrankungen.</li>
+                <li>Bei akuten Entzündungen, Hautinfektionen oder offenen Wunden im Anwendungsbereich.</li>
+                <li>In der Schwangerschaft (außer mit ausdrücklicher ärztlicher Abklärung).</li>
+                <li>Bei einigen Herz- und Kreislauferkrankungen — bitte vorher ärztlich abklären.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="rb-block-disclaimer">
+        <div class="rb-wrap rb-wrap--narrow">
+          <div class="rb-disclaimer">
+            <div class="rb-disclaimer__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01"/></svg></div>
+            <div>
+              <h4>Sprachlicher Hinweis</h4>
+              <p>Die Druckwellen-Anwendung ist eine Wellness-Anwendung — keine medizinische Lymphdrainage. Cellulite und Ödeme sind keine Indikationen, mit denen wir arbeiten; entsprechende Begriffe verwenden wir bewusst nicht.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- ============================================================
+         PAGE 7 · MONICA GALLETTI (Bio)
+         URL: /monica-galletti/
+         ============================================================ -->
+  </article>
+
+</BaseLayout>

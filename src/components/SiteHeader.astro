@@ -1,0 +1,114 @@
+---
+import { site } from '@/lib/site';
+
+interface Props {
+  /** Pfad der aktuellen Seite — für Active-State im Menü. */
+  currentPath?: string;
+}
+const { currentPath = '/' } = Astro.props;
+
+function isActive(href: string): boolean {
+  if (href === '/') return currentPath === '/';
+  return currentPath.startsWith(href);
+}
+---
+
+<header class="rb-header" data-sticky>
+  <div class="rb-wrap rb-header__inner">
+    <a class="rb-brand rb-brand--logo" href="/" aria-label={`${site.name} — Startseite`}>
+      <img
+        class="rb-brand__logo"
+        src="/logo-rubedo-spa.png"
+        alt={site.name}
+        width="64"
+        height="64"
+        fetchpriority="high"
+      />
+    </a>
+
+    <nav class="rb-nav" aria-label="Hauptnavigation">
+      {site.nav.map((item) => (
+        <a
+          class={`rb-nav__item${isActive(item.href) ? ' is-active' : ''}`}
+          href={item.href}
+          aria-current={isActive(item.href) ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <a class="rb-btn rb-btn--primary" href="/termin-buchen/">Termin buchen</a>
+
+    <button
+      class="rb-mobile-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+      data-mobile-toggle
+    >
+      <span class="sr-only">Menü öffnen</span>
+      <span aria-hidden="true">≡</span>
+    </button>
+  </div>
+
+  <nav class="rb-mobile-nav" id="mobile-nav" hidden aria-label="Mobile Navigation">
+    {site.nav.map((item) => (
+      <a class="rb-mobile-nav__item" href={item.href}>
+        {item.label}
+      </a>
+    ))}
+    <a class="rb-btn rb-btn--primary" href="/termin-buchen/">Termin buchen</a>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('[data-mobile-toggle]');
+  const menu = document.getElementById('mobile-nav');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      if (open) {
+        menu.setAttribute('hidden', '');
+      } else {
+        menu.removeAttribute('hidden');
+      }
+    });
+  }
+</script>
+
+<style>
+  /* Mobile-Menu Inline-Styles — minimal, der Rest kommt aus template.css */
+  .rb-mobile-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--rb-ink-300);
+    color: var(--rb-ink-900);
+    width: 44px; height: 44px;
+    border-radius: var(--rb-radius-md);
+    font-size: 24px; line-height: 1;
+    cursor: pointer;
+  }
+  .rb-mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 32px;
+    border-top: 1px solid var(--rb-ink-100);
+    background: var(--rb-paper);
+  }
+  .rb-mobile-nav__item {
+    text-decoration: none;
+    color: var(--rb-ink-900);
+    font-family: var(--rb-font-body);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rb-ink-100);
+  }
+  @media (max-width: 920px) {
+    .rb-nav { display: none !important; }
+    .rb-header__inner > .rb-btn { display: none; }
+    .rb-mobile-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .rb-mobile-nav:not([hidden]) { display: flex; }
+  }
+</style>

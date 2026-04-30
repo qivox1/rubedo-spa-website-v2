@@ -1,0 +1,73 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import ArticleCard from '@/components/ArticleCard.astro';
+
+const categorySlug = (cat: string) =>
+  cat.toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+
+export async function getStaticPaths() {
+  const all = await getCollection('magazin', ({ data }) => !data.draft);
+  const cats = Array.from(new Set(all.map((a) => a.data.category)));
+  const slugify = (cat: string) =>
+    cat.toLowerCase()
+      .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  return cats.map((cat) => ({
+    params: { category: slugify(cat) },
+    props: { category: cat, entries: all.filter((a) => a.data.category === cat) },
+  }));
+}
+
+interface Props {
+  category: string;
+  entries: Awaited<ReturnType<typeof getCollection<'magazin'>>>;
+}
+const { category, entries } = Astro.props;
+const sorted = entries.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+const title = `Magazin · ${category} — Rubedo Spa`;
+const description = `Beiträge aus der Kategorie „${category}" — Themen aus dem Longevity-Studio Rubedo Spa Minden.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="magazin">
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap">
+
+        <header class="rb-magazin-header">
+          <span class="rb-eyebrow">Magazin · Kategorie</span>
+          <h1 class="rb-display">{category}</h1>
+          <p class="rb-magazin-header__intro">
+            {sorted.length} {sorted.length === 1 ? 'Beitrag' : 'Beiträge'} in dieser Kategorie.
+            <a href="/magazin/" style="color: var(--rb-gold-700); margin-left: 8px;">← Alle Themen</a>
+          </p>
+        </header>
+
+        <div class="rb-magazin-grid">
+          {sorted.map((entry) => <ArticleCard entry={entry} />)}
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-magazin-header { max-width: 720px; margin: 0 0 48px; }
+  .rb-magazin-header__intro {
+    font-family: var(--rb-font-body);
+    color: var(--rb-ink-500);
+    line-height: var(--rb-leading-loose);
+    font-size: var(--rb-text-md);
+    margin-top: 16px;
+  }
+  .rb-magazin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+  }
+</style>

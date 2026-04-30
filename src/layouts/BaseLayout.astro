@@ -1,0 +1,129 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import { site } from '@/lib/site';
+import SiteTopbar from '@/components/SiteTopbar.astro';
+import SiteHeader from '@/components/SiteHeader.astro';
+import SiteFooter from '@/components/SiteFooter.astro';
+import SchemaOrg from '@/components/SchemaOrg.astro';
+import Analytics from '@/components/Analytics.astro';
+import ConsentBanner from '@/components/ConsentBanner.astro';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Page-spezifisches Hero-Bild (LCP-Preload). */
+  heroImage?: string;
+  /** Canonical URL — Default: aktuelle Astro-URL. */
+  canonical?: string;
+  /** Optional: ergänzende JSON-LD Blöcke. */
+  schemaExtras?: Record<string, unknown>[];
+  /** Optional: Open-Graph-Bild. */
+  ogImage?: string;
+  /** noindex setzen (z. B. für 404). */
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  heroImage,
+  canonical,
+  schemaExtras,
+  ogImage,
+  noindex = false,
+} = Astro.props;
+
+const fullTitle = title.includes('Rubedo') ? title : `${title} | Rubedo Spa Minden`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).href;
+const ogImg = ogImage ?? `${site.url}/logo-rubedo-spa.png`;
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
+
+    {/* Open Graph / Twitter */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImg} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content={site.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImg} />
+
+    <meta name="theme-color" content="#FBF8F1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    {/* Favicons */}
+    <link rel="icon" type="image/svg+xml" href="/logo-rubedo-spa.svg" />
+    <link rel="alternate icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/logo-rubedo-spa.png" />
+
+    {/* Performance: Preconnect zu Google Fonts (TODO: später self-hosten) */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    {/* RSS-Feed des Magazins */}
+    <link rel="alternate" type="application/rss+xml" title={`${site.name} — Magazin`} href="/magazin/rss.xml" />
+
+    {/* LCP-Preload für Hero-Bild */}
+    {heroImage && (
+      <link rel="preload" as="image" href={heroImage} fetchpriority="high" />
+    )}
+
+    {/* View-Transitions / Astro ClientRouter */}
+    <ClientRouter fallback="swap" />
+
+    {/* Strukturierte Daten */}
+    <SchemaOrg extras={schemaExtras} />
+
+    {/* Analytics — bevor Klaro lädt, mit Consent Mode default-deny */}
+    <Analytics />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Zum Hauptinhalt springen</a>
+
+    <SiteTopbar />
+    <SiteHeader currentPath={currentPath} />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <SiteFooter />
+
+    {/* Cookie-Consent — am Ende des Body, damit Banner immer sichtbar */}
+    <ConsentBanner />
+
+    {/* Reveal-On-Scroll: progressive enhancement, kein Bundle */}
+    <script>
+      const els = document.querySelectorAll<HTMLElement>('[data-reveal]');
+      if ('IntersectionObserver' in window && els.length) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-revealed');
+              io.unobserve(e.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+        els.forEach((el) => io.observe(el));
+      } else {
+        els.forEach((el) => el.classList.add('is-revealed'));
+      }
+    </script>
+  </body>
+</html>

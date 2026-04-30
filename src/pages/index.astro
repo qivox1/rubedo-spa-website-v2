@@ -1,0 +1,194 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = `${site.name} — ${site.claim}`;
+const description = `Rubedo Spa Minden — Longevity-Studio mit drei Säulen: DNA Skin Intelligence, Kryo Vital, Inner Source. Geführt von Monica Galletti.`;
+const heroImage = '/images/rubedo-suite-hero.webp';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  heroImage={heroImage}
+>
+
+  <article class="rb-page" data-page="startseite">
+
+    {/* HERO */}
+    <section class="rb-block-hero rb-block-hero--photo">
+      <div class="rb-block-hero__photo">
+        <img
+          src={heroImage}
+          alt="Rubedo Suite — Behandlungsraum mit warmem Tageslicht und Aubergine-Akzenten"
+          fetchpriority="high"
+          width="1600"
+          height="900"
+        />
+        <div class="rb-wrap">
+          <div class="rb-block-hero__copy">
+            <span class="rb-block-hero__eyebrow">Longevity-Studio · Minden</span>
+            <h1>Smart Beauty for Conscious Humans.</h1>
+            <p class="rb-block-hero__subline">{site.tagline}</p>
+            <div class="rb-block-hero__micro">
+              <span>Von innen nach außen</span>
+              <span>Drei Säulen</span>
+              <span>Geführt von Monica Galletti</span>
+            </div>
+            <div class="rb-block-hero__cta">
+              <a href="/termin-buchen/" class="rb-btn rb-btn--primary rb-btn--lg">
+                Kostenfreies Erstgespräch sichern
+              </a>
+              <a href="/philosophie/" class="rb-btn rb-btn--ghost">Konzept verstehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* DREI SÄULEN */}
+    <section class="rb-section rb-section--paper" data-reveal>
+      <div class="rb-wrap">
+        <div class="rb-block-pillars__head">
+          <div>
+            <span class="rb-eyebrow">Drei Säulen</span>
+            <h2>Ein System, das deine Pflege trägt — von innen nach außen.</h2>
+          </div>
+          <p>Unser Konzept ruht auf drei gleichwertigen Säulen. Sie greifen ineinander, sind aber jede für sich erfahrbar — als Einstieg oder als Ergänzung zu einer bestehenden Routine.</p>
+        </div>
+
+        <div class="rb-pillars">
+          <article class="rb-pillar" data-reveal>
+            <div class="rb-pillar__num">01</div>
+            <div class="rb-pillar__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M7 4c-3 4-3 12 0 16M17 4c3 4 3 12 0 16M7 4c4 0 6 2 6 4M7 8c4 0 6 2 6 4M7 12c4 0 6 2 6 4M7 16c4 0 6 2 6 4"/></svg>
+            </div>
+            <div class="rb-pillar__eyebrow">Innen · Säule 1</div>
+            <h3 class="rb-pillar__title">DNA Skin Intelligence</h3>
+            <p class="rb-pillar__claim">„Hautpflege, die deinen Code versteht."</p>
+            <p class="rb-pillar__text">
+              Personalisierte Hautpflege auf Basis von 20 Beauty-Genen. 12-Wochen-Plan,
+              Mikronährstoffe, epigenetische Routine — entwickelt mit Beauty ID Switzerland.
+            </p>
+            <a class="rb-pillar__link" href="/dna-skin-intelligence/">Säule entdecken →</a>
+          </article>
+
+          <article class="rb-pillar" data-reveal>
+            <div class="rb-pillar__num">02</div>
+            <div class="rb-pillar__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 5l14 14M5 19L19 5M2 12h20"/></svg>
+            </div>
+            <div class="rb-pillar__eyebrow">Aktivierung · Säule 2</div>
+            <h3 class="rb-pillar__title">Kryo Vital</h3>
+            <p class="rb-pillar__claim">„Kälte als Reiz für Regeneration und Vitalität."</p>
+            <p class="rb-pillar__text">
+              Drei Minuten kontrollierter Kältereiz. Ganzkörper-Kryotherapie, Kryo-Facial,
+              Druckwellen-Anwendungen und Bandagen für ein klares Körpergefühl.
+            </p>
+            <a class="rb-pillar__link" href="/kryo-vital/">Säule entdecken →</a>
+          </article>
+
+          <article class="rb-pillar" data-reveal>
+            <div class="rb-pillar__num">03</div>
+            <div class="rb-pillar__icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 7 8 12 12 17c4-5 4-10 0-15z"/><path d="M12 17v5"/></svg>
+            </div>
+            <div class="rb-pillar__eyebrow">Balance · Säule 3</div>
+            <h3 class="rb-pillar__title">Inner Source Rituals</h3>
+            <p class="rb-pillar__claim">„Atem, Berührung und Stille als bewusste Tiefenarbeit."</p>
+            <p class="rb-pillar__text">
+              Klassische Massage-Rituale (Abhyanga, Hot Stone, Hot Bambu, Balinesisch) treffen
+              neurosomatische Atemarbeit und Mind-Methoden.
+            </p>
+            <a class="rb-pillar__link" href="/inner-source/">Säule entdecken →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    {/* STORY-BLOCK */}
+    <section class="rb-block-imgtext rb-section--cream" data-reveal>
+      <div class="rb-wrap">
+        <div class="rb-imgtext rb-imgtext--reverse">
+          <div class="rb-imgtext__media">
+            <img
+              src="/images/philosophie-content-saeulen.webp"
+              alt="Drei Säulen — Pipette, Eiswürfel, dampfende Schale"
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+          </div>
+          <div class="rb-imgtext__body">
+            <span class="rb-eyebrow">Warum Rubedo</span>
+            <h2>Wellness, das ein System hat — kein Behandlungs-Katalog.</h2>
+            <p>
+              Wellness ist heute oft eine Aneinanderreihung von Behandlungen. Eine Massage
+              hier, ein Produkt dort, eine neue Routine, die nach drei Wochen wieder durch
+              eine andere ersetzt wird. Rubedo entstand aus einer anderen Überzeugung:
+              Schönheit, Gesundheit und Wohlbefinden sind nicht zufällig. Sie folgen einem
+              System — und dieses System ist bei jedem Menschen anders.
+            </p>
+            <p>
+              <strong>Rubedo Spa ist deshalb kein klassisches Spa, sondern ein
+              Longevity-Studio.</strong> Wir begleiten Menschen, die ihre Hautpflege nicht jedes
+              Quartal wechseln, sondern wirklich verstehen wollen.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* PULL QUOTE MIT BILD */}
+    <section
+      class="rb-block-quote rb-block-quote--photo"
+      style="--rb-quote-bg: url('/images/philosophie-content-quote.webp');"
+      data-reveal
+    >
+      <div class="rb-block-quote__inner">
+        <blockquote>
+          Wahre Expertise zeigt sich nicht in der Anzahl von Methoden — sondern in der
+          Fähigkeit, sie präzise und bewusst einzusetzen.
+        </blockquote>
+        <cite>Monica Galletti · Gründerin Rubedo Spa</cite>
+      </div>
+    </section>
+
+    {/* LEAD-MAGNET */}
+    <section class="rb-block-cta" data-reveal>
+      <div class="rb-wrap">
+        <div class="rb-cta-band">
+          <div class="rb-cta-band__body">
+            <span class="rb-eyebrow">Kostenfreies Erstgespräch</span>
+            <h3>15 Minuten Videoberatung — finde heraus, welche Säule für dich passt.</h3>
+            <p>Ohne Verpflichtung. Persönlich mit Monica. Im Anschluss entscheidest du, ob und wie du beginnen möchtest.</p>
+          </div>
+          <div class="rb-cta-band__action">
+            <a href="/termin-buchen/" class="rb-btn rb-btn--ghost-light">Termin sichern →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* HWG-Disclaimer */}
+    <section class="rb-block-disclaimer">
+      <div class="rb-wrap rb-wrap--narrow">
+        <div class="rb-disclaimer">
+          <div class="rb-disclaimer__icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16v.01"/></svg>
+          </div>
+          <div>
+            <h4>Wichtiger Hinweis</h4>
+            <p>
+              Rubedo Spa ist ein Wellness- und Pflege-Studio, keine medizinische Praxis. Wir
+              behandeln keine Krankheiten und sprechen keine Heilversprechen aus. Bei
+              medizinischen Fragen wenden Sie sich bitte an Ihre Ärztin oder Ihren Arzt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+</BaseLayout>

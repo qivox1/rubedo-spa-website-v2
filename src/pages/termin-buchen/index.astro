@@ -1,0 +1,161 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Termin buchen — Rubedo Spa Minden';
+const description = '15 Minuten kostenfreies Erstgespräch oder direkt einen Termin im Rubedo Spa buchen. Persönlich mit Monica Galletti.';
+const hasBookingEmbed = !!site.booking.embedUrl;
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="termin-buchen">
+
+    <section class="rb-block-hero rb-block-hero--text">
+      <div class="rb-wrap rb-wrap--narrow">
+        <div class="rb-block-hero__copy">
+          <span class="rb-block-hero__eyebrow">Termin · Beratung</span>
+          <h1>Lass uns sprechen.</h1>
+          <p class="rb-block-hero__subline">
+            15 Minuten Videoberatung. Persönlich mit Monica. Im Anschluss entscheidest du, ob und wie du beginnen möchtest.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap rb-wrap--narrow">
+
+        {hasBookingEmbed ? (
+          <div class="rb-booking-embed" data-reveal>
+            <iframe
+              src={site.booking.embedUrl}
+              width="100%"
+              height="720"
+              frameborder="0"
+              loading="lazy"
+              title="Termin buchen"
+              style="border:0;border-radius:var(--rb-radius-md);"
+            ></iframe>
+          </div>
+        ) : (
+          <div class="rb-booking-fallback" data-reveal>
+            <div class="rb-eyebrow">Online-Buchung in Vorbereitung</div>
+            <h2>Schreib uns kurz — wir melden uns innerhalb eines Werktags.</h2>
+            <form class="rb-booking-form" name="termin" method="POST" action="/api/termin" data-reveal>
+              <div class="rb-form-row">
+                <label>
+                  <span>Name *</span>
+                  <input type="text" name="name" required autocomplete="name" />
+                </label>
+                <label>
+                  <span>E-Mail *</span>
+                  <input type="email" name="email" required autocomplete="email" />
+                </label>
+              </div>
+              <div class="rb-form-row">
+                <label>
+                  <span>Telefon</span>
+                  <input type="tel" name="phone" autocomplete="tel" />
+                </label>
+                <label>
+                  <span>Ich interessiere mich für …</span>
+                  <select name="interest">
+                    <option value="erstgespraech">Kostenfreies Erstgespräch (15 min)</option>
+                    <option value="dna-skin">DNA Skin Intelligence</option>
+                    <option value="kryo">Kryo Vital · Ganzkörper</option>
+                    <option value="kryo-facial">Kryo Vital · Facial</option>
+                    <option value="koerperformung">Körperformung · Druckwellen / Wraps</option>
+                    <option value="inner-source">Inner Source · Massage / Atem</option>
+                    <option value="anderes">Etwas anderes</option>
+                  </select>
+                </label>
+              </div>
+              <label>
+                <span>Nachricht (optional)</span>
+                <textarea name="message" rows="4"></textarea>
+              </label>
+
+              {/* Cloudflare Turnstile Container — wird via Klaro-Consent geladen */}
+              <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY"></div>
+
+              <label class="rb-form-consent">
+                <input type="checkbox" name="dsgvo" required />
+                <span>Ich habe die <a href="/datenschutz/">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Anfrage zu.</span>
+              </label>
+
+              <button type="submit" class="rb-btn rb-btn--primary rb-btn--lg">Anfrage senden</button>
+            </form>
+          </div>
+        )}
+
+        <aside class="rb-booking-aside">
+          <div>
+            <span class="rb-eyebrow">Alternativ</span>
+            <h3>Direkt erreichen</h3>
+            <ul>
+              <li><a href={`tel:${site.contact.phoneE164}`}>{site.contact.phoneDisplay}</a></li>
+              <li><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></li>
+              <li>Mo–Fr 09:00–19:00 Uhr</li>
+            </ul>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-booking-form {
+    display: flex; flex-direction: column; gap: 16px;
+    margin-top: 24px;
+  }
+  .rb-form-row {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .rb-form-row { grid-template-columns: 1fr; }
+  }
+  .rb-booking-form label {
+    display: flex; flex-direction: column; gap: 6px;
+    font-family: var(--rb-font-body); font-size: 14px;
+  }
+  .rb-booking-form span { color: var(--rb-ink-700); letter-spacing: 0.04em; }
+  .rb-booking-form input,
+  .rb-booking-form select,
+  .rb-booking-form textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--rb-ink-300);
+    border-radius: var(--rb-radius-md);
+    font-family: inherit; font-size: 16px;
+    background: var(--rb-paper); color: var(--rb-ink-900);
+    transition: border-color var(--rb-dur-1) var(--rb-ease);
+  }
+  .rb-booking-form input:focus,
+  .rb-booking-form select:focus,
+  .rb-booking-form textarea:focus {
+    outline: 2px solid var(--rb-gold-500);
+    outline-offset: 2px;
+    border-color: var(--rb-gold-500);
+  }
+  .rb-form-consent {
+    flex-direction: row !important;
+    gap: 10px !important;
+    align-items: flex-start;
+  }
+  .rb-form-consent input { width: 18px; height: 18px; margin-top: 2px; }
+  .rb-form-consent span { font-size: 13px; color: var(--rb-ink-500); }
+  .rb-form-consent a { color: var(--rb-gold-700); text-decoration: underline; }
+
+  .rb-booking-aside {
+    margin-top: 48px;
+    padding: 24px;
+    background: var(--rb-gold-50);
+    border-radius: var(--rb-radius-md);
+  }
+  .rb-booking-aside h3 { margin: 4px 0 12px; font-family: var(--rb-font-display); }
+  .rb-booking-aside ul { list-style: none; padding: 0; margin: 0; line-height: 2; }
+  .rb-booking-aside a { color: var(--rb-gold-700); text-decoration: none; }
+  .rb-booking-aside a:hover { text-decoration: underline; }
+</style>
