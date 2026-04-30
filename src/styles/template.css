@@ -2895,8 +2895,33 @@ a { color: inherit; }
   background: var(--rb-paper);
   border: 1px solid var(--rb-ink-100);
   border-radius: var(--rb-radius-md);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transition: transform var(--rb-dur-2) var(--rb-ease), box-shadow var(--rb-dur-2) var(--rb-ease);
+}
+.rb-ritual:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--rb-shadow-md);
+}
+.rb-ritual__media {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--rb-ink-100);
+}
+.rb-ritual__media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--rb-dur-3) var(--rb-ease);
+}
+.rb-ritual:hover .rb-ritual__media img {
+  transform: scale(1.02);
+}
+.rb-ritual__body {
   padding: var(--rb-space-6);
   display: flex; flex-direction: column;
+  flex: 1;
 }
 .rb-ritual__when {
   font-family: var(--rb-font-body);
