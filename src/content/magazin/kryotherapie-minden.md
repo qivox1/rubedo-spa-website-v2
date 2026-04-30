@@ -37,7 +37,7 @@ faq:
   - question: "Wie häufig kann man Kryo nutzen?"
     answer: "Für regenerative Effekte sind 2–3 Anwendungen pro Woche typisch. Längerfristig wirken auch wöchentliche Termine — der Plan kommt aus dem Erstgespräch."
   - question: "Friert man dabei nicht?"
-    answer: "Da die Luft trocken ist, fühlt sich der Aufenthalt anders an als z. B. ein kalter Wind im Winter. Die meisten Klienten beschreiben es als „prickelnd-frisch" — und kommen wieder."
+    answer: "Da die Luft trocken ist, fühlt sich der Aufenthalt anders an als z. B. ein kalter Wind im Winter. Die meisten Klienten beschreiben es als „prickelnd-frisch” — und kommen wieder."
 related:
   - wellness-minden-technologie
 ---
