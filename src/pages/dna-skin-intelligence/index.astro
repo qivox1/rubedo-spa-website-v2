@@ -243,22 +243,96 @@ const heroImage = '/images/dna-skin-hero.webp';
     </section>
 
     <!-- ============================================================
-         ABLAUF · 5 Schritte
+         ABLAUF · Step Theatre — Featured Image über 5 Schritten
          ============================================================ -->
-    <section class="rb-section rb-section--cream" id="programm">
+    <section class="rb-block-step-theatre rb-section--cream" id="programm">
       <div class="rb-wrap">
-        <div class="rb-block-steps__head">
+        <div class="rb-step-theatre__head">
           <span class="rb-eyebrow">Ablauf</span>
           <h2>Vom Speichel-Test zum 12-Wochen-Plan.</h2>
+          <p>Fünf ruhige Schritte. Bewege deinen Cursor über einen Schritt — oder tippe auf dem Smartphone — um den jeweiligen Moment zu sehen.</p>
         </div>
-        <div class="rb-steps">
-          <div class="rb-step"><div class="rb-step__num">1</div><div class="rb-step__title">Speichelprobe</div><p class="rb-step__text">Anonym über QR-Code. Vor Ort oder per Versand.</p></div>
-          <div class="rb-step"><div class="rb-step__num">2</div><div class="rb-step__title">Auswertung</div><p class="rb-step__text">Im zertifizierten Genlabor (Novogenia, Salzburg) in 2–3 Wochen.</p></div>
-          <div class="rb-step"><div class="rb-step__num">3</div><div class="rb-step__title">DNA-Report</div><p class="rb-step__text">20 Beauty-Gene · Kollagen · UV · oxidativer Stress · biologisches Hautalter.</p></div>
-          <div class="rb-step"><div class="rb-step__num">4</div><div class="rb-step__title">Beratung</div><p class="rb-step__text">Persönliches Gespräch mit Monica — dein 12-Wochen-Plan entsteht.</p></div>
-          <div class="rb-step"><div class="rb-step__num">5</div><div class="rb-step__title">Routine</div><p class="rb-step__text">Naturkosmetik, Mikronährstoffe, epigenetische Routine.</p></div>
+
+        <div class="rb-step-theatre__stage" data-theatre>
+          <img src="/images/dna-step-1-speichelprobe.webp" alt="Probenröhrchen mit weißem Schraubdeckel und QR-Code-Karte auf cremefarbenem Marmor" data-step-img="1" loading="eager" width="1680" height="720" />
+          <img src="/images/dna-step-2-auswertung.webp" alt="Reagenzglas-Halter mit drei Probenröhrchen in warmem Goldlicht — zertifiziertes Genlabor" data-step-img="2" loading="lazy" width="1680" height="720" />
+          <img src="/images/dna-step-3-dna-report.webp" alt="Rubedo Spa DNA Report Booklet mit goldener Serifenschrift, Lesebrille und botanischem Zweig auf Marmor" data-step-img="3" loading="lazy" width="1680" height="720" />
+          <img src="/images/dna-step-4-beratung.webp" alt="Persönliche Beratung am Holztisch — zwei Hände mit Teetasse und aufgeschlagenem Booklet" data-step-img="4" loading="lazy" width="1680" height="720" />
+          <img src="/images/dna-step-5-routine.webp" alt="Personalisierte Rubedo Spa Pflegelinie — drei Apothekerflaschen Serum, Tonic, Elixir mit Mikronährstoff-Kapseln" data-step-img="5" loading="lazy" width="1680" height="720" />
+
+          <div class="rb-step-theatre__caption" data-step-caption="1">
+            <span class="rb-step-theatre__caption-eyebrow">Schritt 01 · Speichelprobe</span>
+            Eine kleine Geste, ein anonymer QR-Code — und der Anfang deines persönlichen Plans.
+          </div>
+          <div class="rb-step-theatre__caption" data-step-caption="2">
+            <span class="rb-step-theatre__caption-eyebrow">Schritt 02 · Auswertung</span>
+            Zwei bis drei Wochen ruhige Präzision — im zertifizierten Genlabor in Salzburg.
+          </div>
+          <div class="rb-step-theatre__caption" data-step-caption="3">
+            <span class="rb-step-theatre__caption-eyebrow">Schritt 03 · DNA-Report</span>
+            Zwanzig Beauty-Gene, acht Hautalterungsfaktoren — verständlich gebunden in deinem persönlichen Booklet.
+          </div>
+          <div class="rb-step-theatre__caption" data-step-caption="4">
+            <span class="rb-step-theatre__caption-eyebrow">Schritt 04 · Beratung</span>
+            Dein 12-Wochen-Plan entsteht im Gespräch mit Monica — bei einer Tasse Tee, ohne Eile.
+          </div>
+          <div class="rb-step-theatre__caption" data-step-caption="5">
+            <span class="rb-step-theatre__caption-eyebrow">Schritt 05 · Routine</span>
+            Deine individuell formulierte Pflege, deine Mikronährstoffe, deine epigenetischen Rituale.
+          </div>
+        </div>
+
+        <div class="rb-step-theatre__rail" data-theatre-rail>
+          <button type="button" class="rb-step-theatre__step is-active" data-step="1">
+            <span class="rb-step-theatre__step-num">01</span>
+            <h3 class="rb-step-theatre__step-title">Speichelprobe</h3>
+            <p class="rb-step-theatre__step-text">Anonym über QR-Code. Vor Ort oder per Versand.</p>
+          </button>
+          <button type="button" class="rb-step-theatre__step" data-step="2">
+            <span class="rb-step-theatre__step-num">02</span>
+            <h3 class="rb-step-theatre__step-title">Auswertung</h3>
+            <p class="rb-step-theatre__step-text">Im zertifizierten Genlabor (Novogenia, Salzburg) in 2–3 Wochen.</p>
+          </button>
+          <button type="button" class="rb-step-theatre__step" data-step="3">
+            <span class="rb-step-theatre__step-num">03</span>
+            <h3 class="rb-step-theatre__step-title">DNA-Report</h3>
+            <p class="rb-step-theatre__step-text">20 Beauty-Gene · Kollagen · UV · oxidativer Stress · biologisches Hautalter.</p>
+          </button>
+          <button type="button" class="rb-step-theatre__step" data-step="4">
+            <span class="rb-step-theatre__step-num">04</span>
+            <h3 class="rb-step-theatre__step-title">Beratung</h3>
+            <p class="rb-step-theatre__step-text">Persönliches Gespräch mit Monica — dein 12-Wochen-Plan entsteht.</p>
+          </button>
+          <button type="button" class="rb-step-theatre__step" data-step="5">
+            <span class="rb-step-theatre__step-num">05</span>
+            <h3 class="rb-step-theatre__step-title">Routine</h3>
+            <p class="rb-step-theatre__step-text">Naturkosmetik, Mikronährstoffe, epigenetische Routine.</p>
+          </button>
         </div>
       </div>
+
+      <script type="module">
+        const stage = document.querySelector('[data-theatre]');
+        const rail = document.querySelector('[data-theatre-rail]');
+        if (stage && rail) {
+          const imgs = stage.querySelectorAll('img[data-step-img]');
+          const caps = stage.querySelectorAll('[data-step-caption]');
+          const steps = rail.querySelectorAll('[data-step]');
+          const setActive = (n) => {
+            imgs.forEach(i => i.classList.toggle('is-active', i.dataset.stepImg === n));
+            caps.forEach(c => c.classList.toggle('is-active', c.dataset.stepCaption === n));
+            steps.forEach(s => s.classList.toggle('is-active', s.dataset.step === n));
+          };
+          // Init: erstes Bild + erste Caption aktiv
+          setActive('1');
+          // Hover (Desktop) + Click/Tap (Mobile)
+          steps.forEach(s => {
+            s.addEventListener('mouseenter', () => setActive(s.dataset.step));
+            s.addEventListener('focus', () => setActive(s.dataset.step));
+            s.addEventListener('click', () => setActive(s.dataset.step));
+          });
+        }
+      </script>
     </section>
 
     <!-- ============================================================
