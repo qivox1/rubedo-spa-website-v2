@@ -4,50 +4,58 @@ import { site } from '@/lib/site';
 const { ga4, gtm } = site.tracking;
 ---
 
-{/* Google Tag Manager — mit Consent Mode v2 default-deny.
-    Wird erst nach Klaro-Consent aktiviert (siehe ConsentBanner).
-    Trotzdem hier laden, damit GTM-Tags ready sind, wenn Consent kommt. */}
-{gtm && (
-  <>
-    <script is:inline define:vars={{ gtm }}>
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){window.dataLayer.push(arguments);}
-        // Default deny — Klaro setzt 'granted' bei Zustimmung
-        gtag('consent', 'default', {
-          ad_storage: 'denied',
-          analytics_storage: 'denied',
-          ad_user_data: 'denied',
-          ad_personalization: 'denied',
-          functionality_storage: 'granted',
-          security_storage: 'granted',
-          wait_for_update: 500,
-        });
-        gtag('set', 'ads_data_redaction', true);
-      `}
-    </script>
-    <script is:inline define:vars={{ gtm }}>
-      {`
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','${gtm}');
-      `}
-    </script>
-  </>
-)}
+{/* Consent-Mode + Tag-Loader — render-non-blocking.
+    Setup-Skript läuft sofort, GTM-Iframe + GA4-Skript erst nach
+    `requestIdleCallback` (oder als Fallback nach 1500ms), damit
+    LCP/FCP nicht vom Tracking ausgebremst werden. */}
+{(gtm || ga4) && (
+  <script is:inline define:vars={{ gtm, ga4 }}>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      // Default deny — Klaro setzt 'granted' bei Zustimmung
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500,
+      });
+      gtag('set', 'ads_data_redaction', true);
 
-{ga4 && (
-  <>
-    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${ga4}`}></script>
-    <script is:inline define:vars={{ ga4 }}>
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${ga4}', { anonymize_ip: true });
-      `}
-    </script>
-  </>
+      var loadTrackers = function() {
+        if (window.__rb_trackers_loaded) return;
+        window.__rb_trackers_loaded = true;
+        if (gtm) {
+          var f = document.getElementsByTagName('script')[0],
+              j = document.createElement('script');
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + gtm;
+          f.parentNode.insertBefore(j, f);
+          window.dataLayer.push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+        }
+        if (ga4) {
+          var g = document.createElement('script');
+          g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=' + ga4;
+          document.head.appendChild(g);
+          gtag('js', new Date());
+          gtag('config', ga4, { anonymize_ip: true });
+        }
+      };
+
+      // Auf erste User-Interaktion ODER idle-callback ODER 3s Timeout warten
+      var idle = window.requestIdleCallback || function(cb){return setTimeout(cb, 1);};
+      var triggered = false;
+      var trigger = function(){ if (triggered) return; triggered = true; loadTrackers(); };
+      ['scroll','click','keydown','touchstart','mousemove'].forEach(function(ev){
+        window.addEventListener(ev, trigger, {once: true, passive: true});
+      });
+      window.addEventListener('load', function(){
+        idle(trigger, {timeout: 3000});
+      });
+    `}
+  </script>
 )}

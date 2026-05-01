@@ -89,7 +89,30 @@
   };
 </script>
 
-<script is:inline async src="https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js"></script>
+<script is:inline>
+  // Klaro lazy-load — nicht render-blocking.
+  // Wird auf User-Interaktion ODER nach Idle-Callback geladen.
+  (function(){
+    var loaded = false;
+    var load = function(){
+      if (loaded) return;
+      loaded = true;
+      var s = document.createElement('script');
+      s.defer = true;
+      s.src = 'https://cdn.kiprotect.com/klaro/v0.7.22/klaro.js';
+      document.head.appendChild(s);
+    };
+    var idle = window.requestIdleCallback || function(cb){return setTimeout(cb, 1);};
+    ['scroll','click','keydown','touchstart','mousemove'].forEach(function(ev){
+      window.addEventListener(ev, load, {once: true, passive: true});
+    });
+    if (document.readyState === 'complete') {
+      idle(load, {timeout: 2500});
+    } else {
+      window.addEventListener('load', function(){ idle(load, {timeout: 2500}); });
+    }
+  })();
+</script>
 
 <noscript>
   <p style="position:fixed;bottom:0;left:0;right:0;padding:12px;background:var(--rb-ink-900);color:var(--rb-gold-100);font-family:var(--rb-font-body);font-size:14px;text-align:center;z-index:9999;">
