@@ -155,19 +155,19 @@ if (data.faq && data.faq.length > 0) {
           </nav>
           <span class="rb-mag-hero__cat">{data.category}</span>
           <h1>{data.headline ?? data.title}</h1>
-          <address class="rb-mag-hero__meta byline" role="contentinfo">
-            <span class="rb-mag-hero__meta-item author vcard">
-              Von <a class="author-name fn p-author h-card" rel="author" href={author.data.page ?? '/ueber-monica/'}><strong itemprop="author">{author.data.name}</strong></a>
+          <p class="rb-mag-hero__meta byline author">
+            <span class="rb-mag-hero__meta-item">
+              By <a class="byline author rel-author p-author h-card vcard" rel="author" href={author.data.page ?? '/ueber-monica/'}><span class="fn p-name" itemprop="author"><strong>{author.data.name}</strong></span></a>
             </span>
             <span class="rb-mag-hero__meta-item">
-              Veröffentlicht am
-              <time class="published dt-published" datetime={data.pubDate.toISOString()} pubdate="pubdate" itemprop="datePublished">{pubDateFmt}</time>
+              Published
+              <time class="published dt-published entry-date" datetime={data.pubDate.toISOString()} pubdate="pubdate" itemprop="datePublished">{pubDateFmt}</time>
               {updatedDateFmt && (
-                <> · zuletzt aktualisiert <time class="updated dt-updated" datetime={data.updatedDate!.toISOString()} itemprop="dateModified">{updatedDateFmt}</time></>
+                <>, updated <time class="updated dt-updated" datetime={data.updatedDate!.toISOString()} itemprop="dateModified">{updatedDateFmt}</time></>
               )}
             </span>
             <span class="rb-mag-hero__meta-item">{readingTime} Min. Lesezeit</span>
-          </address>
+          </p>
         </div>
       </div>
     </section>

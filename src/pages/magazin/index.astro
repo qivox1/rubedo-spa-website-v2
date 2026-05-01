@@ -203,7 +203,7 @@ const isLgRight = (i: number) => i === 6;
                 data-date={entry.data.pubDate.toISOString()}
               >
                 <div class="rb-magov-card__media">
-                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} width="800" height="600" loading="lazy" />
+                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} width="800" height="600" loading={lg ? 'eager' : 'lazy'} fetchpriority={lg ? 'high' : 'auto'} />
                   <span class={`rb-magov-cat rb-magov-cat--${cls}`}>{entry.data.category}</span>
                 </div>
                 <div class="rb-magov-card__body">
