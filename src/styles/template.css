@@ -87,10 +87,41 @@ a { color: inherit; }
 }
 .rb-brand__mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
-/* Full-color SVG wordmark variant — replaces mark + name pair */
-.rb-brand--logo { display: inline-flex; align-items: center; text-decoration: none; gap: 0; }
-.rb-brand--logo .rb-brand__logo { display: block; height: 56px; width: auto; }
-.rb-footer .rb-brand--logo .rb-brand__logo { height: 84px; background: var(--rb-paper); padding: 8px; border-radius: 50%; }
+/* Full-color logo (Wappen mit Phönix + RUBEDO/SPA-Wortmarke).
+   Strict 64×64 square with object-fit:contain, damit das Wappen niemals
+   verzerrt wird. Vorher: width:auto + height:56px → der img wurde im
+   flex-Container auf ~12px Breite gequetscht, weil der Browser keine
+   intrinsic-aspect-ratio aus dem 64×63-WebP zog. */
+.rb-brand--logo { display: inline-flex; align-items: center; text-decoration: none; gap: 0; flex: 0 0 auto; }
+.rb-brand--logo .rb-brand__logo {
+  display: block;
+  width: 64px; height: 64px;
+  object-fit: contain;
+  flex: 0 0 64px;
+}
+.rb-footer .rb-brand--logo .rb-brand__logo {
+  /* Footer-Variante: das Wappen sitzt wie ein gestempeltes Briefkopf-Siegel
+     auf einem warmen Cream-Kreis mit feinem Goldring. Der Cream-Kreis greift
+     den hellen Innenraum des Logos auf, sodass das weiße Inner-Detail
+     visuell mit dem Kreis verschmilzt — kein "weißer Klecks auf dunkel"
+     mehr, sondern ein gediegener Stempel. */
+  width: 100px; height: 100px;
+  flex: 0 0 100px;
+  background: var(--rb-cream);
+  border: 1px solid var(--rb-gold-700);
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow:
+    0 0 0 4px rgba(215, 189, 134, 0.08),         /* sehr blasser Gold-Hof */
+    0 4px 18px rgba(0, 0, 0, 0.35);              /* weicher Schatten gegen Ink-900 */
+  transition: box-shadow var(--rb-dur-2) var(--rb-ease), transform var(--rb-dur-2) var(--rb-ease);
+}
+.rb-footer .rb-brand--logo:hover .rb-brand__logo {
+  transform: translateY(-1px);
+  box-shadow:
+    0 0 0 6px rgba(215, 189, 134, 0.12),
+    0 6px 22px rgba(0, 0, 0, 0.45);
+}
 .rb-footer__brand .rb-brand__mark { background: transparent; }
 .rb-footer__brand .rb-brand__mark img {
   filter: brightness(0) invert(1) sepia(0.4) saturate(2) hue-rotate(8deg);
@@ -377,11 +408,12 @@ a { color: inherit; }
 .rb-block-hero--photo .rb-block-hero__eyebrow::before { background: var(--rb-gold-300); }
 .rb-block-hero--photo .rb-block-hero__subline { color: rgba(255,255,255,0.92); max-width: 38ch; }
 .rb-block-hero--photo .rb-block-hero__micro { color: rgba(255,255,255,0.75); }
-/* Auf dunklem Foto-Hero: dezent heller (Red 300) und etwas mehr opacity,
-   damit die Raute auf dem Foto wahrnehmbar bleibt. */
+/* Auf dunklem Foto-Hero: gleiches Rubedo-Red-500 wie überall, etwas mehr
+   Opacity damit der Punkt auf dem Foto wahrnehmbar bleibt. Niemals Red-300
+   nehmen — das ist Rosa, nicht Brand-Rot. */
 .rb-block-hero--photo .rb-block-hero__micro span:not(:last-child)::after {
-  background: var(--rb-red-300);
-  opacity: 0.85;
+  background: var(--rb-red-500);
+  opacity: 0.95;
 }
 .rb-block-hero--photo .rb-btn--ghost {
   border-color: rgba(255,255,255,0.6); color: var(--rb-paper);
@@ -1026,12 +1058,15 @@ a { color: inherit; }
   background: linear-gradient(180deg, transparent 50%, rgba(15,12,10,0.5) 100%);
 }
 .rb-bio__body .rb-eyebrow { display: block; margin-bottom: 12px; }
+.rb-bio__body h1,
 .rb-bio__body h2 {
   font-family: var(--rb-font-display);
   font-weight: 400;
-  font-size: clamp(36px, 4vw, 56px);
-  line-height: 1.05;
+  font-size: clamp(44px, 6vw, 84px);  /* identisch zur Hero-H1 anderer Pages */
+  line-height: 1.02;
+  letter-spacing: -0.012em;
   margin: 0 0 var(--rb-space-3);
+  color: var(--rb-ink-900);
   text-wrap: balance;
 }
 .rb-bio__credentials {
@@ -1448,6 +1483,14 @@ textarea:user-invalid:not(:focus) {
   .rb-gallery__cell { height: 240px; }
   .rb-block-hero--photo .rb-block-hero__photo { height: 480px; }
   .rb-nav { display: none; }
+  /* Mobile: Logo bekommt etwas mehr Atemraum vom linken Viewport-Rand */
+  .rb-header__inner { padding-left: var(--rb-space-2); padding-right: var(--rb-space-2); }
+}
+
+/* Sehr schmale Phones: Topbar darf bündig zum Inner-Padding sein */
+@media (max-width: 480px) {
+  .rb-header__inner { padding: 12px var(--rb-space-3); }
+  .rb-brand--logo .rb-brand__logo { width: 56px; height: 56px; flex: 0 0 56px; }
 }
 
 /* ============================================================
