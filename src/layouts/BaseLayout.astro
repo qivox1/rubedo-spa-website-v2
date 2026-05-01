@@ -142,6 +142,47 @@ const currentPath = Astro.url.pathname;
     {/* Cookie-Consent — am Ende des Body, damit Banner immer sichtbar */}
     <ConsentBanner />
 
+    {/* CR-Pin (C2PA Content Credentials) — KI-Bild-Kennzeichnung gemäß EU AI Act Art. 50.
+        Setzt automatisch ein kleines „cr"-Pin-Element in jede image-tragende Box,
+        außer wenn das <img> mit data-ai="false" markiert ist (Logos, UI-Icons).
+        Klick auf den Pin → /ki-bilder/. Tooltip via title. */}
+    <script>
+      function initAiPins() {
+        const imgs = document.querySelectorAll<HTMLImageElement>('img:not([data-ai="false"])');
+        imgs.forEach((img) => {
+          if (img.dataset.aiPinned === '1') return;
+          // Skip Brand-Logos und sehr kleine UI-Bilder (< 80px breit)
+          if (img.classList.contains('rb-brand__logo')) { img.dataset.aiPinned = '1'; return; }
+          const wAttr = img.getAttribute('width');
+          const wPx = wAttr ? parseInt(wAttr, 10) : (img.naturalWidth || img.offsetWidth);
+          if (wPx && wPx < 80) { img.dataset.aiPinned = '1'; return; }
+
+          const parent = img.parentElement;
+          if (!parent) return;
+          // Falls schon ein Pin am Parent hängt, nicht doppelt anhängen
+          if (parent.querySelector(':scope > .rb-ai-pin')) { img.dataset.aiPinned = '1'; return; }
+
+          // Anchor positioniert sich relativ zum Parent — sicherstellen, dass dieser positioned ist.
+          const cs = getComputedStyle(parent);
+          if (cs.position === 'static') parent.style.position = 'relative';
+
+          const pin = document.createElement('a');
+          pin.className = 'rb-ai-pin';
+          pin.href = '/ki-bilder/';
+          pin.title = 'Mit KI erstellt — Kennzeichnung nach EU AI Act / C2PA Content Credentials. Mehr erfahren.';
+          pin.setAttribute('aria-label', 'Inhalt mit künstlicher Intelligenz erstellt — mehr Informationen');
+          pin.setAttribute('data-cr-pin', 'true');
+          pin.innerHTML = '<span aria-hidden="true">cr</span>';
+          parent.appendChild(pin);
+          img.dataset.aiPinned = '1';
+        });
+      }
+      initAiPins();
+      // Re-run nach Astro view-transition + nach delayed image-loads
+      document.addEventListener('astro:page-load', initAiPins);
+      window.addEventListener('load', initAiPins);
+    </script>
+
     {/* Reveal-On-Scroll: progressive enhancement.
         Bereits sichtbare Elemente (above the fold) werden SOFORT freigegeben,
         damit der Hero nicht auf den IntersectionObserver wartet. */}
@@ -183,3 +224,4 @@ const currentPath = Astro.url.pathname;
     </script>
   </body>
 </html>
+

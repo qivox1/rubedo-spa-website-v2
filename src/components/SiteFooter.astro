@@ -33,7 +33,7 @@ const socials: { key: keyof typeof site.social; label: string; svg: string }[] =
     <div class="rb-footer__top">
       <div class="rb-footer__brand">
         <div class="rb-brand rb-brand--logo">
-          <img class="rb-brand__logo rb-brand__logo--light" src="/logo-rubedo-spa-64.webp" srcset="/logo-rubedo-spa-64.webp 1x, /logo-rubedo-spa-128.webp 2x" alt={site.name} width="64" height="64" />
+          <img class="rb-brand__logo rb-brand__logo--light" src="/logo-rubedo-spa-64.webp" srcset="/logo-rubedo-spa-64.webp 1x, /logo-rubedo-spa-128.webp 2x" alt={site.name} width="64" height="64" data-ai="false" />
           <span hidden>
             <span class="rb-brand__name">{site.name}</span>
             <span class="rb-brand__sub">Smart Beauty · Minden</span>
@@ -94,6 +94,7 @@ const socials: { key: keyof typeof site.social; label: string; svg: string }[] =
           <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
           <li><a href="/datenschutz/">Datenschutz</a></li>
           <li><a href="/impressum/">Impressum</a></li>
+          <li><a href="/ki-bilder/" rel="license">KI-Bild-Hinweis</a></li>
         </ul>
       </nav>
     </div>
@@ -177,4 +178,5 @@ const socials: { key: keyof typeof site.social; label: string; svg: string }[] =
     .rb-footer__socials a:hover, .rb-footer__socials .is-pending:hover { transform: none; }
   }
 </style>
+
 

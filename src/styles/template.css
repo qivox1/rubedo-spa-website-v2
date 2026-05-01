@@ -16,6 +16,51 @@ body {
 img { max-width: 100%; display: block; }
 a { color: inherit; }
 
+/* ============================================================
+   CR-PIN (C2PA Content Credentials, EU AI Act Art. 50)
+   Wird per JS auf alle <img> gesetzt, die nicht data-ai="false" sind.
+   Minimalistisch, Premium-Look, klickbar → /ki-bilder/.
+   ============================================================ */
+.rb-ai-pin {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 4;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  background: rgba(251, 248, 241, 0.92);
+  color: var(--rb-ink-900);
+  border: 1px solid rgba(15,12,10,0.12);
+  font-family: var(--rb-font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: lowercase;
+  text-decoration: none;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(15,12,10,0.18);
+  cursor: help;
+  transition: transform 280ms cubic-bezier(.22,.61,.36,1),
+              background 280ms cubic-bezier(.22,.61,.36,1),
+              border-color 280ms cubic-bezier(.22,.61,.36,1),
+              box-shadow 280ms cubic-bezier(.22,.61,.36,1);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+.rb-ai-pin:hover,
+.rb-ai-pin:focus-visible {
+  transform: scale(1.1);
+  background: var(--rb-paper);
+  border-color: var(--rb-gold-500);
+  box-shadow: 0 4px 14px rgba(15,12,10,0.28);
+  outline: none;
+}
+.rb-ai-pin span { display: block; margin-top: -1px; }
+@media (max-width: 640px) {
+  .rb-ai-pin { width: 22px; height: 22px; top: 6px; right: 6px; font-size: 10px; }
+}
+
 /* ------------ Layout shell ------------ */
 .rb-wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 .rb-wrap--narrow { max-width: 880px; margin: 0 auto; padding: 0 40px; }
@@ -3432,4 +3477,5 @@ a { color: inherit; }
   .rb-pull blockquote { font-size: 24px; }
   .rb-pull__mark { font-size: 56px; }
 }
+
 
