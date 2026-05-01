@@ -1,136 +1,209 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
 
-const title = 'Monica Galletti — Gründerin Rubedo Spa Minden';
-const description = 'Über Monica Galletti — Kosmetikermeisterin, Neurolinguistik-Programmiererin und Gründerin des Longevity-Studios Rubedo Spa in Minden.';
-const heroImage = '/images/monica-portrait.png';
+const title = 'Über Monica Galletti — Gründerin Rubedo Spa Minden';
+const description = 'Über Monica Galletti — CIDESCO Beauty Therapist, DNA-Skin-Expertin, NLP Master und Gründerin des Longevity-Studios Rubedo Spa in Minden. Werte, Werdegang, Methodik.';
+const heroImage = '/images/monica-portrait.webp';
+const url = `${site.url}/ueber-monica/`;
+
+// AboutPage + Person Schema — wichtigste E-E-A-T-Signale für /ueber-monica/
+const aboutPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${url}#aboutpage`,
+  url,
+  name: 'Über Monica Galletti — Rubedo Spa Minden',
+  description,
+  inLanguage: 'de-DE',
+  isPartOf: { '@type': 'WebSite', '@id': `${site.url}/#website`, url: site.url, name: site.name },
+  about: { '@id': `${url}#monica` },
+  mainEntity: { '@id': `${url}#monica` },
+  primaryImageOfPage: { '@type': 'ImageObject', url: `${site.url}${heroImage}` },
+  breadcrumb: {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${site.url}/` },
+      { '@type': 'ListItem', position: 2, name: 'Über Monica', item: url },
+    ],
+  },
+};
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': `${url}#monica`,
+  name: 'Monica Galletti',
+  givenName: 'Monica',
+  familyName: 'Galletti',
+  jobTitle: 'Gründerin & Studio-Leitung',
+  description: 'CIDESCO Beauty Therapist, DNA Skin Expert (Beauty ID Switzerland), NLP Master und Gründerin des Longevity-Studios Rubedo Spa in Minden.',
+  image: `${site.url}${heroImage}`,
+  url,
+  worksFor: { '@id': `${site.url}/#localbusiness` },
+  knowsAbout: [
+    'DNA Skin Intelligence',
+    'Epigenetische Hautpflege',
+    'Ganzkörper-Kryotherapie',
+    'Druckwellen-Anwendungen',
+    'Ayurveda-Spa-Therapien',
+    'Lomi Lomi Massage',
+    'Hot Stone Therapy',
+    'Neurolinguistische Programmierung (NLP)',
+    'Neurosomatische Atemarbeit',
+    'Mindfulness',
+  ],
+  hasCredential: [
+    'CIDESCO Beauty Therapy Diploma',
+    'CIDESCO International Beauty & Spa Management',
+    'Executive Master Spa & Beauty Management — WSO',
+    'DNA Skin Expert — Beauty ID Switzerland',
+    'NLP Master',
+  ],
+  memberOf: { '@type': 'Organization', name: 'CIDESCO International' },
+  alumniOf: { '@type': 'Organization', name: 'World Spa Organization (WSO)' },
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   heroImage={heroImage}
+  schemaExtras={[aboutPageSchema, personSchema]}
 >
 
   <article class="rb-page" data-page='monica-galletti'>
+
     <section class="rb-block-bio">
-        <div class="rb-wrap">
-          <div class="rb-bio">
-            <div class="rb-bio__media">
-              <img src="/images/monica-portrait.png" alt="Monica Galletti — Portrait, Gründerin Rubedo Spa" />
+      <div class="rb-wrap">
+        <div class="rb-bio">
+          <div class="rb-bio__media">
+            <img
+              src="/images/monica-portrait.webp"
+              alt="Monica Galletti — Portrait, Gründerin Rubedo Spa Minden"
+              width="600"
+              height="900"
+              fetchpriority="high"
+            />
+          </div>
+          <div class="rb-bio__body">
+            <span class="rb-eyebrow">Über Monica Galletti</span>
+            <h1>Monica Galletti.</h1>
+            <p class="rb-bio__role">Gründerin &amp; Studio-Leitung Rubedo Spa</p>
+            <div class="rb-bio__credentials">
+              <span>CIDESCO Beauty Therapist</span>
+              <span>Master Spa Mgmt · WSO</span>
+              <span>DNA Skin Expert · Beauty ID</span>
+              <span>NLP Master</span>
             </div>
-            <div class="rb-bio__body">
-              <span class="rb-eyebrow">Über Monica Galletti</span>
-              <h2>Monica Galletti.</h2>
-              <div class="rb-bio__credentials">
-                <span>CIDESCO Beauty Therapist</span>
-                <span>Master Spa Mgmt · WSO</span>
-                <span>DNA Skin Expert · Beauty ID</span>
-                <span>NLP Master</span>
-              </div>
-              <p class="rb-bio__lead">Schönheit beginnt nicht an der Oberfläche. Sie zeigt sich, wenn innere Balance wieder spürbar wird. Genau darauf ist meine Arbeit ausgerichtet.</p>
-              <p style="font-size: 16px; line-height: 1.7; color: var(--rb-ink-700); margin: 0 0 32px;">Ich bin Monica Galletti, Gründerin von Rubedo Spa in Minden. Über zehn Jahre internationale 5-Sterne-Spa-Praxis treffen bei mir auf zertifizierte Expertise in personalisierter Hautpflege auf DNA-Basis, klassische Ayurveda-Rituale und neurosomatische Atemarbeit.</p>
-              <a href="/termin-buchen/" class="rb-btn rb-btn--primary">15-Min-Erstgespräch buchen</a>
-            </div>
+            <p class="rb-bio__lead">Schönheit beginnt nicht an der Oberfläche. Sie zeigt sich, wenn innere Balance wieder spürbar wird. Genau darauf ist meine Arbeit ausgerichtet.</p>
+            <p style="font-size: 16px; line-height: 1.7; color: var(--rb-ink-700); margin: 0 0 32px;">Ich bin Monica Galletti, Gründerin von Rubedo Spa in Minden. Über zehn Jahre internationale 5-Sterne-Spa-Praxis treffen bei mir auf zertifizierte Expertise in personalisierter Hautpflege auf DNA-Basis, klassische Ayurveda-Rituale und neurosomatische Atemarbeit.</p>
+            <a href="/termin-buchen/" class="rb-btn rb-btn--primary">15-Min-Erstgespräch buchen</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Credentials Grid -->
-      <section class="rb-section rb-section--cream rb-section--tight">
-        <div class="rb-wrap">
-          <div style="text-align:center; margin-bottom: 48px;">
-            <span class="rb-eyebrow" style="display:block; margin-bottom: 12px;">Internationale Standards</span>
-            <h2 style="font-family: var(--rb-font-display); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; margin: 0 auto; max-width: 22ch;">Vier Felder, in denen ich gelernt und gearbeitet habe.</h2>
+    <!-- Credentials Grid -->
+    <section class="rb-section rb-section--cream rb-section--tight">
+      <div class="rb-wrap">
+        <div style="text-align:center; margin-bottom: 48px;">
+          <span class="rb-eyebrow" style="display:block; margin-bottom: 12px;">Internationale Standards</span>
+          <h2 style="font-family: var(--rb-font-display); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1.1; margin: 0 auto; max-width: 22ch;">Vier Felder, in denen ich gelernt und gearbeitet habe.</h2>
+        </div>
+        <div class="rb-creds">
+          <section class="rb-cred">
+            <h3>Ausbildung</h3>
+            <ul>
+              <li>CIDESCO Beauty Therapy Diploma</li>
+              <li>CIDESCO International Beauty &amp; Spa Management</li>
+              <li>Executive Master Spa &amp; Beauty Management — WSO</li>
+              <li>DNA Skin Expert — Beauty ID Switzerland</li>
+            </ul>
+          </section>
+          <section class="rb-cred">
+            <h3>Bodywork &amp; Rituale</h3>
+            <ul>
+              <li>Wellness Masseurin Diploma</li>
+              <li>Kinesiologie</li>
+              <li>Lomi Lomi Temple Style Massage</li>
+              <li>Hot Stone &amp; Rain Drop Technique</li>
+              <li>Ayurveda Spa Therapies — Abhyanga, Shirodhara, Udvartana, Pinda Sweda, Marma</li>
+            </ul>
+          </section>
+          <section class="rb-cred">
+            <h3>Atem &amp; Mind</h3>
+            <ul>
+              <li>NLP Master</li>
+              <li>Hypnose im Wellness-Kontext (HWG-konform)</li>
+              <li>Mindfulness Facilitator</li>
+              <li>Breathwork &amp; neurosomatische Atemtechniken</li>
+              <li>Vertiefung seit 2019</li>
+            </ul>
+          </section>
+          <section class="rb-cred">
+            <h3>Smart Technologies</h3>
+            <ul>
+              <li>Ganzkörper- und Lokal-Kryotherapie</li>
+              <li>Druckwellen-Anwendung</li>
+              <li>Wirkstoff-basierte Bandagen</li>
+              <li>Herstellergestützte Trainings</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statement -->
+    <section class="rb-block-prose rb-section--paper">
+      <div class="rb-wrap rb-prose">
+        <span class="rb-eyebrow">Wie ich arbeite</span>
+        <h2>Weniger Methoden, dafür die richtigen.</h2>
+        <p>Ich arbeite nicht mit Behandlungs-Katalogen. Ich arbeite mit Menschen. Jede Anwendung beginnt mit einem ruhigen Aufnahme-Gespräch — dort erfahre ich, was du brauchst, was du gerade nicht brauchst und welche der drei Säulen von Rubedo für dich der passende Einstieg ist.</p>
+        <p>Mein Anspruch: weniger Methoden, dafür die richtigen. Personalisierung ist für mich kein Trend, sondern die einzig stimmige Konsequenz daraus, dass jeder Mensch genetisch, biographisch und energetisch einzigartig ist. <strong>Smart Beauty for Conscious Humans</strong> — präzise, persönlich, präsent.</p>
+
+        <h3>Werte</h3>
+        <ul>
+          <li><strong>Personalisierung statt Standardisierung</strong> — keine universellen Routinen.</li>
+          <li><strong>Wissenschaft trifft Ritual</strong> — moderne Skin Science und klassische Tradition gehören zusammen.</li>
+          <li><strong>Klare Sprache</strong> — wir machen keine Heilversprechen, weil ehrliche Kommunikation langfristiger trägt.</li>
+          <li><strong>Ruhe als Werkzeug</strong> — die meisten Probleme der heutigen Pflege sind das Ergebnis eines überreizten Alltags.</li>
+          <li><strong>Beständigkeit</strong> — Beziehungen zu Gästen baue ich nicht für eine Saison, sondern für Jahre.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="rb-block-quote">
+      <div class="rb-block-quote__inner">
+        <blockquote>Wahre Expertise zeigt sich nicht in der Anzahl von Methoden — sondern in der Fähigkeit, sie präzise und bewusst einzusetzen. Für jeden Menschen die richtige Kombination zu wählen, das ist meine Arbeit.</blockquote>
+        <cite>Monica Galletti</cite>
+      </div>
+    </section>
+
+    <section class="rb-block-cta">
+      <div class="rb-wrap">
+        <div class="rb-cta-band">
+          <div class="rb-cta-band__body">
+            <span class="rb-eyebrow">Bevor du eine Anwendung buchst</span>
+            <h3>Lerne mich in 15 Minuten kennen — kostenfrei per Videocall.</h3>
+            <p>Wir besprechen, was du suchst, und ich erkläre dir, wie wir gemeinsam beginnen könnten.</p>
           </div>
-          <div class="rb-creds">
-            <div class="rb-cred">
-              <h4>Ausbildung</h4>
-              <ul>
-                <li>CIDESCO Beauty Therapy Diploma</li>
-                <li>CIDESCO International Beauty & Spa Management</li>
-                <li>Executive Master Spa & Beauty Management — WSO</li>
-                <li>DNA Skin Expert — Beauty ID Switzerland</li>
-              </ul>
-            </div>
-            <div class="rb-cred">
-              <h4>Bodywork & Rituale</h4>
-              <ul>
-                <li>Wellness Masseurin Diploma</li>
-                <li>Kinesiologie</li>
-                <li>Lomi Lomi Temple Style Massage</li>
-                <li>Hot Stone & Rain Drop Technique</li>
-                <li>Ayurveda Spa Therapies — Abhyanga, Shirodhara, Udvartana, Pinda Sweda, Marma</li>
-              </ul>
-            </div>
-            <div class="rb-cred">
-              <h4>Atem & Mind</h4>
-              <ul>
-                <li>NLP Master</li>
-                <li>Hypnose im Wellness-Kontext (HWG-konform)</li>
-                <li>Mindfulness Facilitator</li>
-                <li>Breathwork & neurosomatische Atemtechniken</li>
-                <li>Vertiefung seit 2019</li>
-              </ul>
-            </div>
-            <div class="rb-cred">
-              <h4>Smart Technologies</h4>
-              <ul>
-                <li>Ganzkörper- und Lokal-Kryotherapie</li>
-                <li>Druckwellen-Anwendung</li>
-                <li>Wirkstoff-basierte Bandagen</li>
-                <li>Herstellergestützte Trainings</li>
-              </ul>
-            </div>
-          </div>
+          <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/">Erstgespräch buchen →</a></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Statement -->
-      <section class="rb-block-prose rb-section--paper">
-        <div class="rb-wrap rb-prose">
-          <span class="rb-eyebrow">Wie ich arbeite</span>
-          <h2>Weniger Methoden, dafür die richtigen.</h2>
-          <p>Ich arbeite nicht mit Behandlungs-Katalogen. Ich arbeite mit Menschen. Jede Anwendung beginnt mit einem ruhigen Aufnahme-Gespräch — dort erfahre ich, was du brauchst, was du gerade nicht brauchst und welche der drei Säulen von Rubedo für dich der passende Einstieg ist.</p>
-          <p>Mein Anspruch: weniger Methoden, dafür die richtigen. Personalisierung ist für mich kein Trend, sondern die einzig stimmige Konsequenz daraus, dass jeder Mensch genetisch, biographisch und energetisch einzigartig ist. <strong>Smart Beauty for Conscious Humans</strong> — präzise, persönlich, präsent.</p>
-
-          <h3>Werte</h3>
-          <ul>
-            <li><strong>Personalisierung statt Standardisierung</strong> — keine universellen Routinen.</li>
-            <li><strong>Wissenschaft trifft Ritual</strong> — moderne Skin Science und klassische Tradition gehören zusammen.</li>
-            <li><strong>Klare Sprache</strong> — wir machen keine Heilversprechen, weil ehrliche Kommunikation langfristiger trägt.</li>
-            <li><strong>Ruhe als Werkzeug</strong> — die meisten Probleme der heutigen Pflege sind das Ergebnis eines überreizten Alltags.</li>
-            <li><strong>Beständigkeit</strong> — Beziehungen zu Gästen baue ich nicht für eine Saison, sondern für Jahre.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="rb-block-quote">
-        <div class="rb-block-quote__inner">
-          <blockquote>Wahre Expertise zeigt sich nicht in der Anzahl von Methoden — sondern in der Fähigkeit, sie präzise und bewusst einzusetzen. Für jeden Menschen die richtige Kombination zu wählen, das ist meine Arbeit.</blockquote>
-          <cite>Monica Galletti</cite>
-        </div>
-      </section>
-
-      <section class="rb-block-cta">
-        <div class="rb-wrap">
-          <div class="rb-cta-band">
-            <div class="rb-cta-band__body">
-              <span class="rb-eyebrow">Bevor du eine Anwendung buchst</span>
-              <h3>Lerne mich in 15 Minuten kennen — kostenfrei per Videocall.</h3>
-              <p>Wir besprechen, was du suchst, und ich erkläre dir, wie wir gemeinsam beginnen könnten.</p>
-            </div>
-            <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/">Erstgespräch buchen →</a></div>
-          </div>
-        </div>
-      </section>
-
-    </article>
-
-    <!-- ============================================================
-         PAGE 8 · KONTAKT / STANDORT
-         URL: /kontakt/
-         ============================================================ -->
   </article>
 
 </BaseLayout>
+
+<style>
+  .rb-bio__role {
+    font-family: var(--rb-font-body);
+    font-size: 14px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--rb-gold-700);
+    margin: 4px 0 16px;
+  }
+</style>

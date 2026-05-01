@@ -9,13 +9,17 @@ export const site = {
   claim: 'Smart Beauty for Conscious Humans',
   tagline: 'Personalisierte Schönheit auf Basis deiner Epigenetik — für Menschen, die bewusst entscheiden.',
 
-  url: 'https://rubedo-spa.de',
+  // Wird zur Build-Zeit aus astro.config.mjs (process.env.SITE_URL || pages.dev) ausgelesen
+  // — diese Konstante hier nur als Fallback für JSON-LD/Component-Code.
+  url: 'https://rubedo-spa-website.pages.dev',
   defaultLocale: 'de',
   locales: ['de'] as const,
 
   contact: {
     email: 'info@rubedo-spa.de',
-    phoneDisplay: '0571 78343423',
+    /** Display-Format identisch zum href: in internationaler E.164-Notation,
+     *  damit Squirrel-Audit-Heuristik und Screenreader denselben String sehen. */
+    phoneDisplay: '+49 571 78343423',
     phoneE164: '+4957178343423',
   },
 

@@ -1,6 +1,6 @@
 ---
 title: "Die Revolution der Kältetherapie: Ganzkörper-Kryotherapie in Minden"
-description: "Drei Minuten bei minus 110 °C — wie Ganzkörper-Kryotherapie auf den Körper wirkt, was sie kann (und was nicht), und wie sich der Bewusste Frischekick im Rubedo Spa anfühlt."
+description: "Drei Minuten bei minus 110 °C — wie Ganzkörper-Kryotherapie wirkt, was sie kann (und was nicht), und wie sich der Frischekick im Rubedo Spa anfühlt."
 excerpt: "Drei Minuten Kälte als Reiz für Regeneration. Was Ganzkörper-Kryotherapie wirklich kann — und wie sich die Anwendung anfühlt."
 pubDate: 2026-03-12
 updatedDate: 2026-04-22
@@ -57,7 +57,7 @@ Ganzkörper-Kryo bezeichnet einen kurzen Aufenthalt in einer Kabine mit extrem k
 
 ## Wie wirkt die Kälte auf den Körper? {#wirkung}
 
-Die Kälte ist ein **kontrollierter Reiz**. Der Körper reagiert mit einer kurzfristigen Verengung der oberflächlichen Gefäße, gefolgt von einer reaktiven Weitstellung. Das Vegetativum schaltet erst auf Sympathikus, dann zurück auf Parasympathikus — viele Klienten erleben einen klaren Energie-Schub und gleichzeitig eine ruhigere Grundspannung in den Stunden danach.
+Die Kälte ist ein **kontrollierter Reiz**. Der Körper reagiert mit einer kurzfristigen Verengung der oberflächlichen Gefäße, gefolgt von einer reaktiven Weitstellung. Das Vegetativum schaltet erst auf Sympathikus, dann zurück auf Parasympathikus — viele Klienten erleben einen klaren Energie-Schub und gleichzeitig eine ruhigere Grundspannung in den Stunden danach. Eine [systematische Übersichtsarbeit auf Frontiers in Physiology](https://www.frontiersin.org/articles/10.3389/fphys.2017.00258/full) fasst zusammen, dass Ganzkörper-Kälte-Anwendungen reproduzierbare physiologische Reaktionen zeigen — bei korrekter Anwendung und gesunden Probandinnen und Probanden.
 
 > Drei Minuten — und der Körper hat das Gefühl, einen Schritt zurückzutreten und sich neu zu sortieren.
 >
@@ -69,7 +69,7 @@ Die Kälte ist ein **kontrollierter Reiz**. Der Körper reagiert mit einer kurzf
 - Menschen mit dem Wunsch nach **klarem Körpergefühl** und einem mentalen Reset.
 - Klienten, die **Inner-Source-Rituale** mit einem aktivierenden Gegengewicht ergänzen möchten.
 
-**Nicht geeignet** für: Schwangerschaft, akute Infekte, schwere Herz-Kreislauf-Erkrankungen, schwerer Bluthochdruck, offene Wunden. Klärung im Erstgespräch.
+**Nicht geeignet** für: Schwangerschaft, akute Infekte, schwere Herz-Kreislauf-Erkrankungen, schwerer Bluthochdruck, offene Wunden. Klärung im Erstgespräch. Wer sich vorab mit Sicherheit und Kontraindikationen vertraut machen möchte, findet eine kompakte Einordnung in der [Cleveland-Clinic-Health-Übersicht zur Kryotherapie](https://my.clevelandclinic.org/health/treatments/21099-cryotherapy).
 
 ## Sinnvolle Kombinationen {#kombinationen}
 

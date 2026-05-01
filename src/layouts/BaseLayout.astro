@@ -36,7 +36,7 @@ const {
 
 const fullTitle = title.includes('Rubedo') ? title : `${title} | Rubedo Spa Minden`;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).href;
-const ogImg = ogImage ?? `${site.url}/logo-rubedo-spa.png`;
+const ogImg = ogImage ?? `${site.url}/logo-rubedo-spa.webp`;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -71,6 +71,12 @@ const currentPath = Astro.url.pathname;
     <link rel="icon" type="image/svg+xml" href="/logo-rubedo-spa.svg" />
     <link rel="alternate icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" href="/logo-rubedo-spa.png" />
+
+    {/* Preload des Logos auf Seiten ohne dediziertes heroImage — verhindert,
+        dass das Logo zum LCP-Element wird ohne Preload-Hint. */}
+    {!heroImage && (
+      <link rel="preload" as="image" href="/logo-rubedo-spa.webp" fetchpriority="high" />
+    )}
 
     {/* Performance: Preconnect zu Google Fonts (TODO: später self-hosten) */}
     <link rel="preconnect" href="https://fonts.googleapis.com" />

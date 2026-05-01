@@ -1,0 +1,102 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Geschenk-Gutscheine — Rubedo Spa Minden';
+const description = 'Geschenk-Gutscheine für DNA Skin, Kryo Vital und Inner Source Rituals. Bald online buchbar — bis dahin auf Anfrage per Telefon oder E-Mail.';
+
+const giftCardSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  '@id': `${site.url}/gutscheine/#giftcard`,
+  name: 'Rubedo Spa — Geschenk-Gutschein',
+  description,
+  brand: { '@type': 'Brand', name: site.name },
+  category: 'GiftCard',
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/PreOrder',
+    priceCurrency: 'EUR',
+    url: `${site.url}/gutscheine/`,
+    seller: { '@type': 'Organization', name: site.name, url: site.url },
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  schemaExtras={[giftCardSchema]}
+>
+
+  <article class="rb-page" data-page="gutscheine">
+
+    <section class="rb-block-hero rb-block-hero--centered">
+      <div class="rb-wrap rb-block-hero__inner">
+        <div>
+          <span class="rb-block-hero__eyebrow">Schenken · Rubedo</span>
+          <h1>Geschenk-Gutscheine.</h1>
+          <p class="rb-block-hero__subline" style="margin-left:auto;margin-right:auto;">Drei Säulen, ein Geschenk. Personalisierte Schönheit verschenken — per Wertgutschein oder als gebuchte Anwendung.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap rb-prose">
+        <span class="rb-eyebrow">Aktuell · Auf Anfrage</span>
+        <h2>Online-Buchung folgt im Frühsommer 2026.</h2>
+        <p>
+          Wir entwickeln gerade unseren Online-Gutschein-Shop. Bis dieser live geht, stellen wir
+          jede Geschenk-Gutschrift persönlich aus — auf Wunsch handschriftlich, in einem
+          Burgunder-Umschlag, postalisch verschickt oder direkt per E-Mail als PDF.
+        </p>
+
+        <h3>Drei Wege zum Gutschein</h3>
+        <ul>
+          <li><strong>Wertgutschein</strong> — beliebiger Betrag ab 75 €, einlösbar für jede Anwendung.</li>
+          <li><strong>Anwendungs-Gutschein</strong> — Sie wählen eine konkrete Behandlung (DNA Skin Konsultation, Kryo-Facial, Abhyanga …) und wir reservieren bereits einen Wunschtermin.</li>
+          <li><strong>Säulen-Erlebnis</strong> — kuratiertes Paket aus zwei oder drei Anwendungen entlang einer der drei Rubedo-Säulen.</li>
+        </ul>
+
+        <h3>So bestellen Sie heute</h3>
+        <p>
+          Schreiben Sie uns eine kurze Nachricht oder rufen Sie an. Wir antworten innerhalb von
+          24 Stunden, klären den Anlass und senden den Gutschein nach Wunsch postalisch oder digital.
+        </p>
+
+        <p>
+          <strong>Telefon:</strong> <a href={`tel:${site.contact.phoneE164}`}>{site.contact.phoneDisplay}</a><br/>
+          <strong>E-Mail:</strong> <a href={`mailto:${site.contact.email}?subject=Gutschein-Bestellung`}>{site.contact.email}</a>
+        </p>
+
+        <h3>Häufig gefragt</h3>
+        <p>
+          <strong>Wie lange ist ein Gutschein gültig?</strong> Drei Jahre ab Ausstellungsdatum, gemäß §195 BGB.
+          Wertgutscheine sind übertragbar, Anwendungs-Gutscheine bei Bedarf umbuchbar auf andere Behandlungen
+          gleichen Werts.
+        </p>
+        <p>
+          <strong>Kann ich einen Gutschein zurückgeben?</strong> Personalisierte Gutscheine sind vom
+          Widerrufsrecht ausgeschlossen — wir bieten aber freie Umbuchung.
+        </p>
+      </div>
+    </section>
+
+    <section class="rb-block-cta">
+      <div class="rb-wrap">
+        <div class="rb-cta-band">
+          <div class="rb-cta-band__body">
+            <span class="rb-eyebrow">Persönlich beraten</span>
+            <h3>Nicht sicher, was passt? Sprechen Sie mit uns.</h3>
+            <p>Wir empfehlen den richtigen Gutschein für Ihren Anlass — diskret, ohne Verkaufsdruck.</p>
+          </div>
+          <div class="rb-cta-band__action">
+            <a class="rb-btn--ghost-light" href={`mailto:${site.contact.email}?subject=Gutschein-Anfrage`}>Anfrage senden →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+</BaseLayout>

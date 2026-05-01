@@ -116,7 +116,7 @@ const isLgRight = (i: number) => i === 6;
           <div class="rb-magov-featured__grid">
             <a class="rb-magov-featured__media" href={`/magazin/${featured.slug}/`} aria-label={`${featured.data.title} — zum Artikel`}>
               <span class="rb-magov-featured__badge">Editor's Pick</span>
-              <img src={featured.data.heroImage} alt={featured.data.heroImageAlt} loading="eager" fetchpriority="high" />
+              <img src={featured.data.heroImage} alt={featured.data.heroImageAlt} width="1200" height="800" loading="eager" fetchpriority="high" />
             </a>
             <div class="rb-magov-featured__body">
               <div class="rb-magov-featured__eyebrow">
@@ -158,7 +158,7 @@ const isLgRight = (i: number) => i === 6;
         <div class="rb-magov-worlds__grid">
           {worlds.map((w) => (
             <a class="rb-magov-world" href={`#${w.cat}`} data-cat={w.cat}>
-              <div class="rb-magov-world__media"><img src={w.image} alt="" loading="lazy" /></div>
+              <div class="rb-magov-world__media"><img src={w.image} alt={`${w.title} — Vorschau-Bild`} width="600" height="400" loading="lazy" /></div>
               <div class="rb-magov-world__body">
                 <span class="rb-magov-world__num">{w.num}</span>
                 <h3 class="rb-magov-world__title">{w.title}</h3>
@@ -202,7 +202,7 @@ const isLgRight = (i: number) => i === 6;
                 data-date={entry.data.pubDate.toISOString()}
               >
                 <div class="rb-magov-card__media">
-                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} loading="lazy" />
+                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} width="800" height="600" loading="lazy" />
                   <span class={`rb-magov-cat rb-magov-cat--${cls}`}>{entry.data.category}</span>
                 </div>
                 <div class="rb-magov-card__body">
@@ -230,6 +230,38 @@ const isLgRight = (i: number) => i === 6;
         {articles.length === 0 && (
           <p class="rb-magazin-empty">Noch keine Artikel veröffentlicht.</p>
         )}
+      </div>
+    </section>
+
+    {/* ÜBER DAS MAGAZIN — Editorial-Notiz */}
+    <section class="rb-section rb-section--cream rb-section--tight">
+      <div class="rb-wrap rb-wrap--narrow rb-prose">
+        <span class="rb-eyebrow">Über das Magazin</span>
+        <h2>Notizen aus dem Atelier.</h2>
+        <p>
+          Im Rubedo-Magazin schreiben wir über die Themen, mit denen wir im Studio täglich
+          arbeiten — Hautwissenschaft, Kryotherapie, Atemarbeit, Ritual und Longevity. Jeder
+          Beitrag entsteht aus dem Studio-Alltag in Minden: aus Gesprächen mit Klientinnen
+          und Klienten, aus Beobachtungen während Anwendungen und aus Recherchen, die
+          Monica Galletti zwischen Behandlungen verdichtet. Wir publizieren bewusst
+          langsam — lieber einen sorgfältig redigierten Beitrag pro Monat als drei oberflächliche.
+        </p>
+        <p>
+          Unser redaktioneller Anspruch: Quellen sind belegt, Fachbegriffe werden erklärt,
+          Heilversprechen unterbleiben. Wo Studien zitiert werden, finden Sie den Link zur
+          Originalpublikation. Wo Erfahrungen geschildert werden, ist es eine Erfahrung
+          aus dem Studio — nicht aus einem Produktkatalog.
+        </p>
+        <p>
+          Wer sich vertiefen möchte: Auf der Seite <a href="/ueber-monica/" rel="author">Über Monica
+          Galletti</a> finden Sie den vollständigen Werdegang der Autorin, die hinter den
+          Beiträgen steht. Auf den drei Säulen-Seiten —
+          <a href="/dna-skin-intelligence/">DNA Skin Intelligence</a>,
+          <a href="/kryo-vital/">Kryo Vital</a> und
+          <a href="/inner-source/">Inner Source</a> — geht es konkret um die Anwendungen
+          selbst. Im Magazin geht es um das Drumherum: das Wissen, die Haltung und die
+          Geschichten.
+        </p>
       </div>
     </section>
 

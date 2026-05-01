@@ -134,7 +134,7 @@ if (data.faq && data.faq.length > 0) {
     {/* HERO */}
     <section class="rb-mag-hero">
       <div class="rb-mag-hero__photo">
-        <img src={data.heroImage} alt={data.heroImageAlt} fetchpriority="high" />
+        <img src={data.heroImage} alt={data.heroImageAlt} width="1600" height="900" fetchpriority="high" />
       </div>
       <div class="rb-wrap">
         <div class="rb-mag-hero__inner">
@@ -147,14 +147,15 @@ if (data.faq && data.faq.length > 0) {
           </nav>
           <span class="rb-mag-hero__cat">{data.category}</span>
           <h1>{data.headline ?? data.title}</h1>
-          <div class="rb-mag-hero__meta">
-            <span class="rb-mag-hero__meta-item">
-              <strong>{author.data.name}</strong>
+          <div class="rb-mag-hero__meta byline" role="contentinfo">
+            <span class="rb-mag-hero__meta-item author vcard">
+              Von <a class="author-name fn" rel="author" href={author.data.page ?? '/ueber-monica/'}><strong>{author.data.name}</strong></a>
             </span>
             <span class="rb-mag-hero__meta-item">
-              <time datetime={data.pubDate.toISOString()}>{pubDateFmt}</time>
+              Veröffentlicht am
+              <time class="published" datetime={data.pubDate.toISOString()} pubdate="pubdate">{pubDateFmt}</time>
               {updatedDateFmt && (
-                <> · zuletzt aktualisiert <time datetime={data.updatedDate!.toISOString()}>{updatedDateFmt}</time></>
+                <> · zuletzt aktualisiert <time class="updated" datetime={data.updatedDate!.toISOString()}>{updatedDateFmt}</time></>
               )}
             </span>
             <span class="rb-mag-hero__meta-item">{readingTime} Min. Lesezeit</span>

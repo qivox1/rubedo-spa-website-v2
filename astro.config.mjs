@@ -3,9 +3,15 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 
+// Site-URL — bis Custom-Domain `rubedo-spa.de` aktiv ist, läuft die Seite
+// auf der Cloudflare-Pages-Preview-URL. Damit Canonicals/OG/Sitemap mit der
+// real ausgelieferten Host-Adresse matchen, bleibt diese hier auf pages.dev.
+// Beim Domain-Switch: SITE_URL env-var setzen ODER hier hardcoden.
+const SITE_URL = process.env.SITE_URL || 'https://rubedo-spa-website.pages.dev';
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://rubedo-spa.de',
+  site: SITE_URL,
   output: 'static',
   trailingSlash: 'always',
   build: {

@@ -37,7 +37,7 @@ const visibleSocials = socials.filter((s) => site.social[s.key]);
     <div class="rb-footer__top">
       <div class="rb-footer__brand">
         <div class="rb-brand rb-brand--logo">
-          <img class="rb-brand__logo rb-brand__logo--light" src="/logo-rubedo-spa.png" alt={site.name} width="64" height="64" loading="lazy" />
+          <img class="rb-brand__logo rb-brand__logo--light" src="/logo-rubedo-spa.webp" alt={site.name} width="64" height="64" loading="lazy" />
           <span hidden>
             <span class="rb-brand__name">{site.name}</span>
             <span class="rb-brand__sub">Smart Beauty · Minden</span>
@@ -60,35 +60,35 @@ const visibleSocials = socials.filter((s) => site.social[s.key]);
         )}
       </div>
 
-      <div class="rb-footer__col">
-        <h5>Säulen</h5>
+      <nav class="rb-footer__col" aria-label="Säulen">
+        <h2 class="rb-footer__h">Säulen</h2>
         <ul>
           <li><a href="/dna-skin-intelligence/">DNA Skin Intelligence</a></li>
           <li><a href="/kryo-vital/">Kryo Vital</a></li>
           <li><a href="/kryo-vital/koerperformung/">Körperformung</a></li>
           <li><a href="/inner-source/">Inner Source</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="rb-footer__col">
-        <h5>Studio</h5>
+      <nav class="rb-footer__col" aria-label="Studio">
+        <h2 class="rb-footer__h">Studio</h2>
         <ul>
           <li><a href="/philosophie/">Philosophie</a></li>
-          <li><a href="/ueber-monica/">Monica Galletti</a></li>
+          <li><a href="/ueber-monica/" rel="author">Über Monica Galletti</a></li>
           <li><a href="/kontakt/">Kontakt &amp; Anfahrt</a></li>
           <li><a href="/magazin/">Magazin</a></li>
         </ul>
-      </div>
+      </nav>
 
-      <div class="rb-footer__col">
-        <h5>Service</h5>
+      <nav class="rb-footer__col" aria-label="Service">
+        <h2 class="rb-footer__h">Service</h2>
         <ul>
           <li><a href="/termin-buchen/">Termin buchen</a></li>
           <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
           <li><a href="/datenschutz/">Datenschutz</a></li>
           <li><a href="/impressum/">Impressum</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
 
     <div class="rb-footer__bottom">

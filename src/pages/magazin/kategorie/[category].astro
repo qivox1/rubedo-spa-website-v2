@@ -30,7 +30,7 @@ const { category, entries } = Astro.props;
 const sorted = entries.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const title = `Magazin · ${category} — Rubedo Spa`;
-const description = `Beiträge aus der Kategorie „${category}" — Themen aus dem Longevity-Studio Rubedo Spa Minden.`;
+const description = `Beiträge aus der Kategorie „${category}" — Notizen, Hintergründe und Methoden-Wissen aus dem Longevity-Studio Rubedo Spa in Minden, kuratiert von Monica Galletti.`;
 
 const catClass = (cat: string): 'wellness' | 'kryo' | 'haut' | 'ritual' => {
   switch (cat) {
@@ -86,7 +86,7 @@ const fmtDate = (d: Date) =>
                 data-cat={cls}
               >
                 <div class="rb-magov-card__media">
-                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} loading="lazy" />
+                  <img src={entry.data.heroImage} alt={entry.data.heroImageAlt} width="800" height="600" loading="lazy" />
                   <span class={`rb-magov-cat rb-magov-cat--${cls}`}>{entry.data.category}</span>
                 </div>
                 <div class="rb-magov-card__body">
@@ -105,6 +105,39 @@ const fmtDate = (d: Date) =>
         <div class="rb-magov-index__more">
           <a class="rb-btn rb-btn--ghost" href="/magazin/">← Zum Magazin</a>
         </div>
+      </div>
+    </section>
+
+    <section class="rb-section rb-section--cream rb-section--tight">
+      <div class="rb-wrap rb-wrap--narrow rb-prose">
+        <span class="rb-eyebrow">Über die Kategorie</span>
+        <h2>Was Sie hier finden.</h2>
+        <p>
+          Die Kategorie „{category}" sammelt alle Magazin-Beiträge des Rubedo-Spa-Studios in
+          Minden, die sich mit diesem Themenfeld beschäftigen. Jeder Beitrag wird von
+          Monica Galletti — Gründerin von Rubedo Spa, CIDESCO Beauty Therapist und
+          DNA-Skin-Expertin — verfasst oder redaktionell begleitet. Neben Hintergrund-Wissen
+          finden Sie hier Erfahrungen aus über zehn Jahren Studio-Praxis, Quellen aus
+          internationalen Fachpublikationen und konkrete Anwendungsbeispiele aus dem Atelier.
+        </p>
+        <p>
+          Wir veröffentlichen sorgfältig recherchierte Beiträge mit klarem Fokus auf
+          Verständlichkeit. Keine Heilversprechen, keine Verkaufsbroschüre — sondern
+          ehrliche Notizen aus dem Studio. Wer sich für eine konkrete Anwendung
+          interessiert, findet auf den Säulen-Seiten <a href="/dna-skin-intelligence/">DNA Skin
+          Intelligence</a>, <a href="/kryo-vital/">Kryo Vital</a> und
+          <a href="/inner-source/">Inner Source</a> ausführliche Informationen. Über die
+          Autorin lesen Sie auf der <a href="/ueber-monica/" rel="author">Über-Monica-Seite</a>.
+        </p>
+
+        <h3>Zum Vertiefen</h3>
+        <p>
+          Wenn Sie weitere Themen aus dem Magazin entdecken möchten, finden Sie alle
+          Beiträge im <a href="/magazin/">Magazin-Hauptindex</a>. Bei Fragen zu einzelnen
+          Anwendungen oder zur Buchung erreichen Sie uns über die
+          <a href="/kontakt/">Kontakt-Seite</a> oder direkt per
+          <a href="/termin-buchen/">Termin-Buchung</a>.
+        </p>
       </div>
     </section>
 
