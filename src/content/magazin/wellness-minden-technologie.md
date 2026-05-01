@@ -1,5 +1,6 @@
 ---
-title: "Wellness in Minden: Warum Technologien den Unterschied machen"
+title: "Modernes Wellness in Minden — Rubedo Spa Magazin"
+headline: "Wellness in Minden: Warum Technologien den Unterschied machen"
 description: "Wie moderne Technologien das Wohlbefinden objektivieren — und welche Methoden im Rubedo Spa Minden zum Einsatz kommen. Von Kryo bis Druckwellen."
 excerpt: "Sauna, Massage, Entspannung — Wellness ist heute mehr. Welche Technologien wirklich einen Unterschied machen, und wie sie sich kombinieren lassen."
 pubDate: 2026-02-05

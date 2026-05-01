@@ -159,7 +159,7 @@ const isLgRight = (i: number) => i === 6;
         <div class="rb-magov-worlds__grid">
           {worlds.map((w) => (
             <a class="rb-magov-world" href={`#${w.cat}`} data-cat={w.cat}>
-              <div class="rb-magov-world__media"><img src={w.image} alt={`${w.title} — Vorschau-Bild`} width="600" height="400" loading="lazy" /></div>
+              <div class="rb-magov-world__media"><img src={w.image} alt={`${w.title} — Vorschau-Bild`} width="600" height="400" /></div>
               <div class="rb-magov-world__body">
                 <span class="rb-magov-world__num">{w.num}</span>
                 <h3 class="rb-magov-world__title">{w.title}</h3>

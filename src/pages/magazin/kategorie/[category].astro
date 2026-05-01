@@ -30,7 +30,7 @@ const { category, entries } = Astro.props;
 const sorted = entries.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
 
 const title = `Magazin · ${category} — Rubedo Spa`;
-const description = `Beiträge aus der Kategorie „${category}" — Notizen, Hintergründe und Methoden-Wissen aus dem Longevity-Studio Rubedo Spa in Minden, kuratiert von Monica Galletti.`;
+const description = `Beiträge aus „${category}" — Notizen, Hintergründe und Methoden-Wissen aus dem Rubedo Spa Minden, kuratiert von Monica Galletti.`;
 
 const catClass = (cat: string): 'wellness' | 'kryo' | 'haut' | 'ritual' => {
   switch (cat) {
