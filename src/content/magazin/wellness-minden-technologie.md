@@ -53,7 +53,7 @@ Wellness ist heute weit mehr als Sauna, Massage und Entspannung. Bei Rubedo Spa 
 
 ## Die Wellness-Revolution hat begonnen {#revolution}
 
-Die Wellness-Branche entwickelt sich rasant weiter, und moderne Technologien verändern, wie wir Gesundheit, Regeneration und Wohlbefinden unterstützen. Genau hier setzen moderne Wellness-Technologien an. In diesem Beitrag erfahren Sie, warum technologiegestütztes Wellness den Unterschied macht — und wie Rubedo Spa Sie mit individuellen Konzepten auf Ihrer Wellness-Reise begleitet.
+Die Spa-Branche entwickelt sich rasant weiter, und moderne Technologien verändern, wie wir Gesundheit, Regeneration und Wohlbefinden unterstützen. Genau hier setzen technologiegestützte Anwendungen an. In diesem Beitrag erfahren Sie, warum sie den Unterschied machen — und wie Rubedo Spa Sie mit individuellen Konzepten auf Ihrer Pflegereise begleitet.
 
 <figure>
   <img src="/images/rubedo-suite-hot-stone.webp" alt="Behandlungsraum der Rubedo Suite mit Hot-Stone-Detail" width="1200" height="800" loading="lazy" />
@@ -62,7 +62,7 @@ Die Wellness-Branche entwickelt sich rasant weiter, und moderne Technologien ver
 
 ## Was ist modernes Wellness? Die Zukunft des Wohlbefindens {#modern}
 
-Modernes Wellness verbindet klassische Prinzipien — Entspannung, Pflege, mentales Wohlbefinden — mit innovativen, nicht-invasiven Technologien. Ziel ist es, neben subjektivem Wohlbefinden auch objektiv wahrnehmbare Effekte zu fördern. Das [Global Wellness Institute](https://globalwellnessinstitute.org/what-is-wellness/) beschreibt Wellness ausdrücklich als „aktive Lebenspraxis" — also nicht als einmaliges Ereignis, sondern als kontinuierliche Selbstpflege.
+Moderne Pflege verbindet klassische Prinzipien — Entspannung, Pflege, mentales Wohlbefinden — mit innovativen, nicht-invasiven Technologien. Ziel ist es, neben subjektivem Wohlbefinden auch objektiv wahrnehmbare Effekte zu fördern. Das [Global Wellness Institute](https://globalwellnessinstitute.org/what-is-wellness/) beschreibt Wellness ausdrücklich als „aktive Lebenspraxis" — also nicht als einmaliges Ereignis, sondern als kontinuierliche Selbstpflege.
 
 ### Klassisches Wellness konzentriert sich auf:
 
@@ -71,7 +71,7 @@ Modernes Wellness verbindet klassische Prinzipien — Entspannung, Pflege, menta
 - Mentales Wohlbefinden
 - Unterstützung der gesundheitlichen Prävention
 
-### Modernes Wellness bei Rubedo Spa baut darauf auf — und ergänzt:
+### Moderne Pflege bei Rubedo Spa baut darauf auf — und ergänzt:
 
 1. **Kryotherapie (Ganzkörper)** — Kälteanwendung zur Unterstützung von Regeneration und Leistungsfähigkeit.
 2. **Kryo-Lokal** — Gezielte Kälteapplikation auf bestimmte Körperregionen.
@@ -80,7 +80,7 @@ Modernes Wellness verbindet klassische Prinzipien — Entspannung, Pflege, menta
 5. **Body Slimming Wrap** — Wickelbehandlungen zur optischen Hautstraffung.
 6. **Kombinierte Behandlungen** — Individuell abgestimmte Synergie-Pläne.
 
-Das Ergebnis ist ein Wellness-Studio in Minden, das nicht nur Ihre Seele entspannt, sondern auch Körpergefühl, Haut und Energielevel positiv unterstützen kann.
+Das Ergebnis ist ein Longevity-Studio in Minden, das nicht nur Ihre Seele entspannt, sondern auch Körpergefühl, Haut und Energielevel positiv unterstützen kann.
 
 > Modernes Wellness ist kein Bruch mit dem Klassischen — es ist seine logische Weiterentwicklung.
 >
@@ -96,16 +96,16 @@ Das Ergebnis ist ein Wellness-Studio in Minden, das nicht nur Ihre Seele entspan
 
 ## Wellness-Ziele und wie Technologien sie unterstützen {#ziele}
 
-Es gibt viele Gründe, warum Menschen ein Wellness-Studio in Minden aufsuchen. Im Folgenden einige typische Ziele — und wie Technologien bei Rubedo Spa sinnvoll eingesetzt werden können.
+Es gibt viele Gründe, warum Menschen ein Longevity-Studio in Minden aufsuchen. Im Folgenden einige typische Ziele — und wie Technologien bei Rubedo Spa sinnvoll eingesetzt werden können.
 
 - **Stress abbauen, Schlaf verbessern** — Inner-Source-Rituale, Atemarbeit, Hot-Stone-Massage als Basis; ergänzt um Kryotherapie zur vegetativen Beruhigung.
 - **Körpergefühl & Konturen** — Druckwellen-Anwendungen + Body-Wraps + Kryo-Lokal zur Unterstützung der Mikrozirkulation und des Hautbildes.
 - **Hautqualität langfristig verbessern** — DNA-Skin-Plan + Kryo-Facial + Mikronährstoff-Coaching.
-- **Regeneration nach Sport oder Belastung** — Ganzkörper-Kryo + Lymph-Wellness-Massage.
+- **Regeneration nach Sport oder Belastung** — Ganzkörper-Kryo + Lymph-Massage.
 
 ## Mythen und Realität {#mythen}
 
-**Mythos:** „Wellness wirkt nur in dem Moment, in dem man im Studio liegt."
+**Mythos:** „Spa-Behandlungen wirken nur in dem Moment, in dem man im Studio liegt."
 **Realität:** Bei strukturierten Programmen über mehrere Wochen sind objektive Veränderungen — etwa der Hautfeuchte, des Schlafgefühls oder des Körpergefühls — gut nachweisbar.
 
 **Mythos:** „Moderne Geräte ersetzen die Hände der Therapeutin."
@@ -118,9 +118,9 @@ Es gibt viele Gründe, warum Menschen ein Wellness-Studio in Minden aufsuchen. I
   <figcaption><em>Tradition trifft Technologie — die Werkzeuge des modernen Studios bewegen sich in der gleichen Bildwelt wie das klassische Spa-Ritual.</em></figcaption>
 </figure>
 
-Klassisches Wellness ist primär subjektiv: Es geht um das Gefühl von Pause und Pflege. Modernes Wellness arbeitet zusätzlich an objektiven Markern — Hautfeuchte, Mikrozirkulation, Regenerationsdauer, Körpergefühl. Beide Ebenen sind nötig: Das Erleben bleibt zentral, der Effekt wird messbarer.
+Klassische Spa-Pflege ist primär subjektiv: Es geht um das Gefühl von Pause und Erholung. Moderne Anwendungen arbeiten zusätzlich an objektiven Markern — Hautfeuchte, Mikrozirkulation, Regenerationsdauer, Körpergefühl. Beide Ebenen sind nötig: Das Erleben bleibt zentral, der Effekt wird messbarer.
 
-## Ihr Wellness-Weg im Studio {#weg}
+## Ihr Pflege-Weg im Studio {#weg}
 
 1. **Erstgespräch** (15 Minuten, kostenfrei) — Klärung von Zielen, Vorerkrankungen, Erwartungen.
 2. **Individueller Plan** — eine bis drei Säulen, abgestimmt auf Ihren Alltag.
@@ -131,7 +131,7 @@ Klassisches Wellness ist primär subjektiv: Es geht um das Gefühl von Pause und
 
 Wir sind kein klassisches Spa, sondern ein **Longevity-Studio**: Drei Säulen — DNA Skin Intelligence, Kryo Vital, Inner Source — greifen ineinander. Geführt von Monica Galletti, mit über 18 Jahren Erfahrung und Spezialisierung auf bewusste, nicht-invasive Pflege.
 
-## Die Wellness-Reise — wie sie sich anfühlen kann {#reise}
+## Die Pflege-Reise — wie sie sich anfühlen kann {#reise}
 
 Eine Klientin kommt mit dem Wunsch, „endlich besser zu schlafen". Im Erstgespräch zeigt sich: Hauptbelastung ist mentale Anspannung. Wir starten mit Inner-Source-Ritualen + Atemarbeit, ergänzen nach drei Wochen Kryo-Vital. Nach acht Wochen berichtet sie von tieferem Schlaf und einer ruhigeren Grundspannung.
 

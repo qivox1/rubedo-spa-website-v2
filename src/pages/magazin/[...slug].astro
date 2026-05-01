@@ -133,7 +133,7 @@ if (data.faq && data.faq.length > 0) {
     tags: data.tags,
   }}
 >
-  <article class="rb-page" data-page="magazin-artikel">
+  <article class="rb-page" data-page="magazin-artikel" itemscope itemtype="https://schema.org/Article">
 
     <div class="rb-mag-progress" aria-hidden="true">
       <div class="rb-mag-progress__bar" id="rb-mag-bar"></div>
@@ -156,14 +156,14 @@ if (data.faq && data.faq.length > 0) {
           <span class="rb-mag-hero__cat">{data.category}</span>
           <h1>{data.headline ?? data.title}</h1>
           <p class="rb-mag-hero__meta byline author">
-            <span class="rb-mag-hero__meta-item">
-              By <a class="byline author rel-author p-author h-card vcard" rel="author" href={author.data.page ?? '/ueber-monica/'}><span class="fn p-name" itemprop="author"><strong>{author.data.name}</strong></span></a>
+            <span class="rb-mag-hero__meta-item" itemprop="author" itemscope itemtype="https://schema.org/Person">
+              von <a class="byline author rel-author p-author h-card vcard" rel="author" href={author.data.page ?? '/ueber-monica/'} itemprop="url"><strong class="fn p-name" itemprop="name">{author.data.name}</strong></a>
             </span>
             <span class="rb-mag-hero__meta-item">
-              Published
+              veröffentlicht am
               <time class="published dt-published entry-date" datetime={data.pubDate.toISOString()} pubdate="pubdate" itemprop="datePublished">{pubDateFmt}</time>
               {updatedDateFmt && (
-                <>, updated <time class="updated dt-updated" datetime={data.updatedDate!.toISOString()} itemprop="dateModified">{updatedDateFmt}</time></>
+                <>, aktualisiert am <time class="updated dt-updated" datetime={data.updatedDate!.toISOString()} itemprop="dateModified">{updatedDateFmt}</time></>
               )}
             </span>
             <span class="rb-mag-hero__meta-item">{readingTime} Min. Lesezeit</span>
