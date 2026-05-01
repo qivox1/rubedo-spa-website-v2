@@ -11,7 +11,8 @@ const { ga4, gtm } = site.tracking;
 {(gtm || ga4) && (
   <script is:inline define:vars={{ gtm, ga4 }}>
 window.dataLayer = window.dataLayer || [];
-function gtag(){window.dataLayer.push(arguments);}
+window.gtag = window.gtag || function(){ window.dataLayer.push(arguments); };
+var gtag = window.gtag;
 gtag('consent', 'default', {
   ad_storage: 'denied',
   analytics_storage: 'denied',

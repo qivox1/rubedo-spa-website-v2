@@ -243,11 +243,12 @@
               transform var(--rb-dur-1) var(--rb-ease);
 }
 .rb-btn--primary {
-  background: var(--rb-gold-500);
+  /* gold-700 statt gold-500: WCAG-AA-konformer Kontrast (4.6:1) zu weiß. */
+  background: var(--rb-gold-700);
   color: var(--rb-paper);
 }
 .rb-btn--primary:hover {
-  background: var(--rb-gold-700);
+  background: var(--rb-gold-900);
 }
 .rb-btn--ghost {
   background: transparent;

@@ -54,26 +54,27 @@
         description: 'Steuert das Laden weiterer Analyse-Werkzeuge.',
         purposes: ['analytics'],
         cookies: [['_dc_gtm_*', '/', '.rubedo-spa.de']],
-        onAccept: `
-          if (typeof gtag === 'function') {
-            gtag('consent','update',{
-              ad_storage:'granted',
-              analytics_storage:'granted',
-              ad_user_data:'granted',
-              ad_personalization:'granted'
+        // Funktionen statt Strings — sonst nutzt Klaro eval() und CSP blockt es.
+        onAccept: function() {
+          if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted',
             });
           }
-        `,
-        onDecline: `
-          if (typeof gtag === 'function') {
-            gtag('consent','update',{
-              ad_storage:'denied',
-              analytics_storage:'denied',
-              ad_user_data:'denied',
-              ad_personalization:'denied'
+        },
+        onDecline: function() {
+          if (typeof window.gtag === 'function') {
+            window.gtag('consent', 'update', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
             });
           }
-        `,
+        },
       },
       {
         name: 'google-analytics',
@@ -87,6 +88,13 @@
       },
     ],
   };
+
+  // gtag muss global verfügbar sein, damit Klaro-Callbacks es finden.
+  // Falls Analytics.astro noch nicht geladen ist, hier sicheren Fallback definieren.
+  if (typeof window.gtag !== 'function') {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+  }
 </script>
 
 <script is:inline>
