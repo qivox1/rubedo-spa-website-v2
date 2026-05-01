@@ -38,6 +38,10 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
+      // /magazin/example-artikel/ ist eine Legacy-Weiterleitung (noindex) und
+      // gehört nicht in die Sitemap, damit Suchmaschinen und Audits sie nicht
+      // als Duplikat zur aktuellen Content-Collection-Seite werten.
+      filter: (page) => !page.includes('/magazin/example-artikel/'),
       i18n: {
         defaultLocale: 'de',
         locales: { de: 'de-DE' },
