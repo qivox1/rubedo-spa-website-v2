@@ -293,6 +293,8 @@ a { color: inherit; }
   min-height: clamp(520px, 62vh, 720px);
   overflow: hidden;
   display: flex; align-items: flex-start;
+  /* Solider dunkler Background als Lighthouse-Contrast-Anker (Bild liegt darüber). */
+  background-color: var(--rb-ink-900);
 }
 .rb-block-hero--photo .rb-block-hero__photo > img {
   position: absolute; inset: 0; width: 100%; height: 100%;
