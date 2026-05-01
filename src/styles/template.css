@@ -76,7 +76,7 @@ a { color: inherit; }
 /* Full-color SVG wordmark variant — replaces mark + name pair */
 .rb-brand--logo { display: inline-flex; align-items: center; text-decoration: none; gap: 0; }
 .rb-brand--logo .rb-brand__logo { display: block; height: 56px; width: auto; }
-.rb-footer .rb-brand--logo .rb-brand__logo { height: 84px; background: var(--rb-paper); padding: 8px; border-radius: 50%; }
+.rb-footer .rb-brand--logo .rb-brand__logo { height: 84px; background: transparent; padding: 0; border-radius: 0; }
 .rb-footer__brand .rb-brand__mark { background: transparent; }
 .rb-footer__brand .rb-brand__mark img {
   filter: brightness(0) invert(1) sepia(0.4) saturate(2) hue-rotate(8deg);
