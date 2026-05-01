@@ -17,8 +17,11 @@ img { max-width: 100%; display: block; }
 a { color: inherit; }
 
 /* ------------ Layout shell ------------ */
-.rb-wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
-.rb-wrap--narrow { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+.rb-wrap { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+.rb-wrap--narrow { max-width: 880px; margin: 0 auto; padding: 0 40px; }
+@media (max-width: 640px) {
+  .rb-wrap, .rb-wrap--narrow { padding: 0 20px; }
+}
 .rb-section { padding: var(--rb-space-9) 0; }
 .rb-section--tight { padding: var(--rb-space-8) 0; }
 .rb-section--cream { background: var(--rb-cream); }
@@ -96,7 +99,14 @@ a { color: inherit; }
   margin-top: 4px;
 }
 
-.rb-nav { display: flex; align-items: center; justify-content: center; gap: var(--rb-space-5); }
+.rb-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--rb-space-4);
+  flex-wrap: nowrap;
+  min-width: 0;
+}
 .rb-nav__item {
   position: relative;
   font-family: var(--rb-font-body);
@@ -109,18 +119,30 @@ a { color: inherit; }
   padding: 14px 2px;
   line-height: 1;
   cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
   transition: color var(--rb-dur-1) var(--rb-ease);
 }
 .rb-nav__item:hover { color: var(--rb-gold-700); }
 .rb-nav__item.is-active { color: var(--rb-gold-700); }
 .rb-nav__item.is-active::before {
-  content: ""; position: absolute; left: 6px; right: 6px; bottom: 4px;
-  height: 1px; background: var(--rb-gold-500);
+  content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
+  height: 2px; background: var(--rb-gold-500);
+  border-radius: 1px;
 }
 .rb-nav__item--has-sub::after {
   content: "›"; display: inline-block; margin-left: 6px; transform: rotate(90deg);
   font-size: 14px; color: var(--rb-gold-500);
+  transition: transform 220ms cubic-bezier(.2,.65,.3,1), color 220ms cubic-bezier(.2,.65,.3,1);
 }
+.rb-nav__group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.rb-nav__group:hover .rb-nav__item--has-sub::after,
+.rb-nav__group:focus-within .rb-nav__item--has-sub::after { transform: rotate(-90deg); color: var(--rb-gold-700); }
 
 .rb-mega {
   position: absolute; top: 100%; left: 0; right: 0;
@@ -179,11 +201,8 @@ a { color: inherit; }
 
 /* ============================================================
    DESKTOP DROPDOWN-NAV (Flyout pro Top-Level-Item)
+   .rb-nav__group ist bereits oben definiert (Block "HEADER · NAV").
    ============================================================ */
-.rb-nav__group {
-  position: relative;
-  display: flex; align-items: center;
-}
 .rb-nav__flyout {
   position: absolute;
   top: 100%;
@@ -264,12 +283,6 @@ a { color: inherit; }
 }
 .rb-nav__item--has-sub {
   cursor: pointer;
-}
-/* Caret rotiert wenn Flyout offen */
-.rb-nav__group:hover .rb-nav__item--has-sub::after,
-.rb-nav__group:focus-within .rb-nav__item--has-sub::after,
-.rb-nav__group.is-open .rb-nav__item--has-sub::after {
-  color: var(--rb-gold-700);
 }
 
 /* ============================================================
@@ -1021,13 +1034,16 @@ a { color: inherit; }
   background: linear-gradient(180deg, transparent 50%, rgba(15,12,10,0.5) 100%);
 }
 .rb-bio__body .rb-eyebrow { display: block; margin-bottom: 12px; }
+.rb-bio__body h1,
 .rb-bio__body h2 {
   font-family: var(--rb-font-display);
   font-weight: 400;
-  font-size: clamp(36px, 4vw, 56px);
+  font-size: clamp(40px, 5vw, 64px);
   line-height: 1.05;
+  letter-spacing: -0.005em;
   margin: 0 0 var(--rb-space-3);
   text-wrap: balance;
+  color: var(--rb-ink-900);
 }
 .rb-bio__credentials {
   display: flex; flex-wrap: wrap; gap: var(--rb-space-2);

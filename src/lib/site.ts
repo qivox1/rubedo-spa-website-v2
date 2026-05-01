@@ -64,28 +64,21 @@ export const site = {
   },
 
   // Hauptnavigation — `children` optional für Untermenüs (zweite Ebene).
-  // Wird auf Mobile als Accordion gerendert, auf Desktop könnte später ein Mega-Menü folgen.
+  // Konvention: in `children` NUR Einträge, deren URL sich vom Parent unterscheidet.
+  // Der Lead-Link „· Übersicht" auf den Parent wird vom Header automatisch ergänzt.
   nav: [
     {
       label: 'Philosophie',
       href: '/philosophie/',
       children: [
-        { label: 'Philosophie & drei Säulen', href: '/philosophie/', description: 'Was Rubedo ist — und was nicht.' },
         { label: 'Longevity-Studio Minden', href: '/longevity-studio-minden/', description: 'Studio, Mission, Werte und Standort in der Marienstraße.' },
       ],
     },
-    {
-      label: 'DNA Skin',
-      href: '/dna-skin-intelligence/',
-      children: [
-        { label: 'DNA Skin Intelligence', href: '/dna-skin-intelligence/', description: 'Personalisierte Hautpflege auf Basis von 20 Beauty-Genen.' },
-      ],
-    },
+    { label: 'DNA Skin', href: '/dna-skin-intelligence/' },
     {
       label: 'Kryo Vital',
       href: '/kryo-vital/',
       children: [
-        { label: 'Kryo Vital · Übersicht', href: '/kryo-vital/', description: 'Drei Minuten kontrollierter Kältereiz für Vitalität.' },
         { label: 'Ganzkörper-Kryotherapie', href: '/kryo-vital/ganzkoerper/', description: 'Drei Minuten in der Kryo-Suite bei minus 110 °C.' },
         { label: 'Körperformung · Druckwellen', href: '/kryo-vital/koerperformung/', description: 'Rhythmische Druckwellen-Anwendung für Beine, Bauch und Arme.' },
         { label: 'Body Slimming Wrap', href: '/kryo-vital/koerperformung/wrap/', description: 'Wickel-Anwendung mit pflegenden Wirkstoffen — drei Linien.' },
@@ -96,7 +89,6 @@ export const site = {
       label: 'Inner Source',
       href: '/inner-source/',
       children: [
-        { label: 'Inner Source · Übersicht', href: '/inner-source/', description: 'Atem, Berührung und Stille als Tiefenarbeit.' },
         { label: 'Rubedo Suite (Massagen)', href: '/inner-source/rubedo-suite/', description: 'Abhyanga, Hot Stone, Hot Bambu, Balinesisch.' },
         { label: 'Atem-Ritual', href: '/inner-source/atem-ritual/', description: 'Geführte 60-Minuten-Sitzung — neurosomatische Atemarbeit.' },
       ],
@@ -106,9 +98,8 @@ export const site = {
       label: 'Magazin',
       href: '/magazin/',
       children: [
-        { label: 'Alle Beiträge', href: '/magazin/' },
-        { label: 'Wellness & Spa', href: '/magazin/kategorie/wellness-und-spa/' },
-        { label: 'Kryotherapie', href: '/magazin/kategorie/kryotherapie/' },
+        { label: 'Wellness & Spa', href: '/magazin/kategorie/wellness-und-spa/', description: 'Beiträge rund um bewussten Wellness-Alltag.' },
+        { label: 'Kryotherapie', href: '/magazin/kategorie/kryotherapie/', description: 'Hintergrund-Beiträge zu Kälteanwendungen.' },
       ],
     },
     { label: 'Kontakt', href: '/kontakt/' },

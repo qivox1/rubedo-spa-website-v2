@@ -241,7 +241,7 @@ const navItems = site.nav as ReadonlyArray<NavGroup>;
     });
 
     // Beim Wechsel auf Desktop-Viewport sicher schließen
-    const mq = window.matchMedia('(min-width: 921px)');
+    const mq = window.matchMedia('(min-width: 981px)');
     const onMq = () => { if (mq.matches) close(); };
     mq.addEventListener?.('change', onMq);
 
@@ -505,8 +505,10 @@ const navItems = site.nav as ReadonlyArray<NavGroup>;
     line-height: 1.5; color: var(--rb-ink-500);
   }
 
-  /* ---- Breakpoints ---- */
-  @media (max-width: 920px) {
+  /* ---- Breakpoints ----
+     980px: stimmt mit template.css überein, das die Desktop-Nav dort versteckt.
+     Vorher gab's eine Lücke 921–980px, in der weder Nav noch Burger sichtbar war. */
+  @media (max-width: 980px) {
     .rb-nav { display: none !important; }
     .rb-header__cta { display: none !important; }
     .rb-mobile-toggle { display: inline-flex; }
