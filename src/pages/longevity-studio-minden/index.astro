@@ -2,12 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { site } from '@/lib/site';
 
-// /about/ ist die englische Konvention. Inhaltlich verweist sie auf
-// /ueber-monica/, hat aber eigene Substanz, damit Squirrel-Audit-Heuristik
-// und internationale Besucher hier eine echte „About"-Seite sehen.
-const title = 'About Rubedo Spa — Studio in Minden';
-const description = 'About Rubedo Spa Minden — Longevity-Studio von Monica Galletti, CIDESCO Beauty Therapist und DNA-Skin-Expertin. Drei Säulen, ein System, ein Studio in Minden.';
-const url = `${site.url}/about/`;
+const title = 'Longevity-Studio Minden — Rubedo Spa';
+const description = 'Longevity-Studio in Minden — Rubedo Spa von Monica Galletti, CIDESCO Beauty Therapist und DNA-Skin-Expertin. Drei Säulen, ein System, ein Studio in der Marienstraße.';
+const url = `${site.url}/longevity-studio-minden/`;
 
 const aboutPageSchema = {
   '@context': 'https://schema.org',
@@ -24,7 +21,7 @@ const aboutPageSchema = {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Startseite', item: `${site.url}/` },
-      { '@type': 'ListItem', position: 2, name: 'About', item: url },
+      { '@type': 'ListItem', position: 2, name: 'Longevity-Studio Minden', item: url },
     ],
   },
 };
@@ -36,16 +33,16 @@ const aboutPageSchema = {
   schemaExtras={[aboutPageSchema]}
 >
 
-  <article class="rb-page" data-page="about">
+  <article class="rb-page" data-page="longevity-studio">
 
     <section class="rb-block-hero rb-block-hero--centered">
       <div class="rb-wrap rb-block-hero__inner">
         <div>
-          <span class="rb-block-hero__eyebrow">About · Rubedo Spa</span>
-          <h1>Über Rubedo Spa.</h1>
+          <span class="rb-block-hero__eyebrow">Studio · Minden</span>
+          <h1>Longevity-Studio Minden.</h1>
           <p class="rb-block-hero__subline" style="margin-left:auto;margin-right:auto;">
-            Ein Longevity-Studio in Minden. Drei Säulen, eine Haltung — geführt von
-            Monica Galletti.
+            Rubedo Spa ist kein klassisches Spa, sondern ein Longevity-Studio in der Marienstraße 58.
+            Drei Säulen, eine Haltung — geführt von Monica Galletti.
           </p>
         </div>
       </div>
@@ -53,22 +50,39 @@ const aboutPageSchema = {
 
     <section class="rb-section rb-section--paper">
       <div class="rb-wrap rb-wrap--narrow rb-prose">
-        <span class="rb-eyebrow">Wer wir sind</span>
-        <h2>Studio &amp; Mensch.</h2>
+        <span class="rb-eyebrow">Was ein Longevity-Studio ausmacht</span>
+        <h2>Pflege, die langfristig denkt.</h2>
         <p>
-          Rubedo Spa ist kein klassisches Spa, sondern ein <strong>Longevity-Studio</strong> in
-          Minden. Wir verbinden personalisierte Hautpflege auf DNA-Basis, kontrollierte
-          Kälteanwendungen und neurosomatische Atemarbeit zu einem System, das auf den
-          einzelnen Menschen zugeschnitten ist.
+          Longevity beschreibt einen Lebensstil und eine Pflege-Haltung, die auf
+          Vorsorge, Regeneration und Selbstregulation setzen. In einem
+          <strong>Longevity-Studio</strong> steht die langfristige Vitalität im Mittelpunkt —
+          nicht das schnelle Ergebnis. Das ist der Unterschied zwischen einer Behandlung,
+          die heute gut tut, und einer Routine, die in fünf Jahren noch wirkt.
         </p>
+        <p>
+          Im Rubedo Spa verbinden wir personalisierte Hautpflege auf DNA-Basis,
+          kontrollierte Kälteanwendungen und neurosomatische Atemarbeit zu einem
+          System, das auf den einzelnen Menschen zugeschnitten ist. Drei Säulen
+          ergeben gemeinsam mehr als die Summe ihrer Teile.
+        </p>
+
+        <h3>Studio &amp; Mensch</h3>
         <p>
           Das Studio wird von <a href="/ueber-monica/" rel="author">Monica Galletti</a>
-          geführt — CIDESCO Beauty Therapist, DNA Skin Expert,
+          geführt — CIDESCO Beauty Therapist, DNA Skin Expert (Beauty ID Switzerland),
           NLP Master und seit über zehn Jahren in der internationalen 5-Sterne-Spa-Praxis tätig.
           Unsere Arbeit basiert auf zertifizierter Ausbildung, sorgfältiger Recherche und
-          jahrelanger Erfahrung mit Klientinnen und Klienten, die ihre Schönheit und Pflege
-          ernst nehmen.
+          jahrelanger Erfahrung mit Gästen, die ihre Pflege ernst nehmen — und Zeit dafür
+          mitbringen wollen.
         </p>
+
+        <h3>Drei Säulen, ein System</h3>
+        <p>Wir arbeiten ausschließlich entlang dieser drei Säulen — keine Behandlungen, die nicht eingebettet sind.</p>
+        <ul>
+          <li><a href="/dna-skin-intelligence/"><strong>DNA Skin Intelligence</strong></a> — personalisierte Hautpflege auf Basis von 20 Beauty-Genen.</li>
+          <li><a href="/kryo-vital/"><strong>Kryo Vital</strong></a> — Ganzkörper-Kryotherapie, Kryo-Lokal, Druckwellen, Bandagen, Wraps.</li>
+          <li><a href="/inner-source/"><strong>Inner Source Rituals</strong></a> — Massage-Rituale in der Rubedo Suite und neurosomatische Atemarbeit.</li>
+        </ul>
 
         <h3>Mission</h3>
         <p>
@@ -97,12 +111,8 @@ const aboutPageSchema = {
         <h3>Mehr erfahren</h3>
         <p>
           Eine ausführliche Vita von Monica Galletti — Werdegang, Zertifizierungen,
-          Methodik — finden Sie auf der Seite <a href="/ueber-monica/" rel="author">Über
+          Methodik — findest du auf der Seite <a href="/ueber-monica/" rel="author">Über
           Monica</a>. Die Philosophie des Studios beschreibt die <a href="/philosophie/">Philosophie-Seite</a>.
-          Konkrete Anwendungen finden Sie in den drei Säulen:
-          <a href="/dna-skin-intelligence/">DNA Skin Intelligence</a>,
-          <a href="/kryo-vital/">Kryo Vital</a> und
-          <a href="/inner-source/">Inner Source</a>.
         </p>
       </div>
     </section>
@@ -113,9 +123,9 @@ const aboutPageSchema = {
           <div class="rb-cta-band__body">
             <span class="rb-eyebrow">Kennenlernen</span>
             <h3>15 Minuten Videocall — kostenfrei.</h3>
-            <p>Wir besprechen, was Sie suchen, und Monica erklärt, welche Säule für Sie passt.</p>
+            <p>Wir besprechen, was du suchst, und Monica erklärt, welche Säule für dich passt.</p>
           </div>
-          <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/">Erstgespräch buchen →</a></div>
+          <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/?intent=erstgespraech">Erstgespräch buchen →</a></div>
         </div>
       </div>
     </section>

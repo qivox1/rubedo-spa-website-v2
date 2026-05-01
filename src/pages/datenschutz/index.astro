@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { site } from '@/lib/site';
 
 const title = 'Datenschutz — Rubedo Spa Minden';
-const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir personenbezogene Daten verarbeiten, welche Cookies und Drittdienste eingesetzt werden.';
+const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir personenbezogene Daten verarbeiten, welche Cookies und Drittdienste eingesetzt werden, sowie Hinweise zur DNA-Skin-Analyse (Art. 9 DSGVO).';
 ---
 
 <BaseLayout title={title} description={description}>
@@ -13,7 +13,20 @@ const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir person
         <h1>Datenschutzerklärung</h1>
         <p class="rb-eyebrow" style="margin-bottom: 24px;">Stand: {new Date().toLocaleDateString('de-DE', { year: 'numeric', month: 'long' })}</p>
 
-        <h2>1. Verantwortlicher</h2>
+        <nav class="rb-toc" aria-label="Inhaltsverzeichnis">
+          <strong>Auf dieser Seite</strong>
+          <ol>
+            <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+            <li><a href="#hosting">Hosting</a></li>
+            <li><a href="#cookies">Cookies &amp; Tracking</a></li>
+            <li><a href="#kontaktformular">Kontaktformular &amp; Termin-Anfrage</a></li>
+            <li><a href="#dna-analyse">Genetische Daten — DNA Skin Concept</a></li>
+            <li><a href="#rechte">Deine Rechte</a></li>
+            <li><a href="#aenderungen">Änderungen dieser Erklärung</a></li>
+          </ol>
+        </nav>
+
+        <h2 id="verantwortlicher">1. Verantwortlicher</h2>
         <p>
           {site.legalName}<br />
           {site.address.street}<br />
@@ -22,14 +35,14 @@ const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir person
           E-Mail: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
         </p>
 
-        <h2>2. Hosting</h2>
+        <h2 id="hosting">2. Hosting</h2>
         <p>
           Diese Website wird auf Cloudflare Pages (Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA) gehostet.
           Beim Aufruf werden technische Daten (IP-Adresse, User-Agent, Datum/Uhrzeit) im Server-Log gespeichert.
           Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren Betrieb).
         </p>
 
-        <h2>3. Cookies & Tracking</h2>
+        <h2 id="cookies">3. Cookies &amp; Tracking</h2>
         <p>
           Wir setzen technisch notwendige Cookies sowie — nach ausdrücklicher Einwilligung — Cookies für anonymisierte Statistik (Google Analytics 4 via Google Tag Manager).
           Die Einwilligung kannst du jederzeit über das Cookie-Banner unten links widerrufen oder ändern.
@@ -38,24 +51,121 @@ const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir person
           Bei Google Analytics ist die IP-Anonymisierung aktiv. Wir nutzen Consent Mode v2 — vor deiner Einwilligung werden keine Tracking-Cookies gesetzt.
         </p>
 
-        <h2>4. Kontaktformular & Termin-Anfrage</h2>
+        <h2 id="kontaktformular">4. Kontaktformular &amp; Termin-Anfrage</h2>
         <p>
           Wenn du uns über das Formular schreibst, verarbeiten wir die angegebenen Daten ausschließlich zur Beantwortung deiner Anfrage.
           Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Anbahnung Vertragsverhältnis).
           Spam-Schutz erfolgt über Cloudflare Turnstile (datenschutzfreundlich, ohne personenbezogene Profilbildung).
         </p>
 
-        <h2>5. Deine Rechte</h2>
+        <h2 id="dna-analyse">5. Genetische Daten — DNA Skin Concept</h2>
         <p>
-          Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-          Datenübertragbarkeit und Widerspruch (Art. 15 ff. DSGVO). Wende dich dazu an oben genannte Adresse.
-          Beschwerderecht bei der zuständigen Aufsichtsbehörde: Landesbeauftragte für Datenschutz NRW.
+          Im Rahmen unseres Pflege-Programms <em>DNA Skin Intelligence</em> bieten wir gemeinsam mit
+          Beauty ID Switzerland eine genetische Hautanalyse an. Dabei werden personenbezogene
+          Daten der besonderen Kategorie im Sinne von Art. 9 DSGVO (genetische Daten) verarbeitet.
+          Wir behandeln diese Daten mit erhöhter Sorgfalt und folgen den nachstehenden Grundsätzen.
         </p>
 
-        <h2>6. Änderung dieser Erklärung</h2>
+        <h3>5.1 Zweck der Verarbeitung</h3>
         <p>
-          Wir passen diese Erklärung an, wenn sich Funktionen oder Rechtslage ändern.
-          Die jeweils aktuelle Fassung findest du auf dieser Seite.
+          Die DNA-Analyse erfolgt ausschließlich zu kosmetischen Zwecken im Sinne einer
+          Lifestyle-Analyse („Beauty-Gene", Hautalterungs-Faktoren). Sie ist <strong>keine medizinische Diagnose</strong>,
+          stellt keine Krankheits- oder Risikobewertung dar und ersetzt keine ärztliche Untersuchung.
+          Die Analyse umfasst rund zwanzig Genvarianten, die im wissenschaftlichen Diskurs mit
+          Hautalterung, Feuchtigkeitshaushalt, Kollagenbildung, oxidativem Stress und individuellem
+          Mikronährstoffbedarf in Verbindung gebracht werden.
+        </p>
+
+        <h3>5.2 Rechtsgrundlage</h3>
+        <p>
+          Verarbeitung erfolgt ausschließlich auf Basis deiner ausdrücklichen, schriftlichen
+          Einwilligung (Art. 9 Abs. 2 lit. a DSGVO i. V. m. Art. 6 Abs. 1 lit. a DSGVO). Vor dem
+          Test erhältst du eine ausführliche schriftliche Aufklärung sowie eine separate
+          Einwilligungserklärung, die du dauerhaft widerrufen kannst — der Widerruf wirkt für die
+          Zukunft. Bestehende Auswertungen werden in dem Fall auf Wunsch unverzüglich gelöscht.
+        </p>
+
+        <h3>5.3 Erhobene Daten und Probe-Workflow</h3>
+        <ol>
+          <li>Speichelprobe vor Ort oder per Versand-Set.</li>
+          <li>Anonymisierung der Probe mit einem QR-Code; dein Klarname wird nicht an das Labor übermittelt.</li>
+          <li>Versand an das Genlabor Novogenia GmbH (Salzburg, Österreich) durch unseren Methodenpartner Beauty ID Switzerland AG (Schweiz).</li>
+          <li>Auswertung der vereinbarten Genvarianten innerhalb von zwei bis drei Wochen.</li>
+          <li>Übermittlung des Reports zurück an Rubedo Spa und an dich; Beratungsgespräch mit Monica Galletti.</li>
+        </ol>
+
+        <h3>5.4 Empfänger und Auftragsverarbeitung</h3>
+        <p>
+          Empfänger deiner Daten sind:
+        </p>
+        <ul>
+          <li><strong>Beauty ID Switzerland AG</strong> — Methodenpartner mit Sitz in der Schweiz; verantwortlich für den Workflow vom Probenversand bis zur Reporterstellung.</li>
+          <li><strong>Novogenia GmbH</strong> — Genlabor mit Sitz in Salzburg, Österreich; verantwortlich für die DNA-Analyse selbst.</li>
+        </ul>
+        <p>
+          Mit beiden Partnern bestehen Verträge zur Auftragsverarbeitung gemäß Art. 28 DSGVO.
+          Eine Kopie kannst du auf Anfrage einsehen. Eine Übermittlung an weitere Dritte
+          (insbesondere an Versicherungen, Arbeitgeber oder Behörden) findet nicht statt.
+        </p>
+
+        <h3>5.5 Drittlandtransfer Schweiz</h3>
+        <p>
+          Die Schweiz verfügt über ein von der EU-Kommission anerkanntes angemessenes
+          Datenschutzniveau (Angemessenheitsbeschluss, zuletzt bestätigt 2024). Eine Übermittlung
+          ist nach Art. 45 DSGVO zulässig. Österreich ist EU/EWR-Mitglied — hier gilt das
+          DSGVO-Schutzniveau unmittelbar.
+        </p>
+
+        <h3>5.6 Speicherdauer und Löschung</h3>
+        <p>
+          Die Speichelprobe wird nach abgeschlossener Auswertung durch Novogenia vernichtet —
+          das ist vertraglich zugesichert. Die ausgewerteten Daten (DNA-Report) werden bei
+          Rubedo Spa für die Dauer der Vertrags- und Beratungsbeziehung sowie ergänzender
+          gesetzlicher Aufbewahrungspflichten gespeichert (Steuer- und Handelsrecht: bis zu
+          zehn Jahre für Rechnungsdokumente). Den eigentlichen Genreport selbst löschen wir
+          spätestens drei Jahre nach Abschluss des Programms — auf deinen Wunsch unverzüglich.
+        </p>
+
+        <h3>5.7 Schriftform und Aufklärung</h3>
+        <p>
+          Vor jeder DNA-Analyse erhältst du eine eigenständige, schriftliche Aufklärung, die
+          unter anderem den Untersuchungs-Umfang, die untersuchten Gene, die Aussagekraft und
+          die ausdrücklichen Grenzen der Analyse erläutert. Die Einwilligung erfolgt
+          schriftlich und ist Voraussetzung für die Probenahme. Wir orientieren uns dabei am
+          Standard des deutschen Gendiagnostikgesetzes (GenDG), auch wenn rein kosmetische
+          Analysen nicht zwingend in dessen Anwendungsbereich fallen.
+        </p>
+
+        <h3>5.8 Deine besonderen Rechte bei genetischen Daten</h3>
+        <p>
+          Zusätzlich zu den allgemeinen Rechten aus Abschnitt 6 hast du bei genetischen Daten
+          das Recht, jederzeit die vollständige Löschung des Reports und aller assoziierten
+          Daten zu verlangen. Wir setzen die Löschung im Studio sowie bei Beauty ID Switzerland
+          und Novogenia in Gang und bestätigen dir die Durchführung schriftlich.
+        </p>
+
+        <h3>5.9 Was wir nicht tun</h3>
+        <ul>
+          <li>Wir geben deine genetischen Daten weder an Versicherungen noch an Arbeitgeber weiter.</li>
+          <li>Wir verkaufen keine Daten und führen keine kommerzielle Auswertung über deine Person hinaus durch.</li>
+          <li>Wir treffen keine medizinischen Aussagen — bei medizinischen Fragestellungen verweisen wir an Ärztinnen und Ärzte.</li>
+          <li>Wir nutzen die Daten nicht für Werbung außerhalb deiner persönlichen Pflege-Beratung.</li>
+        </ul>
+
+        <h2 id="rechte">6. Deine Rechte</h2>
+        <p>
+          Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+          Datenübertragbarkeit und Widerspruch (Art. 15 ff. DSGVO). Wende dich dazu an die unter Abschnitt 1
+          genannte Adresse. Beschwerderecht bei der zuständigen Aufsichtsbehörde: Landesbeauftragte für
+          Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2-4, 40213 Düsseldorf.
+        </p>
+
+        <h2 id="aenderungen">7. Änderungen dieser Erklärung</h2>
+        <p>
+          Wir passen diese Erklärung an, wenn sich Funktionen, Dienstleister oder Rechtslage ändern.
+          Die jeweils aktuelle Fassung findest du auf dieser Seite. Wenn sich der DNA-Skin-Workflow
+          ändert (z. B. Wechsel des Genlabors), informieren wir bestehende Programmteilnehmer:innen
+          gesondert.
         </p>
       </div>
     </section>
@@ -64,7 +174,20 @@ const description = 'Datenschutzerklärung für rubedo-spa.de — wie wir person
 
 <style>
   .rb-prose h1 { font-family: var(--rb-font-display); font-size: var(--rb-text-3xl); margin-bottom: 12px; }
-  .rb-prose h2 { font-family: var(--rb-font-display); font-size: var(--rb-text-xl); margin: 32px 0 12px; }
-  .rb-prose p { font-family: var(--rb-font-body); line-height: var(--rb-leading-loose); color: var(--rb-ink-700); margin: 0 0 16px; }
+  .rb-prose h2 { font-family: var(--rb-font-display); font-size: var(--rb-text-xl); margin: 40px 0 12px; scroll-margin-top: 96px; }
+  .rb-prose h3 { font-family: var(--rb-font-display); font-size: var(--rb-text-lg); margin: 24px 0 10px; }
+  .rb-prose p, .rb-prose li { font-family: var(--rb-font-body); line-height: var(--rb-leading-loose); color: var(--rb-ink-700); margin: 0 0 12px; }
+  .rb-prose ul, .rb-prose ol { padding-left: 22px; margin: 0 0 16px; }
   .rb-prose a { color: var(--rb-gold-700); }
+  .rb-toc {
+    background: var(--rb-cream-50);
+    border: 1px solid var(--rb-ink-200);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin: 0 0 32px;
+    font-size: 14px;
+  }
+  .rb-toc strong { display: block; margin-bottom: 8px; font-family: var(--rb-font-display); font-size: var(--rb-text-sm); letter-spacing: 0.04em; text-transform: uppercase; color: var(--rb-ink-500); }
+  .rb-toc ol { margin: 0; padding-left: 22px; }
+  .rb-toc li { margin: 4px 0; }
 </style>

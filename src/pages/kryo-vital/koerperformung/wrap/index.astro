@@ -1,0 +1,199 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Body Slimming Wrap Minden — Wickel-Anwendung · Rubedo Spa';
+const description = 'Body Slimming Wrap — pflegende Wickel-Anwendung mit Wirkstoffen für ein gepflegtes Hautbild und ein klares Körpergefühl. Drei Linien: Total, Fast, Silhouette. Rubedo Spa Minden.';
+const heroImage = '/images/wrap-hero.webp';
+const url = `${site.url}/kryo-vital/koerperformung/wrap/`;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  serviceType: 'Body Slimming Wrap',
+  name: 'Body Slimming Wrap — Wickel-Anwendung',
+  description: 'Wellness-Wickel mit pflegenden Wirkstoffen, eingebettet in eine ruhige Atmosphäre. Drei Linien: Total, Fast und Silhouette.',
+  url,
+  image: `${site.url}${heroImage}`,
+  category: 'Wellness',
+  provider: { '@id': `${site.url}/#localbusiness` },
+  areaServed: { '@type': 'City', name: 'Minden' },
+  offers: [
+    { '@type': 'Offer', name: 'Body Slimming Total Wrap (90 Min)', price: '170', priceCurrency: 'EUR' },
+    { '@type': 'Offer', name: 'Body-Slimming Fast Wrap (60 Min)', price: '130', priceCurrency: 'EUR' },
+    { '@type': 'Offer', name: 'Body-Slimming Silhouette (90 Min)', price: '170', priceCurrency: 'EUR' },
+  ],
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Start', item: `${site.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Kryo Vital', item: `${site.url}/kryo-vital/` },
+    { '@type': 'ListItem', position: 3, name: 'Körperformung', item: `${site.url}/kryo-vital/koerperformung/` },
+    { '@type': 'ListItem', position: 4, name: 'Body Slimming Wrap', item: url },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'Hält die Wirkung an?', acceptedAnswer: { '@type': 'Answer', text: 'Das Hautempfinden direkt nach der Anwendung hält für mehrere Tage an. Eine längerfristige Veränderung des Hautbildes entsteht — wie bei jeder Pflege-Routine — durch eine Anwendungs-Serie und durch eine konsequente Pflege zu Hause.' } },
+    { '@type': 'Question', name: 'Was ziehe ich danach an?', acceptedAnswer: { '@type': 'Answer', text: 'Bequeme, weiche Kleidung. Wir empfehlen, nach einer Wrap-Anwendung zu Hause noch eine ruhige Stunde zu planen.' } },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  heroImage={heroImage}
+  schemaExtras={[serviceSchema, breadcrumb, faqSchema]}
+>
+  <article class="rb-page" data-page="wrap">
+
+    <!-- HERO -->
+    <section class="rb-block-hero rb-block-hero--photo">
+      <div class="rb-block-hero__photo">
+        <img src="/images/wrap-hero.webp" alt="Body Slimming Wrap im Rubedo Spa — Hand legt pflegende Wirkstoffmischung auf" width="1600" height="900" fetchpriority="high" />
+        <div class="rb-wrap">
+          <div class="rb-block-hero__copy">
+            <span class="rb-block-hero__eyebrow">Kryo Vital · Körperformung</span>
+            <h1>Wickel-Anwendung für ein gepflegtes Körpergefühl.</h1>
+            <p class="rb-block-hero__subline">Pflegende Wickel mit ausgewählten Wirkstoffen — als bewusste Pause für deine Haut und dein Körperempfinden.</p>
+            <div class="rb-block-hero__cta">
+              <a href="/termin-buchen/?intent=wrap" class="rb-btn rb-btn--primary rb-btn--lg">Fast Wrap · 130 €</a>
+              <a href="#wrap-linien" class="rb-btn rb-btn--ghost">Drei Linien ansehen</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT IS A WRAP -->
+    <section class="rb-block-imgtext rb-section--paper">
+      <div class="rb-wrap">
+        <div class="rb-imgtext">
+          <div class="rb-imgtext__media">
+            <img src="/images/wrap-content-botanicals.webp" alt="Body-Slimming-Wrap mit Botanicals und Pflegestoffen — Schale mit getrockneten Pflanzen" width="800" height="600" loading="lazy" />
+          </div>
+          <div class="rb-imgtext__body">
+            <span class="rb-eyebrow">Was ein Body Slimming Wrap ist</span>
+            <h2>Pflege-Wirkstoffe trifft ruhige Atmosphäre.</h2>
+            <p>Beim Wrap werden ausgewählte Pflege-Wirkstoffe großflächig auf den Körper aufgetragen. Anschließend wird der Körper in eine atmungsaktive Folie eingewickelt. In der Ruhephase wirken die Wirkstoffe auf Hautbild und Hautempfinden, während dein Körper sich in einer angenehmen, leicht warmen Umgebung entspannt.</p>
+            <p>Die Anwendung ist ein klassisches <strong>Wellness-Ritual</strong> und kein medizinisches Verfahren. Sie pflegt das Hautbild, unterstützt das subjektive Empfinden eines gestrafften Körpergefühls und ist ein gut angenommenes Format für Gäste, die eine ruhige, aber wirkungsvolle Anwendung suchen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREE LINES -->
+    <section id="wrap-linien" class="rb-section rb-section--cream">
+      <div class="rb-wrap">
+        <div class="rb-block-cards__head">
+          <div><span class="rb-eyebrow">Unsere Wrap-Linien</span><h2>Drei Anwendungen für unterschiedliche Anlässe.</h2></div>
+        </div>
+        <div class="rb-cards rb-cards--three">
+          <article class="rb-tcard">
+            <div class="rb-tcard__media rb-tcard__media--wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12c4-6 14-6 18 0M3 12c4 6 14 6 18 0"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <div class="rb-tcard__body">
+              <div class="rb-tcard__meta"><span>90 Min</span><span>Ganzkörper</span></div>
+              <h3 class="rb-tcard__title">Total Wrap</h3>
+              <p class="rb-tcard__text">Ganzkörper-Anwendung mit pflegender Wirkstoffmischung. Geeignet als Highlight im Rahmen eines Wellness-Tages oder als kompletter Pflege-Reset.</p>
+              <div class="rb-tcard__foot"><span class="rb-tcard__price">170 €</span><a href="/termin-buchen/?intent=wrap-total" class="rb-tcard__cta">Buchen</a></div>
+            </div>
+          </article>
+          <article class="rb-tcard">
+            <div class="rb-tcard__media rb-tcard__media--wrap rb-tcard__media--photo"><img src="/images/wrap-content-botanicals.webp" alt="Body-Slimming Fast Wrap mit pflegenden Botanicals" width="600" height="400" loading="lazy" /></div>
+            <div class="rb-tcard__body">
+              <div class="rb-tcard__meta"><span>60 Min</span><span>Empfohlen</span></div>
+              <h3 class="rb-tcard__title">Fast Wrap</h3>
+              <p class="rb-tcard__text">Verkürzte Wrap-Anwendung mit Schwerpunkt auf Hautempfinden, Festigung und Pflege. Ideal, wenn du wenig Zeit hast und dennoch eine vollständige Anwendung möchtest.</p>
+              <div class="rb-tcard__foot"><span class="rb-tcard__price">130 €</span><a href="/termin-buchen/?intent=wrap-fast" class="rb-tcard__cta">Buchen</a></div>
+            </div>
+          </article>
+          <article class="rb-tcard">
+            <div class="rb-tcard__media rb-tcard__media--slim"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 4h8v4l-3 4 3 4v4H8v-4l3-4-3-4z"/></svg></div>
+            <div class="rb-tcard__body">
+              <div class="rb-tcard__meta"><span>90 Min</span><span>Silhouette</span></div>
+              <h3 class="rb-tcard__title">Silhouette</h3>
+              <p class="rb-tcard__text">Wrap mit Fokus auf Körperformung und gepflegtes Hautbild — ergänzt durch eine kurze Aktivierungs-Sequenz vor dem Wickeln.</p>
+              <div class="rb-tcard__foot"><span class="rb-tcard__price">170 €</span><a href="/termin-buchen/?intent=wrap-silhouette" class="rb-tcard__cta">Buchen</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOW -->
+    <section class="rb-block-prose rb-section--paper">
+      <div class="rb-wrap rb-prose">
+        <span class="rb-eyebrow">Ablauf</span>
+        <h2>So läuft ein Wrap-Termin ab.</h2>
+        <ol>
+          <li>Begrüßung &amp; kurzes Hautcheck-Gespräch (5–10 Min).</li>
+          <li>Wirkstoff-Auftragung mit ruhigen Streichbewegungen.</li>
+          <li>Wickelphase mit ruhiger Musik in einer leicht erwärmten Atmosphäre.</li>
+          <li>Auspackphase — Wirkstoffreste werden behutsam entfernt, deine Haut wird mit einer leichten Pflege beruhigt.</li>
+          <li>Eine kurze Ruhe- und Trinkphase im Empfangsbereich.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SUITABLE / NOT SUITABLE -->
+    <section class="rb-block-duo rb-section--cream">
+      <div class="rb-wrap">
+        <div class="rb-duo">
+          <div class="rb-duo__panel rb-duo__panel--check">
+            <h3>Wann ein Wrap besonders schön ist</h3>
+            <ul>
+              <li>Vor einem besonderen Anlass — als bewusst-ritualisierte Vorbereitung.</li>
+              <li>Im Rahmen eines <a href="/dna-skin-intelligence/">DNA-Skin-Programms</a> — als ergänzende Körperpflege.</li>
+              <li>Als Ergänzung zu einer <a href="/kryo-vital/koerperformung/">Druckwellen-Serie</a>.</li>
+            </ul>
+          </div>
+          <div class="rb-duo__panel rb-duo__panel--cross">
+            <h3>Wann ein Wrap nicht passt</h3>
+            <ul>
+              <li>Bei akuten Hauterkrankungen oder offenen Wunden im Anwendungsbereich.</li>
+              <li>Bei Klaustrophobie — die Wickelphase kann das Engegefühl verstärken.</li>
+              <li>In der Schwangerschaft (Ausnahme nach ärztlicher Rücksprache).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="rb-block-faq">
+      <div class="rb-wrap">
+        <div class="rb-faq__head">
+          <div><span class="rb-eyebrow">FAQ · Body Slimming Wrap</span><h2>Häufige Fragen.</h2></div>
+          <p>Plane nach dem Wrap noch eine ruhige Stunde ein — der Körper bedankt sich.</p>
+        </div>
+        <ul class="rb-faq-list">
+          <li><details class="rb-faq-item" open><summary>Hält die Wirkung an?</summary><div class="rb-faq-item__body">Das Hautempfinden direkt nach der Anwendung hält für mehrere Tage an. Eine längerfristige Veränderung des Hautbildes entsteht — wie bei jeder Pflege-Routine — durch eine Anwendungs-Serie und durch eine konsequente Pflege zu Hause.</div></details></li>
+          <li><details class="rb-faq-item"><summary>Was ziehe ich danach an?</summary><div class="rb-faq-item__body">Bequeme, weiche Kleidung. Wir empfehlen, nach einer Wrap-Anwendung zu Hause noch eine ruhige Stunde zu planen.</div></details></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rb-block-cta">
+      <div class="rb-wrap">
+        <div class="rb-cta-band">
+          <div class="rb-cta-band__body">
+            <span class="rb-eyebrow">Reservierung</span>
+            <h3>Buche dein erstes Wrap-Ritual.</h3>
+            <p>Fast Wrap (60 Min, 130 €) — als entspannter Einstieg in unsere drei Linien.</p>
+          </div>
+          <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/?intent=wrap">Termin buchen →</a></div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>

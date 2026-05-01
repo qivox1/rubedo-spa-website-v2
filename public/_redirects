@@ -2,30 +2,31 @@
 # https://developers.cloudflare.com/pages/configuration/redirects/
 
 # Alte WordPress-Slugs → neue Astro-Routen (immer mit Trailing Slash)
-/kryo                                          /kryo-vital/                                          301
-/kryo/                                         /kryo-vital/                                          301
-/kryotherapie                                  /kryo-vital/                                          301
-/kryotherapie/                                 /kryo-vital/                                          301
+/kryo                                          /kryo-vital/ganzkoerper/                               301
+/kryo/                                         /kryo-vital/ganzkoerper/                               301
+/kryotherapie                                  /kryo-vital/ganzkoerper/                               301
+/kryotherapie/                                 /kryo-vital/ganzkoerper/                               301
 /presso-massage                                /kryo-vital/koerperformung/                            301
 /presso-massage/                               /kryo-vital/koerperformung/                            301
-/body-slimming-wrap                            /kryo-vital/koerperformung/                            301
-/body-slimming-wrap/                           /kryo-vital/koerperformung/                            301
-/body-slimming-bandage                         /kryo-vital/koerperformung/                            301
-/body-slimming-bandage/                        /kryo-vital/koerperformung/                            301
+/body-slimming-wrap                            /kryo-vital/koerperformung/wrap/                       301
+/body-slimming-wrap/                           /kryo-vital/koerperformung/wrap/                       301
+/body-slimming-bandage                         /kryo-vital/koerperformung/bandage/                    301
+/body-slimming-bandage/                        /kryo-vital/koerperformung/bandage/                    301
 /wellness-und-spa                              /inner-source/                                         301
 /wellness-und-spa/                             /inner-source/                                         301
-/rubedo-suite                                  /inner-source/                                         301
-/rubedo-suite/                                 /inner-source/                                         301
+/rubedo-suite                                  /inner-source/rubedo-suite/                            301
+/rubedo-suite/                                 /inner-source/rubedo-suite/                            301
 /datenschutzerklaerung                         /datenschutz/                                          301
 /datenschutzerklaerung/                        /datenschutz/                                          301
 /wohlfuehl-wissen                              /magazin/                                              301
 /wohlfuehl-wissen/                             /magazin/                                              301
 /wohlfuehl-wissen/*                            /magazin/:splat                                        301
 
-# /about/ ist eine eigenständige Seite (siehe src/pages/about/index.astro).
-# Andere Aliase leiten dorthin weiter.
-/about-us                                      /about/                                                 301
-/about-us/                                     /about/                                                 301
+# About-Seite wurde umbenannt in /longevity-studio-minden/ (SEO-Keyword).
+/about                                         /longevity-studio-minden/                              301
+/about/                                        /longevity-studio-minden/                              301
+/about-us                                      /longevity-studio-minden/                              301
+/about-us/                                     /longevity-studio-minden/                              301
 /ueber-uns                                     /ueber-monica/                                         301
 /ueber-uns/                                    /ueber-monica/                                         301
 
