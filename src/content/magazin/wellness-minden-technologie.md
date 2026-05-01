@@ -12,8 +12,8 @@ tags:
   - kryotherapie
   - presso-massage
   - minden
-heroImage: "/images/rubedo-suite-hero.webp"
-heroImageAlt: "Rubedo Suite — Behandlungsraum mit warmem Tageslicht"
+heroImage: "/images/lina-magazin-featured.webp"
+heroImageAlt: "Junge Frau im cremfarbenen Leinen-Wickel, vertieft in einem cremepapierfarbenen Booklet am Fenster"
 readingTime: 12
 featured: true
 draft: false
