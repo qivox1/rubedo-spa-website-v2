@@ -173,10 +173,13 @@ a { color: inherit; }
   transition: color var(--rb-dur-1) var(--rb-ease);
 }
 .rb-nav__item:hover { color: var(--rb-gold-700); }
-.rb-nav__item.is-active { color: var(--rb-gold-700); }
+.rb-nav__item.is-active { color: var(--rb-ink-900); }
+/* Active-Indikator: 2 px Hairline in Rubedo-Red — der einzige Brand-Anker
+   in der Hauptnav. Signalisiert "du bist hier" mit dem Wortmarken-Rot,
+   ohne Rot Fläche zu geben. Hover bleibt Gold (sekundärer State). */
 .rb-nav__item.is-active::before {
   content: ""; position: absolute; left: 0; right: 0; bottom: 2px;
-  height: 2px; background: var(--rb-gold-500);
+  height: 2px; background: var(--rb-red-500);
   border-radius: 1px;
 }
 .rb-nav__item--has-sub::after {
@@ -457,6 +460,21 @@ a { color: inherit; }
 .rb-block-hero__eyebrow::before {
   content: ""; width: 32px; height: 1px; background: var(--rb-gold-500);
 }
+/* Inline-Mikro-Diamant in Rubedo-Red als Eyebrow-Trenner.
+   Reserviert für die Homepage-Hero ("Longevity-Studio ◆ Minden") als
+   Brand-Anker-Moment. Sub-Pages behalten den "·"-Trenner — der Diamant
+   ist das einmalige Marken-Signal pro Seite. */
+.rb-eyebrow__diamond {
+  display: inline-block;
+  width: 6px; height: 6px;
+  background: var(--rb-red-500);
+  transform: rotate(45deg);
+  margin: 0 var(--rb-space-3);
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+/* Auf Photo-Hero etwas heller, damit der Diamant auf dem Foto sichtbar bleibt. */
+.rb-block-hero--photo .rb-eyebrow__diamond { background: var(--rb-red-300); }
 .rb-block-hero h1 {
   font-family: var(--rb-font-display);
   font-weight: 400;
@@ -484,8 +502,12 @@ a { color: inherit; }
   color: var(--rb-ink-500);
   margin: 0 0 var(--rb-space-7);
 }
+/* Mikro-Trenner zwischen den Hero-Items in Rubedo-Red — der "·" liest sich
+   bei 12 px wie ein winziger Brand-Punkt, nicht als Farb-Statement. Premium
+   bleibt erhalten, Marke wird wiedererkennbar. */
 .rb-block-hero__micro span:not(:last-child)::after {
-  content: "·"; margin-left: var(--rb-space-3); color: var(--rb-gold-500);
+  content: "·"; margin-left: var(--rb-space-3); color: var(--rb-red-500);
+  opacity: 0.85;
 }
 .rb-block-hero__cta {
   display: flex; flex-wrap: wrap; gap: var(--rb-space-4);
@@ -581,7 +603,10 @@ a { color: inherit; }
 .rb-block-hero--photo .rb-block-hero__eyebrow::before { background: var(--rb-gold-300); }
 .rb-block-hero--photo .rb-block-hero__subline { color: rgba(255,255,255,0.92); max-width: 38ch; }
 .rb-block-hero--photo .rb-block-hero__micro { color: rgba(255,255,255,0.75); }
-.rb-block-hero--photo .rb-block-hero__micro span:not(:last-child)::after { color: var(--rb-gold-300); }
+/* Auf dunklem Foto-Hero: heller Red 300, damit der Trenner gegen das
+   Foto wahrnehmbar bleibt. Niemals Red 300 verwenden, wenn der Hintergrund
+   hell ist — dort ist Red 500 das Brand-Rot. */
+.rb-block-hero--photo .rb-block-hero__micro span:not(:last-child)::after { color: var(--rb-red-300); opacity: 0.95; }
 .rb-block-hero--photo .rb-btn--ghost {
   border-color: rgba(255,255,255,0.6); color: var(--rb-paper);
 }
@@ -718,7 +743,10 @@ a { color: inherit; }
   padding-left: 22px;
   margin: 0 0 var(--rb-space-5);
 }
-.rb-prose ul li::marker { color: var(--rb-gold-500); }
+/* List-Marker in Rubedo-Red — das Dot vor jedem Listitem ist der einzige
+   farbige Akzent in einem ansonsten typografisch ruhigen Prose-Block.
+   Bringt Marken-Rot in jeden Magazin-Artikel, ohne den Lesefluss zu stören. */
+.rb-prose ul li::marker { color: var(--rb-red-500); }
 .rb-prose li { margin-bottom: var(--rb-space-3); }
 .rb-prose strong { color: var(--rb-ink-900); font-weight: 500; }
 .rb-prose a { color: var(--rb-gold-700); border-bottom: 1px solid var(--rb-gold-300); text-decoration: none; }
@@ -1103,7 +1131,8 @@ a { color: inherit; }
   color: var(--rb-ink-700);
   padding-left: 22px; margin: 0 0 var(--rb-space-4);
 }
-.rb-imgtext__body ul li::marker { color: var(--rb-gold-500); }
+/* Image-Text-Listen: List-Marker in Rubedo-Red, konsistent zu .rb-prose. */
+.rb-imgtext__body ul li::marker { color: var(--rb-red-500); }
 .rb-imgtext__body ul li { margin-bottom: 8px; }
 .rb-imgtext__body strong { color: var(--rb-ink-900); font-weight: 500; }
 
@@ -1490,6 +1519,11 @@ a { color: inherit; }
   font-size: 12px; color: var(--rb-gold-300);
 }
 .rb-footer__bottom .rb-rule-flourish { margin: 0 var(--rb-space-5); flex: 1; opacity: 0.4; }
+/* Im Footer-Bottom-Trenner färbt sich nur der zentrale Mini-Diamant in
+   Rubedo-Red — die umgebenden Hairlines bleiben Gold. Ein einziger
+   intentionaler Brand-Anker im sonst goldenen Linienwerk; der Diamant
+   bekommt volle Opacity, damit er nicht im 0.4-Wash der Linien untergeht. */
+.rb-footer__bottom .rb-rule-flourish__diamond { background: var(--rb-red-500); opacity: 1; }
 
 /* ============================================================
    BUTTONS (extends rb-btn from tokens.css with motion)
@@ -3221,6 +3255,18 @@ a { color: inherit; }
   letter-spacing: var(--rb-tracking-widest);
   text-transform: uppercase;
   color: var(--rb-gold-700);
+  display: inline-flex; align-items: center; gap: var(--rb-space-3);
+}
+/* Mini-Diamant in Rubedo-Red vor jedem cite — der einzige rote Touch im
+   Pull-Quote-Block. Diamant statt Strich, weil's zur Brand-Diamond-Logik
+   in Hero/Footer passt. */
+.rb-pull cite::before {
+  content: "";
+  display: inline-block;
+  width: 5px; height: 5px;
+  background: var(--rb-red-500);
+  transform: rotate(45deg);
+  flex-shrink: 0;
 }
 
 /* --- Block · Outcome (Nach 12 Wochen) --- */
