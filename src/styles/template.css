@@ -1687,31 +1687,18 @@ a { color: inherit; }
 /* ============================================================
    FOOTER
    ============================================================ */
-/* Sanfter Übergang am Footer-Top — 80 px Verlauf von Cream-transparent
-   zu Footer-Schwarz. Wirkt wie ein verblassender Lichtschein an der
-   oberen Footer-Kante: aus dem hellen Body fließt das Cream weich in
-   die dunkle Footer-Fläche, statt einer harten Klippe. Das ::before-
-   Element liegt VOR dem Footer-Inhalt (z-index implizit 0) und ist
-   pointer-events:none, damit es keine Klicks abfängt. Die border-top-
-   Hairline bleibt als feine Gold-Akzent-Linie erhalten. */
+/* Footer auf Ink-700 (#3A332C, dunkles warmes Holz) statt Ink-900
+   (#1A1614, fast schwarz) — nimmt der unteren Fläche etwa 30 % visuelles
+   Gewicht, ohne die edle dunkle Anmutung zu verlieren. Alle Gold-Akzente
+   funktionieren auf Ink-700 genauso gut. Zusammen mit dem Cream-CTA-Banner
+   davor wird der Seiten-Boden gestaffelt: Cream (Banner) → Ink-700 (Footer)
+   statt monolithischer schwarzer Fläche. */
 .rb-footer {
-  position: relative;
-  background: var(--rb-ink-900);
+  background: var(--rb-ink-700);
   color: var(--rb-gold-100);
   padding: var(--rb-space-9) 0 var(--rb-space-6);
   border-top: 1px solid rgba(215,189,134,0.15);
 }
-.rb-footer::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 80px;
-  background: linear-gradient(180deg, var(--rb-cream) 0%, transparent 100%);
-  opacity: 0.18;
-  pointer-events: none;
-  z-index: 0;
-}
-.rb-footer > * { position: relative; z-index: 1; }
 .rb-footer__top {
   display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
   gap: var(--rb-space-6);
