@@ -136,7 +136,6 @@ const navItems = site.nav as ReadonlyArray<NavGroup>;
       <span class="rb-mobile-toggle__bars" aria-hidden="true">
         <span></span>
         <span></span>
-        <span></span>
       </span>
     </button>
   </div>
@@ -353,43 +352,60 @@ const navItems = site.nav as ReadonlyArray<NavGroup>;
   /* Body-Scroll-Lock wenn Drawer offen */
   html.rb-noscroll, html.rb-noscroll body { overflow: hidden; touch-action: none; }
 
-  /* ---- Burger ---- */
+  /* ---- Burger · Variante A — Premium-editorial ----
+     Vorher: 3 gleich lange Striche im Border-Box (klassisch, generisch).
+     Jetzt: 2 versetzte Hairlines, frei stehend ohne Rahmen.
+     - Obere Linie: volle Breite (22 px)
+     - Untere Linie: kürzer (60 %, ~13 px) und nach rechts versetzt
+     Asymmetrie wirkt wie ein typografisches Detail, nicht wie ein UI-Glyph.
+     Touch-Target bleibt 44×44 px durch die Button-Padding-Box; die Border
+     ist nur visuell weg, das Click-Feld bleibt voll erhalten.
+     Hover: Color-Wechsel auf Gold-700 als ruhiges Brand-Feedback. */
   .rb-mobile-toggle {
     display: none;
     background: transparent;
-    border: 1px solid var(--rb-ink-300);
+    border: 0;
     color: var(--rb-ink-900);
     width: 44px; height: 44px;
-    border-radius: var(--rb-radius-md);
+    padding: 0;
     cursor: pointer;
     align-items: center; justify-content: center;
-    transition: border-color var(--rb-dur-1) var(--rb-ease), background var(--rb-dur-1) var(--rb-ease);
+    transition: color var(--rb-dur-1) var(--rb-ease);
   }
-  .rb-mobile-toggle:hover { border-color: var(--rb-gold-500); }
+  .rb-mobile-toggle:hover { color: var(--rb-gold-700); }
   .rb-mobile-toggle__bars {
     position: relative;
     display: inline-block;
-    width: 20px; height: 14px;
+    width: 22px; height: 10px;
   }
   .rb-mobile-toggle__bars span {
-    position: absolute; left: 0; right: 0;
-    height: 1.5px; background: currentColor;
-    border-radius: 1px;
+    position: absolute; left: 0;
+    height: 1.2px; background: currentColor;
     transition: transform 280ms cubic-bezier(.6,-0.28,.74,.05),
                 top 280ms cubic-bezier(.6,-0.28,.74,.05) 280ms,
-                opacity 0ms linear 280ms;
+                width 280ms cubic-bezier(.6,-0.28,.74,.05) 280ms,
+                left 280ms cubic-bezier(.6,-0.28,.74,.05) 280ms;
   }
-  .rb-mobile-toggle__bars span:nth-child(1) { top: 0; }
-  .rb-mobile-toggle__bars span:nth-child(2) { top: 6px; }
-  .rb-mobile-toggle__bars span:nth-child(3) { top: 12px; }
+  /* Closed State: Zwei versetzte Linien, untere kürzer + rechts versetzt */
+  .rb-mobile-toggle__bars span:nth-child(1) { top: 0; width: 22px; }
+  .rb-mobile-toggle__bars span:nth-child(2) { top: 8px; width: 13px; left: 9px; }
+
+  /* Open State: Animation umgekehrte Reihenfolge — erst Width/Left
+     synchronisieren, dann zur X-Form rotieren. */
   .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span {
     transition: top 280ms cubic-bezier(.6,-0.28,.74,.05),
-                transform 280ms cubic-bezier(.215,.61,.355,1) 280ms,
-                opacity 0ms linear 280ms;
+                width 280ms cubic-bezier(.6,-0.28,.74,.05),
+                left 280ms cubic-bezier(.6,-0.28,.74,.05),
+                transform 280ms cubic-bezier(.215,.61,.355,1) 280ms;
   }
-  .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span:nth-child(1) { top: 6px; transform: rotate(45deg); }
-  .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span:nth-child(2) { opacity: 0; }
-  .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
+  .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span:nth-child(1) {
+    top: 4px; width: 22px; left: 0;
+    transform: rotate(45deg);
+  }
+  .rb-mobile-toggle.is-active .rb-mobile-toggle__bars span:nth-child(2) {
+    top: 4px; width: 22px; left: 0;
+    transform: rotate(-45deg);
+  }
 
   /* ---- Drawer-Wrapper ---- */
   .rb-mnav {
