@@ -1266,12 +1266,19 @@ a { color: inherit; }
   box-shadow: var(--rb-shadow-md);
 }
 .rb-bio__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.rb-bio__media::after {
-  content: "Monica Galletti · Studio Minden";
+/* Caption — ehemals CSS ::after content (SEO-unsichtbar), jetzt als
+   echtes DOM-Element via figcaption. Identisches Aussehen, aber von
+   Suchmaschinen + LLMs lesbar. Stärkt das Brand-Person-Place-Signal. */
+.rb-bio__media-caption {
   position: absolute; left: 24px; bottom: 22px;
   color: rgba(255,255,255,0.92);
-  font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  font-family: var(--rb-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   z-index: 2;
+  margin: 0;
 }
 .rb-bio__media::before {
   content: ""; position: absolute; inset: 0; z-index: 1;

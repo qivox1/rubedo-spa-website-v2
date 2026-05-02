@@ -96,7 +96,7 @@ const personSchema = {
     <section class="rb-block-bio">
       <div class="rb-wrap">
         <div class="rb-bio">
-          <div class="rb-bio__media">
+          <figure class="rb-bio__media">
             <img
               src="/images/monica-portrait.webp"
               alt="Monica Galletti — Portrait, Gründerin Rubedo Spa Minden"
@@ -104,7 +104,12 @@ const personSchema = {
               height="900"
               fetchpriority="high"
             />
-          </div>
+            {/* Caption als echtes DOM-Element (war früher CSS ::after content,
+                also für Suchmaschinen unsichtbar). Jetzt im HTML — Google,
+                Bing, LLMs können den Text als Bild-Bezug verarbeiten und
+                stärken das Person-Place-Brand-Signal für Local-SEO. */}
+            <figcaption class="rb-bio__media-caption">Monica Galletti · Gründerin Rubedo Spa Minden</figcaption>
+          </figure>
           <div class="rb-bio__body">
             <span class="rb-eyebrow">Über Monica Galletti</span>
             <h1>Monica Galletti.</h1>
