@@ -1512,6 +1512,92 @@ a { color: inherit; }
 }
 
 /* ============================================================
+   BLOCK · MANIFESTO — typografisches Statement statt Bild-Text-Block.
+   Ersetzt das frühere Triptychon-Bild mit Erklär-Charakter durch ein
+   editorial Manifest: Headline links, drei Säulen-Statements mit Red-500
+   Diamond-Eyebrow rechts, Body-Text als ruhige Schluss-Subline darunter.
+   Wirkt wie ein Buch-Kapitel-Anfang in einem Premium-Magazin.
+   ============================================================ */
+.rb-block-manifesto { padding: var(--rb-space-9) 0; }
+.rb-manifesto {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--rb-space-8);
+  align-items: center;
+  margin-bottom: var(--rb-space-8);
+  padding-bottom: var(--rb-space-7);
+  border-bottom: 1px solid var(--rb-ink-100);
+}
+.rb-manifesto__lead .rb-eyebrow { display: block; margin-bottom: var(--rb-space-3); }
+.rb-manifesto__lead h2 {
+  font-family: var(--rb-font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 3.6vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.005em;
+  color: var(--rb-ink-900);
+  margin: 0;
+  text-wrap: balance;
+}
+.rb-manifesto__pillars {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--rb-space-4);
+}
+.rb-manifesto__pillars li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--rb-space-3);
+  padding-bottom: var(--rb-space-3);
+  border-bottom: 1px solid var(--rb-cream);
+  font-family: var(--rb-font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--rb-ink-700);
+}
+.rb-manifesto__pillars li:last-child { border-bottom: 0; padding-bottom: 0; }
+.rb-manifesto__diamond {
+  width: 6px; height: 6px;
+  background: var(--rb-red-500);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+.rb-manifesto__pillars strong {
+  font-family: var(--rb-font-display);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--rb-ink-900);
+}
+.rb-manifesto__body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.rb-manifesto__body p {
+  font-family: var(--rb-font-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--rb-ink-700);
+  margin: 0 0 var(--rb-space-4);
+  text-wrap: pretty;
+}
+.rb-manifesto__body p:last-child { margin-bottom: 0; }
+.rb-manifesto__body strong { color: var(--rb-ink-900); font-weight: 500; }
+
+/* Mobile: Lead und Pillars stapeln, Body bleibt zentriert. */
+@media (max-width: 768px) {
+  .rb-manifesto {
+    grid-template-columns: 1fr;
+    gap: var(--rb-space-6);
+  }
+}
+
+/* ============================================================
    BLOCK · CROSS-PILLARS — interne Verweise zu den anderen Säulen.
    Dezenter Editorial-Block am Ende einer Säulen-Page: Eyebrow
    "Weiter ergründen", zwei Capital-Links zu den anderen Säulen

@@ -124,35 +124,47 @@ const heroImage = '/images/startseite-hero-rubedo-spa-minden.webp';
       </div>
     </section>
 
-    {/* STORY-BLOCK */}
-    <section class="rb-block-imgtext rb-section--cream" data-reveal>
+    {/* STORY-BLOCK · Typografisches Manifesto.
+        Vorher: rb-imgtext mit Triptychon-Bild (drei Säulen visualisiert) — wirkte
+        didaktisch und doppelte den Drei-Säulen-Block direkt darüber.
+        Jetzt: editorial Manifest mit Headline links, drei Säulen als typografische
+        Statements mit Diamond-Eyebrow rechts. Bild komplett weg, Brand-Diamonds
+        tragen die Markenidentität. */}
+    <section class="rb-block-manifesto rb-section--cream" data-reveal>
       <div class="rb-wrap">
-        <div class="rb-imgtext rb-imgtext--reverse">
-          <div class="rb-imgtext__media rb-imgtext__media--triptych">
-            <img
-              src="/images/philosophie-content-saeulen.webp"
-              alt="Drei Säulen visualisiert — Pipettentropfen (DNA Skin), Eiswürfel (Kryo Vital) und dampfende Keramikschale (Inner Source) auf Steinsims im warmen Tageslicht"
-              loading="lazy"
-              width="1264"
-              height="848"
-            />
-          </div>
-          <div class="rb-imgtext__body">
+        <div class="rb-manifesto">
+          <div class="rb-manifesto__lead">
             <span class="rb-eyebrow">Warum Rubedo</span>
             <h2>Wellness, das ein System hat — kein Behandlungs-Katalog.</h2>
-            <p>
-              Wellness ist heute oft eine Aneinanderreihung von Behandlungen. Eine Massage
-              hier, ein Produkt dort, eine neue Routine, die nach drei Wochen wieder durch
-              eine andere ersetzt wird. Rubedo entstand aus einer anderen Überzeugung:
-              Schönheit, Gesundheit und Wohlbefinden sind nicht zufällig. Sie folgen einem
-              System — und dieses System ist bei jedem Menschen anders.
-            </p>
-            <p>
-              <strong>Rubedo Spa ist deshalb kein klassisches Spa, sondern ein
-              Longevity-Studio.</strong> Wir begleiten Menschen, die ihre Hautpflege nicht jedes
-              Quartal wechseln, sondern wirklich verstehen wollen.
-            </p>
           </div>
+          <ul class="rb-manifesto__pillars">
+            <li>
+              <span class="rb-manifesto__diamond" aria-hidden="true"></span>
+              <span><strong>DNA Skin Intelligence</strong> — Pflege auf Basis deiner Genetik.</span>
+            </li>
+            <li>
+              <span class="rb-manifesto__diamond" aria-hidden="true"></span>
+              <span><strong>Kryo Vital</strong> — Drei Minuten Kälte, die nachwirken.</span>
+            </li>
+            <li>
+              <span class="rb-manifesto__diamond" aria-hidden="true"></span>
+              <span><strong>Inner Source</strong> — Atem als Werkzeug.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="rb-manifesto__body">
+          <p>
+            Wellness ist heute oft eine Aneinanderreihung von Behandlungen. Eine Massage
+            hier, ein Produkt dort, eine neue Routine, die nach drei Wochen wieder durch
+            eine andere ersetzt wird. Rubedo entstand aus einer anderen Überzeugung:
+            Schönheit, Gesundheit und Wohlbefinden sind nicht zufällig. Sie folgen einem
+            System — und dieses System ist bei jedem Menschen anders.
+          </p>
+          <p>
+            <strong>Rubedo Spa ist deshalb kein klassisches Spa, sondern ein
+            Longevity-Studio.</strong> Wir begleiten Menschen, die ihre Hautpflege nicht jedes
+            Quartal wechseln, sondern wirklich verstehen wollen.
+          </p>
         </div>
       </div>
     </section>
