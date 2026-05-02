@@ -60,15 +60,19 @@
   --rb-cream:     #FBF8F1;   /* soft warm white — preferred page bg */
 
   /* ---------- Color: Rubedo Red (Wortmarke + Mikro-Akzente) ----------
-     Sampled from the brand wordmark "RUBEDO / SPA" in the new emblem logo.
-     Used VERY sparingly — never as fill, only as a mark / micro-accent.
-     Strict 60/25/10/4/1 application ratio (see design concept doc). */
-  --rb-red-900:  #4A0606;   /* deepest — focus rings */
-  --rb-red-700:  #6B0808;   /* hover for red accents */
-  --rb-red-500:  #8C0B0B;   /* SIGNATURE — wordmark red, micro-diamonds */
-  --rb-red-300:  #C25A5A;   /* tints */
-  --rb-red-100:  #ECC8C8;   /* soft surfaces (rare) */
-  --rb-red-50:   #F8EDED;   /* page-section tint (very rare) */
+     Red 500 ist exakt aus dem Wordmark-SVG der Live-Site rubedo-spa.de
+     gesampelt (#87362A) — warm-erdiger Terracotta-Burgundy, *nicht* das
+     kühl-feuerrote #8C0B0B aus dem ersten Wurf. Die Skala ist konsistent
+     auf HSL(9°, 36–53 %) interpoliert: gleiche Hue, niedrige Sättigung in
+     den Tints, damit es im Premium-Kontext nicht ins Pink kippt.
+     Verwendung VERY sparingly — niemals Flächenfüller, nur Mark/Akzent.
+     Strikt 60/25/10/4/1 Anwendungs-Verhältnis (siehe Design-Konzept). */
+  --rb-red-900:  #451E17;   /* deepest — focus rings */
+  --rb-red-700:  #61291F;   /* hover for red accents */
+  --rb-red-500:  #87362A;   /* SIGNATURE — exakte Wordmark-Farbe */
+  --rb-red-300:  #B66F63;   /* tints */
+  --rb-red-100:  #EDD8D4;   /* soft surfaces (rare) */
+  --rb-red-50:   #F7EFEE;   /* page-section tint (very rare) */
 
   /* ---------- Color: Brand · Burgundy (Rubedo / Rotwerdung) ---------- */
   --rb-burgundy-900: #4A1418;   /* deepest — letzte Schatten, Print-Akzent */
