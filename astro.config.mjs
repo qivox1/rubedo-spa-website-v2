@@ -38,6 +38,10 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
+      // lastmod auf Build-Datum setzen — gibt jedem URL-Eintrag in der
+      // Sitemap einen aktuellen Frische-Stempel zur Build-Zeit. Crawler
+      // werten das als Hinweis, die Seite neu zu indexieren.
+      lastmod: new Date(),
       // /magazin/example-artikel/ ist eine Legacy-Weiterleitung (noindex) und
       // gehört nicht in die Sitemap, damit Suchmaschinen und Audits sie nicht
       // als Duplikat zur aktuellen Content-Collection-Seite werten.

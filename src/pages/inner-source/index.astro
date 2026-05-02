@@ -1,21 +1,51 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
 
-const title = 'Inner Source — Rituale · Rubedo Spa Minden';
-const description = 'Abhyanga, Hot Stone, Hot Bambu, Balinesisch — kombiniert mit neurosomatischer Atemarbeit und Mind-Methoden im Rubedo Spa Minden bei Monica Galletti.';
+const title = 'Massage & Atemarbeit Minden — Inner Source im Rubedo Spa';
+const description = 'Abhyanga, Hot Stone, Hot Bambu, Balinesisch — kombiniert mit neurosomatischer Atemarbeit. Inner Source Rituals im Rubedo Spa Minden.';
 const heroImage = '/images/inner-source-hero.webp';
+const url = `${site.url}/inner-source/`;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'Inner Source Rituals — Massage & Atemarbeit',
+  serviceType: 'Wellness Service',
+  description: 'Klassische Massage-Rituale (Abhyanga, Hot Stone, Hot Bambu, Balinesische Deep Massage) kombiniert mit neurosomatischer Atemarbeit, Mindfulness und NLP-Methoden im Wellness-Kontext.',
+  provider: { '@id': `${site.url}/#localbusiness` },
+  areaServed: [
+    { '@type': 'City', name: 'Minden' },
+    { '@type': 'AdministrativeArea', name: 'Ostwestfalen-Lippe' },
+  ],
+  url,
+  image: `${site.url}${heroImage}`,
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  mainEntity: [
+    { '@type': 'Question', name: 'Muss ich „spirituell" sein, um Inner Source zu nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Wir arbeiten ruhig, klar und unprätentiös. Du musst nichts glauben — du musst nur eine Stunde Aufmerksamkeit mitbringen.' } },
+    { '@type': 'Question', name: 'Wie unterscheidet sich das von einer normalen Massage?', acceptedAnswer: { '@type': 'Answer', text: 'Eine normale Massage ist Körper-Arbeit. Inner Source verbindet Körper und Wahrnehmung. Schon der Einstieg unterscheidet sich — wir beginnen jede Sitzung mit einer kurzen Aufmerksamkeits-Übung.' } },
+    { '@type': 'Question', name: 'Kann ich nur die Atem-Arbeit buchen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, ab Frühsommer 2026 als eigenständiges 60-Minuten-Format. Sprich uns gerne im Erstgespräch an.' } },
+  ],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   heroImage={heroImage}
+  schemaExtras={[serviceSchema, faqSchema]}
 >
 
   <article class="rb-page" data-page='inner-source'>
     <section class="rb-block-hero rb-block-hero--photo">
         <div class="rb-block-hero__photo">
-          <img src="/images/inner-source-hero.webp" alt="Hände in burgunder Robe halten dampfende Schale mit Atemraum" width="1600" height="900" fetchpriority="high" />
+          <img src="/images/inner-source-hero.webp" alt="Inner Source Rituale im Rubedo Spa Minden — Hände in burgunder Robe halten dampfende Schale" width="1600" height="900" fetchpriority="high" />
           <div class="rb-wrap">
             <div class="rb-block-hero__copy">
               <span class="rb-block-hero__eyebrow">Säule 03 · Balance</span>
@@ -142,6 +172,18 @@ const heroImage = '/images/inner-source-hero.webp';
             <li><details class="rb-faq-item"><summary>Wie unterscheidet sich das von einer normalen Massage?</summary><div class="rb-faq-item__body">Eine normale Massage ist Körper-Arbeit. Inner Source verbindet Körper und Wahrnehmung. Schon der Einstieg unterscheidet sich — wir beginnen jede Sitzung mit einer kurzen Aufmerksamkeits-Übung.</div></details></li>
             <li><details class="rb-faq-item"><summary>Kann ich nur die Atem-Arbeit buchen?</summary><div class="rb-faq-item__body">Ja, ab Frühsommer 2026 als eigenständiges 60-Minuten-Format. Sprich uns gerne im Erstgespräch an.</div></details></li>
           </ul>
+        </div>
+      </section>
+
+      <section class="rb-block-cross-pillars">
+        <div class="rb-wrap">
+          <div class="rb-cross-pillars">
+            <span class="rb-cross-pillars__eyebrow">Weiter ergründen</span>
+            <ul class="rb-cross-pillars__list">
+              <li><a href="/dna-skin-intelligence/">DNA Skin Intelligence</a></li>
+              <li><a href="/kryo-vital/">Kryo Vital</a></li>
+            </ul>
+          </div>
         </div>
       </section>
 

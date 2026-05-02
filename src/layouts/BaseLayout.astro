@@ -46,7 +46,15 @@ const {
 
 const fullTitle = title.includes('Rubedo') ? title : `${title} | Rubedo Spa Minden`;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).href;
-const ogImg = ogImage ?? `${site.url}/logo-rubedo-spa.webp`;
+/* OG-Image-Kaskade: explizites ogImage > heroImage der Page > Default-Logo.
+   Mit dem Fallback auf heroImage bekommt jede Page mit Hero-Bild automatisch
+   ein passendes Sharing-Bild für Slack/iMessage/Facebook/LinkedIn — ohne
+   dass jede Page den Prop explizit übergeben muss. */
+const ogImg = ogImage
+  ? (ogImage.startsWith('http') ? ogImage : `${site.url}${ogImage}`)
+  : heroImage
+    ? (heroImage.startsWith('http') ? heroImage : `${site.url}${heroImage}`)
+    : `${site.url}/logo-rubedo-spa.webp`;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -59,6 +67,11 @@ const currentPath = Astro.url.pathname;
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
+    {/* Hreflang — sauberes Signal an Suchmaschinen, dass die Site
+        deutschsprachig (de-DE) ist. x-default zeigt auf dieselbe URL,
+        falls später weitere Sprachen hinzukommen. */}
+    <link rel="alternate" hreflang="de" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
 
     {/* Query-Parameter-Varianten (z. B. /termin-buchen/?intent=…) sind UI-State,

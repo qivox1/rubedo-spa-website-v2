@@ -1,21 +1,52 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
 
-const title = 'Kryo Vital — Kryotherapie · Rubedo Spa Minden';
-const description = 'Drei Minuten kontrollierter Kältereiz. Ganzkörper-Kryotherapie, Kryo-Facial, Druckwellen und Bandagen im Rubedo Spa Minden bei Monica Galletti.';
+const title = 'Kryotherapie Minden — Kryo Vital bei Monica Galletti';
+const description = 'Drei Minuten Kälte bei −110 °C. Ganzkörper-Kryo, Druckwellen & Bandagen im Rubedo Spa Minden bei Monica Galletti — Termin online buchen.';
 const heroImage = '/images/kryo-vital-hero.webp';
+const url = `${site.url}/kryo-vital/`;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'Kryo Vital — Kryotherapie & Wellness-Anwendungen',
+  serviceType: 'Wellness Service',
+  description: 'Kontrollierte Kälte als Wellness-Reiz: Ganzkörper-Kryotherapie bei −110 °C, Druckwellen, Body-Wraps mit Botanicals und Wirkstoff-Bandagen.',
+  provider: { '@id': `${site.url}/#localbusiness` },
+  areaServed: [
+    { '@type': 'City', name: 'Minden' },
+    { '@type': 'AdministrativeArea', name: 'Ostwestfalen-Lippe' },
+  ],
+  url,
+  image: `${site.url}${heroImage}`,
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  mainEntity: [
+    { '@type': 'Question', name: 'Wie kalt wird es wirklich?', acceptedAnswer: { '@type': 'Answer', text: 'In der Ganzkörper-Anwendung erreichen wir eine Lufttemperatur von etwa minus 110 °C. Dein Körperinneres bleibt davon weitgehend unberührt; die Reaktion entsteht über die Haut und das Nervensystem.' } },
+    { '@type': 'Question', name: 'Friert man dabei?', acceptedAnswer: { '@type': 'Answer', text: 'Die Kälte ist trocken und für viele Gäste erstaunlich gut auszuhalten. Drei Minuten sind kürzer, als sie klingen — und das Gefühl danach ist meist energetisch warm.' } },
+    { '@type': 'Question', name: 'Wie oft kann ich Kryo nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Vom einzelnen Termin pro Monat bis zu mehreren Anwendungen pro Woche ist alles möglich. Wir empfehlen für den Einstieg ein 4er-Testpaket, um zu spüren, wie dein Körper reagiert.' } },
+    { '@type': 'Question', name: 'Kann ich Kryo mit anderen Behandlungen kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Beliebte Kombinationen sind Kryo + Druckwellen-Anwendung oder Kryo + Massage in der Rubedo Suite. Bei Bedarf gestalten wir dir ein individuelles Vital-Paket.' } },
+  ],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   heroImage={heroImage}
+  schemaExtras={[serviceSchema, faqSchema]}
 >
 
   <article class="rb-page" data-page='kryo-vital'>
     <section class="rb-block-hero rb-block-hero--photo">
         <div class="rb-block-hero__photo">
-          <img src="/images/kryo-vital-hero.webp" alt="Kryo-Eingang mit Eis-Reflexion und burgunder Robe" width="1600" height="900" fetchpriority="high" />
+          <img src="/images/kryo-vital-hero.webp" alt="Kryo-Suite im Rubedo Spa Minden — Eingang mit Eis-Reflexion und burgunder Robe" width="1600" height="900" fetchpriority="high" />
           <div class="rb-wrap">
             <div class="rb-block-hero__copy">
               <span class="rb-block-hero__eyebrow">Säule 02 · Aktivierung</span>
@@ -187,6 +218,18 @@ const heroImage = '/images/kryo-vital-hero.webp';
             <li><details class="rb-faq-item"><summary>Wie oft kann ich Kryo nutzen?</summary><div class="rb-faq-item__body">Vom einzelnen Termin pro Monat bis zu mehreren Anwendungen pro Woche ist alles möglich. Wir empfehlen für den Einstieg ein 4er-Testpaket, um zu spüren, wie dein Körper reagiert.</div></details></li>
             <li><details class="rb-faq-item"><summary>Kann ich Kryo mit anderen Behandlungen kombinieren?</summary><div class="rb-faq-item__body">Ja. Beliebte Kombinationen sind Kryo + Druckwellen-Anwendung oder Kryo + Massage in der Rubedo Suite. Bei Bedarf gestalten wir dir ein individuelles Vital-Paket.</div></details></li>
           </ul>
+        </div>
+      </section>
+
+      <section class="rb-block-cross-pillars">
+        <div class="rb-wrap">
+          <div class="rb-cross-pillars">
+            <span class="rb-cross-pillars__eyebrow">Weiter ergründen</span>
+            <ul class="rb-cross-pillars__list">
+              <li><a href="/dna-skin-intelligence/">DNA Skin Intelligence</a></li>
+              <li><a href="/inner-source/">Inner Source Rituals</a></li>
+            </ul>
+          </div>
         </div>
       </section>
 

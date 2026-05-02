@@ -1459,6 +1459,55 @@ a { color: inherit; }
 }
 
 /* ============================================================
+   BLOCK · CROSS-PILLARS — interne Verweise zu den anderen Säulen.
+   Dezenter Editorial-Block am Ende einer Säulen-Page: Eyebrow
+   "Weiter ergründen", zwei Capital-Links zu den anderen Säulen
+   mit Red-500 Mini-Diamant als Pre-Mark. Stärkt die Topic-Cluster-
+   Struktur (drei verbundene Themen-Hubs) ohne den Lesefluss zu
+   unterbrechen — wirkt wie eine Schluss-Anmerkung am Artikelende.
+   ============================================================ */
+.rb-block-cross-pillars { padding: var(--rb-space-7) 0 var(--rb-space-3); }
+.rb-cross-pillars {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.rb-cross-pillars__eyebrow {
+  display: block;
+  font-family: var(--rb-font-body);
+  font-size: var(--rb-text-xs);
+  font-weight: 500;
+  letter-spacing: var(--rb-tracking-widest);
+  text-transform: uppercase;
+  color: var(--rb-gold-700);
+  margin-bottom: var(--rb-space-4);
+}
+.rb-cross-pillars__list {
+  display: inline-flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--rb-space-5);
+  list-style: none; padding: 0; margin: 0;
+}
+.rb-cross-pillars__list a {
+  display: inline-flex; align-items: center; gap: var(--rb-space-3);
+  font-family: var(--rb-font-display);
+  font-style: italic;
+  font-size: 18px;
+  color: var(--rb-ink-900);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+  transition: border-bottom-color var(--rb-dur-1) var(--rb-ease);
+}
+.rb-cross-pillars__list a::before {
+  content: "";
+  width: 5px; height: 5px;
+  background: var(--rb-red-500);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+}
+.rb-cross-pillars__list a:hover { border-bottom-color: var(--rb-red-500); }
+
+/* ============================================================
    BLOCK · CTA WHISPER (dezenter Inline-CTA für lange Pages)
    Editorial, leise, premium. Kein dunkler Banner — sondern eine
    ruhige Cream-Setzung mit Cormorant-Headline, einem Red-500-Diamant-

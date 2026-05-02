@@ -1,15 +1,52 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
 
-const title = 'DNA Skin Intelligence · Rubedo Spa Minden';
-const description = 'Hautpflege auf Basis deines genetischen Profils — 20 Beauty-Gene, 12-Wochen-Plan, Naturkosmetik und Mikronährstoffe im Rubedo Spa Minden.';
+const title = 'DNA-basierte Hautpflege Minden — 20 Beauty-Gene analysieren';
+const description = 'Personalisierte Hautpflege auf Basis von 20 Beauty-Genen. 12-Wochen-Plan mit Naturkosmetik & Mikronährstoffen. Rubedo Spa Minden, Monica Galletti.';
 const heroImage = '/images/dna-skin-hero.webp';
+const url = `${site.url}/dna-skin-intelligence/`;
+
+/* Service-Schema für DNA Skin Intelligence — gibt Suchmaschinen
+   strukturierte Information zu Behandlungs-Typ, Provider, Region.
+   Relevant für Local-Service-Suche und Rich-Snippets. */
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'DNA Skin Intelligence — DNA-basierte Hautpflege',
+  serviceType: 'Beauty Service',
+  description: 'Personalisierte Hautpflege auf Basis der genetischen Analyse von 20 Beauty-Genen. 12-Wochen-Pflegeplan mit Naturkosmetik und Mikronährstoffen, individuell zusammengestellt.',
+  provider: { '@id': `${site.url}/#localbusiness` },
+  areaServed: [
+    { '@type': 'City', name: 'Minden' },
+    { '@type': 'AdministrativeArea', name: 'Ostwestfalen-Lippe' },
+  ],
+  audience: { '@type': 'PeopleAudience', audienceType: 'Adults seeking personalised skincare' },
+  url,
+  image: `${site.url}${heroImage}`,
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  mainEntity: [
+    { '@type': 'Question', name: 'Ist das DNA Skin Concept auch für Männer geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Die analysierten Beauty-Gene sind unabhängig vom Geschlecht. Die Pflege-Routine wird auf deine Lebensgewohnheiten abgestimmt.' } },
+    { '@type': 'Question', name: 'Was passiert nach den 12 Wochen?', acceptedAnswer: { '@type': 'Answer', text: 'Du entscheidest, ob du einzelne Produkte oder Mikronährstoffe weiter beziehen möchtest. Wir empfehlen ein- bis zweimal im Jahr eine Folge-Beratung, die je nach Bedarf 30 bis 60 Minuten dauert.' } },
+    { '@type': 'Question', name: 'Wie unterscheidet sich das von einer Apotheken- oder Online-DNA-Analyse?', acceptedAnswer: { '@type': 'Answer', text: 'Standard-DNA-Tests liefern dir einen Report. Wir liefern dir einen Plan. Die Auswertung wird gemeinsam besprochen, in eine konkrete Pflege-Routine übersetzt und über zwölf Wochen begleitet.' } },
+    { '@type': 'Question', name: 'Was ist mit Mikrobiom-Tests oder Hormon-Analysen?', acceptedAnswer: { '@type': 'Answer', text: 'Beides sind eigenständige Bereiche. Wir verweisen, wenn relevant, an spezialisierte Anbieter und integrieren ihre Ergebnisse in unsere Pflege-Empfehlungen — sofern medizinisch nichts dagegenspricht.' } },
+    { '@type': 'Question', name: 'Verändert sich meine DNA mit der Zeit — muss ich den Test wiederholen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Deine Gen-Sequenz bleibt ein Leben lang gleich. Was sich verändert, ist die Aktivität deiner Gene — und genau hier setzt die epigenetische Routine an. Eine einmalige Analyse genügt.' } },
+    { '@type': 'Question', name: 'Wie schnell sehe ich Ergebnisse?', acceptedAnswer: { '@type': 'Answer', text: 'Erste Veränderungen im Hautbild zeigen sich erfahrungsgemäß nach 4 bis 6 Wochen, deutlicher nach den vollen zwölf Wochen.' } },
+  ],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   heroImage={heroImage}
+  schemaExtras={[serviceSchema, faqSchema]}
 >
 
   <article class="rb-page" data-page='dna-skin'>
@@ -19,7 +56,7 @@ const heroImage = '/images/dna-skin-hero.webp';
          ============================================================ -->
     <section class="rb-block-hero rb-block-hero--photo">
       <div class="rb-block-hero__photo">
-        <img src="/images/dna-skin-hero.webp" alt="Apothekerflasche mit Pipette und Kollagen-Faden auf Marmor" width="1600" height="900" fetchpriority="high" />
+        <img src="/images/dna-skin-hero.webp" alt="DNA-basierte Hautpflege Rubedo Spa Minden — Apothekerflasche mit Pipette und Kollagen-Faden auf Marmor" width="1600" height="900" fetchpriority="high" />
         <div class="rb-wrap">
           <div class="rb-block-hero__copy">
             <span class="rb-block-hero__eyebrow">Säule 01 · Innen</span>
@@ -680,6 +717,18 @@ const heroImage = '/images/dna-skin-hero.webp';
           <li><details class="rb-faq-item"><summary>Verändert sich meine DNA mit der Zeit — muss ich den Test wiederholen?</summary><div class="rb-faq-item__body">Nein. Deine Gen-Sequenz bleibt ein Leben lang gleich. Was sich verändert, ist die <em>Aktivität</em> deiner Gene — und genau hier setzt die epigenetische Routine an. Eine einmalige Analyse genügt.</div></details></li>
           <li><details class="rb-faq-item"><summary>Wie schnell sehe ich Ergebnisse?</summary><div class="rb-faq-item__body">Erste Veränderungen im Hautbild zeigen sich erfahrungsgemäß nach 4 bis 6 Wochen, deutlicher nach den vollen zwölf Wochen. Die Wirkung der Mikronährstoffe wird oft schon früher als wacheres Lebensgefühl beschrieben.</div></details></li>
         </ul>
+      </div>
+    </section>
+
+    <section class="rb-block-cross-pillars">
+      <div class="rb-wrap">
+        <div class="rb-cross-pillars">
+          <span class="rb-cross-pillars__eyebrow">Weiter ergründen</span>
+          <ul class="rb-cross-pillars__list">
+            <li><a href="/kryo-vital/">Kryo Vital</a></li>
+            <li><a href="/inner-source/">Inner Source Rituals</a></li>
+          </ul>
+        </div>
       </div>
     </section>
 

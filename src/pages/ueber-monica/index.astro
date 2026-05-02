@@ -2,8 +2,8 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { site } from '@/lib/site';
 
-const title = 'Über Monica Galletti — Gründerin Rubedo Spa Minden';
-const description = 'Monica Galletti — CIDESCO Beauty Therapist, DNA-Skin-Expertin, NLP Master und Gründerin des Rubedo Spa in Minden. Werdegang & Methodik.';
+const title = 'Monica Galletti — CIDESCO Beauty Therapist Minden';
+const description = 'Monica Galletti — CIDESCO Beauty Therapist, DNA-Skin-Expertin & NLP Master. Gründerin des Rubedo Spa Minden. Werdegang, Methodik, Vita.';
 const heroImage = '/images/monica-portrait.webp';
 const url = `${site.url}/ueber-monica/`;
 
@@ -62,6 +62,25 @@ const personSchema = {
   ],
   memberOf: { '@type': 'Organization', name: 'CIDESCO International' },
   alumniOf: { '@type': 'Organization', name: 'World Spa Organization (WSO)' },
+  /* Social-Profile-URLs für sameAs — Filter, damit nur befüllte URLs
+     im Schema landen. Sobald site.social-Werte gepflegt sind, werden
+     sie automatisch hier referenziert. Stärkt das E-E-A-T-Signal,
+     weil Suchmaschinen die Identität über mehrere Plattformen
+     verifizieren können. */
+  sameAs: Object.values(site.social).filter(Boolean),
+  /* Adress-Verknüpfung mit dem Studio-Standort, damit Person + Place
+     für Suchmaschinen klar verbunden sind (relevant für Local-SEO). */
+  workLocation: {
+    '@type': 'Place',
+    name: site.name,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: site.address.street,
+      postalCode: site.address.postalCode,
+      addressLocality: site.address.city,
+      addressCountry: site.address.country,
+    },
+  },
 };
 ---
 

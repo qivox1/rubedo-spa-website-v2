@@ -1,15 +1,29 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
 
-const title = 'Philosophie · Rubedo Spa Minden';
-const description = 'Drei Säulen, ein System. Die Philosophie hinter Rubedo Spa: DNA Skin, Kryo Vital, Inner Source — bewusste Schönheit im Studio Minden.';
+const title = 'Drei Säulen der bewussten Schönheit — Rubedo Spa Minden';
+const description = 'Das Longevity-Konzept von Monica Galletti: DNA Skin Intelligence, Kryo Vital, Inner Source. Drei Säulen, ein System — Rubedo Spa Minden.';
 const heroImage = '/images/lina-philosophie-fenster.webp';
+const url = `${site.url}/philosophie/`;
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  mainEntity: [
+    { '@type': 'Question', name: 'Was unterscheidet Rubedo von einem klassischen Spa?', acceptedAnswer: { '@type': 'Answer', text: 'Wir arbeiten mit einem System, nicht mit einem Behandlungs-Katalog. Jede Behandlung wird als Teil einer der drei Säulen verstanden und auf den Menschen abgestimmt.' } },
+    { '@type': 'Question', name: 'Muss ich alle drei Säulen nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Viele Gäste beginnen mit einer einzigen Behandlung — etwa einer Ganzkörper-Kryotherapie oder einer Massage in der Rubedo Suite — und entscheiden sich erst nach dem ersten Besuch, ob sie tiefer einsteigen.' } },
+    { '@type': 'Question', name: 'Was bedeutet Longevity-Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Longevity beschreibt einen Lebensstil und eine Pflege-Haltung, die auf Vorsorge, Regeneration und Selbstregulation setzen. In einem Longevity-Studio steht die langfristige Vitalität im Mittelpunkt.' } },
+  ],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   heroImage={heroImage}
+  schemaExtras={[faqSchema]}
 >
 
   <article class="rb-page" data-page='philosophie'>
