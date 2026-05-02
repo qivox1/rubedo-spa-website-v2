@@ -44,7 +44,11 @@ const {
   articleMeta,
 } = Astro.props;
 
-const fullTitle = title.includes('Rubedo') ? title : `${title} | Rubedo Spa Minden`;
+/* Title-Suffix verkürzt auf "| Rubedo Spa" (statt "Rubedo Spa Minden"),
+   damit Page-Titles selten das ~60-Zeichen-Pixel-Limit von Google
+   überschreiten. Pages, die "Rubedo" bereits im Title haben, bekommen
+   gar keinen Suffix. */
+const fullTitle = title.includes('Rubedo') ? title : `${title} | Rubedo Spa`;
 const canonicalUrl = canonical ?? new URL(Astro.url.pathname, site.url).href;
 /* OG-Image-Kaskade: explizites ogImage > heroImage der Page > Default-Logo.
    Mit dem Fallback auf heroImage bekommt jede Page mit Hero-Bild automatisch
