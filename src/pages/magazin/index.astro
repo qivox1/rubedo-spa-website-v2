@@ -29,11 +29,15 @@ const catClass = (cat: string): 'wellness' | 'kryo' | 'haut' | 'ritual' => {
   }
 };
 
-// --- Edition (Heft-Anmutung): Monat + Jahr aus dem neuesten Artikel ---
-const editionDate = articles[0]?.data.pubDate ?? new Date();
+// --- Edition (Heft-Anmutung): immer aktueller Monat + Jahr zur Build-Zeit.
+// Vorher: Datum des neuesten Artikels — das wirkt veraltet, wenn länger
+// nicht publiziert wurde ("März 2026", obwohl wir Mai haben). Jetzt: aktuelle
+// Build-Zeit. Cloudflare baut bei jedem Push; falls längere Zeit nicht
+// gepushed wird, kann ein monatlicher Cron-Trigger den Rebuild auslösen. ---
+const editionDate = new Date();
 const month = new Intl.DateTimeFormat('de-DE', { month: 'long' }).format(editionDate);
 const year = editionDate.getFullYear();
-const editionNo = String(((editionDate.getMonth() + 1) % 12) || 12).padStart(2, '0');
+const editionNo = String(editionDate.getMonth() + 1).padStart(2, '0');
 
 // Sichtbar-zähl-Filter (Anzahl pro CSS-Modifier)
 const filterCounts = articles.reduce<Record<string, number>>((acc, a) => {
