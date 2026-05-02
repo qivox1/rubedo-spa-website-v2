@@ -27,8 +27,14 @@ const heroImage = '/images/startseite-hero-rubedo-spa-minden.webp';
         />
         <div class="rb-wrap">
           <div class="rb-block-hero__copy">
-            <span class="rb-block-hero__eyebrow">Longevity-Studio<span class="rb-eyebrow__diamond" aria-hidden="true"></span>Minden</span>
-            <h1>Smart Beauty for Conscious Humans.</h1>
+            {/* Semantische H1 mit den drei SEO/GEO-relevanten Begriffen —
+                Kategorie, Lokalität, Marke. Visuell als Eyebrow-Caption
+                gerendert (Klasse rb-block-hero__eyebrow), der Tag-Wechsel
+                ist nur für Suchmaschinen + LLMs. aria-label gibt Screen-
+                Readern den Satz als zusammenhängende Page-Identity. Der
+                Display-Claim darunter wird semantisch zur H2. */}
+            <h1 class="rb-block-hero__eyebrow" aria-label="Longevity-Studio in Minden — Rubedo Spa">Longevity-Studio<span class="rb-eyebrow__diamond" aria-hidden="true"></span>Minden<span class="rb-eyebrow__diamond" aria-hidden="true"></span>Rubedo Spa</h1>
+            <h2>Smart Beauty for Conscious Humans.</h2>
             <p class="rb-block-hero__subline">{site.tagline}</p>
             <div class="rb-block-hero__micro">
               <span>Von innen nach außen</span>

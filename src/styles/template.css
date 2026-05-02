@@ -504,7 +504,14 @@ a { color: inherit; }
   width: 8px; height: 8px;
   box-shadow: 0 0 0 1px rgba(251, 248, 241, 0.35);
 }
-.rb-block-hero h1 {
+/* Display-Headline der Hero-Section.
+   Greift auf jedes h1 in einem Hero — AUSSER auf das Eyebrow-H1 der
+   Startseite (Span-Tag-Wechsel für SEO/GEO, dort soll die Display-Größe
+   nicht greifen). Zusätzlich greift es auf h2, weil auf der Startseite
+   der bisherige Display-Claim semantisch zum H2 wird (zweite H1 wäre
+   ein SEO-Bug). Auf anderen Pages bleibt h1 weiterhin der Display-Title. */
+.rb-block-hero h1:not(.rb-block-hero__eyebrow),
+.rb-block-hero h2 {
   font-family: var(--rb-font-display);
   font-weight: 400;
   font-size: clamp(44px, 6vw, 84px);
@@ -612,8 +619,10 @@ a { color: inherit; }
   /* Headlines mit ein bis drei Zeilen werden hier vertikal gleichmäßig gerendert. */
 }
 /* Headline-Größe leicht angeglichen, damit kurze und lange Headlines
-   eine vergleichbare visuelle Höhe haben. */
-.rb-block-hero--photo h1 {
+   eine vergleichbare visuelle Höhe haben. h2 mitgedeckt, weil der
+   Startseiten-Claim ein semantisches H2 ist. */
+.rb-block-hero--photo h1:not(.rb-block-hero__eyebrow),
+.rb-block-hero--photo h2 {
   font-size: clamp(40px, 5.4vw, 68px);
   line-height: 1.05;
   margin-bottom: var(--rb-space-4);
@@ -624,7 +633,8 @@ a { color: inherit; }
 .rb-block-hero--photo .rb-block-hero__subline {
   margin-bottom: var(--rb-space-5);
 }
-.rb-block-hero--photo h1,
+.rb-block-hero--photo h1:not(.rb-block-hero__eyebrow),
+.rb-block-hero--photo h2,
 .rb-block-hero--photo .rb-block-hero__subline,
 .rb-block-hero--photo .rb-block-hero__micro,
 .rb-block-hero--photo .rb-block-hero__eyebrow { color: var(--rb-paper); }
