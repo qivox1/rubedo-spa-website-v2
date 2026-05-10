@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Ganzkörper-Kryotherapie Minden — drei Minuten bei −110 °C';
@@ -188,6 +189,14 @@ const faqSchema = {
         </aside>
       </div>
     </section>
+
+    <MagazinTeaser
+      tags={["ganzkoerper-kryotherapie", "kryotherapie-minden", "kontrollierter-kaeltereiz", "kryo-vital", "kryotherapie", "aktivierung"]}
+      heading="Mehr zur Ganzkörper-Kryotherapie"
+      eyebrow="Vertiefen"
+      intro="Was Kälte physiologisch bewirkt, wofür Gäste sie nutzen und welche Studien dazu existieren — im Rubedo-Magazin."
+      variant="cream"
+    />
 
   </article>
 </BaseLayout>

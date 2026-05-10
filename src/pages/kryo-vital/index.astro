@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Kryotherapie Minden — Kryo Vital bei Monica Galletti';
@@ -251,6 +252,15 @@ const faqSchema = {
          PAGE 5 · INNER SOURCE (Hub)
          URL: /inner-source/
          ============================================================ -->
+
+    <MagazinTeaser
+      tags={["kryo-vital", "kryotherapie", "kryotherapie-minden", "ganzkoerper-kryotherapie", "kontrollierter-kaeltereiz", "drei-saeulen", "aktivierung"]}
+      heading="Aus dem Kryo-Vital-Magazin"
+      eyebrow="Vertiefen"
+      intro="Hintergründe zu kontrolliertem Kältereiz, Anwendung und Wirkung — verfasst von Monica Galletti."
+      variant="cream"
+    />
+
   </article>
 
 </BaseLayout>

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Monica Galletti — CIDESCO Beauty Therapist Minden';
@@ -216,6 +217,14 @@ const personSchema = {
         </div>
       </div>
     </section>
+
+    <MagazinTeaser
+      heading="Beiträge von Monica"
+      eyebrow="Aus dem Studio"
+      intro="Hintergrund, Wissenschaft und Praxis — geschrieben von der Inhaberin selbst."
+      variant="paper"
+      limit={3}
+    />
 
   </article>
 

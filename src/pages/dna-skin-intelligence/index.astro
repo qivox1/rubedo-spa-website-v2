@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'DNA-basierte Hautpflege Minden — 20 Beauty-Gene analysieren';
@@ -747,6 +748,14 @@ const faqSchema = {
         </div>
       </div>
     </section>
+
+    <MagazinTeaser
+      tags={["dna-skin", "dna-hautpflege", "hautpflege", "drei-saeulen", "epigenetik", "mikronaehrstoffe"]}
+      heading="Aus dem DNA-Skin-Magazin"
+      eyebrow="Vertiefen"
+      intro="Hintergründe, Wissenschaft und Praxis-Erfahrungen rund um personalisierte Hautpflege auf DNA-Basis — von Monica Galletti."
+      variant="cream"
+    />
 
   </article>
 

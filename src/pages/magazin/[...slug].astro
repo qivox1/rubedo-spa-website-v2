@@ -67,6 +67,13 @@ const updatedDateFmt = data.updatedDate ? fmtDate(data.updatedDate) : null;
 
 // Schema.org Article + ggf. FAQPage
 const url = `${site.url}/magazin/${entry.slug}/`;
+const authorPageUrl = author.data.page ? `${site.url}${author.data.page}` : `${site.url}/ueber-monica/`;
+/* Person-Knoten via @id auf den vollen Person-Knoten der Vita-Page referenzieren
+   (statt eine Mini-Person inline zu duplizieren). Das verbindet jeden Magazin-
+   Artikel im Knowledge-Graph mit jobTitle/hasCredential/knowsAbout etc. der
+   Author-Seite — entscheidend für E-E-A-T. */
+const authorRef = { '@id': `${authorPageUrl}#monica` };
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -76,20 +83,33 @@ const articleSchema = {
   image: `${site.url}${data.heroImage}`,
   datePublished: data.pubDate.toISOString(),
   dateModified: (data.updatedDate ?? data.pubDate).toISOString(),
-  author: {
-    '@type': 'Person',
-    name: author.data.name,
-    url: author.data.page ? `${site.url}${author.data.page}` : undefined,
-    image: `${site.url}${author.data.avatar}`,
-  },
+  inLanguage: 'de-DE',
+  author: authorRef,
+  /* creator als Synonym zu author — manche AI-Crawler nutzen creator. */
+  creator: authorRef,
   publisher: {
     '@type': 'Organization',
+    '@id': `${site.url}/#localbusiness`,
     name: site.name,
     logo: { '@type': 'ImageObject', url: `${site.url}/logo-rubedo-spa.png` },
   },
   mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  /* isPartOf — bindet den Artikel ans Magazin und damit an die Brand. */
+  isPartOf: {
+    '@type': 'PublicationIssue',
+    '@id': `${site.url}/magazin/#magazin`,
+    name: `${site.name} Magazin`,
+    isPartOf: { '@type': 'Periodical', '@id': `${site.url}/#website`, name: site.name },
+  },
   articleSection: data.category,
   keywords: data.tags.join(', '),
+  /* Speakable: markiert Lead und FAQ als sprachfähig — relevant für Voice
+     Search, Google Assistant und AI-Citation. CSS-Selektoren matchen die
+     gerenderten Bereiche im Layout. */
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.rb-mag-prose > blockquote:first-child', '.rb-mag-faq__item summary', '.rb-mag-faq__item p'],
+  },
 };
 
 const breadcrumbSchema = {
@@ -108,10 +128,14 @@ if (data.faq && data.faq.length > 0) {
   schemaExtras.push({
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: data.faq.map((f) => ({
+    /* FAQ-Page-Schema inhaltlich an Article geknüpft — verbindet die Frage-
+       Antwort-Paare mit dem Artikel im Knowledge-Graph. */
+    mainEntityOfPage: { '@id': `${url}#article` },
+    mainEntity: data.faq.map((f, i) => ({
       '@type': 'Question',
+      '@id': `${url}#faq-${i + 1}`,
       name: f.question,
-      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+      acceptedAnswer: { '@type': 'Answer', text: f.answer, author: authorRef },
     })),
   });
 }

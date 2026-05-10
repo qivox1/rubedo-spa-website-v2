@@ -90,7 +90,7 @@ Das Bild, das wir intern wie extern nutzen, ist der **Stromkreis**: drei Knoten,
 
 **Säule 01 — DNA Skin Intelligence — Innen.** Hier beginnt der Stromkreis. Hautpflege, die deinen Code versteht: ein 12-Wochen-Plan, der aus einem genetischen Report eine individuelle Routine macht, ergänzt durch Mikronährstoffe von innen. Der Begriff dafür ist **Skin-Training nach DNA** — Pflege als wiederkehrende, präzise Übung, nicht als Konsum-Geste. Mehr dazu auf der [Säulen-Seite DNA Skin Intelligence](/dna-skin-intelligence/).
 
-**Säule 02 — Kryo Vital — Aktivierung.** Der Energie-Impuls. Drei Minuten kontrollierter Kältereiz in der Ganzkörper-Kabine, zwei Minuten Kryo-Facial, eine Druckwellen-Anwendung für die Beine — alles unter dem gleichen Prinzip: Aktivierung der körpereigenen Regenerationsfähigkeit, ohne Heilversprechen. Mehr dazu im Hub [Kryo Vital](/kryo-vital/) und im Magazin-Beitrag zur [Ganzkörper-Kryotherapie](/magazin/kryotherapie-minden/).
+**Säule 02 — Kryo Vital — Aktivierung.** Der Energie-Impuls. Drei Minuten kontrollierter Kältereiz in der [Ganzkörper-Kryo-Kabine](/kryo-vital/ganzkoerper/), zwei Minuten Kryo-Facial, eine Druckwellen-Anwendung für die Beine — alles unter dem gleichen Prinzip: Aktivierung der körpereigenen Regenerationsfähigkeit, ohne Heilversprechen. Mehr dazu im Hub [Kryo Vital](/kryo-vital/) und im Magazin-Beitrag zur [Ganzkörper-Kryotherapie](/magazin/kryotherapie-minden/).
 
 **Säule 03 — Inner Source Rituals — Balance.** Die leiseste der drei Säulen, und für viele Gäste die transformierendste. Klassische Massage-Tradition (Abhyanga, Hot Stone, Hot Bambu, Balinesische Deep Massage) trifft moderne neurosomatische Atemarbeit, Visualisierung und Mind-Methoden im Wellness-Kontext. Details auf der [Inner-Source-Seite](/inner-source/) und im [Atem-Ritual](/inner-source/atem-ritual/).
 
@@ -100,11 +100,18 @@ Das Bild, das wir intern wie extern nutzen, ist der **Stromkreis**: drei Knoten,
 
 ## Die Stimme hinter dem Konzept — Monica Galletti {#monica}
 
-Rubedo ist kein Konzern und kein Franchise. Es ist die Praxis von **Monica Galletti**, geführt von ihr seit 2007 in Minden. Diese personale Bindung ist kein Marketing-Detail — sie ist der Grund, warum unser Konzept so eng geführt ist.
+<figure>
+  <a href="/ueber-monica/" aria-label="Zur ausführlichen Vita von Monica Galletti">
+    <img src="/images/monica-portrait.webp" alt="Monica Galletti, Inhaberin Rubedo Spa Minden — CIDESCO Beauty Therapist, DNA Skin Expert, NLP Master" width="800" height="1000" loading="lazy" />
+  </a>
+  <figcaption><em>Monica Galletti — Inhaberin Rubedo Spa Minden. <a href="/ueber-monica/">Vollständige Vita ansehen →</a></em></figcaption>
+</figure>
 
-Monica ist **CIDESCO Beauty Therapist** (das international anerkannte Diplom für Kosmetik-Therapeutinnen), mit Vertiefungen in **Lomi-Lomi-Massage** und einer mehrwöchigen Studienreise nach Indien zur klassischen Abhyanga-Praxis. Seit 2019 ist Atem- und Mind-Arbeit ein zentraler Schwerpunkt — sie arbeitet mit neurosomatischer Atemtechnik, Visualisierung und NLP-Methoden im Wellness-Kontext, klar abgegrenzt von therapeutischer Arbeit. Und seit Beginn der Beauty-ID-Schweiz-Partnerschaft ist Rubedo eine von wenigen Adressen in Deutschland, die das DNA-Skin-Konzept in voller Tiefe anbieten.
+Rubedo ist kein Konzern und kein Franchise. Es ist die Praxis von **[Monica Galletti](/ueber-monica/)**, geführt von ihr seit 2008 in Minden. Diese personale Bindung ist kein Marketing-Detail — sie ist der Grund, warum unser Konzept so eng geführt ist.
 
-Die ausführliche Vita und Qualifikationen findest du auf der [Profil-Seite Über Monica](/ueber-monica/). Wer mit Monica arbeitet, arbeitet nicht mit einer Behandlungsroutine — sondern mit einer Person, die ihre Sprache präzise wählt und ihre Methoden bewusst begrenzt.
+Monica ist **CIDESCO Beauty Therapist** (das international anerkannte Diplom für Kosmetik-Therapeutinnen) und hält ein Executive Master Spa & Beauty Management der World Spa Organization (WSO). Sie hat Vertiefungen in **Lomi-Lomi-Massage** und eine mehrwöchige Studienreise nach Indien zur klassischen Abhyanga-Praxis hinter sich. Seit 2019 ist Atem- und Mind-Arbeit ein zentraler Schwerpunkt — sie arbeitet als **NLP Master** mit neurosomatischer Atemtechnik, Visualisierung und NLP-Methoden im Wellness-Kontext, klar abgegrenzt von therapeutischer Arbeit. Und seit Beginn der Beauty-ID-Schweiz-Partnerschaft ist Rubedo eine von wenigen Adressen in Deutschland, die das **DNA-Skin-Konzept** in voller Tiefe anbieten.
+
+Die ausführliche Vita mit allen Qualifikationen, Ausbildungsstationen und Methoden findest du auf der [Profil-Seite Über Monica Galletti](/ueber-monica/). Wer mit Monica arbeitet, arbeitet nicht mit einer Behandlungsroutine — sondern mit einer Person, die ihre Sprache präzise wählt und ihre Methoden bewusst begrenzt.
 
 ## Was Longevity-Studio konkret bedeutet {#longevity-studio}
 
@@ -135,8 +142,8 @@ Eine ehrliche Klarstellung gehört dazu — gerade weil viele Wellness-Marken hi
 
 ## So fängst du an {#erstgespraech}
 
-Wer mit uns arbeiten möchte, beginnt nicht mit einer Behandlungs-Buchung, sondern mit einem **15-minütigen kostenfreien Erstgespräch**. Wir klären, welche Säule für deine aktuelle Situation der richtige Einstieg ist — und ob ein Plan über zwölf Wochen oder ein einzelner Termin sinnvoller ist.
+Wer mit uns arbeiten möchte, beginnt nicht mit einer Behandlungs-Buchung, sondern mit einem **[15-minütigen kostenfreien Erstgespräch](/termin-buchen/)**. Wir klären, welche Säule für deine aktuelle Situation der richtige Einstieg ist — und ob ein Plan über zwölf Wochen oder ein einzelner Termin sinnvoller ist.
 
-Termine vergeben wir telefonisch oder per Online-Anfrage. Du erreichst uns Montag bis Freitag, 09:00–19:00, in der Marienstraße 58, 32427 Minden. Wer das Studio vorab spüren möchte, findet auf der [Philosophie-Seite](/philosophie/) den ausführlichen Konzept-Hintergrund — und auf der [Profilseite Über Monica](/ueber-monica/) die persönliche Vita der Inhaberin.
+Termine vergeben wir telefonisch oder per [Online-Anfrage](/termin-buchen/). Du erreichst uns Montag bis Freitag, 09:00–19:00, in der Marienstraße 58, 32427 Minden. Wer das Studio vorab spüren möchte, findet auf der [Philosophie-Seite](/philosophie/) den ausführlichen Konzept-Hintergrund — und auf der [Profilseite Über Monica](/ueber-monica/) die persönliche Vita der Inhaberin.
 
 Smart Beauty for Conscious Humans. Von innen nach außen.

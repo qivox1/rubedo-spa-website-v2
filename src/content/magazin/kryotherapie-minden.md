@@ -50,6 +50,7 @@ faq:
   - question: "Warum sagt ihr nicht „Kryotherapie“, sondern „Kryo Vital“?"
     answer: "Therapie ist ein Begriff aus der Medizin. Wir arbeiten im Wellness-Kontext und nutzen Kälte als kontrollierten Reiz für Regeneration und Vitalität — nicht zur Behandlung von Krankheiten. Kryo Vital macht den Unterschied sichtbar."
 related:
+  - was-ist-rubedo-spa
   - wellness-minden-technologie
 ---
 
@@ -65,11 +66,11 @@ Eine [systematische Übersichtsarbeit auf Frontiers in Physiology (2017)](https:
 
 ## Warum wir Kryo Vital „Aktivierung" nennen — die Stromkreis-Logik {#aktivierung}
 
-In der Rubedo-Philosophie steht Kryo Vital für die zweite Säule: **Aktivierung**. Während die Säule DNA Skin Intelligence das Innere versorgt (Säule 01) und Inner Source Rituals die Balance reguliert (Säule 03), ist Kryo Vital der **Energie-Impuls**. Das Bild dahinter: ein Stromkreis von innen nach außen, in dem alle drei Säulen ineinandergreifen.
+In der [Rubedo-Philosophie](/philosophie/) steht Kryo Vital für die zweite Säule: **Aktivierung**. Während die Säule [DNA Skin Intelligence](/dna-skin-intelligence/) das Innere versorgt (Säule 01) und [Inner Source Rituals](/inner-source/) die Balance reguliert (Säule 03), ist Kryo Vital der **Energie-Impuls**. Das Bild dahinter: ein Stromkreis von innen nach außen, in dem alle drei Säulen ineinandergreifen — den vollen Marken-Kontext beschreibt der Beitrag [„Was bedeutet Rubedo?"](/magazin/was-ist-rubedo-spa/).
 
 > Kryo Vital ist keine Behandlung gegen etwas. Es ist ein Reiz, der den Körper an seine eigene Regenerationsfähigkeit erinnert. Der Körper kennt den Weg — wir schaffen die Bedingungen.
 >
-> — *Monica Galletti, Inhaberin Rubedo Spa*
+> — *[Monica Galletti](/ueber-monica/), Inhaberin Rubedo Spa*
 
 Diese Sprache ist bewusst gewählt. Wir vermeiden Begriffe wie „Therapie", „Heilung", „lindert Schmerzen" oder „entzündungshemmend" — nicht aus Vorsicht, sondern aus Klarheit. Eine Wellness-Anwendung soll genau das tun, was sie tun kann: Reize setzen, die das vegetative System stützen und das Körpergefühl klar machen. Mehr nicht. Weniger aber auch nicht.
 
@@ -79,9 +80,9 @@ Wer eine Ganzkörper-Kryotherapie bucht, hat in der Regel eine von drei Motivati
 
 **Profil Sport-Regeneration.** Sportler nach Belastung — Halbmarathon, Krafttraining, intensive Trainingsphase. Die Anwendung wird als regenerativer Impuls genutzt: zwei- bis dreimal in der Woche nach intensiven Einheiten. Der subjektive Effekt ist meist eine schnellere Rückkehr in den nächsten Belastungsblock.
 
-**Profil Stress-Reset.** Menschen mit hoher mentaler Last, die nach einem klaren Schnitt suchen — körperlich erlebbar, ohne Therapie-Charakter. Die Kälte schafft eine Aufmerksamkeit, die mit reiner Massage so nicht entsteht. Viele Gäste kombinieren Kryo Vital mit einer Inner-Source-Sitzung: Aktivierung trifft Balance.
+**Profil Stress-Reset.** Menschen mit hoher mentaler Last, die nach einem klaren Schnitt suchen — körperlich erlebbar, ohne Therapie-Charakter. Die Kälte schafft eine Aufmerksamkeit, die mit reiner Massage so nicht entsteht. Viele Gäste kombinieren Kryo Vital mit einer [Inner-Source-Sitzung](/inner-source/) oder einem [Atem-Ritual](/inner-source/atem-ritual/): Aktivierung trifft Balance.
 
-**Profil Wellness-Routine.** Gäste, die Vitalität als langfristige Praxis verstehen — nicht als Reaktion auf Belastung, sondern als regelmäßiger Bestandteil ihrer Pflege. Hier sind ein bis zwei wöchentliche Termine typisch, oft kombiniert mit DNA Skin oder Kryo-Facial.
+**Profil Wellness-Routine.** Gäste, die Vitalität als langfristige Praxis verstehen — nicht als Reaktion auf Belastung, sondern als regelmäßiger Bestandteil ihrer Pflege. Hier sind ein bis zwei wöchentliche Termine typisch, oft kombiniert mit [DNA Skin](/dna-skin-intelligence/) oder Kryo-Facial. Was Longevity als Lebensstil bedeutet, fasst der Beitrag [„Modernes Wellness in Minden — Was Longevity wirklich bedeutet"](/magazin/wellness-minden-technologie/) zusammen.
 
 <figure>
   <img src="/images/kryo-vital-content-nach.webp" alt="Klientin nach der Ganzkörper-Kryotherapie — locker in cremefarbenes Leinen-Tuch gehüllt, leichter Glow auf der Haut" width="1600" height="1067" loading="lazy" />
@@ -139,4 +140,4 @@ Mehr zu allen Säulen im Hub [Kryo Vital](/kryo-vital/) und auf der Behandlungss
 
 Ganzkörper-Kryotherapie ist kein Mode-Trend und kein Heilversprechen. Sie ist ein präzises Werkzeug der Säule Kryo Vital — drei Minuten kontrollierter Kältereiz, die das Nervensystem klar fokussieren und in einen größeren Pflege-Plan gehören.
 
-Wer einsteigen möchte, beginnt mit dem 15-minütigen Erstgespräch — kostenfrei und ohne Verpflichtung. Wir klären Kontraindikationen, Tagesform und Ziel und entscheiden dann gemeinsam, ob eine Probesitzung der richtige nächste Schritt ist.
+Wer einsteigen möchte, beginnt mit dem [15-minütigen kostenfreien Erstgespräch](/termin-buchen/) — geführt von [Monica Galletti](/ueber-monica/). Wir klären Kontraindikationen, Tagesform und Ziel und entscheiden dann gemeinsam, ob eine Probesitzung der richtige nächste Schritt ist.

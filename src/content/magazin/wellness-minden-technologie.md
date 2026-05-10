@@ -48,6 +48,7 @@ faq:
   - question: "Ist modernes Wellness eine Therapie?"
     answer: "Nein. Wellness-Anwendungen sind Pflege- und Wohlfühlverfahren. Sie ersetzen keine ärztliche Behandlung. Bei medizinischen Fragestellungen ist eine ärztliche Abklärung notwendig."
 related:
+  - was-ist-rubedo-spa
   - kryotherapie-minden
 ---
 
@@ -69,23 +70,23 @@ Drei Dinge unterscheiden ein Longevity-Studio von einem klassischen Spa:
 
 **Erstens die Perspektive.** Ein Spa-Besuch ist meist ein Moment der Pause. Ein Longevity-Termin ist Teil eines Plans, der sich über mindestens zwölf Wochen erstreckt — orientiert am biologischen Turnover der Haut.
 
-**Zweitens die Personalisierung.** Während ein klassisches Spa Standard-Behandlungen anbietet, arbeitet ein Longevity-Studio auf Basis individueller Daten — bei uns über das DNA-Skin-Konzept der Beauty-ID-Schweiz und auf Basis eines persönlichen Erstgesprächs.
+**Zweitens die Personalisierung.** Während ein klassisches Spa Standard-Behandlungen anbietet, arbeitet ein Longevity-Studio auf Basis individueller Daten — bei uns über das [DNA-Skin-Konzept](/dna-skin-intelligence/) der Beauty-ID-Schweiz und auf Basis eines persönlichen Erstgesprächs. Mehr zur Marken-Philosophie und zur Stromkreis-Logik findest du im Eröffnungs-Beitrag [„Was bedeutet Rubedo? Smart Beauty for Conscious Humans erklärt"](/magazin/was-ist-rubedo-spa/).
 
 **Drittens die Sprache.** Longevity vermeidet Heilversprechen und Anti-Aging-Floskeln. Stattdessen geht es um Vorsorge, Regeneration, Selbstregulation — Begriffe, die ehrlich beschreiben, was eine Pflege-Haltung leisten kann.
 
 > Modernes Wellness ist kein Bruch mit dem Klassischen — es ist seine logische Weiterentwicklung. Wir machen aus einer Aneinanderreihung von Behandlungen ein System, das trägt.
 >
-> — *Monica Galletti, Inhaberin Rubedo Spa*
+> — *[Monica Galletti](/ueber-monica/), Inhaberin Rubedo Spa*
 
 ## Drei Dimensionen: Vorsorge, Regeneration, Selbstregulation {#drei-dimensionen}
 
 Longevity lässt sich in drei Dimensionen denken — sie sind die theoretische Grundlage hinter unseren drei Säulen.
 
-**Vorsorge** beschreibt alles, was die Wahrscheinlichkeit von Alterungs-Symptomen senkt: UV-Schutz, Schlafhygiene, Ernährung, Bewegung. Im Studio ist das die Säule **DNA Skin Intelligence** — ein 12-Wochen-Plan, der individuelle Pflege-Routinen aus einem genetischen Report ableitet und durch Mikronährstoffe ergänzt.
+**Vorsorge** beschreibt alles, was die Wahrscheinlichkeit von Alterungs-Symptomen senkt: UV-Schutz, Schlafhygiene, Ernährung, Bewegung. Im Studio ist das die Säule **[DNA Skin Intelligence](/dna-skin-intelligence/)** — ein 12-Wochen-Plan, der individuelle Pflege-Routinen aus einem genetischen Report ableitet und durch Mikronährstoffe ergänzt.
 
-**Regeneration** beschreibt das, was nach Belastung passiert. Erholt sich der Körper schnell? Das vegetative Nervensystem schaltet zwischen Anspannung (Sympathikus) und Erholung (Parasympathikus) — und beide Modi brauchen Reize. Genau hier setzt **Kryo Vital** an: drei Minuten kontrollierter Kältereiz, die das Nervensystem klar fokussieren.
+**Regeneration** beschreibt das, was nach Belastung passiert. Erholt sich der Körper schnell? Das vegetative Nervensystem schaltet zwischen Anspannung (Sympathikus) und Erholung (Parasympathikus) — und beide Modi brauchen Reize. Genau hier setzt **[Kryo Vital](/kryo-vital/)** an: drei Minuten kontrollierter Kältereiz, die das Nervensystem klar fokussieren. Wie sich das in der [Ganzkörper-Kryotherapie](/kryo-vital/ganzkoerper/) konkret anfühlt und was Studien zeigen, beschreibt der Artikel [„Ganzkörper-Kryotherapie in Minden"](/magazin/kryotherapie-minden/).
 
-**Selbstregulation** beschreibt die Fähigkeit, im Alltag bei sich zu bleiben. Stress, mentale Last, Schlafstörungen lösen sich nicht durch eine Massage, aber sie lassen sich durch wiederkehrende Praxis beruhigen. Die Säule **Inner Source Rituals** verbindet klassische Massage-Tradition (Abhyanga, Hot Stone, Hot Bambu, Balinesische Deep Massage) mit Atem-, Visualisierungs- und Mind-Methoden.
+**Selbstregulation** beschreibt die Fähigkeit, im Alltag bei sich zu bleiben. Stress, mentale Last, Schlafstörungen lösen sich nicht durch eine Massage, aber sie lassen sich durch wiederkehrende Praxis beruhigen. Die Säule **[Inner Source Rituals](/inner-source/)** verbindet klassische Massage-Tradition (Abhyanga, Hot Stone, Hot Bambu, Balinesische Deep Massage) mit [Atem-](/inner-source/atem-ritual/), Visualisierungs- und Mind-Methoden.
 
 ## Wie sich Longevity im Alltag zeigt — sechs Mikropraktiken {#mikropraktiken}
 
@@ -133,6 +134,6 @@ Wer zum ersten Mal kommt, durchläuft einen klaren Ablauf — keine Behandlungs-
 
 ## Fazit {#fazit}
 
-Modernes Wellness in Minden ist kein Trend, sondern eine ruhige Korrektur. Statt einer Aneinanderreihung von Wohlfühlbehandlungen bauen wir mit dir ein System: Drei Säulen, die ineinandergreifen — Innen, Aktivierung, Balance. Eine Sprache, die ehrlich beschreibt, was Pflege leisten kann. Und ein Studio, das Longevity nicht als Slogan versteht, sondern als Haltung.
+Modernes Wellness in Minden ist kein Trend, sondern eine ruhige Korrektur. Statt einer Aneinanderreihung von Wohlfühlbehandlungen bauen wir mit dir ein System: Drei Säulen, die ineinandergreifen — Innen, Aktivierung, Balance. Eine Sprache, die ehrlich beschreibt, was Pflege leisten kann. Und ein Studio, das Longevity nicht als Slogan versteht, sondern als Haltung. Wer das Konzept ausführlich nachlesen möchte, findet die Hintergründe auf der [Philosophie-Seite](/philosophie/) und in unserem Brand-Hub-Beitrag [„Was bedeutet Rubedo?"](/magazin/was-ist-rubedo-spa/).
 
-Wer einsteigen möchte, beginnt mit dem 15-minütigen Erstgespräch. Kostenfrei, unverbindlich, in Ruhe.
+Wer einsteigen möchte, beginnt mit dem [15-minütigen kostenfreien Erstgespräch](/termin-buchen/). Unverbindlich, in Ruhe — geführt von [Monica Galletti](/ueber-monica/).

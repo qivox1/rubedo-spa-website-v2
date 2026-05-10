@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Longevity-Studio Minden — Studio, Mission & Standort';
@@ -163,6 +164,14 @@ const aboutPageSchema = {
         </div>
       </div>
     </section>
+
+    <MagazinTeaser
+      tags={["longevity", "longevity-studio-minden", "drei-saeulen", "wellness-minden", "praeventive-pflege"]}
+      heading="Longevity verstehen — im Magazin"
+      eyebrow="Vertiefen"
+      intro="Was Longevity konkret bedeutet, wie Vorsorge und Regeneration zusammenwirken — Lesestoff aus dem Studio."
+      variant="paper"
+    />
 
   </article>
 

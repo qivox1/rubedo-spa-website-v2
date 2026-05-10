@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Massage & Atemarbeit Minden — Inner Source im Rubedo Spa';
@@ -206,6 +207,15 @@ const faqSchema = {
          PAGE 6 · KÖRPERFORMUNG (Druckwellen + Wraps + Bandagen)
          URL: /kryo-vital/koerperformung/
          ============================================================ -->
+
+    <MagazinTeaser
+      tags={["inner-source", "atemarbeit", "abhyanga", "hot-stone", "massage", "drei-saeulen", "berührung"]}
+      heading="Aus dem Inner-Source-Magazin"
+      eyebrow="Vertiefen"
+      intro="Atemarbeit, Massage-Rituale, Mind-Methoden — was Berührung und Stille im Nervensystem bewirken."
+      variant="cream"
+    />
+
   </article>
 
 </BaseLayout>

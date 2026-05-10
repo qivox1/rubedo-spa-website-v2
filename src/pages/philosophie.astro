@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import MagazinTeaser from '@/components/MagazinTeaser.astro';
 import { site } from '@/lib/site';
 
 const title = 'Drei Säulen der bewussten Schönheit — Rubedo Spa Minden';
@@ -153,6 +154,14 @@ const faqSchema = {
           </div>
         </div>
       </section>
+
+      <MagazinTeaser
+        heading="Aus dem Magazin"
+        eyebrow="Weiterlesen"
+        intro="Vertiefende Beiträge zur Rubedo-Philosophie und ihren drei Säulen — von Monica Galletti."
+        variant="cream"
+        limit={3}
+      />
 
     </article>
 
