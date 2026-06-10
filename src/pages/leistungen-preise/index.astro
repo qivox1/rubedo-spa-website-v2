@@ -123,7 +123,9 @@ const groups: Group[] = [
 </BaseLayout>
 
 <style>
-  .rb-leistung-group { margin-bottom: 48px; }
+  .rb-leistung-group { margin-bottom: 88px; }
+  .rb-leistung-group:last-of-type { margin-bottom: 56px; }
+  @media (max-width: 560px) { .rb-leistung-group { margin-bottom: 64px; } }
 
   /* Cover-Banner pro Säule — Hauptbereichs-Bild gut erkennbar im Querformat,
      Titel als Overlay unten links auf weichem Verlauf. */
