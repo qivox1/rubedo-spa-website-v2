@@ -43,6 +43,20 @@ WICHTIG: `@import`-Statements MÜSSEN vor `@tailwind`-Direktiven stehen, sonst w
 
 `src/lib/site.ts` ist Single Source of Truth für NAP, Tracking, Social, Nav-Items, Booking-Embed-URL.
 
+**Nav-`feature` (seit 2026-06-10):** Ein Nav-Item mit `groups` (Mega-Menü, aktuell „Anwendungen") kann ein optionales `feature: { label, href, description }` haben. Das rendert `SiteHeader.astro` als hervorgehobene Banner-Zeile unter den Spalten (Desktop) bzw. als hervorgehobenen Eintrag (Mobile). Genutzt für „Leistungen & Preise" → `/leistungen/`, damit die Top-Nav bei 5 Punkten bleibt. Styles: `.rb-nav__mega-feature*` in `template.css`, `.rb-mnav__sublink--feature` in `SiteHeader.astro`.
+
+## Seiten-Stand (2026-06-10)
+
+17 Routen live. Neu seit dem Compliance-Update: `src/pages/agb/`, `src/pages/kryo-vital/kryo-facial/`, `src/pages/leistungen/`. Alle Preisblöcke tragen „inkl. MwSt."; HWG-/INCI-/NemV-Hinweise sind eingebaut (NemV-Hersteller noch Platzhalter). Testimonial-Sektion auf DNA Skin existiert, ist aber per `SHOW_TESTIMONIALS = false` deaktiviert. Details: `../2026-06-10_Umsetzungsreport_Aenderungswuensche_Monica.md`.
+
+## Push (Achtung große Dateien)
+
+`.secrets/api-push.sh` bricht bei großen Dateien mit `jq: Argument list too long` ab. Für Pushes mit größeren Dateien (z. B. `template.css`) das Python-Skript nehmen:
+
+```bash
+python3 .secrets/api-push-with-delete.py "feat: …" --add <file1> <file2> …
+```
+
 ## Magazin-Frontmatter (siehe `src/content/magazin/_template.md`)
 
 Pflicht: `title, description, pubDate, author, category, heroImage, heroImageAlt`.
