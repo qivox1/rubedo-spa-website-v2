@@ -99,6 +99,7 @@ export const site = {
           headingDesc: 'Drei Minuten kontrollierter Kältereiz für Vitalität.',
           items: [
             { label: 'Ganzkörper-Kryotherapie', href: '/kryo-vital/ganzkoerper/' },
+            { label: 'Kryo-Facial', href: '/kryo-vital/kryo-facial/' },
             { label: 'Körperformung · Druckwellen', href: '/kryo-vital/koerperformung/' },
             { label: 'Body Slimming Wrap', href: '/kryo-vital/koerperformung/wrap/' },
             { label: 'Body Slimming Bandage', href: '/kryo-vital/koerperformung/bandage/' },
@@ -115,6 +116,7 @@ export const site = {
         },
       ],
     },
+    { label: 'Leistungen', href: '/leistungen/' },
     {
       label: 'Magazin',
       href: '/magazin/',

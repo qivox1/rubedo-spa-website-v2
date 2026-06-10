@@ -1,0 +1,125 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/lib/site';
+
+const title = 'Leistungen & Preise — Rubedo Spa Minden';
+const description = 'Alle Anwendungen von Rubedo Spa Minden auf einen Blick: DNA Skin Intelligence, Kryo Vital und Inner Source Rituals — mit Dauer und Preis (inkl. MwSt.).';
+const url = `${site.url}/leistungen/`;
+
+type Row = { name: string; href?: string; dauer: string; preis: string };
+type Group = { saeule: string; href: string; rows: Row[] };
+
+const groups: Group[] = [
+  {
+    saeule: 'Säule 1 — DNA Skin Intelligence',
+    href: '/dna-skin-intelligence/',
+    rows: [
+      { name: 'DNA Skin · Erstanalyse vor Ort', href: '/dna-skin-intelligence/', dauer: '90 Min', preis: '149 €' },
+      { name: 'DNA Skin · 12-Wochen-Komplettpaket', href: '/dna-skin-intelligence/', dauer: 'Programm', preis: '2.000 €' },
+    ],
+  },
+  {
+    saeule: 'Säule 2 — Kryo Vital',
+    href: '/kryo-vital/',
+    rows: [
+      { name: 'Ganzkörper-Kryotherapie', href: '/kryo-vital/ganzkoerper/', dauer: '15 Min', preis: '50 €' },
+      { name: 'Kryo-Lokal (einzelne Zone)', href: '/kryo-vital/ganzkoerper/', dauer: '15 Min', preis: '36 €' },
+      { name: 'Kryo-Facial · Quick', href: '/kryo-vital/kryo-facial/', dauer: '15 Min', preis: 'ab 39 €' },
+      { name: 'Kryo-Facial · Express', href: '/kryo-vital/kryo-facial/', dauer: '25 Min', preis: 'ab 59 €' },
+      { name: 'Kryo-Facial · Beauty Antioxidant', href: '/kryo-vital/kryo-facial/', dauer: '45 Min', preis: 'ab 89 €' },
+      { name: 'Kryo-Facial · Plus Intensiv', href: '/kryo-vital/kryo-facial/', dauer: '60 Min', preis: 'ab 119 €' },
+      { name: 'Druckwellen-Anwendung', href: '/kryo-vital/koerperformung/', dauer: '40 Min', preis: 'ab 45 €' },
+    ],
+  },
+  {
+    saeule: 'Säule 3 — Inner Source Rituals',
+    href: '/inner-source/',
+    rows: [
+      { name: 'Abhyanga (Ayurveda-Massage)', href: '/inner-source/rubedo-suite/', dauer: '80 Min', preis: '175 €' },
+      { name: 'Hot Stone', href: '/inner-source/rubedo-suite/', dauer: '80 Min', preis: '175 €' },
+      { name: 'Hot Bambu', href: '/inner-source/rubedo-suite/', dauer: '80 Min', preis: '175 €' },
+      { name: 'Balinesische Deep Massage', href: '/inner-source/rubedo-suite/', dauer: '50 Min', preis: '145 €' },
+      { name: 'Atem-Ritual', href: '/inner-source/atem-ritual/', dauer: '60 Min', preis: 'auf Anfrage' },
+    ],
+  },
+  {
+    saeule: 'Alle Säulen',
+    href: '/termin-buchen/',
+    rows: [
+      { name: 'Erstgespräch (Videocall)', href: '/termin-buchen/', dauer: '15 Min', preis: 'kostenfrei' },
+    ],
+  },
+];
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="rb-page" data-page="leistungen">
+
+    <section class="rb-block-hero rb-block-hero--centered">
+      <div class="rb-wrap rb-block-hero__inner">
+        <div>
+          <span class="rb-block-hero__eyebrow">Übersicht · Rubedo</span>
+          <h1>Leistungen &amp; Preise.</h1>
+          <p class="rb-block-hero__subline" style="margin-left:auto;margin-right:auto;">Alle Anwendungen auf einen Blick — entlang der drei Säulen. Dauer und Preis transparent, inkl. gesetzlicher Mehrwertsteuer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rb-section rb-section--paper">
+      <div class="rb-wrap rb-wrap--narrow">
+        {groups.map((g) => (
+          <div class="rb-leistung-group">
+            <h2 class="rb-leistung-group__title"><a href={g.href}>{g.saeule}</a></h2>
+            <table class="rb-leistung-table">
+              <thead>
+                <tr><th scope="col">Anwendung</th><th scope="col">Dauer</th><th scope="col">Preis</th></tr>
+              </thead>
+              <tbody>
+                {g.rows.map((r) => (
+                  <tr>
+                    <td>{r.href ? <a href={r.href}>{r.name}</a> : r.name}</td>
+                    <td>{r.dauer}</td>
+                    <td class="rb-leistung-table__price">{r.preis}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ))}
+        <p class="rb-leistung-note">Alle Preise inkl. gesetzlicher MwSt. Bestimmte Leistungen können nach § 4 Nr. 14 UStG von der Mehrwertsteuer befreit sein; in diesen Fällen ist der ausgewiesene Preis der Endpreis. Es gelten unsere <a href="/agb/">AGB</a>.</p>
+      </div>
+    </section>
+
+    <section class="rb-block-cta">
+      <div class="rb-wrap">
+        <div class="rb-cta-band">
+          <div class="rb-cta-band__body">
+            <span class="rb-eyebrow">Erster Schritt</span>
+            <h3>Unsicher, was zu dir passt?</h3>
+            <p>Im kostenfreien 15-Minuten-Erstgespräch finden wir gemeinsam die richtige Anwendung — ohne Verpflichtung.</p>
+          </div>
+          <div class="rb-cta-band__action"><a class="rb-btn--ghost-light" href="/termin-buchen/">Erstgespräch buchen →</a></div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+</BaseLayout>
+
+<style>
+  .rb-leistung-group { margin-bottom: 40px; }
+  .rb-leistung-group__title { font-family: var(--rb-font-display); font-weight: 400; font-size: 24px; margin: 0 0 14px; }
+  .rb-leistung-group__title a { color: var(--rb-ink-900, inherit); text-decoration: none; }
+  .rb-leistung-group__title a:hover { color: var(--rb-gold-700); }
+  .rb-leistung-table { width: 100%; border-collapse: collapse; font-family: var(--rb-font-body); }
+  .rb-leistung-table th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--rb-ink-500); font-weight: 500; padding: 8px 12px; border-bottom: 1px solid var(--rb-ink-100); }
+  .rb-leistung-table td { font-size: 15px; color: var(--rb-ink-700); padding: 13px 12px; border-bottom: 1px dashed var(--rb-ink-100); }
+  .rb-leistung-table td a { color: var(--rb-ink-700); text-decoration: none; }
+  .rb-leistung-table td a:hover { color: var(--rb-gold-700); text-decoration: underline; }
+  .rb-leistung-table__price { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .rb-leistung-note { font-family: var(--rb-font-body); font-size: 13px; color: var(--rb-ink-500); line-height: 1.7; margin-top: 8px; }
+  .rb-leistung-note a { color: var(--rb-gold-700); }
+  @media (max-width: 520px) {
+    .rb-leistung-table th:nth-child(2), .rb-leistung-table td:nth-child(2) { display: none; }
+  }
+</style>

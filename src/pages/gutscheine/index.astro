@@ -94,6 +94,62 @@ const giftCardSchema = {
           <strong>Kann ich einen Gutschein zurückgeben?</strong> Personalisierte Gutscheine sind vom
           Widerrufsrecht ausgeschlossen — wir bieten aber freie Umbuchung.
         </p>
+
+        <h3>Widerrufsbelehrung</h3>
+        <p>
+          Bei im Fernabsatz (online, per E-Mail oder telefonisch) bestellten Wertgutscheinen besteht ein
+          gesetzliches Widerrufsrecht von 14 Tagen ab Vertragsschluss gemäß § 312g BGB. Für persönlich und
+          vor Ort vereinbarte Gutscheine (Präsenzgeschäft) besteht gemäß § 312b Abs. 1 BGB kein
+          Widerrufsrecht. Die vollständige Widerrufsbelehrung finden Sie in unseren
+          <a href="/agb/#widerruf">AGB</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- GUTSCHEIN-ANFRAGE · Direktformular -->
+    <section class="rb-section rb-section--cream">
+      <div class="rb-wrap rb-wrap--narrow">
+        <div class="rb-gutschein-form">
+          <span class="rb-eyebrow">Direkt anfragen</span>
+          <h2>Gutschein jetzt anfragen — direkt auf dieser Seite.</h2>
+          <p class="rb-gutschein-form__intro">Füllen Sie die Felder aus und senden Sie die Anfrage ab — Ihr E-Mail-Programm öffnet sich mit einer fertig vorbereiteten Nachricht an uns.</p>
+
+          <form id="rb-gutschein-form" novalidate>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-art">Gutschein-Art</label>
+              <select id="rb-gs-art" name="art" required>
+                <option value="Wertgutschein">Wertgutschein</option>
+                <option value="Anwendungs-Gutschein">Anwendungs-Gutschein</option>
+                <option value="Säulen-Erlebnis">Säulen-Erlebnis</option>
+              </select>
+            </div>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-betrag">Betrag / Anwendung</label>
+              <input type="text" id="rb-gs-betrag" name="betrag" placeholder="z. B. 150 € oder Kryo-Facial" />
+            </div>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-name">Ihr Name</label>
+              <input type="text" id="rb-gs-name" name="name" autocomplete="name" required />
+            </div>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-anlass">Anlass <span class="rb-gutschein-form__opt">(optional)</span></label>
+              <input type="text" id="rb-gs-anlass" name="anlass" placeholder="z. B. Geburtstag" />
+            </div>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-versand">Versand</label>
+              <select id="rb-gs-versand" name="versand">
+                <option value="PDF per E-Mail">PDF per E-Mail</option>
+                <option value="Physisch per Post">Physisch per Post</option>
+              </select>
+            </div>
+            <div class="rb-gutschein-form__field">
+              <label for="rb-gs-mail">Ihre E-Mail</label>
+              <input type="email" id="rb-gs-mail" name="email" autocomplete="email" placeholder="ihre@adresse.de" required />
+            </div>
+            <button type="submit" class="rb-btn rb-btn--primary">Anfrage senden</button>
+            <p class="rb-gutschein-form__note">Wir antworten innerhalb von 24 Stunden. Zahlung per Überweisung oder vor Ort. Alle Preise inkl. MwSt.</p>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -115,3 +171,56 @@ const giftCardSchema = {
   </article>
 
 </BaseLayout>
+
+<style>
+  .rb-gutschein-form { max-width: 560px; margin: 0 auto; }
+  .rb-gutschein-form h2 { font-family: var(--rb-font-display); font-weight: 400; font-size: 30px; line-height: 1.2; margin: 10px 0 12px; }
+  .rb-gutschein-form__intro { font-family: var(--rb-font-body); color: var(--rb-ink-700); line-height: 1.7; margin: 0 0 28px; }
+  .rb-gutschein-form__field { margin-bottom: 18px; display: flex; flex-direction: column; gap: 6px; }
+  .rb-gutschein-form__field label { font-family: var(--rb-font-body); font-size: 14px; color: var(--rb-ink-700); font-weight: 500; }
+  .rb-gutschein-form__opt { color: var(--rb-ink-500); font-weight: 400; }
+  .rb-gutschein-form__field input,
+  .rb-gutschein-form__field select {
+    font-family: var(--rb-font-body); font-size: 15px; color: var(--rb-ink-700);
+    padding: 12px 14px; border: 1px solid var(--rb-ink-100); border-radius: 8px;
+    background: var(--rb-paper, #fff); width: 100%;
+  }
+  .rb-gutschein-form__field input:focus,
+  .rb-gutschein-form__field select:focus { outline: 2px solid var(--rb-gold-300); outline-offset: 1px; border-color: var(--rb-gold-500); }
+  .rb-gutschein-form button { margin-top: 8px; }
+  .rb-gutschein-form__note { font-family: var(--rb-font-body); font-size: 13px; color: var(--rb-ink-500); line-height: 1.6; margin: 16px 0 0; }
+</style>
+
+<script>
+  function initGutscheinForm() {
+    const form = document.getElementById('rb-gutschein-form') as HTMLFormElement | null;
+    if (!form || form.dataset.ready === '1') return;
+    form.dataset.ready = '1';
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const val = (id: string) => (document.getElementById(id) as HTMLInputElement | HTMLSelectElement | null)?.value ?? '';
+      const art = val('rb-gs-art');
+      const betrag = val('rb-gs-betrag');
+      const name = val('rb-gs-name');
+      const anlass = val('rb-gs-anlass');
+      const versand = val('rb-gs-versand');
+      const mail = val('rb-gs-mail');
+      const lines = [
+        'Gutschein-Anfrage über rubedo-spa.de',
+        '',
+        'Gutschein-Art: ' + art,
+        'Betrag / Anwendung: ' + betrag,
+        'Name: ' + name,
+        'Anlass: ' + (anlass || '—'),
+        'Versand: ' + versand,
+        'E-Mail: ' + mail,
+      ];
+      const subject = 'Gutschein-Anfrage: ' + art;
+      const href = 'mailto:info@rubedo-spa.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+      window.location.href = href;
+    });
+  }
+  document.addEventListener('astro:page-load', initGutscheinForm);
+  if (document.readyState !== 'loading') initGutscheinForm();
+  else document.addEventListener('DOMContentLoaded', initGutscheinForm);
+</script>

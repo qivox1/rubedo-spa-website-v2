@@ -28,6 +28,18 @@ const serviceSchema = {
   image: `${site.url}${heroImage}`,
 };
 
+/* Strukturierte Gäste-Stimmen (Social Proof für das 2.000-€-Paket).
+   SHOW_TESTIMONIALS bewusst auf false: Die Sektion ist als Struktur
+   eingebaut, geht aber erst live, wenn echte, von den Gästen freigegebene
+   Stimmen vorliegen — keine erfundenen Bewertungen (UWG / faire Werbung).
+   Zum Aktivieren: echte Daten unten eintragen und das Flag auf true setzen. */
+const SHOW_TESTIMONIALS = false;
+const testimonials = [
+  { quote: '[Authentisches Gästezitat — von der Gästin freigegeben]', name: '[Vorname N.]', location: 'Minden', date: '2026-00-00' },
+  { quote: '[Authentisches Gästezitat — von der Gästin freigegeben]', name: '[Vorname N.]', location: 'Minden', date: '2026-00-00' },
+  { quote: '[Authentisches Gästezitat — von der Gästin freigegeben]', name: '[Vorname N.]', location: 'Minden', date: '2026-00-00' },
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -62,11 +74,12 @@ const faqSchema = {
           <div class="rb-block-hero__copy">
             <span class="rb-block-hero__eyebrow">Säule 01 · Innen</span>
             <h1>Hautpflege, die deinen Code versteht.</h1>
-            <p class="rb-block-hero__subline">Personalisierte Hautpflege auf Basis von 20 Beauty-Genen — wissenschaftlich begleitet.</p>
+            <p class="rb-block-hero__subline">Personalisierte Hautpflege auf Basis wissenschaftlich erforschter Genvarianten — keine medizinische Diagnose.</p>
             <div class="rb-block-hero__cta">
               <a href="/termin-buchen/" class="rb-btn rb-btn--primary rb-btn--lg">Kostenfreies 15-Min-Erstgespräch</a>
               <a href="#programm" class="rb-btn rb-btn--ghost">Programm im Detail</a>
             </div>
+            <p class="rb-block-hero__disclaimer-link"><a href="#hinweis-wirkung">Alle Angaben sind subjektive Gasterfahrungen. Mehr Informationen →</a></p>
           </div>
         </div>
       </div>
@@ -477,6 +490,7 @@ const faqSchema = {
               <ul class="rb-pricing-rows">
                 <li class="is-highlight"><span>Investition · Komplettpaket</span><span class="rb-pricing-rows__price">2.000 €</span></li>
               </ul>
+              <p class="rb-pricing-table__caption" style="margin-top:12px;">Alle Preise inkl. MwSt.</p>
             </div>
             <div class="rb-pricing-table">
               <h3>Sanfte Wege zum Einstieg</h3>
@@ -485,8 +499,15 @@ const faqSchema = {
                 <li><span>15-Min-Videoberatung <span class="rb-pricing-rows__badge">empfohlen</span></span><span class="rb-pricing-rows__price">kostenfrei</span></li>
                 <li><span>90-Min-Erstanalyse vor Ort</span><span class="rb-pricing-rows__price">149 €</span></li>
               </ul>
+              <p class="rb-pricing-table__caption" style="margin-top:12px;">Alle Preise inkl. MwSt.</p>
             </div>
           </div>
+        </div>
+
+        <div class="rb-nemv-note" style="margin-top:40px; padding:28px 32px; border:1px solid var(--rb-ink-100); border-radius:var(--rb-radius-lg, 16px); background:var(--rb-cream, #F6EFE6);">
+          <h3 style="font-family:var(--rb-font-display); font-size:22px; font-weight:400; margin:0 0 12px;">Mikronährstoffe — Hinweise gemäß NemV</h3>
+          <p style="font-family:var(--rb-font-body); line-height:1.7; color:var(--rb-ink-700); margin:0 0 12px;">Die im DNA-Skin-Programm enthaltenen Mikronährstoff-Präparate sind Nahrungsergänzungsmittel im Sinne der Nahrungsergänzungsmittelverordnung (NemV). Sie sind kein Ersatz für eine ausgewogene, abwechslungsreiche Ernährung. Die empfohlene tägliche Verzehrmenge ist einzuhalten. Außerhalb der Reichweite von kleinen Kindern lagern.</p>
+          <p style="font-family:var(--rb-font-body); line-height:1.7; color:var(--rb-ink-700); margin:0;"><strong>Hersteller:</strong> [NAME DES NEM-HERSTELLERS], [ADRESSE]<br/>Zutaten und Nährwertangaben entnehmen Sie bitte der Produktverpackung, die mit dem Programm ausgeliefert wird.</p>
         </div>
       </div>
     </section>
@@ -563,7 +584,7 @@ const faqSchema = {
         <h2>Warum 12 Wochen?</h2>
         <p>Die Haut erneuert sich in einem biologischen Rhythmus. Eine erste sichtbare Erneuerung der oberen Hautschichten dauert rund <strong>28 Tage</strong>, eine vollständige Erneuerung etwa <strong>90 Tage</strong>. Der Plan ist deshalb auf zwölf Wochen ausgelegt — kürzer wäre verfrüht, länger wäre für den Einstieg unnötig.</p>
 
-        <h3>Was diese Pflege bewirken kann — und was nicht.</h3>
+        <h3>Was Gäste in der 12-Wochen-Begleitung berichten — individuell, nicht verallgemeinerbar.</h3>
         <p>Eine ehrliche Einordnung gehört für uns dazu: Personalisierte Pflege ersetzt keine Medizin und keine Diagnose. Sie kann das Hautbild, das Hautempfinden und die Konsistenz deiner Pflege-Erfahrung deutlich verändern — viele Gäste berichten von ruhigerer, klarer wirkender Haut und von einem neuen Verständnis ihrer eigenen Routine.</p>
       </div>
     </section>
@@ -604,9 +625,35 @@ const faqSchema = {
             <p class="rb-outcome-item__text"><strong>Ein neues Verhältnis zum Älterwerden</strong>weniger Kampf, mehr bewusstes Begleiten — Longevity statt Anti-Aging.</p>
           </div>
         </div>
-        <p class="rb-outcome__note">Die hier beschriebenen Erfahrungen sind individuelle Empfindungen unserer Gäste und stellen keine Heilversprechen dar.</p>
+        <p class="rb-outcome__note" id="hinweis-wirkung">Die hier beschriebenen Erfahrungen sind individuelle Empfindungen unserer Gäste und stellen keine Heilversprechen dar. Die DNA-Analyse erfolgt ausschließlich zu kosmetischen Zwecken und stellt keine medizinische Diagnose dar.</p>
       </div>
     </section>
+
+    <!-- ============================================================
+         GÄSTE-STIMMEN · Social Proof (gated bis echte Stimmen vorliegen)
+         ============================================================ -->
+    {SHOW_TESTIMONIALS && (
+      <section class="rb-block-testimonials rb-section--cream">
+        <div class="rb-wrap">
+          <div class="rb-testimonials__head">
+            <span class="rb-eyebrow">Gäste-Stimmen</span>
+            <h2>Was Gäste über ihre Begleitung sagen.</h2>
+            <p>Namentliche Erfahrungen aus dem Studio — von den Gästinnen ausdrücklich zur Veröffentlichung freigegeben.</p>
+          </div>
+          <div class="rb-testimonials-grid">
+            {testimonials.map((t) => (
+              <figure class="rb-testimonial">
+                <blockquote>{t.quote}</blockquote>
+                <figcaption>
+                  <span class="rb-testimonial__name">{t.name}</span>
+                  <span class="rb-testimonial__meta">{t.location} · {new Intl.DateTimeFormat('de-DE', { month: 'long', year: 'numeric' }).format(new Date(t.date))}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- ============================================================
          CTA WHISPER · nach Outcome — der zweite Touchpoint
@@ -692,6 +739,17 @@ const faqSchema = {
           </div>
         </div>
 
+        <div class="rb-inci-note" style="margin-top:32px; padding:28px 32px; border:1px solid var(--rb-ink-100); border-radius:var(--rb-radius-lg, 16px);">
+          <h3 style="font-family:var(--rb-font-display); font-size:22px; font-weight:400; margin:0 0 12px;">Inhaltsstoffe &amp; Qualitätsstandards</h3>
+          <p style="font-family:var(--rb-font-body); line-height:1.7; color:var(--rb-ink-700); margin:0 0 12px;">Unsere personalisierten Naturkosmetik-Produkte werden nach GMP-Standard ISO 22716 produziert. Die vollständige INCI-Liste deiner individuell formulierten Produkte erhältst du:</p>
+          <ul style="font-family:var(--rb-font-body); line-height:1.7; color:var(--rb-ink-700); margin:0 0 12px; padding-left:20px;">
+            <li>als Beilage zum DNA-Report (physisch)</li>
+            <li>auf Anfrage per E-Mail an <a href={`mailto:${site.contact.email}`} style="color:var(--rb-gold-700);">{site.contact.email}</a></li>
+            <li>jederzeit vor Programmbeginn, ohne Angabe von Gründen</li>
+          </ul>
+          <p style="font-family:var(--rb-font-body); line-height:1.7; color:var(--rb-ink-700); margin:0;">Unsere Basisformulierungen enthalten keine Parabene, Mineralöle oder synthetischen Duftstoffe. Alle Rohstoffe entsprechen den Anforderungen der EU-Kosmetikverordnung (EG) Nr. 1223/2009. Auf Wunsch stellen wir dir die vollständige Rohstoffliste zur Verfügung.</p>
+        </div>
+
         <div class="rb-trust__seals">
           <span class="rb-trust__seal"><strong>ISO 22716</strong>Kosmetik-Standard</span>
           <span class="rb-trust__seal"><strong>GenDG</strong>Aufklärung gemäß deutschem Gendiagnostikgesetz</span>
@@ -760,3 +818,16 @@ const faqSchema = {
   </article>
 
 </BaseLayout>
+
+<style>
+  .rb-block-testimonials { padding: 72px 0; }
+  .rb-testimonials__head { max-width: 640px; margin: 0 auto 40px; text-align: center; }
+  .rb-testimonials__head h2 { font-family: var(--rb-font-display); font-weight: 400; font-size: 34px; line-height: 1.15; margin: 10px 0 12px; }
+  .rb-testimonials__head p { font-family: var(--rb-font-body); color: var(--rb-ink-700); line-height: 1.7; }
+  .rb-testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+  .rb-testimonial { background: var(--rb-paper, #fff); border: 1px solid var(--rb-ink-100); border-radius: 14px; padding: 28px; margin: 0; }
+  .rb-testimonial blockquote { font-family: var(--rb-font-display); font-weight: 400; font-size: 19px; line-height: 1.5; color: var(--rb-ink-900); margin: 0 0 18px; }
+  .rb-testimonial figcaption { display: flex; flex-direction: column; gap: 2px; }
+  .rb-testimonial__name { font-family: var(--rb-font-body); font-weight: 600; font-size: 14px; color: var(--rb-ink-900); }
+  .rb-testimonial__meta { font-family: var(--rb-font-body); font-size: 12px; color: var(--rb-ink-500); }
+</style>
