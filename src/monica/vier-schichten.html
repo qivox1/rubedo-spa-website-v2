@@ -203,40 +203,17 @@
 
 <p class="q-credit">Bildkonzept &amp; Art-Direction: Monica Galletti · KI-gestützte Visualisierung</p>
 
-<div id="tweak-root"></div>
 
 <template id="__bundler_thumbnail">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FBF8F1"/><g fill="none" stroke="#A8884A" stroke-width="1.4"><circle cx="28" cy="60" r="9"/><circle cx="44" cy="60" r="9"/><circle cx="60" cy="60" r="9"/><circle cx="76" cy="60" r="9"/></g><text x="50" y="34" font-family="Georgia, serif" font-size="15" fill="#6B1E2A" text-anchor="middle" font-style="italic">Quadriga</text></svg>
 </template>
 
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script type="text/babel" src="/tweaks-panel.jsx"></script>
-<script type="text/babel">
-const TWEAK_DEFAULTS = { bg: "Cream", aura: true, glow: 80 };
-function applyTweaks(t) {
-  const b = document.body;
-  b.setAttribute('data-bg', t.bg === "Dunkel" ? "dunkel" : "cream");
-  if (t.bg === "Sand") { b.style.setProperty('--vs-bg', '#ECE5D6'); b.setAttribute('data-bg','cream'); }
-  else b.style.removeProperty('--vs-bg');
-  b.setAttribute('data-aura', t.aura ? "on" : "off");
-  b.style.setProperty('--vs-glow', String((t.glow ?? 80) / 100));
-}
-function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
-  React.useEffect(() => { applyTweaks(t); }, [t]);
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakSection label="Bühne" />
-      <TweakRadio label="Hintergrund" value={t.bg} options={["Cream", "Sand", "Dunkel"]} onChange={(v) => setTweak('bg', v)} />
-      <TweakSection label="Aura" />
-      <TweakToggle label="Aura zeigen" value={t.aura} onChange={(v) => setTweak('aura', v)} />
-      <TweakSlider label="Intensität" value={t.glow} min={0} max={100} step={5} unit="%" onChange={(v) => setTweak('glow', v)} />
-    </TweaksPanel>
-  );
-}
-ReactDOM.createRoot(document.getElementById('tweak-root')).render(<App />);
+<script>
+/* Design-Defaults + Entrance + Reveal — vormals Teil des React/Babel-Tweaks-Panels
+   (Dev-Werkzeug, entfernt 2026-07-14). Verhalten identisch: Cream · Aura an · Glow 80 %. */
+document.body.setAttribute('data-bg', 'cream');
+document.body.setAttribute('data-aura', 'on');
+document.body.style.setProperty('--vs-glow', '0.8');
 
 /* entrance: setTimeout fires even when the iframe is backgrounded */
 if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
