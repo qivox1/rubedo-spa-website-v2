@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Breathwork · Vorbereitungsbogen — Rubedo Spa Minden. Online ausfüllbar: persönliche Angaben, Intention, Gesundheitserklärung, Haftungsausschluss & Datenschutz.">
+<link rel="canonical" href="https://www.rubedo-spa.de/breathwork-vorbereitung.html">
+    <title>Breathwork · Vorbereitungsbogen | Rubedo Spa Minden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  :root { --paper: #ffffff; }
+  * { box-sizing: border-box; }
+  body { background: #ffffff; margin: 0; color: #1f1813; }
+
+  .sheet-wrap { max-width: 880px; margin: 0 auto; padding: 44px 24px 96px; }
+
+  /* ── azioni (sticky, fuori stampa) ── */
+  .actions { position: sticky; top: 0; z-index: 20; display: flex; gap: 12px; align-items: center; justify-content: flex-end; padding: 16px 0; margin-bottom: 8px; flex-wrap: wrap; background: #ffffff; }
+  .actions .hint { margin-right: auto; font-family: var(--sans); font-size: 12.5px; color: var(--text-3); letter-spacing: .01em; }
+  .btn-save, .btn-clear { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: .04em; border-radius: 2px; padding: 12px 24px; cursor: pointer; border: 1px solid var(--brass); transition: background .2s, color .2s, transform .15s; }
+  .btn-save { background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
+  .btn-save:hover { transform: translateY(-1px); }
+  .btn-clear { background: transparent; color: var(--text-2); }
+  .btn-clear:hover { color: var(--burgundy); border-color: var(--burgundy); }
+
+  /* ── foglio ── */
+  .sheet { background: var(--paper); border: 1px solid var(--border); box-shadow: 0 16px 48px rgba(31,24,19,.06); padding: 72px 76px; }
+
+  .sheet-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; border-bottom: 1px solid var(--border); padding-bottom: 30px; }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand img { height: 72px; width: auto; display: block; }
+  .brand .bn { font-family: var(--serif); font-size: 23px; font-weight: 700; letter-spacing: .08em; color: var(--burgundy); }
+  .brand .bs { font-family: var(--serif); font-style: italic; font-size: 18px; font-weight: 400; letter-spacing: .01em; text-transform: none; color: var(--brass); margin-top: 7px; }
+  .sheet-head .doc-id { font-family: var(--sans); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--brass); text-align: right; line-height: 1.7; }
+
+  .doc-title { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 3.4vw, 36px); line-height: 1.1; letter-spacing: -.01em; color: var(--text-1); margin: 32px 0 12px; white-space: nowrap; }
+  .doc-intro { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 18px; line-height: 1.5; color: var(--text-2); max-width: none; margin: 0; }
+
+  /* ── blocco "was Sie erleben können" ── */
+  .erleben { margin: 30px 0 6px; background: #faf8f3; border: 1px solid #ece5d6; border-radius: 2px; padding: 28px 32px; }
+  .erleben h2 { font-family: var(--serif); font-weight: 400; font-size: 24px; color: var(--text-1); margin: 0 0 14px; }
+  .erleben p { font-size: 14.5px; line-height: 1.74; color: #463F33; margin: 0 0 12px; max-width: 70ch; }
+  .erleben .list-elegant { list-style: none; margin: 14px 0 18px; padding: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 16px; }
+  .erleben .list-elegant li { font-family: var(--serif); font-size: 19px; line-height: 1.5; color: var(--text-1); display: inline-flex; align-items: baseline; gap: 16px; }
+  .erleben .list-elegant li:not(:last-child)::after { content: '·'; color: var(--brass); font-size: 17px; }
+  .erleben .note { font-family: var(--sans); font-size: 12.5px; line-height: 1.7; color: var(--text-2); border-left: 2px solid var(--brass); padding-left: 18px; margin: 4px 0 0; max-width: 66ch; }
+  .erleben .note strong { color: var(--burgundy); font-weight: 600; }
+
+  /* ── sezioni form ── */
+  .fs { border: none; margin: 32px 0 0; padding: 0; }
+  .fs-legend { display: flex; align-items: baseline; gap: 16px; padding: 0 0 8px; }
+  .fs-num { font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--brass); }
+  .fs-h { font-family: var(--serif); font-weight: 400; font-size: 26px; color: var(--text-1); margin: 0; }
+  .fs-sub { font-family: var(--sans); font-size: 13px; color: var(--text-3); margin: 2px 0 20px; }
+
+  /* ── input a singola linea ── */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px 36px; }
+  .field { display: flex; flex-direction: column; }
+  .field.col-2 { grid-column: span 2; }
+  .field label { font-family: var(--serif); font-size: 16px; color: var(--text-1); margin-bottom: 6px; }
+  .field input, .field textarea { font-family: var(--sans); font-size: 15px; color: #1f1813; border: none; border-bottom: 1px solid #9c917d; background: transparent; padding: 7px 2px; outline: none; transition: border-color .2s; resize: none; width: 100%; }
+  .field input:focus, .field textarea:focus { border-bottom-color: var(--burgundy); }
+  .field textarea { min-height: 30px; line-height: 1.6; }
+
+  /* ── checkbox ── */
+  .checks { display: grid; gap: 14px; margin-top: 4px; }
+  .checks.cols { grid-template-columns: 1fr 1fr; gap: 14px 32px; }
+  .chk { display: grid; grid-template-columns: 22px 1fr; gap: 13px; align-items: start; cursor: pointer; font-size: 14.5px; line-height: 1.55; color: #2e2820; }
+  .chk input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .chk .box { width: 19px; height: 19px; margin-top: 1px; border: 1px solid var(--text-3); border-radius: 2px; position: relative; transition: border-color .2s, background .2s; }
+  .chk input:checked + .box { border-color: var(--burgundy); background: var(--burgundy); }
+  .chk input:checked + .box::after { content: ''; position: absolute; left: 6px; top: 2px; width: 5px; height: 10px; border: solid var(--cream); border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  .chk input:focus-visible + .box { box-shadow: 0 0 0 3px rgba(139,30,42,.18); }
+  .chk b { color: var(--text-1); font-weight: 600; }
+  .chk .pflicht { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--brass); }
+
+  /* ── blocchi legali ── */
+  .legal { margin-top: 22px; }
+  .legal h3 { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin: 0 0 8px; }
+  .legal p { font-size: 13px; line-height: 1.74; color: #38322a; margin: 0 0 18px; max-width: 76ch; }
+
+  /* ── firma ── */
+  .sign-row { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: end; margin-top: 26px; }
+
+  .sheet-foot { margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-family: var(--sans); font-size: 11px; color: var(--text-3); letter-spacing: .02em; }
+  .sheet-foot .claim { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-2); }
+  .back-link { max-width: 880px; margin: 22px auto 0; padding: 0 24px; }
+  .back-link a { font-family: var(--sans); font-size: 13px; letter-spacing: .03em; color: var(--text-3); text-decoration: none; transition: color .2s; }
+  .back-link a:hover { color: var(--brass); }
+
+      @media (max-width: 560px) { .doc-title { white-space: normal; } }
+  @media (max-width: 720px) {
+    .sheet { padding: 44px 26px; }
+    .grid, .checks.cols { grid-template-columns: 1fr; }
+    .field.col-2 { grid-column: span 1; }
+    .sign-row { grid-template-columns: 1fr; gap: 24px; }
+    .sheet-head { flex-direction: column; }
+    .sheet-head .doc-id { text-align: left; }
+  }
+
+  /* ════ STAMPA / PDF ════ */
+  /* numerazione pagine (visibile solo in stampa, generata via JS) */
+  .pg-foot { display: none; }
+  @media print {
+    @page { size: A4; margin: 14mm 14mm 16mm; }
+    body { background: #fff; }
+    .sheet-wrap { padding: 0; max-width: none; position: relative; }
+    .pg-foot { display: block; position: absolute; left: 0; right: 0; text-align: center; font-family: var(--sans); font-size: 8.5pt; letter-spacing: .12em; color: #9c917d; }
+    .actions { display: none !important; }
+    .sheet { box-shadow: none; border: none; padding: 0; background: #fff; }
+    .erleben { background: #faf8f3; -webkit-print-color-adjust: exact; print-color-adjust: exact; margin: 18px 0 4px; padding: 18px 22px; }
+    .erleben p { margin-bottom: 8px; }
+    .doc-title { margin: 20px 0 8px; }
+    .fs { margin-top: 20px; }
+    .fs-sub { margin-bottom: 12px; }
+    .grid { gap: 16px 36px; }
+    .legal p { margin-bottom: 10px; }
+    /* niente "break-inside: avoid" sull'intera sezione: lasciava mezza pagina bianca.
+       Spezziamo solo le unità piccole, mai a metà. */
+    .chk, .field, .sig-row, .legal, .fs-legend, .erleben { break-inside: avoid; }
+    .chk input:checked + .box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .sig-clear, .btn-save, .btn-clear { display: none !important; }
+    .back-link { display: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet-wrap">
+
+  <div class="actions">
+    <span class="hint">Online ausfüllen · als PDF speichern · bei Bedarf unterschrieben mitbringen oder zurücksenden.</span>
+    <button class="btn-clear" type="button" id="clearAll">Formular leeren</button>
+    <button class="btn-save" type="button" id="savePdf">Als PDF speichern</button>
+  </div>
+
+  <form class="sheet" id="bwForm" autocomplete="off">
+
+    <header class="sheet-head">
+      <div class="brand">
+        <img src="/img/logo.webp" alt="Rubedo Spa Logo">
+        <div>
+          <div class="bn">RUBEDO SPA</div>
+          <div class="bs">smART Beauty for Conscious Humans</div>
+        </div>
+      </div>
+      <div class="doc-id">
+        Breathwork · Origo<br>Vorbereitungsbogen
+      </div>
+    </header>
+
+    <h1 class="doc-title">Bewusstes Atmen — Ihr Vorbereitungsbogen.</h1>
+    <p class="doc-intro">Damit Ihre Session ruhig und sicher beginnen kann, lernen wir Sie vorab ein wenig kennen. Nehmen Sie sich ein paar stille Minuten.</p>
+
+    <!-- Was Sie erleben können -->
+    <section class="erleben">
+      <h2>Was Sie erleben können — und was Breathwork nicht ist.</h2>
+      <p>Bewusstes Atmen ist eine einfache, kraftvolle Praxis. Viele Menschen erleben dabei einen Raum von Ruhe und Weite — andere eine sanfte Entlastung von innerer Anspannung. Was Sie heute einbringen möchten, bestimmen Sie selbst:</p>
+      <ul class="list-elegant">
+        <li>Tiefe Entspannung</li>
+        <li>Mentale Klarheit</li>
+        <li>Innere Kraft</li>
+        <li>Emotionale Entlastung</li>
+        <li>Körperwahrnehmung</li>
+        <li>Präsenz</li>
+      </ul>
+      <p>Während der Session können Empfindungen auftreten — ein Kribbeln in den Händen, Wärme, leichter Schwindel oder Veränderungen im inneren Rhythmus. Diese Reaktionen sind in der Regel normal. Sie dürfen jederzeit verlangsamen oder pausieren; es gibt keine Leistung zu erreichen.</p>
+      <p class="note"><strong>Kein medizinisches oder therapeutisches Angebot.</strong> Breathwork dient der Entspannung, der Wahrnehmung und der persönlichen Weiterentwicklung. Es ersetzt keinen ärztlichen oder psychotherapeutischen Rat und gibt kein Heilversprechen ab.</p>
+    </section>
+
+    <!-- 1 · Persönliche Daten -->
+    <fieldset class="fs">
+      <legend class="fs-legend"><span class="fs-num">1</span><h2 class="fs-h">Persönliche Daten</h2></legend>
+      <div class="grid">
+        <div class="field"><label for="vorname">Vorname</label><input type="text" id="vorname" name="vorname"></div>
+        <div class="field"><label for="name">Name</label><input type="text" id="name" name="name"></div>
+        <div class="field"><label for="geburt">Geburtsdatum</label><input type="text" id="geburt" name="geburt" placeholder="TT.MM.JJJJ"></div>
+        <div class="field"><label for="tel">Telefonnummer</label><input type="tel" id="tel" name="tel"></div>
+        <div class="field col-2"><label for="email">E-Mail</label><input type="email" id="email" name="email"></div>
+      </div>
+    </fieldset>
+
+    <!-- 2 · Erfahrung & Hintergrund -->
+    <fieldset class="fs">
+      <legend class="fs-legend"><span class="fs-num">2</span><h2 class="fs-h">Erfahrung &amp; Hintergrund</h2></legend>
+      <div class="grid">
+        <div class="field col-2">
+          <label>Ist dies Ihre erste Breathwork-Session?</label>
+          <div class="checks cols" style="margin-top:8px;">
+            <label class="chk"><input type="radio" name="erste" value="ja"><span class="box"></span><span>Ja</span></label>
+            <label class="chk"><input type="radio" name="erste" value="nein"><span class="box"></span><span>Nein</span></label>
+          </div>
+        </div>
+        <div class="field col-2"><label for="techniken">Welche Atem- oder Meditationstechniken haben Sie bereits ausprobiert?</label><textarea id="techniken" name="techniken" rows="2"></textarea></div>
+        <div class="field col-2"><label for="gutgetan">Was hat Ihnen bei früheren Erfahrungen besonders gutgetan?</label><textarea id="gutgetan" name="gutgetan" rows="2"></textarea></div>
+        <div class="field col-2"><label for="unangenehm">Gab es etwas, das unangenehm war oder nicht funktioniert hat?</label><textarea id="unangenehm" name="unangenehm" rows="2"></textarea></div>
+      </div>
+    </fieldset>
+
+    <!-- 3 · Intention & Fokus -->
+    <fieldset class="fs">
+      <legend class="fs-legend"><span class="fs-num">3</span><h2 class="fs-h">Intention &amp; Fokus</h2></legend>
+      <p class="fs-sub">Was möchten Sie heute in die Session einbringen? (Mehrfachwahl möglich)</p>
+      <div class="checks cols">
+        <label class="chk"><input type="checkbox" name="fokus" value="entspannung"><span class="box"></span><span><b>Tiefe Entspannung</b> — Stressabbau, zur Ruhe kommen.</span></label>
+        <label class="chk"><input type="checkbox" name="fokus" value="klarheit"><span class="box"></span><span><b>Mentale Klarheit</b> — Fokus finden, das Gedankenkarussell verlangsamen.</span></label>
+        <label class="chk"><input type="checkbox" name="fokus" value="kraft"><span class="box"></span><span><b>Selbstvertrauen &amp; Kraft</b> — die innere Sicherheit stärken.</span></label>
+        <label class="chk"><input type="checkbox" name="fokus" value="entlastung"><span class="box"></span><span><b>Emotionale Entlastung</b> — Spannungen lösen, „loslassen".</span></label>
+        <label class="chk"><input type="checkbox" name="fokus" value="koerper"><span class="box"></span><span><b>Körperwahrnehmung</b> — die Verbindung zum Körper stärken.</span></label>
+        <label class="chk"><input type="checkbox" name="fokus" value="sonstiges"><span class="box"></span><span><b>Sonstiges</b> — siehe unten.</span></label>
+      </div>
+      <div class="field col-2" style="margin-top:22px;"><label for="sonstiges">Sonstiges / persönliche Anmerkung</label><textarea id="sonstiges" name="sonstiges_text" rows="2"></textarea></div>
+    </fieldset>
+
+    <!-- 4 · Gesundheitserklärung -->
+    <fieldset class="fs">
+      <legend class="fs-legend"><span class="fs-num">4</span><h2 class="fs-h">Gesundheitserklärung</h2></legend>
+      <p class="fs-sub">Breathwork ist eine kraftvolle Methode. Bitte bestätigen Sie die folgenden Punkte. <span class="pflicht">Pflicht</span></p>
+      <div class="checks">
+        <label class="chk"><input type="checkbox" name="gesund1" required><span class="box"></span><span>Ich bestätige, dass ich körperlich und psychisch gesund bin und keine schwerwiegenden Vorerkrankungen vorliegen — insbesondere keine Herz-Kreislauf-Erkrankungen, Epilepsie, erhöhter Augeninnendruck, schwere Atemwegserkrankungen oder eine bestehende Schwangerschaft.</span></label>
+        <label class="chk"><input type="checkbox" name="gesund2" required><span class="box"></span><span>Sollte einer dieser Punkte auf mich zutreffen, bespreche ich dies vor der Session persönlich mit Monica und halte im Zweifel zuvor Rücksprache mit meiner Ärztin oder meinem Arzt.</span></label>
+        <label class="chk"><input type="checkbox" name="gesund3" required><span class="box"></span><span>Ich nehme eigenverantwortlich, bewusst und freiwillig an dieser Session teil.</span></label>
+      </div>
+    </fieldset>
+
+    <!-- 5 · Haftungsausschluss & Datenschutz -->
+    <fieldset class="fs">
+      <legend class="fs-legend"><span class="fs-num">5</span><h2 class="fs-h">Haftungsausschluss &amp; Datenschutz</h2></legend>
+
+      <div class="legal">
+        <h3>Haftungsausschluss</h3>
+        <p>Die Breathwork-Session ist ein sensorisches Wellness- und Entspannungsritual und ersetzt keinen ärztlichen oder therapeutischen Rat. Die Verantwortung für mein Wohlbefinden während und nach der Session liegt bei mir selbst. RUBEDO SPA — Monica Galletti übernimmt keine Haftung für gesundheitliche Folgen, die aus einer nicht den Hinweisen entsprechenden Anwendung entstehen. Es werden keine Heilversprechen abgegeben.</p>
+        <h3>Datenschutz</h3>
+        <p>Ich stimme zu, dass meine Angaben ausschließlich zur Vorbereitung und Durchführung der Session sowie zur internen Dokumentation verwendet werden. Die Daten werden nicht an Dritte weitergegeben und gemäß DSGVO vertraulich behandelt.</p>
+      </div>
+
+      <div class="checks" style="margin-top:6px;">
+        <label class="chk"><input type="checkbox" name="haftung" required><span class="box"></span><span>Ich habe den <b>Haftungsausschluss</b> gelesen und stimme ihm zu. <span class="pflicht">Pflicht</span></span></label>
+        <label class="chk"><input type="checkbox" name="datenschutz" required><span class="box"></span><span>Ich stimme der <b>Verarbeitung meiner Daten</b> gemäß den Datenschutzhinweisen zu. <span class="pflicht">Pflicht</span></span></label>
+      </div>
+
+      <div class="sign-row">
+        <div class="field"><label for="ortdatum">Ort, Datum</label><input type="text" id="ortdatum" name="ortdatum" placeholder="Minden, TT.MM.JJJJ"></div>
+        <div class="field"><label for="unterschrift">Unterschrift</label><input type="text" id="unterschrift" name="unterschrift"></div>
+      </div>
+    </fieldset>
+
+    <div class="sheet-foot">
+      <span>RUBEDO SPA · Monica Galletti · Marienstraße 58 · 32427 Minden</span>
+      <span class="claim">smART Beauty for Conscious Humans.</span>
+    </div>
+
+  </form>
+  <div class="back-link"><a href="/origo/">← Zurück zu Origo</a></div>
+</div>
+
+<script>
+(function(){
+  var form = document.getElementById('bwForm');
+  var KEY = 'rubedo_bw_vorbereitung_v1';
+
+  /* ── persistenza ── */
+  function save(){
+    var data = {};
+    form.querySelectorAll('input, textarea').forEach(function(el){
+      if (el.type === 'checkbox' || el.type === 'radio') {
+        if (el.name) { data[el.name] = data[el.name] || {}; data[el.name][el.value || 'on'] = el.checked; }
+      } else if (el.id) { data[el.id] = el.value; }
+    });
+    try { localStorage.setItem(KEY, JSON.stringify(data)); } catch(e){}
+  }
+  function load(){
+    var raw; try { raw = localStorage.getItem(KEY); } catch(e){}
+    if (!raw) return;
+    var data; try { data = JSON.parse(raw); } catch(e){ return; }
+    form.querySelectorAll('input, textarea').forEach(function(el){
+      if (el.type === 'checkbox' || el.type === 'radio') {
+        if (el.name && data[el.name] && typeof data[el.name][el.value || 'on'] !== 'undefined') el.checked = data[el.name][el.value || 'on'];
+      } else if (el.id && typeof data[el.id] !== 'undefined') { el.value = data[el.id]; }
+    });
+  }
+  form.addEventListener('input', save);
+  form.addEventListener('change', save);
+
+  /* ── azioni ── */
+  document.getElementById('savePdf').addEventListener('click', function(){ window.print(); });
+  document.getElementById('clearAll').addEventListener('click', function(){
+    if (!confirm('Alle Eingaben in diesem Formular löschen?')) return;
+    form.reset();
+    try { localStorage.removeItem(KEY); } catch(e){}
+  });
+
+  /* ── init ── */
+  load();
+
+  /* ── numerazione pagine in stampa (Seite X von Y) ── */
+  var wrap = document.querySelector('.sheet-wrap');
+  var MM = 96 / 25.4; // px per mm (CSS reference)
+  function stampPages(){
+    clearPages();
+    var pageH = (297 - 14 - 16) * MM;   // altezza utile A4 (margini 14mm sopra, 16mm sotto)
+    var total = Math.max(1, Math.ceil((wrap.scrollHeight - 4) / pageH));
+    for (var i = 0; i < total; i++){
+      var f = document.createElement('div');
+      f.className = 'pg-foot';
+      f.textContent = 'Seite ' + (i + 1) + ' von ' + total;
+      f.style.top = (i * pageH + pageH - 12) + 'px';
+      wrap.appendChild(f);
+    }
+  }
+  function clearPages(){
+    var old = wrap.querySelectorAll('.pg-foot');
+    for (var i = 0; i < old.length; i++) old[i].remove();
+  }
+  window.addEventListener('beforeprint', stampPages);
+  window.addEventListener('afterprint', clearPages);
+})();
+</script>
+</body>
+</html>

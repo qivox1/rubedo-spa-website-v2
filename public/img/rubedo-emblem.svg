@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Rubedo Emblem">
+  <title>Rubedo — Emblem</title>
+  <g fill="none" stroke="#A8884A">
+    <circle cx="120" cy="120" r="110" stroke-width="2"></circle>
+    <circle cx="120" cy="120" r="100" stroke-width="0.8" opacity="0.5"></circle>
+  </g>
+  <g fill="#A8884A">
+    <path d="M119 151 C 99 148 79 129 74 97 C 73 90 66.5 90 65.5 97 C 68.5 134 93 156 116 160 Z"></path>
+    <path d="M121 151 C 141 148 161 129 166 97 C 167 90 173.5 90 174.5 97 C 171.5 134 147 156 124 160 Z"></path>
+  </g>
+  <path d="M120 56 C 122.6 79 126.5 83 150 86 C 126.5 89 122.6 93 120 116 C 117.4 93 113.5 89 90 86 C 113.5 83 117.4 79 120 56 Z" fill="#A8884A"></path>
+  <circle cx="120" cy="153" r="5.4" fill="#6B1E2A"></circle>
+</svg>

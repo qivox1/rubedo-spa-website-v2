@@ -1,72 +1,55 @@
-# Rubedo Spa Minden
+# Rubedo Spa — Longevity-Studio Minden
 
-> Longevity-Studio in Minden mit drei Säulen: DNA-basierte Hautpflege (DNA Skin Intelligence), Kryotherapie (Kryo Vital) und Inner Source Rituals (Massage + Atemarbeit). Geführt von Monica Galletti — CIDESCO Beauty Therapist, DNA-Skin-Expertin und NLP Master.
+> Rubedo Spa ist ein Longevity- und Wellness-Studio in Minden (Deutschland), gegründet von Monica Galletti (CIDESCO Beauty Therapist). Leitidee: „smART Beauty for Conscious Humans" — personalisierte, präventive und auf Langlebigkeit ausgerichtete Pflege auf Basis des genetischen Profils. Rubedo Spa ist ausdrücklich KEINE medizinische Praxis: keine Diagnosen, keine Heilversprechen.
 
-## Über das Studio
+## Eckdaten
+- Name: Rubedo Spa (Rubedo Longevity-Studio Minden)
+- Inhaberin: Monica Galletti, CIDESCO Beauty Therapist
+- Adresse: Marienstraße 58, 32427 Minden, Deutschland
+- Öffnungszeiten: Mo–Fr 08:00–17:00 Uhr (Termine nach Vereinbarung)
+- Telefon: +49 571 78343423
+- E-Mail: info@rubedo-spa.de
+- Claim: smART Beauty for Conscious Humans
+- Werte: Personalisierung · Prävention · Longevity
+- Zielgruppe: Frauen und Männer von 20 bis 65 Jahren
 
-Rubedo Spa ist ein Premium-Longevity-Studio in der Marienstraße 58, 32427 Minden. Geöffnet Mo–Fr 09:00–19:00 Uhr (Sa nach Vereinbarung, So geschlossen). Telefon: 0571 78343423. E-Mail: info@rubedo-spa.de. Inhaberin und alleinige Behandlerin: Monica Galletti.
+## Die vier Säulen (Anwendungen)
+- Cutis (Haut) — Genombasierte Hautpflege & Gesichtsbehandlung. Enthält das Sub-Angebot „Genomis — DNA Lifestyle Analysen" (genetische Anlagen & Profile für Haut, Körper & Leistung; keine medizinische Diagnose).
+- Vigor (Aktivierung) — Kryotherapie bis −196 °C, Kryo-Facial, Presso-Massage, Wirkstoff-Bandage & Body Wrap. Inklusive der „Rubedo Sequenz" (Kryo · Presso · Wirkstoffe).
+- Corpus (Körper) — Massage & rituelle Körperarbeit: Abhyanga, Hot Stone, Raindrop, Schwedische Massage, Opus Magnum (Signature).
+- Origo (Atem) — Atemarbeit & geführte Tiefenentspannung: Spiramen (Atem-Protokoll), Stille-Sitzung, digitale Bibliothek.
 
-Der Name „Rubedo" ist alchemistisch und bedeutet „Rotwerdung" — die letzte Stufe der Transformation. Das Studio versteht Schönheit als Ergebnis von Bewusstsein, Technologie und Ritual. Drei Säulen greifen ineinander, sind aber jede für sich erfahrbar.
+## Erster Schritt
+- Einstieg in Stufen: Magazin (frei lesbar) → Prospectus (15-Minuten-Orientierung, € 49, bei Buchung voll verrechenbar) → Prooemium (persönliche Konzept-Vorbereitung, € 159 Vorbereitungspauschale, bei Programmbuchung zu 100 % verrechnet) → Programm. Einzelne Sitzungen enthalten eine 15-minütige Standortbestimmung. Erst danach erfolgt eine Empfehlung — ohne Verpflichtung.
+- Viele Angebote werden „Ad personam" (im persönlichen Gespräch) geplant statt über einen öffentlichen Katalog.
 
-## Methodik (drei Säulen)
+## Wichtige rechtliche Hinweise (HWG / Heilmittelwerbegesetz)
+- Rubedo Spa erbringt Wellness- und Pflegedienstleistungen, keine medizinischen Leistungen.
+- Die DNA Lifestyle Analysen zeigen genetische Anlagen & Profile als Grundlage für Lifestyle-, Pflege- und Ernährungsempfehlungen. Sie sind keine medizinische Diagnose und ersetzen keine ärztliche Beratung.
+- Die Presso-Massage ist eine kosmetische Anwendung und nicht identisch mit medizinischer Lymphdrainage.
+- „Prävention" und „Longevity" werden im kosmetischen/lifestylebezogenen Sinn verstanden (z. B. Prävention von Hautalterung), nicht als Krankheitsvorsorge oder Heilversprechen.
 
-### DNA Skin Intelligence
-Personalisierte Hautpflege auf Basis der genetischen Analyse von 20 Beauty-Genen (Speichelprobe, Auswertung im akkreditierten Labor). Daraus folgt ein 12-Wochen-Plan mit Naturkosmetik und Mikronährstoffen, individuell zusammengestellt.
+## Seiten
+- Startseite: /
+- Philosophie: /philosophie/
+- Anwendungen (Übersicht): /anwendungen/
+- Origo — Atem & Stille (Landing, Säule 04): /origo/
+- Genomis — DNA Lifestyle Analysen: /genomis/
+- Presso-Massage: /presso-massage/
+- Magazin (Übersicht): /magazin/
+- Über Monica: /monica/
+- Gutscheine: /gutscheine/
+- Termin & Kontakt: /termin-buchen/
+- AGB (Allgemeine Geschäftsbedingungen): /agb/
+- Impressum: /impressum/
+- Datenschutzerklärung: /datenschutz/
+- KI-Bild-Hinweis & Content Credentials (Transparenz, EU AI Act / C2PA): /ki-bilder/
 
-### Kryo Vital
-Wellness-Anwendungen mit kontrollierter Kälte: Ganzkörper-Kryotherapie (drei Minuten bei −110 °C in der Kryo-Suite), Druckwellen für die Körperformung, Body Slimming Wraps mit Botanicals, Wirkstoff-Bandagen für leichtere Beine.
+## Magazin (redaktionelle Beiträge, Bildungsinhalt)
+- Die Haut als Ökosystem — Mikrobiom, Epigenetik und personalisierte Pflege: /magazin-mikrobiom/
+- Atem & Haut — was das Nervensystem mit dem Teint zu tun hat: /magazin-atem-haut/
+- Berührung als Wirkstoff — die Biologie der Massage: /magazin-beruehrung/
+- Sonnenschutz, neu gedacht — Prävention für die Haut: /magazin-sonnenschutz/
 
-### Inner Source Rituals
-Klassische Massage-Rituale (Abhyanga, Hot Stone, Hot Bambu, Balinesische Deep Massage) in der Rubedo Suite, kombiniert mit neurosomatischer Atemarbeit, Mindfulness, NLP- und Hypnose-Methoden im Wellness-Kontext.
-
-## Pages
-
-### Übergreifend
-- [Startseite](https://rubedo-spa.de/): Übersicht über Studio, drei Säulen und Monica Galletti.
-- [Philosophie](https://rubedo-spa.de/philosophie/): Das Drei-Säulen-Konzept und die Werte hinter Rubedo Spa.
-- [Longevity-Studio Minden](https://rubedo-spa.de/longevity-studio-minden/): Studio-Ansicht, Mission, Werte und Anfahrt.
-- [Über Monica Galletti](https://rubedo-spa.de/ueber-monica/): Vita, Credentials (CIDESCO Beauty Therapist, DNA-Skin-Expertin, NLP Master), Methodik.
-
-### DNA Skin Intelligence
-- [DNA-basierte Hautpflege](https://rubedo-spa.de/dna-skin-intelligence/): Wie die Analyse von 20 Beauty-Genen, Naturkosmetik und Mikronährstoffe in einem 12-Wochen-Plan zusammenspielen.
-
-### Kryo Vital
-- [Kryo Vital Übersicht](https://rubedo-spa.de/kryo-vital/): Alle Kryo-Anwendungen im Studio.
-- [Ganzkörper-Kryotherapie](https://rubedo-spa.de/kryo-vital/ganzkoerper/): Drei Minuten bei −110 °C in der Kryo-Suite. Anwendungsbereiche, Ausschlüsse, Preise.
-- [Körperformung & Druckwellen](https://rubedo-spa.de/kryo-vital/koerperformung/): Druckwellen, Body-Wraps und Wirkstoff-Bandagen für ein klares Körpergefühl.
-- [Body Slimming Wrap](https://rubedo-spa.de/kryo-vital/koerperformung/wrap/): Drei Linien (Total, Fast, Silhouette) Wickel-Anwendung mit Botanicals.
-- [Body Slimming Bandage](https://rubedo-spa.de/kryo-vital/koerperformung/bandage/): Fünf Wirkstoff-Bandagen-Linien für leichtere Beine.
-
-### Inner Source
-- [Inner Source Übersicht](https://rubedo-spa.de/inner-source/): Massage- und Atemarbeit-Konzepte im Studio.
-- [Rubedo Suite — Massage](https://rubedo-spa.de/inner-source/rubedo-suite/): Vier klassische Massage-Rituale.
-- [Atem-Ritual](https://rubedo-spa.de/inner-source/atem-ritual/): Neurosomatische Atemarbeit, Mindfulness, NLP- und Hypnose-Methoden.
-
-### Service & Buchung
-- [Termin & Kontakt](https://rubedo-spa.de/termin-buchen/): Terminanfrage und 15-Minuten-Erstgespräch per Videocall oder im Studio; Adresse, Telefon, E-Mail, Öffnungszeiten und Anfahrt.
-- [Geschenk-Gutscheine](https://rubedo-spa.de/gutscheine/): Gutscheine für DNA Skin, Kryo Vital und Inner Source.
-
-### Magazin
-- [Magazin-Hub](https://rubedo-spa.de/magazin/): Editorial Beiträge zu Hautpflege, Kryotherapie und Rituale.
-
-### Rechtliches & Transparenz
-- [Datenschutz](https://rubedo-spa.de/datenschutz/): DSGVO-Erklärung mit Hinweis zur DNA-Skin-Analyse (Art. 9 DSGVO).
-- [Impressum](https://rubedo-spa.de/impressum/): Anbieterkennzeichnung gemäß § 5 TMG.
-- [KI-Bilder & C2PA](https://rubedo-spa.de/ki-bilder/): Transparenz-Hinweis zu KI-generierten Bildern (EU AI Act, C2PA Content Credentials).
-
-## Häufige Fragen
-
-**Wer betreut die Behandlungen?** Alle Anwendungen werden persönlich von Monica Galletti durchgeführt. Sie ist CIDESCO Beauty Therapist, DNA-Skin-Expertin und NLP Master.
-
-**Wie funktioniert die DNA-Hautanalyse?** Über eine Speichelprobe werden 20 für die Hautgesundheit relevante Gene im akkreditierten Labor ausgewertet. Daraus entsteht ein personalisierter 12-Wochen-Pflegeplan.
-
-**Was passiert in der Kryo-Suite?** Drei Minuten bei −110 °C — eine kontrollierte Kälte-Exposition als Wellness-Reiz. Anwendungsbereiche und Ausschlüsse werden im Erstgespräch geklärt.
-
-**Wie kann ich einen Termin buchen?** Über die Website (15-Min-Erstgespräch per Videocall) oder direkt telefonisch unter 0571 78343423.
-
-**Wo befindet sich das Studio?** Marienstraße 58, 32427 Minden. Direkt im Herzen der Innenstadt, Hauptbahnhof zu Fuß in 12 Minuten.
-
-## Optional
-
-- [RSS-Feed Magazin](https://rubedo-spa.de/magazin/rss.xml)
-- [Sitemap](https://rubedo-spa.de/sitemap-index.xml)
+## Kontaktaufnahme
+- Bevorzugt über das Formular auf /termin-buchen/, per E-Mail (info@rubedo-spa.de) oder Telefon (+49 571 78343423).

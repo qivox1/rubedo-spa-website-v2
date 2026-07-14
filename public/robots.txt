@@ -1,23 +1,2 @@
 User-agent: *
-Allow: /
-
-# AI-Crawler — explizit erlaubt für GEO-Sichtbarkeit
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-Sitemap: https://rubedo-spa.de/sitemap-index.xml
+Disallow: /

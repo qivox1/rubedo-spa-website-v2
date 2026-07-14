@@ -1,0 +1,159 @@
+/* ============================================================
+   RUBEDO — MODEL SYSTEM (v2)   ·   system.css
+   Opt-in layer. Only pages that embody the refined "Astro"
+   system link this (Home, Longevity-Studio …). Legacy pages
+   (origo, audit, anwendungen v1 …) do NOT link it, so the
+   shared section-primitive class names never collide.
+
+   Principle: ONE cream ground · rhythm from full-bleed photos
+   + whitespace · brass eyebrows · crimson reserved (≈10% — the
+   primary button) · a single dark anchor = the footer.
+   Depends on tokens from styles.css (load styles.css first).
+   ============================================================ */
+
+/* ── SECTION PRIMITIVES ─────────────────── */
+.sec      { padding: 120px 40px; }
+.sec-in   { max-width: 1080px; margin: 0 auto; }
+.col      { max-width: 62ch; }
+
+/* eyebrow — brass, no crimson */
+.eb { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.eb::before { content: ''; width: 28px; height: 1px; background: var(--brass); opacity: .75; }
+
+.h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4vw, 48px); line-height: 1.12; letter-spacing: -.01em; color: var(--text-1); margin: 0; }
+
+/* ONE neutral break per page (warm cream-dark, never crimson) — the
+   single rhythm accent allowed on an otherwise cream ground. */
+.sec.tone, .section.tone { background: var(--cream-dark); }
+.body { font-size: 16.5px; line-height: 1.85; color: #463F33; }
+.body p { margin: 0; }
+.body p + p { margin-top: 16px; }
+.body em { font-style: italic; color: var(--text-1); }
+
+/* ── HERO (full-bleed photo) ─────────────── */
+.hero { position: relative; min-height: 80vh; display: flex; align-items: flex-end; overflow: hidden; }
+.hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(28,20,16,.62) 0%, rgba(28,20,16,.20) 46%, rgba(28,20,16,0) 78%); }
+.hero-in { position: relative; z-index: 2; max-width: 1080px; width: 100%; margin: 0 auto; padding: 0 40px 76px; }
+.hero .eb { color: #ECD9AC; font-size: 11.5px; text-shadow: 0 1px 10px rgba(20,14,10,.6); }
+.hero .eb::before { background: var(--burgundy); opacity: 1; }
+.hero .eb .dia { color: var(--burgundy); margin: 0 .35em; font-size: .82em; vertical-align: middle; text-shadow: 0 1px 10px rgba(251,248,241,.3); }
+.hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(44px, 6.6vw, 86px); line-height: 1.02; letter-spacing: -.02em; color: var(--cream); margin: 0 0 22px; }
+.hero h1 .art { color: var(--brass-l); }
+.hero .sub { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 2.3vw, 25px); color: rgba(251,248,241,.92); line-height: 1.5; max-width: 54ch; margin: 0 0 30px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.hero .btn-secondary { color: rgba(251,248,241,.9); border-color: rgba(251,248,241,.35); }
+.hero .btn-secondary:hover { border-color: var(--cream); color: var(--cream); }
+
+/* ── FULL-BLEED PHOTO (the rhythm) ───────── */
+.bleed { width: 100%; font-size: 0; }
+.bleed img { width: 100%; height: auto; display: block; }
+
+/* ── DIMENSION CARDS (photo-led, on cream) ─ */
+.dim-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 56px; }
+.dim { background: #fff; border: .5px solid var(--border); border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; position: relative; transition: box-shadow .3s, transform .3s, border-color .3s; }
+.dim::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; z-index: 3; }
+.dim:hover { box-shadow: 0 18px 46px rgba(28,23,18,.10); transform: translateY(-4px); border-color: var(--border-m); }
+.dim:hover::before { transform: scaleX(1); }
+.dim-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.dim-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.dim:hover .dim-img img { transform: scale(1.04); }
+.dim-body { padding: 30px 32px 32px; display: flex; flex-direction: column; flex: 1; }
+.dim-essence { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
+.dim-name { font-family: var(--serif); font-size: 31px; font-weight: 400; line-height: 1.05; color: var(--text-1); margin-bottom: 11px; }
+.dim-bridge { font-size: 13.5px; color: var(--text-2); line-height: 1.45; margin-bottom: 16px; display: flex; align-items: baseline; gap: 9px; }
+.dim-bridge::before { content: ''; flex-shrink: 0; width: 16px; height: 1px; background: var(--brass); transform: translateY(-4px); }
+.dim-desc { font-size: 13.5px; color: var(--text-3); line-height: 1.7; flex: 1; margin-bottom: 22px; }
+.dim-link { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); display: inline-flex; gap: 7px; transition: gap .2s; }
+.dim:hover .dim-link { gap: 12px; }
+/* KI „cr" pin — LOCKED spec: Ø15px, dead-zone bottom-left, 8px offset */
+.dim-cr { position: absolute; left: 8px; bottom: 8px; z-index: 4; width: 15px; height: 15px; border-radius: 50%; border: 1px solid rgba(251,248,241,.2); color: rgba(251,248,241,.45); font-family: var(--sans); font-size: 7px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: color .25s, border-color .25s; }
+.dim-cr:hover { color: rgba(251,248,241,.95); border-color: rgba(251,248,241,.75); }
+  /* max. Mimetisierung sitewide: Ø13/6px + Geist-Opazität .45, in Hover voll lesbar */
+  .dim-cr { width:13px; height:13px; font-size:6px; opacity:.45; transition: opacity .25s, color .25s, border-color .25s; }
+  .dim-cr:hover { opacity:1; }
+
+/* ── EDITORIAL PULL-QUOTE · open on cream (no box, no band) ── */
+.sec.lift { background: var(--cream); }
+.pullquote { max-width: 880px; margin: 0 auto; text-align: center; }
+.pullquote blockquote { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(26px, 3.6vw, 42px); line-height: 1.3; color: var(--text-1); margin: 0; letter-spacing: -.005em; }
+.pullquote blockquote em { font-style: italic; color: var(--burgundy); }
+.pullquote .pq-mark { display: block; font-family: var(--serif); font-size: 60px; line-height: 0; color: var(--brass); opacity: .55; margin-bottom: 32px; }
+.pullquote .pq-attr { margin-top: 30px; font-family: var(--sans); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); }
+
+/* ── TWO-COLUMN PORTRAIT BAND ────────────── */
+.band { display: grid; grid-template-columns: .85fr 1.15fr; gap: 68px; align-items: center; }
+.band figure { aspect-ratio: 4/4.7; overflow: hidden; border-radius: 2px; }
+.band figure img { width: 100%; height: 100%; object-fit: cover; }
+.band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.16; color: var(--text-1); margin: 0 0 20px; }
+.band-attr { display: flex; align-items: center; gap: 14px; margin: 26px 0; }
+.band-attr-line { width: 32px; height: 1px; background: var(--brass); }
+.band-attr-name { font-size: 13px; font-weight: 500; color: var(--text-1); }
+.band-attr-role { font-size: 12px; color: var(--text-3); }
+
+/* ── NUMBERED MODULE ROWS (Quattuor, methods) ── */
+.quat { border-top: 1px solid var(--border); margin-top: 56px; }
+.q-row { display: grid; grid-template-columns: 60px 1fr auto; gap: 36px; align-items: baseline; padding: 34px 6px; border-bottom: 1px solid var(--border); text-decoration: none; transition: padding-left .28s ease; }
+.q-row:hover { padding-left: 16px; }
+.q-num { font-family: var(--serif); font-size: 20px; color: var(--brass); }
+.q-name { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 400; color: var(--text-1); line-height: 1.05; }
+.q-name span { font-family: var(--sans); font-size: 14px; color: var(--text-2); font-weight: 400; }
+.q-arrow { align-self: center; font-family: var(--serif); font-size: 22px; color: var(--text-3); transition: color .2s, transform .2s; }
+.q-row:hover .q-arrow { color: var(--brass); transform: translateX(5px); }
+
+/* ── BORDERED CTA CARD (on cream) ────────── */
+.cta-card { max-width: 1080px; margin: 0 auto; border: 1px solid var(--border-m); border-radius: 2px; padding: 60px 64px; display: grid; grid-template-columns: 1fr auto; gap: 52px; align-items: center; }
+.cta-card .eb { margin-bottom: 18px; }
+.cta-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.12; color: var(--text-1); margin: 0 0 14px; }
+.cta-card p { font-size: 15.5px; line-height: 1.72; color: var(--text-2); max-width: 48ch; margin: 0; }
+.cta-card .cta-note { margin-top: 16px; font-family: var(--sans); font-size: 12px; letter-spacing: .03em; color: var(--text-3); }
+.cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; white-space: nowrap; }
+.cta-actions .ghost { font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); text-decoration: none; }
+.cta-actions .ghost:hover { color: var(--brass); }
+
+/* ── MAGAZIN CARDS ───────────────────────── */
+.mag-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
+.mag-card { border: 1px solid var(--border); border-radius: 2px; padding: 34px 34px 36px; text-decoration: none; transition: border-color .2s, background .2s; }
+.mag-card:hover { border-color: var(--border-m); background: #fff; }
+.mag-card .kat { font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+.mag-card h4 { font-family: var(--serif); font-weight: 400; font-size: 23px; line-height: 1.22; color: var(--text-1); margin: 14px 0 8px; }
+.mag-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-2); margin: 0; }
+.mag-all { display: inline-block; margin-top: 32px; font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); text-decoration: none; transition: color .2s; }
+.mag-all:hover { color: var(--brass); }
+
+/* ── DARK FOOTER · the single dark anchor ──
+   Restyles the SHARED footer structure (footer-inner / footer-col /
+   footer-bottom / footer-seek from styles.css) onto a dark ground.
+   A page opts in with <footer class="dark"> — no inner-HTML changes,
+   so every page keeps one identical footer markup. ── */
+footer.dark { background: #221A14; border-top: none; }
+footer.dark .footer-brand-name { color: var(--cream); }
+footer.dark .footer-tagline { color: rgba(251,248,241,.5); }
+footer.dark .footer-address { color: rgba(251,248,241,.55); }
+footer.dark .footer-address a:hover { color: var(--brass-l); }
+footer.dark .footer-col h5 { color: var(--brass-l); }
+footer.dark .footer-col a { color: rgba(251,248,241,.66); }
+footer.dark .footer-col a:hover { color: var(--cream); }
+footer.dark .foot-bridge { color: rgba(251,248,241,.4); }
+footer.dark .footer-bottom { border-top-color: rgba(251,248,241,.14); color: rgba(251,248,241,.45); }
+footer.dark .footer-bottom a:hover { color: var(--cream); }
+footer.dark .footer-legal { color: rgba(251,248,241,.45); }
+footer.dark .footer-legal a { color: rgba(251,248,241,.55); }
+footer.dark .footer-legal a:hover { color: var(--cream); }
+/* Cerca-Trova seek panel, recoloured for dark ground */
+footer.dark .seek-trigger { border-color: rgba(196,165,104,.5); color: var(--brass-l); }
+footer.dark .seek-trigger:hover { background: var(--brass); color: #221A14; border-color: var(--brass); }
+footer.dark .seek-panel a { border-color: rgba(196,165,104,.45); color: var(--brass-l); }
+footer.dark .seek-panel a:hover { background: var(--brass); color: #221A14; border-color: var(--brass); }
+
+@media (max-width: 860px) {
+  .sec { padding: 80px 24px; }
+  .hero-in { padding: 0 24px 52px; }
+  .dim-cards { grid-template-columns: 1fr; }
+  .band { grid-template-columns: 1fr; gap: 40px; }
+  .band figure { max-width: 360px; aspect-ratio: 4/4.4; }
+  .mag-cards { grid-template-columns: 1fr; }
+  .cta-card { grid-template-columns: 1fr; padding: 44px 30px; gap: 30px; }
+  .q-row { grid-template-columns: 40px 1fr; }
+  .q-arrow { display: none; }
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ============================================================= -->
+<!-- VERSTECKTE SEO-EBENE (annotiert) — beim Rollout pflegen        -->
+<!-- Marke = Rubedo Spa (Bridge); "Quadriga" = Systemname.          -->
+<!-- ============================================================= -->
+<title>Die Quadriga — Cutis · Vigor · Corpus · Origo | Rubedo Spa Minden</title>
+<meta name="description" content="Die Quadriga der bewussten Personalisierung: vier Schichten — Cutis, Vigor, Corpus, Origo. Vier Kräfte, ein Zug. Longevity-Studio Rubedo in Minden, Monica Galletti.">
+<meta name="keywords" content="Die Quadriga, Cutis Vigor Corpus Origo, bewusste Personalisierung, Longevity-Studio Minden, Rubedo Spa, Monica Galletti">
+<link rel="canonical" href="/vier-schichten/">
+<meta property="og:title" content="Die Quadriga — Vier Kräfte, ein Zug.">
+<meta property="og:description" content="Cutis · Vigor · Corpus · Origo. Die Quadriga der bewussten Personalisierung. Longevity-Studio Rubedo in Minden.">
+<meta property="og:image" content="/img/rubedo-lab-vier-schichten-cutis-vigor-corpus-origo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1536">
+<meta property="og:image:alt" content="RUBEDO L.A.B. — Vier Schichten: Cutis, Vigor, Corpus, Origo. Longevity-Studio Minden. KI-generierte Visualisierung, Art-Direction Monica Galletti.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Rubedo Spa",
+  "alternateName": "Rubedo Longevity-Studio Minden",
+  "slogan": "smART Beauty for Conscious Humans",
+  "description": "Longevity-Studio in Minden. Die Quadriga: vier Schichten — Cutis, Vigor, Corpus, Origo.",
+  "address": { "@type": "PostalAddress", "streetAddress": "Marienstraße 58", "postalCode": "32427", "addressLocality": "Minden", "addressCountry": "DE" },
+  "founder": { "@type": "Person", "name": "Monica Galletti" }
+}
+</script>
+<!-- ============================================================= -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  html, body { background: var(--vs-bg, var(--cream)); transition: background .6s ease; }
+
+  /* ── MANIFEST (cream, airy) ─────────────────────────────────── */
+  .q-stage { position: relative; min-height: 74vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; padding: clamp(90px,13vh,134px) 40px clamp(74px,10vh,108px); overflow: hidden; }
+  .q-aura { position: absolute; z-index: 0; inset: 0; pointer-events: none; opacity: var(--vs-glow, 1);
+    transition: opacity .6s ease; background: transparent; }
+  body[data-aura="off"] .q-aura { opacity: 0; }
+  body[data-bg="dunkel"] .q-aura { background: radial-gradient(44% 40% at 50% 44%, rgba(168,136,74,.20), transparent 70%); }
+
+  .q-inner { position: relative; z-index: 1; max-width: 820px; }
+  .q-eyebrow { font-size: 10.5px; font-weight: 600; letter-spacing: .4em; text-transform: uppercase; color: var(--brass); margin-bottom: clamp(30px, 5vh, 50px); }
+  .q-title { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(48px, 7vw, 92px); line-height: 1.0; letter-spacing: -.02em; color: var(--text-1); white-space: nowrap; }
+  .q-sub { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: clamp(18px, 2.1vw, 26px); color: var(--text-2); margin-top: clamp(20px, 3vh, 30px); letter-spacing: .01em; }
+  .q-sub .sep { color: var(--brass); margin: 0 .5em; font-style: normal; }
+  .q-rule { width: 44px; height: 1px; background: var(--brass); margin: clamp(36px, 5.5vh, 54px) auto; opacity: .85; }
+  .q-lead { font-size: clamp(14px, 1.4vw, 16px); line-height: 1.75; color: var(--text-2); max-width: 540px; margin: 0 auto; letter-spacing: .005em; }
+  .q-lead em { font-style: italic; color: var(--text-1); }
+
+  /* dark stage variant */
+  body[data-bg="dunkel"] { --vs-bg: #1C1410; }
+  body[data-bg="dunkel"] .q-title { color: #F7F2E9; }
+  body[data-bg="dunkel"] .q-sub, body[data-bg="dunkel"] .q-lead { color: rgba(247,242,233,.74); }
+  body[data-bg="dunkel"] .q-lead em { color: #F7F2E9; }
+  body[data-bg="dunkel"] .q-eyebrow { color: var(--brass-l); }
+  body[data-bg="dunkel"] .q-rule { background: var(--brass-l); }
+  body[data-bg="dunkel"] .q-sub .sep { color: var(--brass-l); }
+
+  /* ── THE FOUR (small photo columns, side by side) ───────────── */
+  .q-four { padding: clamp(60px, 8vh, 96px) 40px; border-top: .5px solid var(--border); background: var(--cream-dark); }
+  body[data-bg="dunkel"] .q-four { background: #16100C; }
+  .q-four-inner { max-width: 1000px; margin: 0 auto; }
+  .q-four-head { text-align: center; max-width: 600px; margin: 0 auto clamp(40px, 5.5vh, 56px); }
+  .q-four-head .eyebrow { margin-bottom: 14px; }
+  .q-four-head h2 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(24px, 3.2vw, 38px); line-height: 1.2; color: var(--text-1); letter-spacing: -.01em; }
+  .q-four-head h2 em { font-style: normal; color: var(--burgundy); }
+
+  .q-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.4vw, 30px); }
+  .q-col { display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+  .q-col-img { position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 2px; margin-bottom: 20px; }
+  .q-cr { position: absolute; left: 8px; bottom: 8px; z-index: 4; width: 15px; height: 15px; border-radius: 50%; border: 1px solid var(--crb, rgba(251,248,241,.22)); color: var(--cr, rgba(251,248,241,.5)); font-family: var(--sans); font-size: 7px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; display: flex; align-items: center; justify-content: center; transition: color .25s, border-color .25s; }
+  .q-cr:hover { color: var(--crh, rgba(251,248,241,.95)); border-color: var(--crhb, rgba(251,248,241,.75)); }
+  /* max. Mimetisierung: kleinstmöglich + Geist-Opazität, in Hover voll lesbar */
+  .q-cr { width:13px; height:13px; font-size:6px; opacity:.45; transition: opacity .25s, color .25s, border-color .25s; }
+  .q-cr:hover { opacity:1; }
+  .q-col-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+  .q-col:hover .q-col-img img { transform: scale(1.04); }
+  .q-col-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(28,20,16,.28) 100%); }
+  .q-col-num { position: absolute; top: 13px; left: 15px; z-index: 2; font-family: var(--serif); font-style: italic; font-size: 15px; letter-spacing: .12em; color: var(--cream); text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+  .q-col-name { font-family: var(--serif); font-size: clamp(21px, 2vw, 26px); font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--text-1); line-height: 1; margin-bottom: 12px; }
+  .q-col-meaning { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--text-2); line-height: 1.5; margin-bottom: 16px; min-height: 3em; }
+  .q-col-link { font-size: 9.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); display: inline-flex; gap: 6px; transition: gap .25s; margin-top: auto; }
+  .q-col:hover .q-col-link { gap: 12px; }
+  body[data-bg="dunkel"] .q-four-head h2 { color: #F7F2E9; }
+  body[data-bg="dunkel"] .q-four-head h2 em { color: var(--brass-l); }
+  body[data-bg="dunkel"] .q-col-name { color: #F7F2E9; }
+  body[data-bg="dunkel"] .q-col-meaning { color: rgba(247,242,233,.66); }
+  body[data-bg="dunkel"] .q-col-link { color: var(--brass-l); }
+
+  /* ── CLOSER ──────────────────────────────────────────────────── */
+  .q-cta { background: var(--burgundy); padding: clamp(68px, 9vh, 100px) 40px; text-align: center; }
+  .q-cta-inner { max-width: 660px; margin: 0 auto; }
+  .q-cta h2 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(27px, 3.8vw, 42px); line-height: 1.2; color: #fff; margin-bottom: 14px; }
+  .q-cta p { font-size: 14.5px; line-height: 1.7; color: rgba(251,248,241,.78); max-width: 460px; margin: 0 auto 30px; }
+  .q-cta .btn-stack { background: var(--cream); color: var(--burgundy); }
+  .q-cta .btn-stack:hover { background: #fff; }
+  .q-cta .btn-stack .bs-bridge { color: rgba(107,30,42,.6); }
+
+  .q-credit { text-align: center; font-size: 10px; font-style: italic; color: var(--text-3); padding: 24px 20px; background: var(--vs-bg, var(--cream)); }
+  body[data-bg="dunkel"] .q-credit { color: rgba(247,242,233,.4); }
+
+  /* entrance */
+  .vs-anim { opacity: 1; }
+  body[data-prime="1"] .vs-anim { opacity: 0; }
+  body[data-ready="1"] .vs-anim { opacity: 1; transition: opacity 1s ease; }
+  body[data-ready="1"] .vs-anim.d2 { transition-delay: .22s; }
+  body[data-ready="1"] .vs-anim.d3 { transition-delay: .44s; }
+  body[data-ready="1"] .vs-anim.d4 { transition-delay: .66s; }
+
+  @media (max-width: 720px) { .q-grid { grid-template-columns: 1fr 1fr; row-gap: 30px; } }
+  @media (max-width: 420px) { .q-grid { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body data-bg="cream" data-aura="on">
+
+<main id="main">
+
+  <!-- MANIFEST -->
+  <section class="q-stage" data-screen-label="Quadriga · Manifest">
+    <div class="q-aura"></div>
+    <div class="q-inner">
+      <div class="q-eyebrow vs-anim d1">Das System</div>
+      <h1 class="q-title vs-anim d2">Die Quadriga.</h1>
+      <p class="q-sub vs-anim d2">Vier Kräfte <span class="sep">·</span> ein bewusstes Ziel.</p>
+      <div class="q-rule vs-anim d3"></div>
+      <p class="q-lead vs-anim d3">Biologisch fundierte Individualisierung — für Haut, Vitalität und Wohlbefinden.</p>
+    </div>
+  </section>
+
+  <!-- THE FOUR -->
+  <section class="q-four" data-screen-label="Quadriga · Vier Schichten">
+    <div class="q-four-inner">
+      <div class="q-four-head reveal">
+        <span class="eyebrow eyebrow-rule">Die vier Kräfte</span>
+        <h2>Von der Haut bis zum <em>Atem</em>.</h2>
+      </div>
+
+      <div class="q-grid">
+        <a href="/anwendungen/#cutis" class="q-col reveal">
+          <div class="q-col-img">
+            <span class="q-col-num">I</span>
+            <img src="/img/dna-skin.webp" alt="Cutis — Pflege der Hautoberfläche im Longevity-Studio Rubedo Minden"><span class="q-cr" style="--cr:rgba(87,76,58,.62);--crb:rgba(87,76,58,.42);--crh:rgba(41,36,28,.92);--crhb:rgba(41,36,28,.6)" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
+          </div>
+          <h3 class="q-col-name">Cutis</h3>
+          <p class="q-col-meaning">Die Haut — Persönlicher Code. Gelesen. Sichtbar.</p>
+          <span class="q-col-link">Mehr →</span>
+        </a>
+        <a href="/anwendungen/#vigor" class="q-col reveal">
+          <div class="q-col-img">
+            <span class="q-col-num">II</span>
+            <img src="/img/kryo-vital.webp" alt="Vigor — Frische und sichtbarer Tonus im Longevity-Studio Rubedo Minden"><span class="q-cr" style="--cr:rgba(183,175,171,.55);--crb:rgba(183,175,171,.3);--crh:rgba(251,248,241,.95);--crhb:rgba(251,248,241,.75)" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
+          </div>
+          <h3 class="q-col-name">Vigor</h3>
+          <p class="q-col-meaning">Die Aktivierung — Kälte. Druck. Vitalität.</p>
+          <span class="q-col-link">Mehr →</span>
+        </a>
+        <a href="/anwendungen/#corpus" class="q-col reveal">
+          <div class="q-col-img">
+            <span class="q-col-num">III</span>
+            <img src="/img/mag-massage.webp" alt="Corpus — Berührung und rituelle Körperarbeit im Longevity-Studio Rubedo Minden"><span class="q-cr" style="--cr:rgba(193,177,167,.55);--crb:rgba(193,177,167,.3);--crh:rgba(251,248,241,.95);--crhb:rgba(251,248,241,.75)" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
+          </div>
+          <h3 class="q-col-name">Corpus</h3>
+          <p class="q-col-meaning">Der Körper — Bewusst. Berührung. Ritual.</p>
+          <span class="q-col-link">Mehr →</span>
+        </a>
+        <a href="/anwendungen/#origo" class="q-col reveal">
+          <div class="q-col-img">
+            <span class="q-col-num">IV</span>
+            <img src="/img/inner-source.webp" alt="Origo — Pause, Atem und Stille im Longevity-Studio Rubedo Minden"><span class="q-cr" style="--cr:rgba(215,209,197,.55);--crb:rgba(215,209,197,.3);--crh:rgba(251,248,241,.95);--crhb:rgba(251,248,241,.75)" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
+          </div>
+          <h3 class="q-col-name">Origo</h3>
+          <p class="q-col-meaning">Der Atem — Rhythmus. Besinnung. Wandlung.</p>
+          <span class="q-col-link">Mehr →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSER -->
+  <section class="q-cta" data-screen-label="Quadriga · Einladung">
+    <div class="q-cta-inner reveal">
+      <h2>Die Quadriga, in einer Begegnung.</h2>
+      <p>Der Weg beginnt mit einem persönlichen Gespräch — nicht mit einer Behandlung von der Liste.</p>
+      <a href="/termin-buchen/" class="btn-stack">
+        <span class="bs-latin">Primo Contactu</span>
+        <span class="bs-bridge">Erstgespräch vereinbaren</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<p class="q-credit">Bildkonzept &amp; Art-Direction: Monica Galletti · KI-gestützte Visualisierung</p>
+
+<div id="tweak-root"></div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#FBF8F1"/><g fill="none" stroke="#A8884A" stroke-width="1.4"><circle cx="28" cy="60" r="9"/><circle cx="44" cy="60" r="9"/><circle cx="60" cy="60" r="9"/><circle cx="76" cy="60" r="9"/></g><text x="50" y="34" font-family="Georgia, serif" font-size="15" fill="#6B1E2A" text-anchor="middle" font-style="italic">Quadriga</text></svg>
+</template>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel">
+const TWEAK_DEFAULTS = { bg: "Cream", aura: true, glow: 80 };
+function applyTweaks(t) {
+  const b = document.body;
+  b.setAttribute('data-bg', t.bg === "Dunkel" ? "dunkel" : "cream");
+  if (t.bg === "Sand") { b.style.setProperty('--vs-bg', '#ECE5D6'); b.setAttribute('data-bg','cream'); }
+  else b.style.removeProperty('--vs-bg');
+  b.setAttribute('data-aura', t.aura ? "on" : "off");
+  b.style.setProperty('--vs-glow', String((t.glow ?? 80) / 100));
+}
+function App() {
+  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  React.useEffect(() => { applyTweaks(t); }, [t]);
+  return (
+    <TweaksPanel title="Tweaks">
+      <TweakSection label="Bühne" />
+      <TweakRadio label="Hintergrund" value={t.bg} options={["Cream", "Sand", "Dunkel"]} onChange={(v) => setTweak('bg', v)} />
+      <TweakSection label="Aura" />
+      <TweakToggle label="Aura zeigen" value={t.aura} onChange={(v) => setTweak('aura', v)} />
+      <TweakSlider label="Intensität" value={t.glow} min={0} max={100} step={5} unit="%" onChange={(v) => setTweak('glow', v)} />
+    </TweaksPanel>
+  );
+}
+ReactDOM.createRoot(document.getElementById('tweak-root')).render(<App />);
+
+/* entrance: setTimeout fires even when the iframe is backgrounded */
+if (matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  document.body.setAttribute('data-prime','1');
+  setTimeout(() => {
+    document.body.removeAttribute('data-prime');
+    document.body.setAttribute('data-ready','1');
+  }, 80);
+}
+
+/* reveal-on-scroll */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .12 });
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Leistungen und Preise im Rubedo Spa Minden: Cutis, Vigor, Corpus und Origo — Dauer und Preis transparent, inkl. gesetzlicher MwSt.">
+<meta property="og:title" content="Leistungen & Preise — Rubedo Spa Minden">
+<meta property="og:description" content="Alle Anwendungen auf einen Blick — entlang der vier Säulen. Dauer und Preis transparent.">
+<meta property="og:locale" content="de_DE">
+<link rel="canonical" href="https://www.rubedo-spa.de/preisliste.html">
+    <title>Leistungen &amp; Preise — Rubedo Spa Minden</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/system.css">
+<style>
+  .eyebrow-rule { color: var(--brass); border-bottom-color: rgba(168,136,74,.5); }
+
+  /* HERO */
+  .pl-hero { padding: 76px 40px 30px; text-align: center; }
+  .pl-hero .eyebrow { margin-bottom: 20px; }
+  .pl-hero h1 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(42px, 5.8vw, 68px); line-height: 1.04; letter-spacing: -.01em; margin-bottom: 14px; }
+  .pl-hero-claim { font-family: var(--sans); font-size: 12px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); margin-bottom: 22px; }
+  .pl-hero-lead { font-family: var(--serif); font-size: 18px; font-weight: 300; color: var(--text-2); line-height: 1.6; max-width: 520px; margin: 0 auto; }
+  .pl-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+  .pl-print { font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-2); background: none; border: .5px solid var(--border-m); border-radius: 2px; padding: 11px 22px; cursor: pointer; transition: border-color .25s, color .25s; display: inline-flex; align-items: center; gap: 9px; }
+  .pl-print:hover { border-color: var(--brass); color: var(--burgundy); }
+
+  /* WRAP */
+  .pl-wrap { max-width: 940px; margin: 0 auto; padding: 56px 40px 0; }
+  .pl-pillar { margin-bottom: 70px; }
+
+  /* BANNER */
+  .pl-banner { position: relative; border-radius: 3px; overflow: hidden; min-height: 168px; display: flex; align-items: flex-end; }
+  .pl-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .pl-banner::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(34,26,20,.78) 0%, rgba(34,26,20,.42) 52%, rgba(34,26,20,.12) 100%); }
+  .pl-banner-label { position: relative; z-index: 2; padding: 26px 32px; }
+  .pl-banner-num { display: block; font-family: var(--sans); font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--brass-l); margin-bottom: 7px; }
+  .pl-banner-name { font-family: var(--serif); font-size: clamp(26px, 3.2vw, 38px); color: var(--cream); font-weight: 400; line-height: 1.04; }
+  .pl-banner-bridge { display: block; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: rgba(251,248,241,.82); margin-top: 5px; }
+  .pl-banner-link { position: absolute; top: 16px; right: 16px; z-index: 3; width: 38px; height: 38px; border-radius: 50%; border: .5px solid rgba(251,248,241,.4); display: flex; align-items: center; justify-content: center; color: var(--cream); text-decoration: none; font-size: 15px; transition: background .25s, color .25s, border-color .25s; }
+  .pl-banner-link:hover { background: var(--cream); color: var(--burgundy); border-color: var(--cream); }
+  .pl-cr { position: absolute; bottom: 8px; right: 8px; z-index: 5; display: flex; align-items: center; justify-content: center; width: 15px; height: 15px; font-family: var(--sans); font-size: 7px; font-weight: 600; letter-spacing: .02em; text-transform: uppercase; color: rgba(251,248,241,.45); text-decoration: none; border: 1px solid rgba(251,248,241,.2); border-radius: 50%; transition: color .25s, border-color .25s; }
+  .pl-cr:hover { color: rgba(251,248,241,.95); border-color: rgba(251,248,241,.75); }
+  /* max. Mimetisierung sitewide: Ø13/6px + Geist-Opazität .45, in Hover voll lesbar */
+  .pl-cr { width:13px; height:13px; font-size:6px; opacity:.45; transition: opacity .25s, color .25s, border-color .25s; }
+  .pl-cr:hover { opacity:1; }
+
+  /* TABLE */
+  .pl-thead { display: grid; grid-template-columns: 1fr 104px 158px; gap: 24px; padding: 22px 6px 10px; border-bottom: 1px solid var(--border-m); }
+  .pl-thead span { font-family: var(--sans); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--text-3); }
+  .pl-thead span:last-child { text-align: right; }
+  .pl-row { display: grid; grid-template-columns: 1fr 104px 158px; gap: 24px; padding: 18px 6px; border-bottom: .5px dotted var(--border-m); align-items: baseline; }
+  .pl-name { font-family: var(--serif); font-size: 19px; color: var(--text-1); line-height: 1.2; }
+  .pl-name .pl-tag { font-family: var(--sans); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: var(--brass); border: .5px solid rgba(168,136,74,.4); padding: 2px 6px; border-radius: 1px; margin-left: 8px; vertical-align: middle; white-space: nowrap; }
+  .pl-sub { display: block; font-family: var(--sans); font-size: 12px; color: var(--text-3); margin-top: 4px; line-height: 1.5; }
+  .pl-dauer { font-family: var(--sans); font-size: 13px; color: var(--text-2); }
+  .pl-preis { font-family: var(--serif); font-size: 20px; font-weight: 400; color: var(--burgundy); text-align: right; white-space: nowrap; }
+  .pl-preis small { display: block; font-family: var(--sans); font-size: 10.5px; color: var(--text-3); letter-spacing: .03em; margin-top: 4px; font-weight: 400; }
+  .pl-group { font-family: var(--sans); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin: 32px 6px 2px; }
+  .pl-cutis-note { font-family: var(--serif); font-style: italic; font-size: 13.5px; color: var(--text-3); padding: 16px 6px 0; line-height: 1.6; }
+
+  /* CTA BOX */
+  .pl-cta { max-width: 940px; margin: 26px auto 0; padding: 0 40px; }
+  .pl-cta-inner { border: .5px solid var(--brass); border-radius: 3px; padding: 40px 44px; display: flex; justify-content: space-between; align-items: center; gap: 36px; flex-wrap: wrap; }
+  .pl-cta-eyebrow { font-family: var(--sans); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
+  .pl-cta h3 { font-family: var(--serif); font-style: italic; font-size: 28px; font-weight: 400; line-height: 1.1; }
+  .pl-cta p { font-size: 14px; color: var(--text-2); margin-top: 10px; max-width: 420px; line-height: 1.65; }
+  .pl-cta-actions { display: flex; flex-direction: column; gap: 12px; align-items: stretch; }
+  .pl-cta-actions .btn-ghost { text-align: center; }
+
+  /* NOTE */
+  .pl-note { max-width: 940px; margin: 38px auto 0; padding: 26px 40px 0; font-size: 11.5px; color: var(--text-3); line-height: 1.75; font-style: italic; border-top: .5px solid var(--border); }
+
+  @media (max-width: 720px) {
+    .pl-hero { padding: 52px 20px 24px; }
+    .pl-wrap { padding: 40px 20px 0; }
+    .pl-cta, .pl-note { padding-left: 20px; padding-right: 20px; }
+    .pl-thead { display: none; }
+    .pl-row { grid-template-columns: 1fr auto; gap: 4px 18px; }
+    .pl-dauer { grid-column: 1; order: 3; font-size: 12px; color: var(--text-3); }
+    .pl-preis { grid-row: 1 / span 2; align-self: center; }
+    .pl-cta-inner { padding: 30px 26px; }
+  }
+
+  @media print {
+    .topbar, nav.main, .nav-toggle, .pl-actions, .pl-banner-link, .pl-cta-actions, footer.dark { display: none !important; }
+    body { background: #fff; }
+    .pl-hero { padding: 20px 20px 10px; }
+    .pl-banner { min-height: 96px; break-inside: avoid; }
+    .pl-pillar, .pl-row { break-inside: avoid; }
+    .pl-cta-inner { border-color: #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Marienstraße 58 · 32427 Minden</span>
+  <span class="topbar-dot">·</span>
+  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-dot">·</span>
+  <span class="topbar-accent">nach Vereinbarung</span>
+</div>
+
+<nav class="main" aria-label="Hauptnavigation">
+  <a href="/" class="nav-logo">
+    <img src="/img/logo.webp" alt="Rubedo Spa Logo">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">Rubedo Spa</span>
+      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li class="has-drop">
+    <a href="/philosophie/">Philosophie</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+    </div>
+  </li>
+    <li class="has-drop">
+    <a href="/anwendungen/" class="active">Anwendungen</a>
+    <div class="drop-panel">
+      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/preisliste/">Leistungen &amp; Preise →</a>
+    </div>
+  </li>
+    <li class="has-drop">
+    <a href="/magazin/">Magazin</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/magazin/#kat=longevity"><span class="drop-text"><span class="drop-name">Longevity</span><span class="drop-bridge">Biologie, Alter &amp; Prävention</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=haut"><span class="drop-text"><span class="drop-name">Haut &amp; Pflege</span><span class="drop-bridge">Wissen für die Haut</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=ritual"><span class="drop-text"><span class="drop-name">Ritual</span><span class="drop-bridge">Berührung &amp; Körperarbeit</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=inner"><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atem &amp; Stille</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
+    </div>
+  </li>
+    <li><a href="/monica/">Monica</a></li>
+    <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="pl-hero" data-screen-label="Preisliste · Hero">
+    <span class="eyebrow eyebrow-rule">Leistungen &amp; Preise</span>
+    <h1>Beyond Wellness</h1>
+    <p class="pl-hero-claim">smART Beauty for Conscious Humans</p>
+    <p class="pl-hero-lead">Alle Anwendungen auf einen Blick — entlang der vier Säulen. Dauer und Preis transparent, inkl. gesetzlicher MwSt.</p>
+    <div class="pl-actions">
+      <button type="button" class="pl-print" onclick="window.print()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 01-2-2v-4a2 2 0 012-2h16a2 2 0 012 2v4a2 2 0 01-2 2h-2M6 14h12v7H6z"/></svg>
+        Als PDF speichern · Drucken
+      </button>
+    </div>
+  </section>
+
+  <div class="pl-wrap">
+
+    <!-- ── SÄULE 01 · CUTIS ── -->
+    <section class="pl-pillar" data-screen-label="Preisliste · Cutis">
+      <div class="pl-banner">
+        <img src="/img/dna-skin.webp" alt="Cutis — genombasierte Hautpflege und Gesichtsbehandlungen im Rubedo Spa Minden">
+        <a class="pl-banner-link" href="/anwendungen/#cutis" aria-label="Mehr zu Cutis">↗</a>
+        <a class="pl-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
+        <div class="pl-banner-label">
+          <span class="pl-banner-num">Säule 01 — Haut</span>
+          <span class="pl-banner-name">Cutis</span>
+          <span class="pl-banner-bridge">Genombasierte Pflege &amp; Gesichtsästhetik</span>
+        </div>
+      </div>
+      <div class="pl-thead"><span>Anwendung</span><span>Dauer</span><span>Preis</span></div>
+
+      <div class="pl-row">
+        <div class="pl-name">Genomis — DNA Lifestyle Analyse<span class="pl-tag">Genetik</span><span class="pl-sub">Vertrauliche Grundlage Ihrer Pflege — Anlagen &amp; Profile, keine Diagnose.</span></div>
+        <div class="pl-dauer">individuell</div>
+        <div class="pl-preis">Ad personam<small>im Gespräch</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Genbasierte Naturkosmetik<span class="pl-sub">Auf Basis Ihrer Beauty-Gen-Analyse — keine Einheitsformel.</span></div>
+        <div class="pl-dauer">für 3 Monate</div>
+        <div class="pl-preis">individuell</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Genombasierte Mikronährstoffe<span class="pl-sub">Auf Ihr Profil abgestimmt — begleiten die Analyse, Pflege von innen.</span></div>
+        <div class="pl-dauer">nach Profil</div>
+        <div class="pl-preis">individuell</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Gesichtsbehandlungen<span class="pl-sub">Drei aufeinander abgestimmte Rituale — Reinigung, Pflege &amp; Wirkstoffe.</span></div>
+        <div class="pl-dauer">ab 45 Min</div>
+        <div class="pl-preis">auf Anfrage</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Limen<span class="pl-tag">Signature</span><span class="pl-sub">Das Schwellen-Ritual — vollständig personalisiert.</span></div>
+        <div class="pl-dauer">75 Min</div>
+        <div class="pl-preis">Ad personam<small>Signature</small></div>
+      </div>
+      <p class="pl-cutis-note">Die drei Gesichts-Rituale — Namen &amp; Details in Abstimmung.</p>
+    </section>
+
+    <!-- ── SÄULE 02 · VIGOR ── -->
+    <section class="pl-pillar" data-screen-label="Preisliste · Vigor">
+      <div class="pl-banner">
+        <img src="/img/kryo-vital.webp" alt="Vigor — Ganzkörper-Kryotherapie bis −196 °C im Rubedo Spa Minden">
+        <a class="pl-banner-link" href="/anwendungen/#vigor" aria-label="Mehr zu Vigor">↗</a>
+        <a class="pl-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
+        <div class="pl-banner-label">
+          <span class="pl-banner-num">Säule 02 — Kälte &amp; Aktivierung</span>
+          <span class="pl-banner-name">Vigor</span>
+          <span class="pl-banner-bridge">Kontrollierte Kälte, Kompression &amp; Wickel</span>
+        </div>
+      </div>
+      <div class="pl-thead"><span>Anwendung</span><span>Dauer</span><span>Preis</span></div>
+
+      <div class="pl-group">Kryotherapie</div>
+      <div class="pl-row">
+        <div class="pl-name">Ganzkörper-Kryotherapie<span class="pl-sub">Kryo-Suite — drei Minuten Kältereiz, belebender Auftakt.</span></div>
+        <div class="pl-dauer">15 Min</div>
+        <div class="pl-preis">50 €<small>4er 160 · 5er 230 · 10er 450</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo-Lokal<span class="pl-sub">Gezielter Kältereiz für einzelne Zonen.</span></div>
+        <div class="pl-dauer">15 Min</div>
+        <div class="pl-preis">36 €<small>5er 165 · 10er 320</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo-Lokal Intensiv<span class="pl-sub">Ausgedehnte lokale Kälteanwendung.</span></div>
+        <div class="pl-dauer">120 Min</div>
+        <div class="pl-preis">220 €<small>5er 1.075 · 10er 2.000</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo-Facial Express<span class="pl-sub">Kälte-Frische fürs Gesicht — über dem Make-up.</span></div>
+        <div class="pl-dauer">10 Min</div>
+        <div class="pl-preis">36 €<small>5er 165 · 10er 320</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo-Facial Quick<span class="pl-sub">Gesicht, Hals &amp; Dekolleté.</span></div>
+        <div class="pl-dauer">20 Min</div>
+        <div class="pl-preis">105 €<small>5er 510 · 10er 950</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo-Facial Plus<span class="pl-sub">Reinigung + Kälte + Gesichtsmassage.</span></div>
+        <div class="pl-dauer">40 Min</div>
+        <div class="pl-preis">175 €<small>5er 800</small></div>
+      </div>
+
+      <div class="pl-group">Presso-Kompression</div>
+      <div class="pl-row">
+        <div class="pl-name">Presso · Ganzkörper<span class="pl-sub">Rhythmische Kompression — Beine, Bauch &amp; Arme.</span></div>
+        <div class="pl-dauer">60 Min</div>
+        <div class="pl-preis">75 €<small>Zyklus auf Anfrage</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Presso · Beine<span class="pl-sub">Kompression für die Beine.</span></div>
+        <div class="pl-dauer">40 Min</div>
+        <div class="pl-preis">50 €<small>Zyklus auf Anfrage</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Kryo &amp; Presso · Beine<span class="pl-sub">Ganzkörper-Kälte und Bein-Kompression in einem.</span></div>
+        <div class="pl-dauer">40 Min</div>
+        <div class="pl-preis">90 €<small>Zyklus auf Anfrage</small></div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Presso + Bandage<span class="pl-sub">Kompression mit Wirkstoff-Bandage.</span></div>
+        <div class="pl-dauer">60 Min</div>
+        <div class="pl-preis">220 €<small>Zyklus auf Anfrage</small></div>
+      </div>
+
+      <div class="pl-group">Körperwickel &amp; Bandage</div>
+      <div class="pl-row">
+        <div class="pl-name">Körperwickel · Total<span class="pl-sub">Pflegender Ganzkörper-Wickel — Komfort &amp; Textur.</span></div>
+        <div class="pl-dauer">90 Min</div>
+        <div class="pl-preis">170 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Körperwickel · Fast<span class="pl-sub">Pflegender Wickel, kompakt.</span></div>
+        <div class="pl-dauer">60 Min</div>
+        <div class="pl-preis">130 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Körperwickel · Silhouette<span class="pl-sub">Auf ein sichtbar gepflegtes Körpergefühl ausgerichtet.</span></div>
+        <div class="pl-dauer">90 Min</div>
+        <div class="pl-preis">170 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Wirkstoff-Bandage<span class="pl-sub">Beine · in mehreren Rezepturen.</span></div>
+        <div class="pl-dauer">40 Min</div>
+        <div class="pl-preis">99 €<small>Zyklus auf Anfrage</small></div>
+      </div>
+
+      <div class="pl-group">Premium</div>
+      <div class="pl-row">
+        <div class="pl-name">Rubedo Sequenz<span class="pl-tag">Signature</span><span class="pl-sub">Kryo · Presso · Wirkstoffe in physiologischer Reihenfolge.</span></div>
+        <div class="pl-dauer">ca. 90 Min</div>
+        <div class="pl-preis">Ad personam<small>Premium</small></div>
+      </div>
+    </section>
+
+    <!-- ── SÄULE 03 · CORPUS ── -->
+    <section class="pl-pillar" data-screen-label="Preisliste · Corpus">
+      <div class="pl-banner">
+        <img src="/img/mag-massage.webp" alt="Corpus — Massage und rituelle Körperarbeit im Rubedo Spa Minden">
+        <a class="pl-banner-link" href="/anwendungen/#corpus" aria-label="Mehr zu Corpus">↗</a>
+        <a class="pl-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
+        <div class="pl-banner-label">
+          <span class="pl-banner-num">Säule 03 — Körper</span>
+          <span class="pl-banner-name">Corpus</span>
+          <span class="pl-banner-bridge">Rituelle Körperarbeit aus mehreren Traditionen</span>
+        </div>
+      </div>
+      <div class="pl-thead"><span>Anwendung</span><span>Dauer</span><span>Preis</span></div>
+
+      <div class="pl-row">
+        <div class="pl-name">Abhyanga<span class="pl-sub">Ayurvedische Ganzkörper-Ölmassage.</span></div>
+        <div class="pl-dauer">80 Min</div>
+        <div class="pl-preis">175 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Hot Stone<span class="pl-sub">Warme Basaltsteine — Wärme als Träger von Tiefe und Ruhe.</span></div>
+        <div class="pl-dauer">80 Min</div>
+        <div class="pl-preis">175 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Hot Bambu Massage<span class="pl-sub">Beheizte Bambusstäbe — kräftigend und lösend.</span></div>
+        <div class="pl-dauer">80 Min</div>
+        <div class="pl-preis">175 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Balinesische Deep Massage<span class="pl-sub">Kräftige, fließende Bewegungen.</span></div>
+        <div class="pl-dauer">50 Min</div>
+        <div class="pl-preis">130 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Opus Magnum<span class="pl-tag">Signature</span><span class="pl-sub">Das große Werk — Massage, Atem &amp; Meditation in einem Ritual.</span></div>
+        <div class="pl-dauer">ca. 3 Std</div>
+        <div class="pl-preis">Ad personam<small>Signature</small></div>
+      </div>
+    </section>
+
+    <!-- ── SÄULE 04 · ORIGO ── -->
+    <section class="pl-pillar" data-screen-label="Preisliste · Origo">
+      <div class="pl-banner">
+        <img src="/img/origo-quelle.webp" style="object-position: center 30%;" alt="Origo — Atemarbeit und geführte Tiefenentspannung im Rubedo Spa Minden">
+        <a class="pl-banner-link" href="/anwendungen/#origo" aria-label="Mehr zu Origo">↗</a>
+        <a class="pl-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
+        <div class="pl-banner-label">
+          <span class="pl-banner-num">Säule 04 — Atem</span>
+          <span class="pl-banner-name">Origo</span>
+          <span class="pl-banner-bridge">Atem, Wahrnehmung und Stille</span>
+        </div>
+      </div>
+      <div class="pl-thead"><span>Anwendung</span><span>Dauer</span><span>Preis</span></div>
+
+      <div class="pl-row">
+        <div class="pl-name">Spiramen<span class="pl-sub">Geführte Atemarbeit, Entspannung &amp; Selbsthypnose.</span></div>
+        <div class="pl-dauer">60 Min</div>
+        <div class="pl-preis">95 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Stille-Sitzung<span class="pl-sub">Imaginationsgeführte Tiefenentspannung.</span></div>
+        <div class="pl-dauer">60 Min</div>
+        <div class="pl-preis">95 €</div>
+      </div>
+      <div class="pl-row">
+        <div class="pl-name">Concentus<span class="pl-sub">Atem- &amp; Klang-Sessions für zu Hause.</span></div>
+        <div class="pl-dauer">Abo</div>
+        <div class="pl-preis">ab 4 €<small>monatlich</small></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="pl-cta" data-screen-label="Preisliste · CTA">
+    <div class="pl-cta-inner">
+      <div>
+        <div class="pl-cta-eyebrow">Rubedo Beginn</div>
+        <h3>Unsicher, was zu Ihnen passt?</h3>
+        <p>Ein kurzes Gespräch genügt. Wir stimmen die richtige Anwendung gemeinsam ab — ohne Verpflichtung.</p>
+      </div>
+      <div class="pl-cta-actions">
+        <a href="/termin-buchen/" class="btn-primary">Erstgespräch vereinbaren →</a>
+        <a href="/anwendungen/" class="btn-ghost">Anwendungen entdecken →</a>
+      </div>
+    </div>
+  </section>
+
+  <p class="pl-note">Alle Preise inkl. gesetzlicher MwSt. Mehrfach-Karten gelten innerhalb ihrer Gültigkeit. Anwendungen im Rubedo Spa sind Wellness- und Pflegeleistungen — keine medizinischen Behandlungen, keine Heilversprechen. Signature-Rituale und Ad-personam-Leistungen werden im persönlichen Gespräch zusammengestellt.</p>
+
+</main>
+
+<footer class="dark">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Rubedo Spa</div>
+      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-address">
+        Marienstraße 58 · 32427 Minden<br>
+        Mo–Fr 08:00–17:00 Uhr<br>
+        <a href="tel:+4957178343423">+49 571 78343423</a><br>
+        <a href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a>
+      </div>
+      <div class="footer-seek">
+        <button type="button" class="seek-trigger" aria-expanded="false" aria-controls="seek-panel">Cerca&ensp;Trova</button>
+        <div class="seek-panel" id="seek-panel">
+          <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
+          <a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.8 3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.8zM9.6 15.57V8.43L15.82 12 9.6 15.57z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Dimensionen</h5>
+      <ul>
+        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Studio</h5>
+      <ul>
+        <li><a href="/philosophie/">Philosophie</a></li>
+        <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
+        <li><a href="/monica/">Monica</a></li>
+        <li><a href="/magazin/">Magazin</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Service</h5>
+      <ul>
+        <li><a href="/preisliste/">Leistungen &amp; Preise</a></li>
+        <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
+        <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+        <li><a href="/agb/">AGB</a></li>
+        <li><a href="/ki-bilder/">KI-Bild-Hinweis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rubedo Spa · Monica Galletti · Minden</span>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+<script>(function(){var s=document.querySelector('.footer-seek');var b=s&&s.querySelector('.seek-trigger');if(s&&b){b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');});}})();</script>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Kennzeichnung KI-generierter Bilder gemäß EU AI Act und C2PA Content Credentials — wie Rubedo Spa Minden KI einsetzt und was die „cr&quot;-Markierung bedeutet.">
+<title>KI-Bild-Hinweis &amp; Content Credentials — Transparenz | Rubedo Spa Minden</title>
+<link rel="canonical" href="/ki-bilder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KI-Bild-Hinweis &amp; Content Credentials — Rubedo Spa Minden">
+<meta property="og:description" content="Kennzeichnung KI-generierter Bilder gemäß EU AI Act und C2PA Content Credentials — wie Rubedo Spa Minden KI einsetzt und was die „cr&quot;-Markierung bedeutet.">
+<meta property="og:locale" content="de_DE">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/system.css">
+<style>
+  /* SYSTEM v2 eyebrow */
+  .eyebrow-rule { color: var(--brass); border-bottom-color: rgba(168,136,74,.5); }
+  main { background: var(--cream); }
+
+  /* ── kopf ── */
+  .doc-head { padding: 132px 40px 0; }
+  .doc-head-in { max-width: 760px; margin: 0 auto; }
+  .doc-eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 34px; }
+  .doc-eb::before { content: ''; width: 40px; height: 1px; background: var(--brass); opacity: .7; }
+  .doc-title { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 5vw, 60px); line-height: 1.06; letter-spacing: -.015em; color: var(--text-1); margin: 0; max-width: 18ch; }
+  .doc-stand { margin-top: 22px; font-family: var(--sans); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); }
+  .doc-intro { margin-top: 40px; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 2.1vw, 24px); line-height: 1.5; color: var(--text-2); max-width: 60ch; }
+
+  /* ── inhalt ── */
+  .doc { padding: 64px 40px 132px; }
+  .doc-in { max-width: 760px; margin: 0 auto; }
+
+  /* TOC — testo nudo, niente gabbia */
+  .toc { margin: 8px 0 80px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .toc-label { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--brass); margin-bottom: 22px; }
+  .toc ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; columns: 2; column-gap: 56px; }
+  .toc li { counter-increment: toc; margin-bottom: 13px; break-inside: avoid; }
+  .toc a { display: grid; grid-template-columns: 26px 1fr; gap: 6px; align-items: baseline; font-size: 14.5px; line-height: 1.4; color: var(--text-2); text-decoration: none; transition: color .2s; }
+  .toc a::before { content: counter(toc, decimal-leading-zero); font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--brass); }
+  .toc a:hover { color: var(--burgundy); }
+
+  .doc-sec { padding: 14px 0; scroll-margin-top: 90px; }
+  .doc-sec + .doc-sec { margin-top: 56px; border-top: 1px solid var(--border); padding-top: 56px; }
+  .doc-sec h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 3vw, 34px); line-height: 1.16; letter-spacing: -.01em; color: var(--text-1); margin: 0 0 24px; max-width: 22ch; }
+  .doc-body { font-size: 16px; line-height: 1.85; color: #463F33; }
+  .doc-body p { margin: 0; }
+  .doc-body p + p { margin-top: 18px; }
+  .doc-body strong { color: var(--text-1); font-weight: 500; }
+  .doc-body em { font-style: italic; color: var(--text-1); }
+  .doc-body a { color: var(--burgundy); text-decoration: none; border-bottom: 1px solid var(--border-m); transition: border-color .2s; }
+  .doc-body a:hover { border-color: var(--burgundy); }
+  .doc-list { list-style: none; margin: 20px 0 0; padding: 0; }
+  .doc-list li { display: grid; grid-template-columns: 18px 1fr; gap: 14px; padding: 8px 0; font-size: 15.5px; line-height: 1.62; color: #463F33; }
+  .doc-list .mk { font-family: var(--sans); color: var(--brass); font-size: 14px; line-height: 1.6; }
+  .doc-list b { color: var(--text-1); font-weight: 500; }
+
+  /* ── pin-demo ── */
+  .pin-demo { display: flex; align-items: center; gap: 22px; margin: 30px 0 6px; padding: 28px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .pin-chip { flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 16px; font-weight: 600; color: var(--cream); background: var(--ink); border: 1px solid rgba(251,248,241,.25); }
+  .pin-cap { font-size: 13.5px; line-height: 1.6; color: var(--text-2); }
+  .pin-cap b { color: var(--text-1); font-weight: 500; }
+
+  /* ── kontakt-schluss ── */
+  .doc-contact { margin-top: 64px; padding-top: 40px; border-top: 1px solid var(--border-m); }
+  .doc-contact .doc-body { max-width: 60ch; }
+  .doc-mail { display: inline-block; margin-top: 22px; font-family: var(--serif); font-size: 20px; color: var(--burgundy); text-decoration: none; border-bottom: 1px solid var(--brass); padding-bottom: 2px; }
+
+  /* ── FOOTER scuro (coerente con le altre pagine) ── */
+  footer.dark { background: #221A14; color: rgba(251,248,241,.66); padding: 84px 40px 40px; border: none; }
+  .fd-top { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; gap: 64px; flex-wrap: wrap; }
+  .fd-brand { max-width: 320px; }
+  .fd-brand .name { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: .04em; color: var(--cream); margin-bottom: 14px; }
+  .fd-desc { font-size: 13px; line-height: 1.72; color: rgba(251,248,241,.58); margin: 0 0 24px; }
+  .fd-cols { display: flex; gap: 64px; }
+  .fd-col h5 { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brass-l); margin: 0 0 18px; }
+  .fd-col ul { list-style: none; margin: 0; padding: 0; }
+  .fd-col li { margin-bottom: 11px; }
+  .fd-col a { font-size: 13.5px; color: rgba(251,248,241,.66); text-decoration: none; transition: color .2s; }
+  .fd-col a:hover { color: var(--cream); }
+  .fd-bottom { max-width: 1080px; margin: 58px auto 0; padding-top: 24px; border-top: 1px solid rgba(251,248,241,.14); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(251,248,241,.45); }
+  .fd-bottom .claim { font-family: var(--serif); font-style: italic; font-size: 14px; color: rgba(251,248,241,.62); }
+
+  @media (max-width: 860px) {
+    .doc-head { padding: 96px 24px 0; }
+    .doc { padding: 48px 24px 96px; }
+    .toc ol { columns: 1; }
+    .fd-top { gap: 44px; }
+    .fd-cols { gap: 44px; flex-wrap: wrap; }
+    .fd-bottom { flex-direction: column; gap: 10px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span>Marienstraße 58 · 32427 Minden</span>
+  <span class="topbar-dot">·</span>
+  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-dot">·</span>
+  <span class="topbar-accent">nach Vereinbarung</span>
+</div>
+
+<nav class="main" aria-label="Hauptnavigation">
+  <a href="/" class="nav-logo">
+    <img src="/img/logo.webp" alt="Rubedo Spa Logo">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">Rubedo Spa</span>
+      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li class="has-drop">
+      <a href="/philosophie/">Philosophie</a>
+      <div class="drop-panel mag">
+        <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+        <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+      </div>
+    </li>
+    <li class="has-drop">
+      <a href="/anwendungen/">Anwendungen</a>
+      <div class="drop-panel">
+        <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+        <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+        <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+        <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+        <span class="drop-div"></span>
+        <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
+      </div>
+    </li>
+    <li class="has-drop">
+      <a href="/magazin/">Magazin</a>
+      <div class="drop-panel mag">
+        <a class="drop-item" href="/magazin/#kat=longevity"><span class="drop-text"><span class="drop-name">Longevity</span><span class="drop-bridge">Biologie, Alter &amp; Prävention</span></span></a>
+        <a class="drop-item" href="/magazin/#kat=haut"><span class="drop-text"><span class="drop-name">Haut &amp; Pflege</span><span class="drop-bridge">Wissen für die Haut</span></span></a>
+        <a class="drop-item" href="/magazin/#kat=ritual"><span class="drop-text"><span class="drop-name">Ritual</span><span class="drop-bridge">Berührung &amp; Körperarbeit</span></span></a>
+        <a class="drop-item" href="/magazin/#kat=inner"><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atem &amp; Stille</span></span></a>
+        <span class="drop-div"></span>
+        <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
+      </div>
+    </li>
+    <li><a href="/monica/">Monica</a></li>
+    <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main">
+
+  <!-- KOPF -->
+  <header class="doc-head">
+    <div class="doc-head-in">
+      <span class="doc-eb">Transparenz</span>
+      <h1 class="doc-title">KI-Bild-Hinweis &amp; Content Credentials</h1>
+      <p class="doc-stand">Stand: Juni 2026</p>
+      <p class="doc-intro">Auf rubedo-spa.de werden Bildinhalte überwiegend mit Hilfe generativer Künstlicher Intelligenz erstellt oder mit KI-gestützten Werkzeugen nachbearbeitet. Wir kennzeichnen das transparent — sichtbar auf jedem Bild und ausführlich auf dieser Seite. Damit erfüllen wir bereits heute die Transparenzpflichten, die ab dem 2. August 2026 europaweit gelten.</p>
+    </div>
+  </header>
+
+  <div class="doc">
+    <div class="doc-in">
+
+      <!-- TOC -->
+      <nav class="toc" aria-label="Auf dieser Seite">
+        <div class="toc-label">Auf dieser Seite</div>
+        <ol>
+          <li><a href="#kennzeichnung">Was bedeutet das „cr"-Pin?</a></li>
+          <li><a href="#warum">Warum wir KI-Bilder einsetzen</a></li>
+          <li><a href="#persona">Die wiederkehrende Klientinnen-Persona</a></li>
+          <li><a href="#location">Hinweis zu den Studio-Fotos</a></li>
+          <li><a href="#audio">Hinweis zu KI-Audio</a></li>
+          <li><a href="#tools">Eingesetzte Werkzeuge</a></li>
+          <li><a href="#rechtsgrundlagen">Rechtsgrundlagen</a></li>
+          <li><a href="#kontakt">Fragen oder Beanstandungen</a></li>
+        </ol>
+      </nav>
+
+      <!-- 1 -->
+      <section class="doc-sec" id="kennzeichnung">
+        <h2>Was bedeutet das „cr"-Pin?</h2>
+        <div class="pin-demo">
+          <span class="pin-chip" aria-hidden="true">cr</span>
+          <p class="pin-cap"><b>Content Credentials.</b> Das kleine kreisförmige Symbol oben rechts auf einem Bild signalisiert: dieses Bild wurde maschinell erzeugt oder substanziell mit KI bearbeitet.</p>
+        </div>
+        <div class="doc-body">
+          <p>Das Symbol mit den Buchstaben <strong>„cr"</strong> ist die offizielle Kennzeichnung der <a href="https://c2pa.org/" target="_blank" rel="noopener">Coalition for Content Provenance and Authenticity (C2PA)</a> — ein industrieweiter Standard, der von Adobe, Microsoft, Google, BBC, Sony, Reuters und weiteren entwickelt wird. Das Pin steht für „Content Credentials" und macht die Herkunft eines Bildes nachvollziehbar.</p>
+          <p>Wir setzen die minimalistische Variante des Pins ein. Beim Bewegen über das Symbol erscheint ein Hinweis; ein Klick führt auf diese Seite mit allen Hintergrund-Informationen.</p>
+        </div>
+      </section>
+
+      <!-- 2 -->
+      <section class="doc-sec" id="warum">
+        <h2>Warum wir KI-Bilder einsetzen</h2>
+        <div class="doc-body">
+          <p>Eine durchgängig stimmige, ruhige Bildwelt ist im Premium- und Longevity-Segment wesentlich für die Wahrnehmung der Marke. Klassische Bildproduktion mit Modell, Set, Studio und Postproduktion ist ressourcenintensiv und reicht selten für die Vielzahl an Bildanlässen, die eine moderne Webseite verlangt. Mit kuratierten KI-Bildern können wir</p>
+          <ul class="doc-list">
+            <li><span class="mk">✱</span><span>eine konsistente, ruhige Bildsprache über alle Seiten hinweg halten,</span></li>
+            <li><span class="mk">✱</span><span>auf vielfältige Ritual- und Anwendungskontexte editorial reagieren,</span></li>
+            <li><span class="mk">✱</span><span>ohne Stockfotografie auskommen, die in fast jedem Wellness-Auftritt identisch wiederkehrt.</span></li>
+          </ul>
+          <p style="margin-top: 22px;">Wir setzen KI <em>bewusst und sparsam</em> ein. Wo eine reale Aufnahme aussagekräftiger ist — etwa das Studio-Gebäude in der Marienstraße — arbeiten wir mit professioneller Architekturfotografie.</p>
+        </div>
+      </section>
+
+      <!-- 3 -->
+      <section class="doc-sec" id="persona">
+        <h2>Die wiederkehrende Klientinnen-Persona</h2>
+        <div class="doc-body">
+          <p>Auf einigen Bildern — darunter das Schlüsselmotiv der Dimension <em>Origo</em> — erscheint eine ruhig portraitierte Klientinnen-Figur. Diese Person ist <strong>fiktiv</strong>. Sie wurde bewusst als KI-generiertes, konsistentes Modell erschaffen, weil das Bild-Konzept eine identifizierbare Stimme braucht — ohne dass eine reale Person dafür Persönlichkeitsrechte abtreten müsste.</p>
+          <p>Die Figur entspricht keiner real existierenden, identifizierbaren Person; etwaige Ähnlichkeiten sind unbeabsichtigt. Falls Ihnen eine Übereinstimmung mit einer realen Person auffällt, schreiben Sie uns bitte an <a href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a> — wir prüfen den Fall und tauschen das betreffende Bild aus.</p>
+        </div>
+      </section>
+
+      <!-- 4 -->
+      <section class="doc-sec" id="location">
+        <h2>Hinweis zu den Studio-Fotos</h2>
+        <div class="doc-body">
+          <p>Die Aufnahmen unseres Hauses in der Marienstraße 58 sind originale Architekturfotografien eines beauftragten Fotografen. Eine dieser Aufnahmen wurde mit KI-Werkzeugen (Bild-Editing-Modus von Google Nanobanana Pro über fal.ai) leicht retuschiert — konkret wurde im Vordergrund eine Briefkasten-Anlage entfernt, um den Bildaussagewert des Hero-Bilds zu schärfen. Auch retuschierte Bilder tragen den „cr"-Pin, weil substanzielle KI-Bearbeitung nach EU AI Act ebenfalls kennzeichnungspflichtig ist. Die übrigen Studio-Fotos sind unbearbeitet.</p>
+        </div>
+      </section>
+
+      <!-- 4b · KI-Audio -->
+      <section class="doc-sec" id="audio">
+        <h2>Hinweis zu KI-Audio</h2>
+        <div class="doc-body">
+          <p>Einzelne Klang-Inhalte — etwa die Hörprobe <em>Spiramen</em> in der Dimension Origo — sind Kompositionen, deren Klang mit generativer KI erzeugt wurde. Konzept, Kuratierung und künstlerische Leitung liegen bei Monica Galletti; Eigentum und Lizenz liegen bei Rubedo Spa. Auch die KI-Beteiligung an Audio kennzeichnen wir transparent.</p>
+        </div>
+      </section>
+
+      <!-- 5 -->
+      <section class="doc-sec" id="tools">
+        <h2>Eingesetzte Werkzeuge</h2>
+        <div class="doc-body">
+          <p>Derzeit verwenden wir folgende KI-Bildwerkzeuge:</p>
+          <ul class="doc-list">
+            <li><span class="mk">✱</span><span><b>Google Nanobanana Pro</b> (Gemini 2.5 Flash Image) — Bildgenerierung mit Identitäts-Referenz und Bild-Editing.</span></li>
+            <li><span class="mk">✱</span><span><b>fal.ai</b> — Plattform für Modellansteuerung, temporäre Outputs und Konvertierung in webfähige Formate.</span></li>
+          </ul>
+          <p style="margin-top: 22px;">Die finalen Bild-Dateien werden lokal im WebP-Format optimiert, bevor sie veröffentlicht werden. Original-Dateien und die zugrunde liegenden Prompts archivieren wir intern, damit die Provenienz auch retrospektiv nachweisbar bleibt.</p>
+        </div>
+      </section>
+
+      <!-- 6 -->
+      <section class="doc-sec" id="rechtsgrundlagen">
+        <h2>Rechtsgrundlagen</h2>
+        <div class="doc-body">
+          <p>Diese Kennzeichnung erfüllt:</p>
+          <ul class="doc-list">
+            <li><span class="mk">✱</span><span><b>EU AI Act, Art. 50 Abs. 2 und 4</b> — Pflicht zur klaren, sichtbaren Kennzeichnung synthetischer oder substanziell KI-bearbeiteter Bildinhalte (verbindlich ab 2. August 2026).</span></li>
+            <li><span class="mk">✱</span><span><b>C2PA Content Credentials Specification 2.0</b> — technischer Standard für die Provenienz-Markierung digitaler Inhalte; das „cr"-Pin ist die offizielle Kennzeichnung.</span></li>
+            <li><span class="mk">✱</span><span><b>UWG / Wettbewerbsrecht</b> — Transparenz über synthetisch erzeugte Bildinhalte schließt irreführende Werbung aus.</span></li>
+            <li><span class="mk">✱</span><span><b>Persönlichkeitsrecht (KUG, GG Art. 2 Abs. 1 i. V. m. Art. 1 Abs. 1)</b> — die fiktive Klientinnen-Persona berührt keine Bildrechte realer Personen.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7 -->
+      <section class="doc-sec doc-contact" id="kontakt">
+        <h2>Fragen oder Beanstandungen</h2>
+        <div class="doc-body">
+          <p>Sie haben Fragen zu einem konkreten Bild, möchten ein Bild beanstanden oder vermuten eine ungewollte Ähnlichkeit mit einer realen Person? Schreiben Sie uns kurz — wir antworten innerhalb von 48 Stunden und nehmen Bilder im Zweifel umgehend vom Netz.</p>
+        </div>
+        <a class="doc-mail" href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a>
+      </section>
+
+    </div>
+  </div>
+
+</main>
+
+<footer class="dark">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Rubedo Spa</div>
+      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-address">
+        Marienstraße 58 · 32427 Minden<br>
+        Mo–Fr 08:00–17:00 Uhr<br>
+        <a href="tel:+4957178343423">+49 571 78343423</a><br>
+        <a href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a>
+      </div>
+      <div class="footer-seek">
+        <button type="button" class="seek-trigger" aria-expanded="false" aria-controls="seek-panel">Cerca&ensp;Trova</button>
+        <div class="seek-panel" id="seek-panel">
+          <a href="#" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.31-1.46.72-2.13 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.31-.79-.72-1.46-1.38-2.13C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1018.16 12 6.16 6.16 0 0012 5.84zM12 16a4 4 0 114-4 4 4 0 01-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg></a>
+          <a href="#" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+          <a href="#" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2 31.5 31.5 0 000 12a31.5 31.5 0 00.5 5.8 3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14A31.5 31.5 0 0024 12a31.5 31.5 0 00-.5-5.8zM9.6 15.57V8.43L15.82 12 9.6 15.57z"/></svg></a>
+          <a href="#" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.07 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.45 9.45 0 01-4.82-1.32l-.35-.2-3.58.94.96-3.49-.23-.36a9.46 9.46 0 01-1.45-5.04c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.42 9.42 0 012.77 6.7c0 5.22-4.25 9.47-9.47 9.47zM20.52 3.49A11.78 11.78 0 0012.04 0C5.46 0 .1 5.35.1 11.93c0 2.1.55 4.16 1.6 5.97L0 24l6.25-1.64a11.9 11.9 0 005.79 1.47h.01c6.58 0 11.93-5.35 11.94-11.93a11.86 11.86 0 00-3.48-8.41z"/></svg></a>
+          <a href="#" aria-label="Pinterest" title="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.08 3.16 9.42 7.62 11.17-.1-.95-.2-2.4.04-3.44.22-.93 1.4-5.95 1.4-5.95s-.36-.72-.36-1.78c0-1.66.97-2.91 2.17-2.91 1.02 0 1.51.77 1.51 1.69 0 1.03-.66 2.57-1 4-.28 1.2.6 2.18 1.79 2.18 2.15 0 3.8-2.27 3.8-5.54 0-2.9-2.08-4.92-5.05-4.92-3.44 0-5.46 2.58-5.46 5.25 0 1.04.4 2.16.9 2.76.1.12.11.23.08.35-.09.38-.3 1.2-.34 1.36-.05.22-.18.27-.41.16-1.5-.7-2.44-2.89-2.44-4.65 0-3.78 2.75-7.26 7.92-7.26 4.16 0 7.39 2.96 7.39 6.92 0 4.13-2.6 7.46-6.22 7.46-1.21 0-2.35-.63-2.74-1.38l-.75 2.84c-.27 1.04-1 2.35-1.49 3.15A12 12 0 1012 0z"/></svg></a>
+          <a href="#" aria-label="Spotify" title="Spotify"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.5 17.31c-.21.35-.67.46-1.02.24-2.81-1.72-6.34-2.1-10.5-1.15-.4.09-.8-.16-.89-.56-.09-.4.16-.8.56-.89 4.56-1.04 8.46-.6 11.61 1.33.35.22.46.68.24 1.03zm1.47-3.27c-.27.44-.85.58-1.29.31-3.21-1.97-8.11-2.55-11.9-1.39-.5.15-1.02-.13-1.17-.62-.15-.5.13-1.02.62-1.17 4.34-1.32 9.73-.68 13.42 1.58.43.27.58.85.31 1.29zm.13-3.41C15.13 8.23 8.6 8.02 5.13 9.08a1.11 1.11 0 11-.64-2.12c3.98-1.21 11.2-.98 15.62 1.65.52.31.69.99.38 1.51-.31.52-.99.69-1.51.38z"/></svg></a>
+          <a href="https://www.linkedin.com/" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.22.79 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+          <a href="https://business.google.com/" aria-label="Google Business" title="Google Business"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.24 10.4v3.34h5.6c-.25 1.45-1.7 4.26-5.6 4.26-3.37 0-6.12-2.79-6.12-6.23s2.75-6.23 6.12-6.23c1.92 0 3.2.82 3.94 1.52l2.69-2.59C17.36 2.7 15.1 1.7 12.24 1.7 6.96 1.7 2.7 5.96 2.7 11.24s4.26 9.54 9.54 9.54c5.51 0 9.16-3.87 9.16-9.32 0-.63-.07-1.11-.16-1.59l-9-.01z"/></svg></a>
+          <a href="mailto:info@rubedo-spa.de?subject=Newsletter%20Rubedo%20Brief" aria-label="Newsletter" title="Newsletter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-10 6L2 8V6l10 6 10-6v2z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Dimensionen</h5>
+      <ul>
+        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Studio</h5>
+      <ul>
+        <li><a href="/philosophie/">Philosophie</a></li>
+        <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
+        <li><a href="/monica/">Monica</a></li>
+        <li><a href="/magazin/">Magazin</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Service</h5>
+      <ul>
+        <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
+        <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
+        <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+        <li><a href="/agb/">AGB</a></li>
+        <li><a href="/ki-bilder/">KI-Bild-Hinweis</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rubedo Spa · Monica Galletti · Minden</span>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>

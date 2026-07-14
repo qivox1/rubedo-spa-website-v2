@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://www.rubedo-spa.de/atem-ring.html">
+    <title>Atem — Spiramen · Rubedo Inner Circle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+  html, body { background: var(--cream); }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; }
+
+  .atem { width: 100%; max-width: 640px; text-align: center; }
+  .atem-eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+  .atem-eb::before, .atem-eb::after { content: ''; width: 34px; height: 1px; background: var(--brass); opacity: .65; }
+  .atem-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 52px); line-height: 1; letter-spacing: -.015em; color: var(--text-1); margin: 0; }
+  .atem-title .latin { font-style: italic; color: var(--burgundy); font-weight: 500; }
+  .atem-sub { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 2.2vw, 19px); color: var(--text-2); margin: 14px 0 0; }
+
+  /* ── selector ── */
+  .atem-patterns { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 40px 0 8px; }
+  .pat { background: transparent; border: 1px solid var(--border-m); border-radius: 2px; padding: 10px 18px 9px; cursor: pointer; color: var(--text-2); font-family: var(--sans); transition: border-color .25s, color .25s, background .25s; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 92px; }
+  .pat:hover { border-color: var(--text-2); color: var(--text-1); }
+  .pat.active { border-color: var(--brass); background: rgba(168,136,74,.07); color: var(--text-1); }
+  .pat-name { font-family: var(--serif); font-size: 17px; line-height: 1; }
+  .pat-rhythm { font-size: 10px; letter-spacing: .14em; color: var(--brass); font-variant-numeric: tabular-nums; }
+
+  /* ── stage ── */
+  .stage { position: relative; width: min(320px, 78vw); aspect-ratio: 1; margin: 44px auto 0; display: grid; place-items: center; cursor: pointer; }
+  .stage svg { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); pointer-events: none; }
+  .ring-track { fill: none; stroke: rgba(168,136,74,.16); stroke-width: 1; }
+  .ring-arc   { fill: none; stroke: var(--brass); stroke-width: 1.5; stroke-linecap: round; }
+
+  .orb { width: 78%; height: 78%; border-radius: 50%;
+    background: radial-gradient(circle at 50% 42%, rgba(168,136,74,.22), rgba(168,136,74,.07) 62%, rgba(168,136,74,0) 78%);
+    border: 1px solid rgba(168,136,74,.45);
+    transform: scale(.34); transition: transform 4s cubic-bezier(.42,0,.58,1);
+    will-change: transform; pointer-events: none; }
+
+  .stage-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; pointer-events: none; }
+  .phase-label { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--brass); min-height: 14px; opacity: 0; transition: opacity .4s; }
+  .phase-count { font-family: var(--serif); font-size: clamp(46px, 11vw, 64px); line-height: 1; color: var(--text-1); font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .4s; }
+  .stage-hint  { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--text-3); transition: opacity .4s; }
+
+  .atem.running .phase-label, .atem.running .phase-count { opacity: 1; }
+  .atem.running .stage-hint { opacity: 0; }
+
+  .atem-foot { margin-top: 40px; font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); }
+  .atem-foot .dot { color: var(--brass); margin: 0 8px; }
+  .atem-back { display: inline-block; margin-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--text-3); text-decoration: none; transition: color .25s; }
+  .atem-back:hover { color: var(--burgundy); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .orb { transition: none !important; }
+    .ring-arc { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="atem" id="atem">
+    <span class="atem-eb">Origo · Atem</span>
+    <h1 class="atem-title"><span class="latin">Spiramen</span></h1>
+    <p class="atem-sub">Ein Rhythmus zum Mitatmen. Folgen Sie dem Ring.</p>
+
+    <div class="atem-patterns" id="patterns"></div>
+
+    <div class="stage" id="stage" role="button" tabindex="0" aria-label="Atem starten oder pausieren">
+      <svg viewBox="0 0 320 320">
+        <circle class="ring-track" cx="160" cy="160" r="150"></circle>
+        <circle class="ring-arc"   cx="160" cy="160" r="150" id="arc"></circle>
+      </svg>
+      <div class="orb" id="orb"></div>
+      <div class="stage-center">
+        <span class="phase-label" id="phaseLabel"></span>
+        <span class="phase-count" id="phaseCount"></span>
+        <span class="stage-hint" id="hint">Beginnen</span>
+      </div>
+    </div>
+
+    <p class="atem-foot"><span id="footRhythm">Kohärent · 4 · 4</span><span class="dot">·</span><span id="footCycles">0 Atemzüge</span></p>
+    <a class="atem-back" href="/atem-loslassen/">Loslassen · 3 · 6 · 9 →</a>
+  </div>
+
+<script>
+(function(){
+  var PATTERNS = {
+    kohaerent: { name: 'Kohärent', rhythm: '4 · 4',         phases: [ {l:'Einatmen',d:4,s:1}, {l:'Ausatmen',d:4,s:0} ] },
+    box:       { name: 'Quadrat',  rhythm: '4 · 4 · 4 · 4',  phases: [ {l:'Einatmen',d:4,s:1}, {l:'Halten',d:4,s:1}, {l:'Ausatmen',d:4,s:0}, {l:'Halten',d:4,s:0} ] },
+    ruhe:      { name: 'Ruhe',     rhythm: '4 · 7 · 8',      phases: [ {l:'Einatmen',d:4,s:1}, {l:'Halten',d:7,s:1}, {l:'Ausatmen',d:8,s:0} ] },
+    tief:      { name: 'Tief',     rhythm: '6 · 6',          phases: [ {l:'Einatmen',d:6,s:1}, {l:'Ausatmen',d:6,s:0} ] }
+  };
+  var ORDER = ['kohaerent','box','ruhe','tief'];
+  var MIN = 0.34, MAX = 1.0;
+
+  var atem = document.getElementById('atem');
+  var orb = document.getElementById('orb');
+  var arc = document.getElementById('arc');
+  var phaseLabel = document.getElementById('phaseLabel');
+  var phaseCount = document.getElementById('phaseCount');
+  var footRhythm = document.getElementById('footRhythm');
+  var footCycles = document.getElementById('footCycles');
+  var stage = document.getElementById('stage');
+  var patternsEl = document.getElementById('patterns');
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var CIRC = 2 * Math.PI * 150;
+  arc.style.strokeDasharray = CIRC;
+  arc.style.strokeDashoffset = CIRC; // empty
+
+  var current = 'kohaerent';
+  var running = false;
+  var pi = 0;            // phase index
+  var phaseTimer = null;
+  var countRAF = null;
+  var cycles = 0;
+  var orbAnim = null, arcAnim = null;
+  var lastScale = MIN;
+
+  // build selector
+  ORDER.forEach(function(key){
+    var p = PATTERNS[key];
+    var b = document.createElement('button');
+    b.className = 'pat' + (key === current ? ' active' : '');
+    b.dataset.key = key;
+    b.innerHTML = '<span class="pat-name">' + p.name + '</span><span class="pat-rhythm">' + p.rhythm + '</span>';
+    b.addEventListener('click', function(){ selectPattern(key); });
+    patternsEl.appendChild(b);
+  });
+
+  function selectPattern(key){
+    current = key;
+    document.querySelectorAll('.pat').forEach(function(el){ el.classList.toggle('active', el.dataset.key === key); });
+    footRhythm.textContent = PATTERNS[key].name + ' · ' + PATTERNS[key].rhythm;
+    if (running) { stop(); start(); } else { resetVisual(); }
+  }
+
+  function resetVisual(){
+    cycles = 0; footCycles.textContent = '0 Atemzüge';
+    if (orbAnim) { orbAnim.cancel(); orbAnim = null; }
+    if (arcAnim) { arcAnim.cancel(); arcAnim = null; }
+    lastScale = MIN;
+    orb.style.transform = 'scale(' + MIN + ')';
+    arc.style.strokeDashoffset = CIRC;
+  }
+
+  function runPhase(){
+    var ph = PATTERNS[current].phases[pi];
+    var dur = ph.d;
+    phaseLabel.textContent = ph.l;
+    var targetScale = MIN + ph.s * (MAX - MIN);
+
+    if (orbAnim) orbAnim.cancel();
+    if (arcAnim) arcAnim.cancel();
+    orb.style.transform = 'scale(' + lastScale + ')';
+
+    if (reduce) {
+      orb.style.transform = 'scale(' + targetScale + ')';
+      arc.style.strokeDashoffset = 0;
+    } else {
+      orbAnim = orb.animate(
+        [ { transform: 'scale(' + lastScale + ')' }, { transform: 'scale(' + targetScale + ')' } ],
+        { duration: dur * 1000, easing: 'cubic-bezier(.42,0,.58,1)', fill: 'forwards' }
+      );
+      arcAnim = arc.animate(
+        [ { strokeDashoffset: CIRC }, { strokeDashoffset: 0 } ],
+        { duration: dur * 1000, easing: 'linear', fill: 'forwards' }
+      );
+    }
+    lastScale = targetScale;
+
+    // countdown number
+    var end = performance.now() + dur * 1000;
+    function tick(){
+      var rem = Math.max(0, (end - performance.now()) / 1000);
+      phaseCount.textContent = Math.ceil(rem);
+      if (rem > 0 && running) countRAF = requestAnimationFrame(tick);
+    }
+    if (countRAF) cancelAnimationFrame(countRAF);
+    tick();
+
+    phaseTimer = setTimeout(function(){
+      pi++;
+      if (pi >= PATTERNS[current].phases.length) { pi = 0; cycles++; footCycles.textContent = cycles + (cycles === 1 ? ' Atemzug' : ' Atemzüge'); }
+      if (running) runPhase();
+    }, dur * 1000);
+  }
+
+  function start(){
+    running = true;
+    atem.classList.add('running');
+    pi = 0;
+    runPhase();
+  }
+  function stop(){
+    running = false;
+    atem.classList.remove('running');
+    if (phaseTimer) clearTimeout(phaseTimer);
+    if (countRAF) cancelAnimationFrame(countRAF);
+    resetVisual();
+  }
+  function toggle(){ if (running) stop(); else start(); }
+
+  stage.addEventListener('click', toggle);
+  stage.addEventListener('keydown', function(e){ if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+
+  resetVisual();
+})();
+</script>
+</body>
+</html>
