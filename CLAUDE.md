@@ -19,7 +19,7 @@ Monicas Seiten sind statisches HTML und werden **1:1 unverändert** ausgeliefert
   `set:html` unverändert ausgeben. **Inhaltliche Änderungen IMMER in `src/monica/*.html`
   machen, nie in den .astro-Dateien.**
 - `public/` — Monicas Assets (`img/`, `audio/`, `styles.css`, `system.css`, `app.js`,
-  `llms.txt`) + `robots.txt` (Disallow all) + `_headers` (CSP erlaubt Google Fonts + unpkg).
+  `llms.txt`) + `robots.txt` (Disallow all) + `_headers` (CSP erlaubt Google Fonts; unpkg/unsafe-eval seit 2026-07-14 entfernt). Zusätzlich: `src/monica/404.html` (404-Seite, nicht von Monica — Markenlook-Ergänzung) und Favicon aus Monicas `logo-hires.png`.
 
 **Nicht übernommen** (Monicas eigene Publikations-Plancia, „nie öffentlich"): alle `_*.html`
 Arbeitsdokumente, Audits, Preis-Master, Backups, `sitemap.html`, Design-System- und
