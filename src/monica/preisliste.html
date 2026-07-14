@@ -94,6 +94,16 @@
     .pl-cta-inner { border-color: #ccc; }
   }
 </style>
+<style>
+/* ── cr-Pin · sichtbarer Einheits-Standard (EU AI Act Art. 50, Stand 2026-07-14) ──
+   Ersetzt die tonalisierte Mini-Variante (15px/7px, fast transparent) durch eine
+   dezente, aber kontrastsichere Ausführung: 22px, dunkler Glas-Kreis, helle
+   Schrift — lesbar auf hellen wie dunklen Motiven. Hover verstärkt. Position
+   bleibt je Seite erhalten. */
+[aria-label^="KI-Hinweis"]{width:22px!important;height:22px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;border-radius:50%!important;font-family:'DM Sans',system-ui,sans-serif!important;font-size:9px!important;font-weight:600!important;line-height:1!important;letter-spacing:.02em!important;text-decoration:none!important;color:rgba(251,248,241,.95)!important;background:rgba(24,18,14,.45)!important;border:1px solid rgba(251,248,241,.55)!important;backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);z-index:5;}
+[aria-label^="KI-Hinweis"]:hover{color:#FBF8F1!important;background:rgba(24,18,14,.72)!important;border-color:#FBF8F1!important;}
+.cr-std{position:absolute;left:10px;bottom:10px;}
+</style>
 </head>
 <body>
 
