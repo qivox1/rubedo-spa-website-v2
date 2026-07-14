@@ -350,3 +350,11 @@ footer { background: var(--cream-dark); border-top: .5px solid var(--border); pa
   footer { padding: 48px 20px 28px; }
   .saeulen-philo { grid-template-columns: 1fr; }
 }
+
+/* ── FIX 2026-07-14 (v2-Portierung) ──────────────────────────────
+   .nav-cta wurde von ».nav-links a { padding-bottom: 2px }« per
+   Spezifität überstimmt und blieb display:inline → der Button wirkte
+   vertikal abgeschnitten (10px oben, 2px unten) und ragte je nach
+   Seite in die Topbar. Chirurgischer Fix, Optik wie von der Regel
+   .nav-cta (Zeile 87) vorgesehen: */
+.nav-links a.nav-cta { display: inline-flex; align-items: center; padding: 10px 22px; }
