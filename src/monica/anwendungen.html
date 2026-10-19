@@ -6,6 +6,9 @@
 <meta name="description" content="Anwendungen im Rubedo Spa Minden: Cutis (Hautpflege & Gesichtsbehandlung), Vigor (Kryotherapie bis −196 °C), Corpus (Massage) und Origo (Atemarbeit). Personalisiert, präventiv, langfristig.">
 <meta property="og:title" content="Anwendungen — Rubedo Spa Minden">
 <meta property="og:description" content="Vier Säulen: Hautpflege, Kryotherapie, Massage und Atemarbeit in Minden. Jede Anwendung beginnt mit einem Gespräch.">
+<meta property="og:image" content="https://www.rubedo-spa.de/img/quattuor-vier-dimensionen.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.rubedo-spa.de/img/quattuor-vier-dimensionen.webp">
 <meta property="og:locale" content="de_DE">
 <link rel="canonical" href="https://www.rubedo-spa.de/anwendungen.html">
     <title>Anwendungen — Hautpflege, Kryotherapie, Massage & Atemarbeit | Rubedo Spa Minden</title>
@@ -18,44 +21,53 @@
   "@type": "HealthAndBeautyBusiness",
   "name": "Rubedo Spa",
   "address": { "@type": "PostalAddress", "streetAddress": "Marienstraße 58", "postalCode": "32427", "addressLocality": "Minden", "addressCountry": "DE" },
+  "areaServed": [
+    { "@type": "City", "name": "Minden" },
+    { "@type": "City", "name": "Porta Westfalica" },
+    { "@type": "City", "name": "Bad Oeynhausen" },
+    { "@type": "City", "name": "Bückeburg" },
+    { "@type": "City", "name": "Lübbecke" },
+    { "@type": "City", "name": "Petershagen" },
+    { "@type": "City", "name": "Hille" }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Anwendungen",
     "itemListElement": [
-      { "@type": "Service", "name": "Cutis — Hautpflege & Gesichtsbehandlung", "serviceType": "Gesichtsbehandlung, Hautanalyse" },
-      { "@type": "Service", "name": "Vigor — Kryotherapie & Aktivierung", "serviceType": "Kryotherapie" },
-      { "@type": "Service", "name": "Corpus — Massage & rituelle Körperarbeit", "serviceType": "Massage" },
-      { "@type": "Service", "name": "Origo — Atemarbeit & geführte Tiefenentspannung", "serviceType": "Atemarbeit, Entspannung" }
+      { "@type": "Service", "name": "Cutis — Genombasierte Hautpflege & Gesichtsbehandlung", "serviceType": "Genombasierte Hautpflege, DNA-Hautanalyse, Gesichtsbehandlung" },
+      { "@type": "Service", "name": "Vigor — Kryotherapie & Kryo-Facial", "serviceType": "Ganzkörper-Kryotherapie, Kryo-Facial, Presso-Kompressionsmassage" },
+      { "@type": "Service", "name": "Corpus — Massage & rituelle Körperarbeit", "serviceType": "Massage, Raindrop-Aroma-Ritual, rituelle Körperarbeit" },
+      { "@type": "Service", "name": "Origo — Atemarbeit & geführte Tiefenentspannung", "serviceType": "Atemarbeit, geführte Entspannung, Ritual" }
     ]
   }
 }
 </script>
 <style>
-  /* ── SYSTEM v2 reskin · crema unica · eyebrow ottone · un solo cremisi (Rubedo Sequenz) ── */
-  .eyebrow-rule { color: var(--brass); border-bottom-color: rgba(168,136,74,.5); }
+  /* ── SYSTEM v2 reskin · crema unica · eyebrow ottone · un solo cremisi ── */
+  .eyebrow-rule { color:var(--gold); border-bottom-color: rgba(168,136,74,.5); }
 
-  .page-hero { padding: 80px 40px 56px; }
+  .page-hero { padding: 80px 40px 32px; }
   .motto { display: block; margin-bottom: 18px; }
-  .motto-latin { font-family: var(--serif); font-style: italic; font-size: 13px; letter-spacing: .26em; text-transform: uppercase; color: var(--brass); }
-  .motto-bridge { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-3); margin-left: 10px; }
+  .motto-latin { font-family: var(--serif); font-style: italic; font-size: 14px; letter-spacing: .26em; text-transform: uppercase; color:var(--gold); }
+  .motto-bridge { font-family: var(--serif); font-style: italic; font-size: 14px; color:var(--text-2); margin-left: 10px; }
   .motto-grand { display: block; margin-bottom: 24px; }
-  .motto-grand .mg-latin { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -.01em; color: var(--burgundy); }
-  .motto-grand .mg-bridge { display: block; font-family: var(--serif); font-style: italic; font-size: 15px; letter-spacing: .06em; color: var(--text-3); margin-top: 10px; }
+  .motto-grand .mg-latin { display: block; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(32px, 4.2vw, 50px); line-height: 1.02; letter-spacing: -.01em; color: var(--burgundy); }
+  .motto-grand .mg-bridge { display: block; font-family: var(--serif); font-style: italic; font-size: 18px; letter-spacing: .06em; color:var(--text-2); margin-top: 10px; }
   .pillar-kicker .motto-latin { font-size: 11px; letter-spacing: .2em; }
-  .page-hero-inner { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: end; }
-  .page-hero .eyebrow { margin-bottom: 20px; }
+  .page-hero-inner { max-width: var(--maxw); margin: 0 auto; display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+  .page-hero .eyebrow { margin-top: 44px; margin-bottom: 20px; }
   .page-hero h1 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(40px, 5.5vw, 64px); line-height: 1.08; letter-spacing: -.01em; margin-bottom: 18px; }
   .page-hero h1 .art { font-style: normal; font-weight: 500; }
   .page-hero-lead { font-family: var(--serif); font-size: 20px; font-weight: 300; color: var(--text-2); line-height: 1.5; }
 
   /* pillar index with bridges */
   .pillar-index { display: flex; flex-direction: column; gap: 0; }
-  .pillar-index .pi-note { font-size: 11px; color: var(--text-3); letter-spacing: .04em; padding-top: 13px; }
-  .pillar-index a { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; padding: 17px 0; border-bottom: .5px solid var(--border); text-decoration: none; color: var(--text-1); transition: color .2s; }
+  .pillar-index .pi-note { font-size:14px; color:var(--text-2); letter-spacing: .04em; padding-top: 13px; }
+  .pillar-index a { display: grid; grid-template-columns: 1fr auto; gap: 5px 12px; padding: 12px 0; text-decoration: none; color: var(--text-1); transition: color .2s; }
   .pillar-index a:hover { color: var(--burgundy); }
   .pillar-index .pi-name { font-family: var(--serif); font-size: 26px; }
-  .pillar-index .pi-num { font-size: 12px; color: var(--brass); letter-spacing: .12em; align-self: center; }
-  .pillar-index .pi-bridge { grid-column: 1 / -1; font-size: 13.5px; color: var(--text-3); letter-spacing: .01em; }
+  .pillar-index .pi-num { font-size:14px; color: var(--brass); letter-spacing: .12em; align-self: center; }
+  .pillar-index .pi-bridge { grid-column: 1 / -1; font-size: 14.5px; color:var(--text-2); letter-spacing: .01em; }
 
   /* PILLAR BLOCK */
   .pillar { padding: 88px 40px; scroll-margin-top: 80px; }
@@ -69,22 +81,22 @@
   .cr-pin { width:13px; height:13px; font-size:6px; opacity:.45; transition: opacity .25s, color .25s, border-color .25s; }
   .cr-pin:hover { opacity:1; }
   .cr-pin.cr-right { left: auto; right: 8px; }
-  .pillar-essence { font-size: 11px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; }
+  .pillar-essence { font-size:14px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color:var(--gold); margin-bottom: 14px; }
   .pillar-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.04; letter-spacing: -.01em; margin-bottom: 12px; }
-  .pillar-bridge { font-size: 16px; color: var(--text-2); line-height: 1.5; margin-bottom: 20px; display: flex; align-items: baseline; gap: 11px; max-width: 460px; }
+  .pillar-bridge { font-size: 17px; color: var(--text-2); line-height: 1.5; margin-bottom: 20px; display: flex; align-items: baseline; gap: 11px; max-width: 460px; }
   .pillar-bridge::before { content: ''; flex-shrink: 0; width: 22px; height: 1px; background: var(--brass); transform: translateY(-5px); }
-  .pillar-head p.pillar-desc { font-size: 15px; line-height: 1.8; color: var(--text-2); max-width: 480px; }
+  .pillar-head p.pillar-desc { font-size: 16.5px; line-height: 1.75; color: var(--text-2); max-width: 480px; }
 
   /* TREATMENT LIST — line-light, editorial spacing */
   .treat-list { }
-  .treat { display: grid; grid-template-columns: 1.3fr 1.7fr 150px; gap: 36px; padding: 34px 0; align-items: baseline; }
+  .treat { display: grid; grid-template-columns: 1.3fr 1.7fr 196px; gap: 36px; padding: 34px 0; align-items: baseline; }
   .treat-name { font-family: var(--serif); font-size: 23px; font-weight: 400; color: var(--text-1); }
-  .treat-name .tag { display: inline-block; font-family: var(--sans); font-size: 9.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--brass); border: .5px solid rgba(168,136,74,.4); padding: 2px 7px; border-radius: 1px; margin-left: 10px; vertical-align: middle; }
-  .treat-meta { font-size: 12px; color: var(--text-3); margin-top: 4px; letter-spacing: .03em; }
-  .treat-desc { font-size: 14px; color: var(--text-2); line-height: 1.7; }
+  .treat-name .tag { display: inline-block; font-family: var(--sans); font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color:var(--gold); border: .5px solid rgba(168,136,74,.4); padding: 2px 7px; border-radius: 1px; margin-left: 10px; vertical-align: middle; }
+  .treat-meta { font-size: 14px; color: var(--text-2); margin-top: 4px; letter-spacing: .03em; }
+  .treat-desc { font-size: 15.5px; color: var(--text-2); line-height: 1.7; }
   .treat-desc .term-latin { font-family: var(--serif); font-style: italic; color: var(--burgundy); font-weight: 500; }
   .dna-mods { display: flex; flex-direction: column; gap: 6px; margin-top: 12px; }
-  .dna-mods span { font-size: 13px; color: var(--text-2); line-height: 1.5; padding-left: 16px; position: relative; }
+  .dna-mods span { font-size: 14px; color: var(--text-2); line-height: 1.5; padding-left: 16px; position: relative; }
   .dna-mods span::before { content: ''; position: absolute; left: 0; top: 9px; width: 7px; height: 1px; background: var(--brass); }
   .dna-mods b { font-style: normal; }
   .dna-mods--faces { gap: 13px; }
@@ -93,31 +105,37 @@
   .dna-mods--faces span.dna-sub::before { width: 5px; opacity: .55; }
   .dna-mods--faces span.dna-head { padding-left: 0; }
   .dna-mods--faces span.dna-head::before { display: none; }
-  .ritual-close { display: block; margin-top: 16px; font-size: 12.5px; line-height: 1.6; color: var(--text-3); font-style: italic; }
-  .dna-note { display: block; margin-top: 14px; font-size: 11px; color: var(--text-3); line-height: 1.55; font-style: italic; border-left: 1.5px solid var(--border-m); padding-left: 11px; }
+  .ritual-close { display: block; margin-top: 16px; font-size: 14px; line-height: 1.6; color:var(--text-2); font-style: italic; }
+  .dna-note { display: block; margin-top: 14px; font-size:14px; color:var(--text-2); line-height: 1.55; font-style: italic; border-left: 1.5px solid var(--border-m); padding-left: 11px; }
   /* Transparenz — a scomparsa, senza cornice (filetto rimosso · occhiello + spazio) */
-  .treat-transparenz { margin-top: 40px; }
-  .treat-transparenz > summary.tt-k { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 9.5px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--brass); }
+  .treat-transparenz { margin-top: 14px; }
+  .treat-transparenz > summary.tt-k { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color:var(--gold); }
   .treat-transparenz > summary.tt-k::-webkit-details-marker { display: none; }
-  .treat-transparenz > summary.tt-k::after { content: "+"; font-size: 12px; line-height: 1; opacity: .7; }
+  .treat-transparenz > summary.tt-k::after { content: "+"; font-size:14px; line-height: 1; opacity: .7; }
   .treat-transparenz[open] > summary.tt-k::after { content: "\2013"; }
   .treat-transparenz > summary.tt-k:hover { opacity: .78; }
-  .treat-transparenz .tt-body { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 64px; margin-top: 18px; }
-  .treat-transparenz p { font-size: 12.5px; line-height: 1.72; color: var(--text-2); font-style: italic; margin: 0; }
+  .treat-transparenz .tt-body { display: block; margin-top: 12px; border-left: 1.5px solid rgba(168,136,74,.3); padding-left: 14px; }
+  .treat-transparenz p { font-size: 14px; line-height: 1.7; color: var(--text-2); font-style: italic; margin: 0 0 8px; }
+  .treat-transparenz p:last-child { margin-bottom: 0; }
+  .treat-transparenz .tt-more { font-family: var(--sans); font-style: normal; font-size:14px; letter-spacing: .06em; color:var(--gold); text-decoration: none; }
+  .treat-transparenz .tt-more:hover { color: var(--burgundy); }
+  .treat-transparenz > summary.tt-k::after { content: "+"; font-size:14px; opacity: .7; }
+  .treat-transparenz[open] > summary.tt-k::after { content: "\2013"; }
   @media (max-width: 720px) { .treat-transparenz .tt-body { grid-template-columns: 1fr; gap: 14px; } }
   .treat-group { display: flex; align-items: baseline; gap: 14px; padding: 48px 0 6px; margin-top: 8px; }
   .treat-group:first-child { padding-top: 16px; margin-top: 0; border-top: none; }
-  .treat-group .tg-k { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
+  .treat-group .tg-k { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color:var(--gold); white-space: nowrap; }
   .treat-group .tg-line { flex: 1; height: .5px; background: var(--border-m); align-self: center; }
-  .treat-group .tg-note { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--text-3); white-space: nowrap; }
+  .treat-group .tg-note { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--text-2); white-space: nowrap; }
   .treat-price { font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--burgundy); white-space: nowrap; text-align: right; }
-  .treat-price small { display: block; font-family: var(--sans); font-size: 10.5px; color: var(--text-3); letter-spacing: .04em; margin-top: 2px; white-space: normal; }
+  .treat-price small { display: block; font-family: var(--sans); font-size:14px; color: var(--text-2); letter-spacing: .04em; margin-top: 2px; white-space: normal; }
   /* Ergänzungen · archiviate 2026-07-08 (vedi _archiv-sezioni.html) */
   #cutis .pillar-cta { margin-top: 30px; }
   /* Vigor · tre Welten */
-  #vigor .treat-group .tg-note { white-space: normal; max-width: 380px; text-align: right; line-height: 1.4; }
+  #vigor .treat-group .tg-note, #cutis .treat-group .tg-note { white-space: normal; max-width: 400px; text-align: right; line-height: 1.45; }
+  .treat-group .tg-note { font-size: 15px; color: var(--text-2); }
   .vigor-nachklang { max-width: 620px; margin: 18px 0 0; }
-  .vigor-nachklang .nk-k { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--brass); margin-bottom: 10px; }
+  .vigor-nachklang .nk-k { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color:var(--gold); margin-bottom: 10px; }
   .vigor-nachklang p { font-family: var(--serif); font-weight: 300; font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0; }
 
   .pillar-cta { margin-top: 40px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
@@ -126,20 +144,23 @@
   .seq { background: var(--burgundy); color: var(--cream); border-radius: 2px; padding: 40px 44px; margin-top: 40px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
   .seq .lockup-essence { color: var(--brass-l); margin-bottom: 12px; }
   .seq h3 { font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--cream); margin-bottom: 6px; line-height: 1.1; }
-  .seq .seq-bridge { font-size: 13.5px; color: rgba(251,248,241,.7); margin-bottom: 16px; }
+  .seq .seq-bridge { font-size: 14.5px; color: rgba(251,248,241,.7); margin-bottom: 16px; }
   .seq p { font-size: 14.5px; color: rgba(251,248,241,.74); line-height: 1.75; }
   .seq-steps { display: flex; flex-direction: column; gap: 10px; }
   .seq-step { display: flex; gap: 14px; align-items: baseline; padding: 10px 0; border-bottom: .5px solid rgba(251,248,241,.16); }
   .seq-step:last-child { border-bottom: none; }
   .seq-step .n { font-family: var(--serif); color: var(--brass-l); font-size: 15px; width: 22px; flex-shrink: 0; }
-  .seq-step .t { font-size: 13.5px; color: rgba(251,248,241,.9); }
+  .seq-step .t { font-size: 14.5px; color: rgba(251,248,241,.9); }
   .seq-step .t b { color: var(--cream); font-weight: 500; }
 
   .cta-band { background: var(--cream); padding: 88px 40px; text-align: center; }
   .cta-band .eyebrow { margin-bottom: 18px; }
   .cta-band h2 { font-family: var(--serif); font-size: clamp(30px, 4vw, 50px); font-weight: 400; line-height: 1.12; margin-bottom: 10px; }
-  .cta-band .cta-bridge { font-size: 14px; color: var(--text-3); margin-bottom: 26px; }
+  .cta-band .cta-bridge { font-size: 14px; color:var(--text-2); margin-bottom: 26px; }
   .cta-band p { font-size: 16px; color: var(--text-2); max-width: 460px; margin: 0 auto 34px; line-height: 1.7; }
+  .cta-band .cta-verschenken { font-size: 14.5px; color:var(--text-2); margin-top: 28px; }
+  .cta-band .cta-verschenken a { color: var(--brass); text-decoration: none; border-bottom: .5px solid rgba(168,136,74,.4); padding-bottom: 1px; transition: color .2s, border-color .2s; }
+  .cta-band .cta-verschenken a:hover { color: var(--burgundy); border-bottom-color: var(--burgundy); }
 
 
   @media (max-width: 900px) {
@@ -156,6 +177,56 @@
     .cta-band { padding: 60px 20px; }
     .treat-price { font-size: 21px; }
   }
+
+  /* BROSCHÜRE FORM */
+  .br-section{max-width:660px;margin:64px auto 0;padding:0 40px;}
+  .br-card{background:#fff;border:.5px solid var(--border-m,rgba(28,23,18,.18));border-radius:3px;padding:44px 46px;}
+  .br-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.18em;color:var(--brass,#A8884A);font-weight:500;margin-bottom:14px;}
+  .br-h{font-family:var(--serif,'Cormorant Garamond',serif);font-weight:400;font-size:28px;line-height:1.15;margin-bottom:10px;color:var(--text-1,#1C1712);}
+  .br-lead{font-size:14.5px;color:var(--text-2,#5C5347);line-height:1.65;margin-bottom:26px;}
+  .br-row{display:flex;gap:14px;flex-wrap:wrap;}
+  .br-field{flex:1;min-width:180px;display:flex;flex-direction:column;gap:7px;margin-bottom:16px;}
+  .br-field label{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3,#9A8E82);font-weight:500;}
+  .br-field label .opt{text-transform:none;letter-spacing:0;}
+  .br-field input{background:var(--cream,#FBF8F1);border:.5px solid var(--border-m,rgba(28,23,18,.18));border-radius:2px;padding:12px 14px;font-family:inherit;font-size:14px;color:var(--text-1,#1C1712);}
+  .br-field input:focus{outline:none;border-color:var(--burgundy,#6B1E2A);}
+  .br-hint{font-size:14px;color:var(--text-3,#9A8E82);font-style:italic;margin:-8px 0 16px;}
+  .br-themes{margin:6px 0 22px;}
+  .br-tlabel{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3,#9A8E82);font-weight:500;margin-bottom:12px;display:block;}
+  .br-chips{display:flex;gap:10px;flex-wrap:wrap;}
+  .br-chip input{position:absolute;opacity:0;width:0;height:0;}
+  .br-chip label{display:inline-block;border:.5px solid var(--border-m,rgba(28,23,18,.18));border-radius:999px;padding:8px 16px;font-size:14px;font-family:var(--serif,serif);color:var(--text-2,#5C5347);cursor:pointer;transition:all .2s;}
+  .br-chip input:checked + label{border-color:var(--brass,#A8884A);background:rgba(168,136,74,.09);color:var(--burgundy,#6B1E2A);}
+  .br-consent{display:flex;gap:10px;align-items:flex-start;margin-bottom:14px;}
+  .br-consent input{margin-top:3px;accent-color:var(--burgundy,#6B1E2A);flex-shrink:0;}
+  .br-consent label{font-size:14px;color:var(--text-3,#9A8E82);line-height:1.55;}
+  .br-consent a{color:var(--burgundy,#6B1E2A);}
+  .br-btn{margin-top:10px;background:var(--burgundy,#6B1E2A);color:var(--cream,#FBF8F1);border:none;border-radius:2px;padding:14px 30px;font-size:14.5px;font-weight:500;letter-spacing:.04em;cursor:pointer;}
+  .br-btn:hover{background:var(--burgundy-l,#8B2F3E);}
+  .br-done{display:none;text-align:center;padding:14px 0;}
+  .br-done.show{display:block;}
+
+  .br-section{margin:64px auto 84px;}
+  .br-acc{border-top:.5px solid var(--border-m,rgba(28,23,18,.18));border-bottom:.5px solid var(--border-m,rgba(28,23,18,.18));}
+  .br-summary{cursor:pointer;list-style:none;padding:26px 2px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-family:var(--serif,'Cormorant Garamond',serif);font-size:23px;font-weight:400;color:var(--text-1,#1C1712);transition:color .2s;}
+  .br-summary::-webkit-details-marker{display:none;}
+  .br-summary::after{content:'+';color:var(--brass,#A8884A);font-size:26px;font-weight:300;line-height:1;}
+  .br-acc[open] .br-summary::after{content:'\2013';}
+  .br-summary:hover{color:var(--burgundy,#6B1E2A);}
+  .br-acc .br-card{border:none;border-radius:0;padding:6px 2px 40px;}
+
+  .treat-go{display:block;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.01em;color:var(--gold);text-decoration:none;transition:color .2s;}
+  .treat-go:hover{color:var(--burgundy);}
+  @media (hover:none){.treat-go{color:var(--burgundy);}}
+  .treat-more{color:var(--brass);text-decoration:none;transition:color .2s;white-space:nowrap;}
+  .treat-more:hover{color:var(--burgundy);}
+  .pillar-rahmen{display:inline-block;margin-top:18px;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--gold);text-decoration:none;border-bottom:.5px solid rgba(168,136,74,.28);padding-bottom:2px;transition:color .2s,border-color .2s;}
+  .pillar-rahmen:hover{color:var(--burgundy);border-color:rgba(107,30,42,.4);}
+  .treat-rahmen{display:inline-block;margin-top:10px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--gold);text-decoration:none;transition:color .2s;}
+  .treat-rahmen:hover{color:var(--burgundy);}
+  .treat-warum{display:block;margin:10px 0 0;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;color:var(--text-2);}
+  .treat-desc .treat-claim{grid-column:auto;margin:14px 0 0;font-size:14.5px;max-width:none;}
+  .treat-claim{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-weight:300;font-size:15.5px;line-height:1.6;color:var(--text-2);max-width:60ch;margin:-10px 0 6px;padding-left:14px;border-left:1px solid rgba(168,136,74,.35);}
 </style>
 <style id="rb-tweak-overrides">
   :root {
@@ -166,7 +237,7 @@
     --rb-accent: var(--brass);
   }
   /* Ruhe · atmosphärische Weite */
-  .page-hero { padding: calc(80px * var(--rb-air)) 40px calc(56px * var(--rb-air)); }
+  .page-hero { padding: calc(80px * var(--rb-air)) 40px calc(32px * var(--rb-air)); }
   .pillar { padding: calc(88px * var(--rb-air)) 40px; }
   .pillar-head { margin-bottom: calc(52px * var(--rb-air)); }
   .treat { padding: calc(34px * var(--rb-air)) 0; }
@@ -174,7 +245,7 @@
   /* Haltung · typografische Präsenz */
   .page-hero h1 { font-size: calc(clamp(40px, 5.5vw, 64px) * var(--rb-type)); letter-spacing: var(--rb-h-track); }
   .pillar-head h2 { font-size: calc(clamp(34px, 4.6vw, 56px) * var(--rb-type)); letter-spacing: var(--rb-h-track); }
-  .motto-grand .mg-latin { font-size: calc(clamp(34px, 4.6vw, 56px) * var(--rb-type)); letter-spacing: var(--rb-h-track); }
+  .motto-grand .mg-latin { font-size: calc(clamp(32px, 4.2vw, 50px) * var(--rb-type)); letter-spacing: var(--rb-h-track); }
   .pillar-index .pi-name { font-size: calc(20px * var(--rb-type)); }
   /* Signatur · Akzent-Temperatur */
   .treat-price { color: var(--rb-price); }
@@ -188,9 +259,9 @@
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -198,24 +269,25 @@
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
     <li class="has-drop">
-    <a href="/philosophie/">Philosophie</a>
+    <a href="/philosophie/">Studio</a>
     <div class="drop-panel mag">
-      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
-      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
     </div>
   </li>
     <li class="has-drop">
     <a href="/anwendungen/" class="active">Anwendungen</a>
     <div class="drop-panel">
-      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Presso-Massage &amp; Bandagen</span></span></a>
-      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
       <span class="drop-div"></span>
       <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
     </div>
@@ -231,7 +303,6 @@
       <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
     </div>
   </li>
-    <li><a href="/monica/">Monica</a></li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -249,22 +320,23 @@
       </div>
       <nav class="pillar-index" aria-label="Säulen">
         <a href="#cutis">
-          <span class="pi-name">Cutis</span><span class="pi-num">01</span>
+          <span class="pi-name">Cutis <span class="pi-de">· Haut</span></span><span class="pi-num">01</span>
           <span class="pi-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span>
         </a>
         <a href="#vigor">
-          <span class="pi-name">Vigor</span><span class="pi-num">02</span>
+          <span class="pi-name">Vigor <span class="pi-de">· Aktivierung</span></span><span class="pi-num">02</span>
           <span class="pi-bridge">Kryotherapie bis −196 °C · Presso-Massage &amp; Bandagen</span>
         </a>
         <a href="#corpus">
-          <span class="pi-name">Corpus</span><span class="pi-num">03</span>
+          <span class="pi-name">Corpus <span class="pi-de">· Körper</span></span><span class="pi-num">03</span>
           <span class="pi-bridge">Massage &amp; rituelle Körperarbeit</span>
         </a>
         <a href="#origo">
-          <span class="pi-name">Origo</span><span class="pi-num">04</span>
+          <span class="pi-name">Origo <span class="pi-de">· Atem</span></span><span class="pi-num">04</span>
           <span class="pi-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span>
         </a>
         <span class="pi-note">Alle Preise inklusive MwSt.</span>
+        <a class="pi-transparenz" href="/transparenz-vorbereitung/">Wie eine Anwendung abläuft — Vorbereitung, Rhythmus, Abstände →</a>
       </nav>
     </div>
   </section>
@@ -278,22 +350,23 @@
           <h2>Cutis</h2>
           <p class="pillar-bridge">Von der Hautpflege zum Verständnis Ihrer Haut.</p>
           <p class="pillar-desc">Jede Behandlung bei Cutis beginnt mit einer präzisen Analyse der Haut und einer exklusiv der Person gewidmeten Behandlungszeit, um einen gezielten und individuell abgestimmten Pflegeweg zu gestalten.</p>
-          <p class="pillar-desc" style="margin-top:16px;">Für alle, die sich ein noch tieferes Maß an Individualisierung wünschen, eröffnen die DNA Lifestyle Analysen den Zugang zu einer erweiterten Dimension der Hautpflege. Das DNA Skin Concept interpretiert 20 Gene, die mit den Hautmerkmalen verbunden sind, und übersetzt diese Informationen in die Entwicklung exklusiver Pflege- und Mikronährstoff-Formeln, die auf die Einzigartigkeit jeder Haut und ihr gesamtes Gleichgewicht abgestimmt sind.</p>
+          <p class="pillar-desc" style="margin-top:16px;">Für alle, die sich ein noch tieferes Maß an Individualisierung wünschen, eröffnet die DNA-Hautanalyse eine erweiterte Dimension der Hautpflege. Sie liest 20 hautrelevante Gene, die in einem zertifizierten Labor analysiert werden, und übersetzt diese Erkenntnisse in exklusive Pflege- und Mikronährstoff-Formeln — abgestimmt auf die Einzigartigkeit Ihrer Haut und ihr gesamtes Gleichgewicht.</p>
         </div>
-        <figure class="img-fill pillar-head-img reveal"><img src="/img/dna-skin.webp" alt="Cutis — genombasierte Hautpflege und Gesichtsbehandlungen im Rubedo Spa Minden"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
+        <figure class="img-fill pillar-head-img reveal"><img src="/img/dna-skin.webp" alt="Cutis — genombasierte Hautpflege und Gesichtsbehandlungen"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
       </div>
 
       <div class="treat-list reveal">
 
-        <div class="treat-group">
+        <div class="treat-group" id="cutis-genomis" style="scroll-margin-top:90px;">
           <span class="tg-k">Longevity · Genomis</span>
           <span class="tg-line"></span>
           <span class="tg-note">Ihre einzigartige genetische Grundlage</span>
         </div>
-        <div class="treat">
+        <div class="treat" id="dna-hautanalyse" style="scroll-margin-top:96px;">
           <div>
-            <div class="treat-name">DNA Skin Concept</div>
+            <div class="treat-name">DNA-Hautanalyse</div>
             <div class="treat-meta">Maßgeschneiderte Genanalyse für Ihre Haut</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#cutis-dna">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
           <div class="treat-desc">
             Genanalyse auf Basis Ihrer DNA — eine vertrauliche Grundlage für Ihre personalisierte Hautpflege. Sie zeigt <b>Anlagen, keine Krankheiten</b>. Das Konzept umfasst:
@@ -305,21 +378,21 @@
             </div>
             <a href="/genomis/" class="btn-ghost" style="margin-top:14px;">DNA Lifestyle Analysen →</a>
           </div>
-          <div class="treat-price">Ad personam<small>ab Prooemium · 159 €</small></div>
+          <div class="treat-price">Ad personam<small>Einstieg: Konzept-Vorbereitung 160 €, anrechenbar<button type="button" aria-label="Hinweis zur Anrechnung" aria-expanded="false" onclick="var n=document.getElementById('an-cutis');var h=n.hasAttribute('hidden');h?n.removeAttribute('hidden'):n.setAttribute('hidden','');this.setAttribute('aria-expanded',h)" style="background:none;border:0;color:var(--gold);cursor:pointer;font-size:11px;line-height:1;padding:0 0 0 4px;vertical-align:baseline">✱</button></small><div id="an-cutis" hidden style="margin-top:6px;font-style:italic;opacity:.8;font-size:11px">Bei Beauftragung der Analyse innerhalb von 14 Tagen wird die Beratung vollständig angerechnet.</div><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
 
         <div class="treat-group">
           <span class="tg-k">Personalisierte Kosmetik &amp; Mikronährstoffe</span>
           <span class="tg-line"></span>
-          <span class="tg-note">Ihr Produkt, keine Einheitsformel</span>
+          <span class="tg-note">Eine Formel, individuelle Produkte, die mit Ihrer Haut mitgehen.</span>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Genbasierte Naturkosmetik</div>
             <div class="treat-meta">96 % Naturinhaltsstoffe · für 3 Monate</div>
           </div>
-          <div class="treat-desc">Direkt auf Basis Ihrer Beauty-Gen-Analyse entwickelt — keine Einheitsformel, sondern eine präzise Wirkstoffmischung für Ihre Haut. Produziert nach ISO 22716.</div>
-          <div class="treat-price">individuell<small>nach Analyse</small></div>
+          <div class="treat-desc">Auf Basis Ihrer wissenschaftlich erforschten Beauty-Gene und Ihres Hautbedarfs abgestimmt — keine Einheitsformel, sondern eine für Sie zusammengestellte Wirkstoffmischung. Produziert nach ISO 22716 in einem zugelassenen Labor.</div>
+          <div class="treat-price">individuell<small>nach Analyse</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
@@ -327,7 +400,7 @@
             <div class="treat-meta">Mikronährstoffe nach Profil · begleiten die Analyse</div>
           </div>
           <div class="treat-desc">Auf Ihr Genprofil abgestimmte Mikronährstoffe — Pflege von innen, ergänzend zur äußeren Routine.</div>
-          <div class="treat-price">individuell<small>nach Analyse</small></div>
+          <div class="treat-price">individuell<small>nach Analyse</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
 
         <details class="treat-transparenz reveal">
@@ -341,7 +414,7 @@
         <div class="treat-group">
           <span class="tg-k">Gesichtsrituale</span>
           <span class="tg-line"></span>
-          <span class="tg-note">reine Behandlungszeit · auf Ihre Tagesform abgestimmt</span>
+          <span class="tg-note">Eine Zeit, in der die Haut die Richtung vorgibt.</span>
         </div>
         <div class="treat">
           <div>
@@ -358,7 +431,7 @@
             </div>
             <span class="ritual-close">Ihr Ritual beginnt immer mit einer persönlichen Hautanalyse — gemeinsam entscheiden wir, welche der vier Ausrichtungen Ihre Haut heute am besten unterstützt.</span>
           </div>
-          <div class="treat-price">130 €<small>50 Min · Kur auf Anfrage</small></div>
+          <div class="treat-price">130 €<small>50 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
@@ -366,21 +439,21 @@
             <div class="treat-meta">Ausrichtung nach Wahl · 90 Min</div>
           </div>
           <div class="treat-desc">Dasselbe Ritual, in Ruhe vertieft — mit einer <strong>30-minütigen Gesichts- und Dekolleté-Massage</strong> und einer verlängerten Wirkstoff- und Maskenphase.</div>
-          <div class="treat-price">180 €<small>90 Min</small></div>
+          <div class="treat-price">180 €<small>90 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name"><span class="term-latin">Limen</span> <span class="tag">Signature</span></div>
-            <div class="treat-meta">Das Schwellen-Ritual · 110 Min</div>
+            <div class="treat-meta">Das Schwellen-Ritual · Eine Stunde fünfzig</div>
           </div>
-          <div class="treat-desc">Das vollständig personalisierte Gesichts-Ritual — 110 Minuten, ganz auf Sie abgestimmt. Eine geführte Atemsequenz (die ersten Minuten mit Monica, dann audiobegleitet) führt in die Ruhe; während der Maskenphase begleiten Sie eine auf Ihr Thema gewählte Klanglandschaft und eine geführte Tiefenentspannung. Dazu eine manuelle Gesichts- und Dekolleté-Massage mit Marma-Punkten und lymphstimulierenden Griffen, ergänzt um Nacken, Schultern und Hände. Was viele beschreiben: ein Gefühl von Klarheit und tiefer Ruhe.</div>
-          <div class="treat-price">290 €<small>110 Min</small></div>
+          <div class="treat-desc"><p style="margin:0 0 12px">Ein Gesichts-Ritual, das an einer Schwelle beginnt — dort, wo der Tag draußen bleibt. Zu Beginn führt Sie Monica mit einer ruhigen Atemsequenz in die Stille. Im weiteren Verlauf des Rituals werden Sie durch eine meditativ geführte Reise begleitet, die sich ganz Ihrem persönlichen Thema widmet.</p><p style="margin:0 0 12px">Das Behandlungskonzept umfasst eine tiefgreifende Reinigung, eine auf Ihre Hautbedürfnisse abgestimmte Pflege sowie eine harmonisierende Massage. Untermalt von einer individuell gewählten Klanglandschaft und einer geführten Tiefenentspannung, entsteht ein Raum, in dem Sie vollkommen ankommen können.</p><p style="margin:0 0 12px">Kein Programm, das einfach abgearbeitet wird, sondern ein Ritual für Ihre Sinne. <em>Was viele beschreiben: ein Gefühl von Klarheit, Wärme und tiefer Ruhe.</em></p><p style="margin:0"><em>Ein Moment ganz für sich – oder der Auftakt zu</em> <span class="term-latin">Limen · Die 30 Tage</span>.</p><p style="margin:16px 0 0;font-size:14px;font-style:italic;color:var(--text-2);line-height:1.6">Jedem Limen geht ein kurzes persönliches Vorgespräch voraus — so stimmen wir Klanglandschaft und Schwerpunkte im Voraus auf Sie ab.</p><a class="btn-ghost" href="/termin-buchen/" style="margin-top:12px">Vorgespräch anfragen →</a></div>
+          <div class="treat-price">290 €<small>Eine Stunde fünfzig</small></div>
         </div>
 
         <div class="treat-group">
           <span class="tg-k">Peeling</span>
           <span class="tg-line"></span>
-          <span class="tg-note">Erneuerung — neue Frische und Strahlkraft</span>
+          <span class="tg-note">Das Wesentliche erstrahlen lassen, statt neu erschaffen.</span>
         </div>
         <div class="treat">
           <div>
@@ -396,22 +469,24 @@
               <span class="dna-sub"><b>Ebenmaß</b> — für einen ungleichmäßigen Teint mit dunklen Flecken; lässt die Haut ebenmäßiger und strahlender wirken. <em>Glykolsäure · Kojisäure · Arbutin · Azelainsäure.</em></span>
               <span class="dna-sub"><b>Glättung</b> — für fahle Haut, feine Linien und unregelmäßige Textur; die sanfte, nicht photosensibilisierende „Sommer-Säure" für alle Hauttypen. <em>Mandelsäure.</em></span>
             </div>
+            <a href="/magazin-peeling-minden/" class="treat-more">Mehr im Magazin →</a>
           </div>
-          <div class="treat-price">105 €<small>45 Min</small></div>
+          <div class="treat-price">105 €<small>45 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Fruchtsäure-Routine</div>
             <div class="treat-meta">Salicyl- &amp; Fruchtsäure · 30 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#cutis-peeling">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Die gezielte Anwendung für ein bestimmtes Hautbild — für unreine, zu Glanz neigende Haut, einen ungleichmäßigen Teint oder eine unregelmäßige Textur. Ein klärendes Peeling mit Salicyl- und Fruchtsäure, abgeschlossen mit passendem Sonnenschutz. In Zyklen angelegt: den Takt bestimmen wir gemeinsam nach Ihrem Hautbild.</div>
-          <div class="treat-price">75 €<small>30 Min<br>6er-Zyklus 435 €</small></div>
+          <div class="treat-desc">Die gezielte Anwendung für ein bestimmtes Hautbild — für unreine, zu Glanz neigende Haut, einen ungleichmäßigen Teint oder eine unregelmäßige Textur. Ein klärendes Peeling mit Salicyl- und Fruchtsäure, abgeschlossen mit passendem Sonnenschutz. In Zyklen angelegt: den Takt bestimmen wir gemeinsam nach Ihrem Hautbild.
+          </div>
+          <div class="treat-price">75 €<small>30&nbsp;Min<br>Zyklus · 6&nbsp;×&nbsp;75&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
 
       </div>
 
       <div class="pillar-cta reveal">
-        <a href="/termin-buchen/?interesse=cutis#anfrage" class="btn-primary">Cutis anfragen</a>
         <a href="/magazin/" class="btn-ghost">Mehr im Magazin →</a>
       </div>
     </div>
@@ -421,7 +496,7 @@
   <section class="pillar alt" id="vigor" data-screen-label="Anwendungen · Vigor">
     <div class="pillar-inner">
       <div class="pillar-head">
-        <figure class="img-fill pillar-head-img reveal"><img src="/img/kryo-vital.webp" alt="Vigor — Ganzkörper-Kryotherapie bis −196 °C im Rubedo Spa Minden"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
+        <figure class="img-fill pillar-head-img reveal"><img src="/img/kryo-vital.webp" alt="Vigor — Ganzkörper-Kryotherapie bis −196 °C"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
         <div class="reveal">
           <div class="pillar-essence">Aktivierung · Säule 02</div>
           <h2>Vigor</h2>
@@ -438,31 +513,37 @@
         <div class="treat-group">
           <span class="tg-k">Die Welt der Kühle</span>
           <span class="tg-line"></span>
-          <span class="tg-note">Ein Moment der Erfrischung — für ein Gefühl von Klarheit und neuer Präsenz.</span>
+          <span class="tg-note">Der Kältereiz lebt vom Rhythmus — hier begleiten wir den Takt.</span>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Ganzkörper-Kryotherapie</div>
             <div class="treat-meta">3 Min · bis −196 °C</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#vigor-kryo">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Drei Minuten Kälte als Reiz — der belebende Auftakt jeder <span class="term-latin">Rubedo Sequenz</span>.</div>
-          <div class="treat-price">ab 50 €<small>5er 230 · 10er 450</small></div>
+          <div class="treat-desc"><em>Der Kältereiz, der wach macht.</em> Drei Minuten in trockener Stickstoff-Kälte bis −196 °C — kurz, kontrolliert, klärend. Kälte, die Klarheit und Präsenz zurücklässt.
+            <p class="treat-claim">Der Preis der Ganzkörper-Kryotherapie ist seit 2022 unverändert — damit der Rhythmus nicht am Preis scheitert. Das war eine Entscheidung, keine Nachlässigkeit.</p>
+            <a href="/magazin-kryotherapie-minden/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">50&nbsp;€<small>Zyklus · 5&nbsp;×&nbsp;46&nbsp;€ · 10&nbsp;×&nbsp;45&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Kryo-Lokal</div>
             <div class="treat-meta">Gezielte Kälteanwendung · 15 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#vigor-kryo-lokal">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Gezielter Kältereiz für eine einzelne Zone — kurz, präzise, ein wacher Akzent für den Moment.</div>
-          <div class="treat-price">ab 36 €<small>10er-Zyklus 325 €</small></div>
+          <div class="treat-desc">Gezielter Kältereiz für eine einzelne Zone — kurz, präzise, ein wacher Akzent für den Moment.
+          </div>
+          <div class="treat-price">36 €<small>Zyklus · 10&nbsp;×&nbsp;36&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Kryo-Facial</div>
             <div class="treat-meta">Gesicht · über Make-up möglich · ca. 15 Min</div>
           </div>
-          <div class="treat-desc">Der kurze Frische-Akzent vor einem Moment, der zählt: gezielter Kältereiz auf der Gesichtshaut — der Impuls von Vigor, übersetzt für den Teint. Gehört auch zu <a href="/anwendungen/#cutis" style="color:var(--burgundy);text-decoration:none;font-weight:500;">Cutis</a>. <a href="/magazin-kryo-facial-minden/" style="color:var(--burgundy);text-decoration:none;font-weight:500;white-space:nowrap;">Mehr zum Kryo-Facial →</a></div>
-          <div class="treat-price">49 €<small>10er-Zyklus 445 €</small></div>
+          <div class="treat-desc">Der kurze Frische-Akzent vor einem Moment, der zählt: gezielter Kältereiz auf der Gesichtshaut — der Impuls von Vigor, übersetzt für den Teint. Gehört auch zu <a href="/anwendungen/#cutis" style="color:var(--burgundy);text-decoration:none;font-weight:500;">Cutis</a>. <a href="/magazin-kryo-facial-minden/" class="treat-more">Mehr im Magazin →</a></div>
+          <div class="treat-price">49&nbsp;€<small>Zyklus · 10&nbsp;×&nbsp;49&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
@@ -470,18 +551,18 @@
             <div class="treat-meta">Gesicht · Hals · Dekolleté · 20 Min</div>
           </div>
           <div class="treat-desc">Derselbe Frische-Impuls, erweitert über das Gesicht hinaus — Kältereiz für Gesicht, Hals und Dekolleté in einem Zug.</div>
-          <div class="treat-price">75 €<small>6er-Zyklus 435 €</small></div>
+          <div class="treat-price">75 €<small>Zyklus · 6&nbsp;×&nbsp;75&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Kryo-Facial Signature <span class="tag">Vollständig</span></div>
-            <div class="treat-meta">Gesicht · Hals · Dekolleté + Gesichtsmassage · 50 Min</div>
+            <div class="treat-meta">Gesicht · Hals · Dekolleté + Gesichtsmassage<br>50 Min</div>
           </div>
           <div class="treat-desc"><em>Das Erwachen der Leuchtkraft.</em> Ein Ritual der bewussten Gegensätze: die präzise, kühlende Kraft der Kryotherapie weckt die natürliche Vitalität Ihrer Haut — gefolgt von einer ruhigen, manuellen Massage, die die Konturen Ihrer Gesichtszüge zart betont. Die Haut wirkt frisch, ebenmäßig und von einer klaren, fast porzellanartigen Leuchtkraft durchdrungen — ein maßgeschneidertes Erlebnis für Momente, in denen Sie Ihre Präsenz vollkommen zum Ausdruck bringen möchten.</div>
-          <div class="treat-price">185 €<small>Zyklus auf Anfrage</small></div>
+          <div class="treat-price">185 €<a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
-        <div class="treat-group">
+<div class="treat-group">
           <span class="tg-k">Die Welt der Geborgenheit</span>
           <span class="tg-line"></span>
           <span class="tg-note">Ein rhythmischer Druckfluss, der ein Gefühl innerer Balance schenkt.</span>
@@ -489,98 +570,104 @@
         <div class="treat">
           <div>
             <div class="treat-name">Presso-Massage · Beine <span class="tag">Empfohlen</span></div>
-            <div class="treat-meta">Pneumatische Kompression · 45 Min</div>
+            <div class="treat-meta">Mechanische Lymphdrainage · 50 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#vigor-presso">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc"><em>Wenn die Beine wieder wach werden.</em> Ein aufsteigender Druckrhythmus, der die Beine Zone für Zone umschließt und wieder freigibt — nach langen Stunden im Stehen oder Sitzen kehrt ein Gefühl von Leichtigkeit zurück. <a href="/presso-massage/" style="color:var(--burgundy);text-decoration:none;font-weight:500;white-space:nowrap;">Mehr zur Presso-Massage →</a></div>
-          <div class="treat-price">ab 65 €<small>10er-Zyklus 600 €</small></div>
+          <div class="treat-desc"><em>Wenn die Beine wieder wach werden.</em> Ein aufsteigender Druckrhythmus, der die Beine Zone für Zone umschließt und wieder freigibt — nach langen Stunden im Stehen oder Sitzen kehrt ein Gefühl von Leichtigkeit zurück. <span style="color:var(--text-2);">Kosmetische Kompressionsmassage — kein Ersatz für die medizinische (manuelle) Lymphdrainage.</span> <a href="/presso-massage/#formate" class="treat-more">Formate &amp; Rhythmus →</a>
+          </div>
+          <div class="treat-price">65 €<small>Einzelne Sitzung</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Presso-Massage · Ganzkörper</div>
-            <div class="treat-meta">Beine · Bauch · Arme · 60 Min</div>
+            <div class="treat-meta">Beine · Bauch · Arme · 50 Min</div>
           </div>
           <div class="treat-desc"><em>Der Rhythmus der Leichtigkeit.</em> Ein harmonischer Druckfluss, der den Körper mit sanfter, rhythmischer Präzision umschließt. Statt zu fordern, lädt er zum Loslassen ein: die weiche Wellenbewegung schenkt ein tiefes Gefühl innerer Balance und lässt die Silhouette leichter erscheinen.</div>
-          <div class="treat-price">80 €<small>10er-Zyklus 750 €</small></div>
-        </div>
-        <div class="treat">
-          <div>
-            <div class="treat-name">Presso-Massage + Wirkstoff-Bandage</div>
-            <div class="treat-meta">Beine + Wirkstoff-Bandage · 60 Min</div>
-          </div>
-          <div class="treat-desc"><em>Druck und Pflege, im Gleichklang.</em> Die Kompression verbindet sich mit einer pflegenden Wirkstoff-Bandage; der Rhythmus begleitet die Aufnahme der Wirkstoffe, für ein spürbar leichtes, umhülltes Körpergefühl. <span style="color:var(--text-3);">Fünf Linien zur Wahl.</span></div>
-          <div class="treat-price">170 €<small>6er-Zyklus 950 €</small></div>
+          <div class="treat-price">85 €<small>Einzelne Sitzung</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat-group">
           <span class="tg-k">Die Welt der Kontur</span>
           <span class="tg-line"></span>
-          <span class="tg-note">Eine sanfte Umhüllung, die die natürliche Ausstrahlung Ihrer Silhouette zur Geltung bringt.</span>
+          <span class="tg-note">Der Körper bleibt Landschaft — Temperatur, Wirkstoff und Zeit formen das Gefühl.</span>
         </div>
         <div class="treat">
           <div>
-            <div class="treat-name">Body Wrap &amp; Bandage</div>
-            <div class="treat-meta">Pflegender Wrap &amp; Wirkstoff-Bandage · 90 Min</div>
+            <div class="treat-name">Beine Bandagen</div>
+            <div class="treat-meta">Fünf Linien · nach Hautbild abgestimmt · 65 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#vigor-wraps">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Pflegender Wrap kombiniert mit Wirkstoff-Bandage — auf <strong>ein leichtes, gepflegtes Körpergefühl</strong> ausgerichtet.</div>
-          <div class="treat-price">ab 220 €<small>5er 1.075 €</small></div>
+          <div class="treat-desc">
+            <em>Umhüllt, gehalten, in Ruhe gelassen.</em> Mit Wirkstoffen getränkte Gazen umhüllen die Beine Bahn für Bahn; darüber die Okklusionshose, die die eigene Körperwärme hält. Es folgt die stille Mitte der Anwendung — eine halbe Stunde, in der die Haut in Ruhe aufnimmt. Zum Schluss wird der verbliebene Wirkstoff einmassiert, nicht abgewaschen. Was viele beschreiben: die Beine fühlen sich leichter an, das Schweregefühl lässt nach.
+            <div class="dna-mods dna-mods--faces">
+              <span><b>Marine</b> — <i>leicht &amp; entlastet.</i> Meersalz und marine Mineralien. <span class="bl-real">Marine Salt-Bandage</span></span>
+              <span><b>Kontur</b> — <i>glatt &amp; definiert.</i> Für ein glattes, straffes Hautgefühl. <span class="bl-real">Slim-Cell-Bandage</span></span>
+              <span><b>Wärme</b> — <i>warm &amp; geschmeidig.</i> Wohlige Wärme, die die Haut weich macht. <span class="bl-real">Warme Cell Effect-Bandage</span></span>
+              <span><b>Frische</b> — <i>kühl &amp; belebend.</i> Der tonisierende Akzent für ein waches Bein. <span class="bl-real">Kryo Tonic Bandage</span></span>
+              <span><b>Leichtigkeit</b> — <i>wach &amp; beschwingt.</i> Für müde Beine nach langen Stunden im Stehen. <span class="bl-real">Flying Legs Bandage</span></span>
+            </div>
+            <span class="ritual-close">Welche Linie zu Ihnen passt, sehen wir gemeinsam nach Hautbild — sie darf über einen Zyklus hinweg auch wechseln.</span>
+            <p class="treat-warum">Einmal pro Woche — ein Hautgefühl baut sich über Wochen auf, nicht an einem Nachmittag.</p>
+            <a href="/magazin-beine-bandagen-minden/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">150&nbsp;€<small>65&nbsp;Min<br>Zyklus · 6&nbsp;×&nbsp;150&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
-      </div>
+        <div class="treat">
+          <div>
+            <div class="treat-name">Beine Bandagen &amp; Presso-Massage</div>
+            <div class="treat-meta">Dieselbe Anwendung, die Ruhephase genutzt · 75 Min</div>
+          </div>
+          <div class="treat-desc">Dieselben fünf Linien — und die Presso-Kompression arbeitet <strong>gleichzeitig</strong>, innerhalb der Einwirkzeit der Wirkstoffe: die Manschetten liegen über der Okklusionshose und legen ihren ruhigen, aufsteigenden Rhythmus über die stille halbe Stunde. Es wird also nichts angehängt — die Anwendung dauert nur zehn Minuten länger und ist deutlich voller. <p class="treat-warum">Einmal pro Woche — die Presso arbeitet innerhalb der Einwirkzeit mit.</p>
+            <a href="/magazin-beine-bandagen-minden/" class="treat-more">Mehr im Magazin →</a></div>
+          <div class="treat-price">170&nbsp;€<small>75&nbsp;Min<br>Zyklus · 6&nbsp;×&nbsp;170&nbsp;€</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
+        </div>
+        <div class="treat">
+          <div>
+            <div class="treat-name"><span class="term-latin">Velamen</span> <span class="tag">Signature</span></div>
+            <div class="treat-meta">Das Body Wrap Ritual · Ganzkörper · Zwei Stunden fünfzehn</div>
+          </div>
+          <div class="treat-desc"><span class="term-latin">Velamen</span> — der Schleier, die Hülle. <em>Zeit für Sie — auch das ist Longevity.</em> Das große Format der Umhüllung: ein Bogen in vier Bewegungen — die Haut wird vorbereitet, der Körper geweckt, dann Bahn für Bahn in Wirkstoff-Bandagen gehüllt, und schließlich eine lange, ununterbrochene Ruhe, in der nichts mehr zu tun ist. Gut zwei Stunden, in denen der Körper einmal nicht funktionieren muss. Was viele beschreiben: <strong>ein leichtes, gepflegtes Körpergefühl</strong>, das über den Tag hinaus bleibt. <a href="/magazin-koerperwickel-minden/" class="treat-more">Mehr im Magazin →</a>
+            <a href="/termin-buchen/#anfrage" class="btn-ghost" style="margin-top:14px;">Vorgespräch anfragen →</a></div>
+          <div class="treat-price">290&nbsp;€<small>Zwei&nbsp;Stunden&nbsp;fünfzehn</small></div>
+        </div>
 
       <style>
       .kryo-note { margin-top: 24px; }
+      .bl-note { margin-top: 16px; }
+      .dna-mods .bl-real { display:block; font-size:11.5px; letter-spacing:.03em; color:var(--text-2); margin-top:2px; }
+      .bl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 13px; }
+      .bl-list li { display: grid; grid-template-columns: 30px 1fr; align-items: baseline; }
+      .bl-num { font-family: var(--serif); font-size:14px; color: var(--brass); letter-spacing: .04em; }
+      .bl-body { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+      .bl-name { font-family: var(--serif); font-size: 18px; font-weight: 400; color: var(--text-1); }
+      .bl-char { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--text-2); }
+      .bl-real { flex-basis: 100%; font-family: var(--sans); font-size: 11.5px; letter-spacing: .05em; color:var(--text-2); }
+      .bl-foot { font-size: 14px; line-height: 1.7; color: var(--text-2); margin: 18px 0 0; max-width: 62ch; }
       .kryo-note summary { list-style: none; cursor: pointer; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 8px; }
       .kryo-note summary::-webkit-details-marker { display: none; }
-      .kryo-note summary::after { content: "+"; font-size: 13px; opacity: .7; }
-      .kryo-note[open] summary::after { content: "\2013"; }
+      .kryo-note summary::after { content: "˅"; font-size:14px; opacity: .7; transition: transform .25s ease; }
+      .kryo-note[open] summary::after { transform: rotate(180deg); }
       .kryo-note > div { margin-top: 14px; max-width: 720px; }
-      .kryo-note p { font-size: 13px; line-height: 1.7; color: var(--text-2); margin: 0 0 12px; }
+      .kryo-note p { font-size:14px; line-height: 1.7; color: var(--text-2); margin: 0 0 12px; }
       .kryo-note ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 9px; }
-      .kryo-note li { font-size: 13px; line-height: 1.6; color: var(--text-2); padding-left: 15px; position: relative; }
+      .kryo-note li { font-size:14px; line-height: 1.6; color: var(--text-2); padding-left: 15px; position: relative; }
       .kryo-note li::before { content: "\00B7"; position: absolute; left: 3px; color: var(--brass); font-weight: 700; }
-      .preis-hinweis { max-width: 720px; margin: 36px auto 0; font-family: var(--sans); font-size: 11px; color: var(--text-3); letter-spacing: .03em; text-align: center; }
+      .preis-hinweis { max-width: 720px; margin: 36px auto 0; font-family: var(--sans); font-size: 11px; color:var(--text-2); letter-spacing: .03em; text-align: center; }
+      .pi-transparenz { display: block; margin-top: 14px; padding-top: 14px; border-top: .5px solid var(--border); font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--gold); text-decoration: none; transition: color .2s; }
+      .pi-transparenz:hover { color: var(--burgundy); }
+      .pi-de { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 15px; letter-spacing: .02em; color: var(--text-2); }
       .kryo-block { margin-top: 40px; }
-      .kryo-eyebrow { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color: var(--brass); margin-bottom: 18px; }
+      .sf-cta { display: inline-flex; align-items: baseline; gap: 10px; margin-top: 36px; padding: 15px 22px; border: .5px solid var(--border-m); border-radius: 2px; text-decoration: none; transition: border-color .25s, background .25s; }
+      .sf-cta:hover { border-color: var(--brass); background: rgba(168,136,74,.05); }
+      .sf-cta .sf-cta-k { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color:var(--gold); }
+      .sf-cta .sf-cta-t { font-family: var(--serif); font-size: 18px; color: var(--text-1); }
+      .sf-cta .sf-cta-t .sf-arrow { color: var(--brass); transition: transform .25s; display: inline-block; }
+      .sf-cta:hover .sf-arrow { transform: translateX(4px); }
+      .kryo-eyebrow { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; color:var(--gold); margin-bottom: 18px; }
       .kryo-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 34px; align-items: start; }
       .kryo-row .kryo-note { margin-top: 0; }
       .kryo-row .kryo-note summary { align-items: flex-start; }
       @media (max-width: 720px) { .kryo-row { grid-template-columns: 1fr; gap: 4px; } }
       </style>
-      <div class="kryo-block reveal">
-        <span class="kryo-eyebrow">Gut zu wissen zur Kryotherapie</span>
-        <div class="kryo-row">
-      <details class="kryo-note">
-        <summary>Wann die Kälte nicht geeignet ist</summary>
-        <div>
-          <p>Aus Sorgfalt verzichten wir auf die Ganzkörper-Kälte u. a. bei Herz-Kreislauf-Themen (Bluthochdruck, Herzschrittmacher, schwere Herzrhythmusstörungen), akuten Infekten oder Fieber, Kälteallergie oder Raynaud-Syndrom, offenen Hautstellen sowie in der Schwangerschaft. Im Zweifel klären wir alles in Ruhe im persönlichen Vorgespräch.</p>
-        </div>
-      </details>
-      <details class="kryo-note">
-        <summary>Vor der Kälte-Anwendung</summary>
-        <div>
-          <p>Damit die Sitzung sicher und angenehm verläuft, vor der Kabine bitte beachten:</p>
-          <ul>
-            <li><b>Trockene, saubere Haut</b> — keine Cremes, Lotionen oder Körperöle vor der Anwendung; die Haut sollte vollkommen trocken sein.</li>
-            <li><b>Kein Metall</b> — Piercings, Uhren, Schmuck und Brille bitte ablegen; Metall leitet die extreme Kälte besonders stark.</li>
-            <li><b>Nicht verschwitzt</b> — bitte trocken in die Kabine; feuchte Haut reagiert empfindlicher auf die Kälte.</li>
-            <li><b>Kein Kaffee unmittelbar davor</b> — Koffein wirkt gefäßverengend; kurz vor der Kälte verzichten Sie besser darauf.</li>
-            <li><b>Nach dem Schwimmbad</b> — Chlor strapaziert die Hautbarriere; die Haut kann danach empfindlicher auf Kälte reagieren.</li>
-          </ul>
-        </div>
-      </details>
-      <details class="kryo-note">
-        <summary>Nach der Kälte-Anwendung</summary>
-        <div>
-          <p>Nach der Kabine hält der belebende Effekt am längsten, wenn Sie:</p>
-          <ul>
-            <li><b>Sanft in Bewegung bleiben</b> — ein paar ruhige Minuten leichte Bewegung lassen die Wärme zurückkehren.</li>
-            <li><b>Keine Sauna, kein heißes Bad direkt danach</b> — starke Wärme hebt den Kältereiz wieder auf; gönnen Sie dem Körper ein paar Stunden.</li>
-            <li><b>Hautreizende Behandlungen an diesem Tag meiden</b> — Waxing, Rasur, Laser oder Solarium; die Haut ist nach der Kälte empfindlicher.</li>
-            <li><b>Ausreichend trinken</b> — ein Glas Wasser rundet die Anwendung ab.</li>
-          </ul>
-        </div>
-      </details>
-        </div>
-      </div>
-
       <div class="pillar-cta reveal">
         <a href="/termin-buchen/?interesse=vigor#anfrage" class="btn-primary">Vigor vereinbaren</a>
       </div>
@@ -594,10 +681,11 @@
         <div class="reveal">
           <div class="pillar-essence">Körper · Säule 03</div>
           <h2>Corpus</h2>
-          <p class="pillar-bridge">Massage &amp; rituelle Körperarbeit</p>
-          <p class="pillar-desc">Rituelle Körperarbeit aus vier Traditionen — und das individuelle <span class="term-latin">Opus Magnum</span>, das Signature-Ritual aus Massage, Atem und Meditation.</p>
+          <p class="pillar-bridge">Berührung, die den Körper wieder verstehen lässt — was Hände sagen, wenn Worte schweigen.</p>
+          <p class="pillar-desc corpus-grundton"><em>Vorsorge beginnt bei der Berührung:</em> das Nervensystem lernt den Weg in die Ruhe — und es geht ihn leichter, je öfter es ihn geht.</p>
+          <p class="pillar-desc">Rituelle Körperarbeit aus vier Traditionen — und das individuelle <span class="term-latin">Opus</span>, das Signature-Ritual aus Massage, Atem und Meditation.</p>
         </div>
-        <figure class="img-fill pillar-head-img reveal"><img src="/img/mag-massage.webp" alt="Corpus — Massage und rituelle Körperarbeit im Rubedo Spa Minden"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
+        <figure class="img-fill pillar-head-img reveal"><img src="/img/mag-massage.webp" alt="Corpus — Massage und rituelle Körperarbeit"><a class="cr-pin" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
       </div>
 
       <div class="treat-list reveal">
@@ -605,48 +693,55 @@
           <div>
             <div class="treat-name">Abhyanga</div>
             <div class="treat-meta">Ayurvedische Ganzkörpermassage · 80 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#corpus-abhyanga">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Warmes Öl, fließende Bewegungen — die klassische ayurvedische Massage für tiefe Entspannung.</div>
-          <div class="treat-price">175 €<small>80 Min</small></div>
+          <div class="treat-desc">Warmes Öl, fließende Bewegungen — die klassische ayurvedische Massage für tiefe Entspannung. <a href="/magazin-abhyanga-minden/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">175 €<small>80 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Hot Stone</div>
             <div class="treat-meta">Wärme-Ritual mit erwärmten Steinen · 75 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#corpus-hotstone">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Erwärmte Steine — Wärme als Träger von Tiefe und Ruhe.</div>
-          <div class="treat-price">ab 135 €<small>75 Min</small></div>
+          <div class="treat-desc">Warme Basaltsteine, entlang der Muskulatur platziert und in ruhigen Strichen geführt — die Wärme dringt langsam ein und lädt den Körper ein, loszulassen. Was viele beschreiben: eine tiefe, gelöste Stille, in der die Zeit weicher wird. <a href="/magazin-hot-stone/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">175 €<small>75 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
-            <div class="treat-name">Raindrop-Massage</div>
-            <div class="treat-meta">Aroma-Ritual mit ätherischen Essenzen · 90 Min</div>
+            <div class="treat-name">Raindrop-Aroma-Ritual</div>
+            <div class="treat-meta">Ätherische Essenzen &amp; Federstriche · 90 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#corpus-raindrop">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Ätherische Essenzen, tropfenweise entlang der Wirbelsäule, und federleichte Streichungen — ein Duft- und Berührungsritual. <a href="/magazin-raindrop-massage/" style="color:var(--burgundy);">Mehr im Magazin →</a></div>
-          <div class="treat-price">195 €<small>90 Min</small></div>
+          <div class="treat-desc">Ätherische Essenzen, tropfenweise entlang der Wirbelsäule, und federleichte Streichungen — ein Duft- und Berührungsritual. <a href="/magazin-raindrop-massage/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">195 €<small>90 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name">Schwedische Massage</div>
             <div class="treat-meta">Klassische Ganzkörpermassage · 60 Min</div>
+            <a class="treat-rahmen" href="/transparenz-vorbereitung/#corpus-schwedisch">Ablauf · Rhythmus &amp; Abstände →</a>
           </div>
-          <div class="treat-desc">Die bewährte klassische Massage — kräftigend, lösend, klar.</div>
-          <div class="treat-price">135 €<small>60 Min</small></div>
+          <div class="treat-desc">Die bewährte klassische Massage — kräftigend, lösend, klar. <a href="/magazin-schwedische-massage/" class="treat-more">Mehr im Magazin →</a>
+          </div>
+          <div class="treat-price">135 €<small>60 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
-            <div class="treat-name"><span class="term-latin">Opus Magnum</span> <span class="tag">Signature</span></div>
-            <div class="treat-meta">Massage · Atem · geführte Tiefenentspannung · ca. 2,5 Std</div>
+            <div class="treat-name"><span class="term-latin">Opus</span> <span class="tag">Signature</span></div>
+            <div class="treat-meta">Massage · Atem · geführte Tiefenentspannung · Zweieinhalb Stunden</div>
           </div>
-          <div class="treat-desc"><span class="term-latin">Opus Magnum</span> — das große Werk: eine einzige, einmalige Erfahrung von zweieinhalb Stunden, vollständig auf Sie komponiert. Sie beginnt mit einem persönlichen Vorgespräch und zehn Minuten geführtem Atem. Es folgt eine Ganzkörper-Massage in der Tradition des Abhyanga — entlang der Energielinien, mit der Klangschale und hochwertigen Ölen auf den Marma-Punkten —, getragen von einer eigens auf Ihr Thema gewählten Klanglandschaft. Zum Abschluss 45 Minuten geführte Tiefenentspannung mit ruhigen, bestärkenden Worten, in Präsenz oder audiobegleitet. Ein Ritual, das wir bewusst nur ein einziges Mal gestalten.</div>
-          <div class="treat-price">420 €<small>2,5 Std · einmalig</small></div>
+          <div class="treat-desc"><p style="margin:0"><span class="term-latin">Opus</span> — das Werk: eine tiefgreifende, einmalige Erfahrung von zweieinhalb Stunden, vollständig auf Sie komponiert. Nach einem persönlichen Vorgespräch und einer gemeinsamen Atemsequenz beginnt Ihre Reise. Es folgt eine Ganzkörper-Behandlung, die entlang der Energielinien führt und durch gezielte Berührungspunkte sowie hochwertige Essenzen den gesamten Körper in eine tiefe Harmonie bringt. Begleitet von einer eigens für Ihr Thema gewählten Klanglandschaft, lassen Sie los, was den Geist beschwert. Zum Abschluss begleitet Sie eine rund 45-minütige geführte Tiefenentspannung, ganz auf Ihr persönliches Thema abgestimmt, in eine vollkommene Ruhe. Diese geführte Tiefenentspannung dürfen Sie als »die Stille zum Mitnehmen« behalten — jederzeit nachzuhören, wann immer Sie sie brauchen. Ein Ritual, das wir bewusst nur ein einziges Mal in dieser Form gestalten.</p><p style="margin:16px 0 0;font-size:14px;font-style:italic;color:var(--text-2);line-height:1.6">Jedem Opus geht ein persönliches Vorgespräch voraus — da es für Sie allein komponiert wird, bestimmen wir darin Ihr Thema, die Klanglandschaft und die Schwerpunkte des Rituals.</p><a class="btn-ghost" href="/termin-buchen/" style="margin-top:12px">Vorgespräch anfragen →</a></div>
+          <div class="treat-price">490&nbsp;€<small>Zweieinhalb&nbsp;Stunden · einmalig</small></div>
         </div>
       </div>
       <!-- /Corpus treats -->
 
       <div class="pillar-cta reveal">
-        <a href="/termin-buchen/?interesse=corpus#anfrage" class="btn-primary">Corpus anfragen</a>
-      </div>
+        </div>
     </div>
   </section>
 
@@ -654,53 +749,51 @@
   <section class="pillar alt" id="origo" data-screen-label="Anwendungen · Origo">
     <div class="pillar-inner">
       <div class="pillar-head">
-        <figure class="img-fill pillar-head-img reveal"><img src="/img/origo-quelle.webp" style="object-position: center 30%;" alt="Frau im Profil mit geschlossenen Augen vor einem leuchtenden Lichtkreis — Origo, Atemarbeit und geführte Tiefenentspannung im Rubedo Spa Minden"><a class="cr-pin cr-right" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
+        <figure class="img-fill pillar-head-img reveal"><img src="/img/origo-quelle.webp" style="object-position: center 30%;" alt="Frau im Profil mit geschlossenen Augen vor einem leuchtenden Lichtkreis — Origo, Atemarbeit und geführte Tiefenentspannung"><a class="cr-pin cr-right" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a></figure>
         <div class="reveal">
           <div class="pillar-essence">Atem · Säule 04</div>
           <h2>Origo</h2>
-          <p class="pillar-bridge">Atemarbeit &amp; geführte Tiefenentspannung</p>
-          <p class="pillar-desc">Atem, Wahrnehmung und Stille als Tiefenarbeit. Geführte Atemsequenzen im Studio — als <span class="term-latin">Spiramen</span>, dem Ritual bewusster, somatischer Atemarbeit — und die Bibliothek <span class="term-latin">Concentus</span> für zu Hause.</p>
+          <p class="pillar-bridge">Der Atem als Weg nach innen — geführt und getragen.</p>
+          <p class="pillar-desc">Atem, Wahrnehmung und Stille als Tiefenarbeit. Im Studio geführt — als <span class="term-latin">Spiramen</span> (bewusste Atemarbeit) und <span class="term-latin">Imago</span> (geführte Imagination). Dazu <span class="term-latin">Concentus</span>, die Bibliothek begleitender Klänge und Musik für zu Hause — mit oder ohne Worte. Jede Begleitung in Origo beginnt mit einem persönlichen Gespräch.</p>
         </div>
       </div>
 
       <div class="treat-list reveal">
         <div class="treat">
           <div>
-            <div class="treat-name"><span class="term-latin">Origo</span> · persönlicher Weg <span class="tag">Signature</span></div>
-            <div class="treat-meta">Individueller Atem-Weg · auf Sie entworfen</div>
+            <div class="treat-name"><span class="term-latin">Via</span> · persönlicher Weg</div>
+            <div class="treat-meta">Individueller Atem-Weg über zwölf Wochen · auf Sie entworfen</div>
           </div>
-          <div class="treat-desc">Ein persönlicher Weg durch Atem, Wahrnehmung und Stille — von Monica auf Sie abgestimmt. Er beginnt mit dem <span class="term-latin">Prooemium</span>, dem persönlichen Auftakt-Gespräch.</div>
-          <div class="treat-price">Ad personam<small>ab Prooemium · 159 €</small></div>
+          <div class="treat-desc">Ein persönlicher Weg über zwölf Wochen durch Atem, Wahrnehmung und Stille — von Monica auf Sie abgestimmt. Er beginnt mit einem persönlichen Vorgespräch, in dem wir Ihren Weg gemeinsam entwerfen.</div>
+          <div class="treat-price" style="font-size:15px;white-space:normal;line-height:1.35">Nach persönlichem Gespräch</div>
         </div>
         <div class="treat">
           <div>
             <div class="treat-name"><span class="term-latin">Spiramen</span></div>
-            <div class="treat-meta">Atem-Ritual · 60 Min</div>
+            <div class="treat-meta">Atem-Ritual 1:1 · 90 Min</div>
           </div>
-          <div class="treat-desc"><span class="term-latin">Spiramen</span> — geführte Atemarbeit, Entspannungstechniken und Selbsthypnose für mehr Ruhe und Präsenz.</div>
-          <div class="treat-price">95 €<small>60 Min</small></div>
+          <div class="treat-desc"><span class="term-latin">Spiramen</span> — persönlich begleitete Atemarbeit 1:1: geführte Sequenzen, Entspannungstechniken und Selbsthypnose, ganz auf Ihr Thema des Moments abgestimmt. Inkl. Vorgespräch &amp; Nachgespräch.</div>
+          <div class="treat-price">210 €<small>90&nbsp;Min · inkl.&nbsp;Vorgespräch</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
-            <div class="treat-name">Stille-Sitzung</div>
-            <div class="treat-meta">Geführte Tiefenentspannung · 60 Min</div>
+            <div class="treat-name"><span class="term-latin">Imago</span></div>
+            <div class="treat-meta">Geführte Imagination · 60 Min</div>
           </div>
-          <div class="treat-desc">Imaginationsgeführte Tiefenentspannung — Ruhe als aktive Praxis, nicht als Pause.</div>
-          <div class="treat-price">95 €<small>60 Min</small></div>
+          <div class="treat-desc"><span class="term-latin">Imago</span> — eine geführte Hypnose-Sitzung über Aufmerksamkeitslenkung und ruhige innere Bilder, ganz auf Ihr Thema des Moments abgestimmt. Von tiefer Entspannung bis zur stillen Arbeit an einer persönlichen Frage.</div>
+          <div class="treat-price">160 €<small>60 Min</small><a class="treat-go" href="/termin-buchen/#anfrage">Zeit für sich →</a></div>
         </div>
         <div class="treat">
           <div>
-            <div class="treat-name"><span class="term-latin">Concentus</span></div>
-            <div class="treat-meta">Audio-Sessions für zu Hause · Abo</div>
+            <div class="treat-name"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" style="color:var(--gold);vertical-align:-3px;margin-right:9px" aria-hidden="true"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4.5" height="6.5" rx="1.6"/><rect x="16.5" y="13" width="4.5" height="6.5" rx="1.6"/></svg><span class="term-latin">Concentus</span></div>
+            <div class="treat-meta">Audio-Bibliothek zum Streamen · Abo</div>
           </div>
-          <div class="treat-desc"><span class="term-latin">Concentus</span> — geführte Atem- und Klang-Sessions als Abo oder Einzelkauf, für jeden Tag. <a href="/termin-buchen/?interesse=concentus#anfrage" style="color:var(--burgundy);text-decoration:none;font-weight:500;white-space:nowrap;">Auf Anfrage abonnieren →</a></div>
-          <div class="treat-price">ab 4 €<small>monatlich</small></div>
+          <div class="treat-desc"><span class="term-latin">Concentus</span> — eine wachsende Bibliothek geführter Atem-, Klang- und Entspannungs-Sessions zum Streamen. Sie hören frei, was, wann und wo Sie möchten — ganz in Ihrem eigenen Rhythmus. <a href="/termin-buchen/?interesse=concentus#anfrage" style="color:var(--burgundy);text-decoration:none;font-weight:500;white-space:nowrap;">Auf Anfrage abonnieren →</a></div>
+          <div class="treat-price" style="font-size:15px;white-space:normal;line-height:1.35">monatlich</div>
         </div>
       </div>
-
-      <div class="pillar-cta reveal">
-        <a href="/termin-buchen/?interesse=origo#anfrage" class="btn-primary">Origo anfragen</a>
-      </div>
+<div class="pillar-cta reveal">
+        </div>
     </div>
   </section>
 
@@ -709,18 +802,72 @@
     <span class="eyebrow eyebrow-rule">Elige et cura</span>
     <h2>Vier Kräfte. Eine, die zu Ihnen führt.</h2>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px;">
-      <a href="/termin-buchen/#anfrage" class="btn-primary">Erstgespräch vereinbaren</a>
+      <a href="/termin-buchen/#anfrage" class="btn-primary">Termin vereinbaren</a>
       <a href="mailto:info@rubedo-spa.de" class="btn-secondary">info@rubedo-spa.de</a>
     </div>
+    <p class="cta-verschenken">Nicht für sich selbst? <a href="/gutscheine/">Eine Anwendung verschenken →</a></p>
   </section>
 
 </main>
+
+  <!-- BROSCHÜRE · Anfrage -->
+  <section class="br-section" id="broschure" data-screen-label="Anwendungen · Broschüre">
+    <details class="br-acc">
+      <summary class="br-summary"><span>Broschüre anfragen</span></summary>
+      <div class="br-card">
+      <p class="br-lead">Kein offener Download — wir senden Ihnen den persönlichen Zugang zu Ihrer Broschüre per E-Mail. Sagen Sie uns kurz, wohin.</p>
+      <form id="br-form" novalidate>
+        <div class="br-row">
+          <div class="br-field"><label for="br-vorname">Vorname</label><input type="text" id="br-vorname" name="vorname" autocomplete="given-name" required></div>
+          <div class="br-field"><label for="br-nachname">Nachname</label><input type="text" id="br-nachname" name="nachname" autocomplete="family-name" required></div>
+        </div>
+        <div class="br-field"><label for="br-email">E-Mail</label><input type="email" id="br-email" name="email" autocomplete="email" required></div>
+        <div class="br-field"><label for="br-gb">Geburtstag <span class="opt">(freiwillig)</span></label><input type="text" id="br-gb" name="geburtstag" placeholder="Tag / Monat" autocomplete="off"></div>
+        <p class="br-hint">Wann dürfen wir Sie überraschen? — ganz freiwillig.</p>
+        <div class="br-field"><label for="br-adresse">Adresse <span class="opt">(freiwillig)</span></label><input type="text" id="br-adresse" name="adresse" placeholder="Straße · PLZ · Ort" autocomplete="street-address"></div>
+        <p class="br-hint">Damit wir Ihnen auch per Post eine Aufmerksamkeit senden dürfen.</p>
+        <div class="br-themes">
+          <span class="br-tlabel">Welche Themen interessieren Sie?</span>
+          <div class="br-chips">
+            <span class="br-chip"><input type="checkbox" id="br-cutis" name="thema" value="Cutis"><label for="br-cutis">Cutis · Haut</label></span>
+            <span class="br-chip"><input type="checkbox" id="br-vigor" name="thema" value="Vigor"><label for="br-vigor">Vigor · Kälte</label></span>
+            <span class="br-chip"><input type="checkbox" id="br-corpus" name="thema" value="Corpus"><label for="br-corpus">Corpus · Körper</label></span>
+            <span class="br-chip"><input type="checkbox" id="br-origo" name="thema" value="Origo"><label for="br-origo">Origo · Atem</label></span>
+          </div>
+        </div>
+        <div class="br-consent"><input type="checkbox" id="br-dsgvo" required><label for="br-dsgvo">Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Broschüre-Anfrage gespeichert und verarbeitet werden. Es gilt die <a href="/datenschutz/" target="_blank">Datenschutzerklärung</a>.</label></div>
+        <div class="br-consent"><input type="checkbox" id="br-brief"><label for="br-brief">Ich möchte den Rubedo Brief erhalten — etwa einmal im Monat, jederzeit abbestellbar.</label></div>
+        <div class="br-consent"><input type="checkbox" id="br-kontakt"><label for="br-kontakt">Bitte kontaktieren Sie mich für ein persönliches Gespräch.</label></div>
+        <button type="submit" class="br-btn">Broschüre anfordern →</button>
+      </form>
+      <div class="br-done" id="br-done"><div class="br-eyebrow">Danke</div><p class="br-lead" style="margin-bottom:0">Ihre Anfrage ist bei uns. Wir senden Ihnen den persönlichen Zugang zu Ihrer Broschüre in Kürze per E-Mail.</p></div>
+    </div>
+    </details>
+  </section>
+
+<script>
+(function(){
+  var acc=document.querySelector('.br-acc');
+  if(acc){ if(location.hash==='#broschure')acc.open=true; window.addEventListener('hashchange',function(){if(location.hash==='#broschure'){acc.open=true;acc.scrollIntoView({behavior:'smooth'});}}); }
+  var form=document.getElementById('br-form');if(!form)return;
+  var WEB3FORMS_KEY='';
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+    var themes=Array.prototype.slice.call(form.querySelectorAll('input[name=thema]:checked')).map(function(c){return c.value;}).join(', ');
+    var name=document.getElementById('br-vorname').value+' '+document.getElementById('br-nachname').value;
+    var done=document.getElementById('br-done'),btn=form.querySelector('.br-btn');
+    function ok(){form.style.display='none';done.classList.add('show');}
+    if(WEB3FORMS_KEY){btn.disabled=true;btn.textContent='Wird gesendet \u2026';fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:'Broschüre-Anfrage — '+name,from_name:'Rubedo Broschüre',Vorname:document.getElementById('br-vorname').value,Nachname:document.getElementById('br-nachname').value,'E-Mail':document.getElementById('br-email').value,Geburtstag:document.getElementById('br-gb').value,Adresse:document.getElementById('br-adresse').value,Themen:themes,'Rubedo Brief':document.getElementById('br-brief').checked?'ja':'nein',Kontakt:document.getElementById('br-kontakt').checked?'ja':'nein'})}).then(function(r){return r.json();}).then(ok).catch(ok);}else{ok();}
+  });
+})();
+</script>
 
 <footer class="dark">
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -745,10 +892,10 @@
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -756,7 +903,6 @@
       <ul>
         <li><a href="/philosophie/">Philosophie</a></li>
         <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
-        <li><a href="/monica/">Monica</a></li>
         <li><a href="/magazin/">Magazin</a></li>
       </ul>
     </div>
@@ -766,6 +912,7 @@
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>
@@ -780,6 +927,5 @@
 
 <script src="/app.js"></script>
 
-<!-- ===== Tweaks ===== -->
 </body>
 </html>

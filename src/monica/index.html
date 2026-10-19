@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Longevity-Studio in Minden: vier Dimensionen — Cutis (Hautpflege), Vigor (Kryotherapie bis −196 °C), Corpus (Körperarbeit) und Origo (Atem). smART Beauty for Conscious Humans. Geführt von Monica Galletti.">
+<meta name="description" content="Longevity-Studio in Minden: Hautpflege, Kryotherapie, Körperarbeit und Atem — vier Dimensionen, eine Begleitung. Geführt von Monica Galletti.">
 <meta property="og:title" content="Rubedo Spa Minden — Longevity-Studio von Monica Galletti">
 <meta property="og:description" content="Personalisierte Schönheit für Menschen, die bewusst entscheiden. Vier Dimensionen, eine Begleitung — in Minden.">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="/img/hero-studio.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/img/hero-studio.webp">
 <link rel="canonical" href="https://www.rubedo-spa.de/index.html">
     <title>Rubedo Spa Minden — Longevity-Studio von Monica Galletti</title>
 <link rel="stylesheet" href="/fonts/fonts.css">
@@ -18,7 +20,7 @@
   "@context": "https://schema.org",
   "@type": "HealthAndBeautyBusiness",
   "name": "Rubedo Spa",
-  "alternateName": "Rubedo Longevity-Studio Minden",
+  "alternateName": "Rubedo",
   "description": "Longevity-Studio in Minden: personalisierte Hautpflege, Kryotherapie, rituelle Körperarbeit und Atem. smART Beauty for Conscious Humans.",
   "slogan": "smART Beauty for Conscious Humans",
   "url": "https://rubedo-spa.de/",
@@ -32,6 +34,15 @@
     "addressCountry": "DE"
   },
   "openingHours": "Mo-Fr 08:00-17:00",
+  "areaServed": [
+    { "@type": "City", "name": "Minden" },
+    { "@type": "City", "name": "Porta Westfalica" },
+    { "@type": "City", "name": "Bad Oeynhausen" },
+    { "@type": "City", "name": "Bückeburg" },
+    { "@type": "City", "name": "Lübbecke" },
+    { "@type": "City", "name": "Petershagen" },
+    { "@type": "City", "name": "Hille" }
+  ],
   "founder": { "@type": "Person", "name": "Monica Galletti", "jobTitle": "CIDESCO Beauty Therapist · Gründerin" }
 }
 </script>
@@ -40,22 +51,55 @@
   .intro-thesis { max-width: 60ch; margin-top: 16px; font-size: 16px; line-height: 1.8; color: var(--text-2); }
   .warum-body { max-width: 62ch; }
   .warum-body p + p { margin-top: 16px; }
+  /* Wegweiser · Vier Fragen (Home) */
+  .wg-eb { margin-bottom: 20px; }
+  .wg-lead { font-size: 16.5px; line-height: 1.8; color: var(--text-2); max-width: 54ch; margin: 22px 0 34px; text-wrap: pretty; }
+  .wg-step { display: none; }
+  .wg-step.on { display: block; }
+  .wg-start { font-family: var(--sans); font-size:14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--cream); background: var(--burgundy); border: 0; border-radius: 2px; padding: 17px 34px; cursor: pointer; transition: opacity .2s; }
+  .wg-start:hover { opacity: .86; }
+  .wg-prog { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+  .wg-prog i { width: 26px; height: 2px; background: var(--border-m); display: block; }
+  .wg-prog i.done { background: var(--brass); }
+  .wg-prog span { font-family: var(--sans); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color:var(--text-2); margin-left: 6px; }
+  .wg-q { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.2; color: var(--text-1); margin: 0 0 28px; max-width: 32ch; text-wrap: balance; }
+  .wg-opts { display: grid; gap: 12px; max-width: 620px; }
+  .wg-opt { display: flex; align-items: baseline; gap: 16px; text-align: left; background: #fff; border: .5px solid var(--border); border-radius: 2px; padding: 20px 24px; font-family: var(--sans); font-size: 16px; color: var(--text-1); cursor: pointer; transition: border-color .2s, transform .2s, box-shadow .2s; }
+  .wg-opt:hover { border-color: var(--brass); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(28,23,18,.07); }
+  .wg-opt em { font-family: var(--serif); font-style: italic; font-size: 15px; color:var(--gold); flex-shrink: 0; }
+  .wg-back { margin-top: 24px; background: none; border: 0; padding: 0; font-family: var(--sans); font-size:14px; letter-spacing: .1em; text-transform: uppercase; color:var(--text-2); cursor: pointer; }
+  .wg-back:hover { color: var(--brass); }
+  .wg-res-name { font-family: var(--serif); font-weight: 400; font-size: clamp(42px, 5.6vw, 70px); line-height: 1; color: var(--text-1); margin: 14px 0 8px; }
+  .wg-res-sub { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 2.3vw, 25px); color: var(--burgundy); margin: 0 0 24px; }
+  .wg-res-body { font-size: 16.5px; line-height: 1.82; color: var(--text-2); max-width: 54ch; margin: 0 0 32px; text-wrap: pretty; }
+  .wg-acts { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .wg-btn { font-family: var(--sans); font-size:14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--cream); background: var(--burgundy); border-radius: 2px; padding: 17px 32px; }
+  .wg-btn:hover { opacity: .86; }
+  .wg-ghost { font-family: var(--sans); font-size:14px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--text-1); border: 1px solid var(--border-m); border-radius: 2px; padding: 16px 28px; }
+  #wg a:not(.wg-btn):not(.wg-ghost) { text-decoration: none; color: var(--burgundy); }
+  #wg a:not(.wg-btn):not(.wg-ghost):hover { color: var(--brass); }
+  .wg-ghost:hover { border-color: var(--brass); color: var(--brass); }
+  .wg-method { margin-top: 42px; padding-top: 22px; border-top: 1px solid var(--border); font-size: 14px; line-height: 1.75; color: var(--text-2); max-width: 60ch; }
+  .wg-method b { font-weight: 500; color: var(--text-1); }
+  @media (max-width: 680px) { .wg-opt { font-size: 15px; padding: 18px 20px; } }
   .warum-body strong { color: var(--text-1); font-weight: 500; }
   .disclaimer { padding: 0 40px 64px; background: var(--cream); }
   .disclaimer-mark { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; gap: 9px; font-size: 11px; text-transform: uppercase; letter-spacing: .16em; color: var(--brass); font-weight: 600; cursor: pointer; list-style: none; user-select: none; transition: opacity .2s; }
   .disclaimer-mark:hover { opacity: .72; }
   .disclaimer-mark::-webkit-details-marker { display: none; }
-  .disclaimer-mark::after { content: "+"; font-size: 13px; line-height: 1; opacity: .7; }
+  .disclaimer-mark::after { content: "+"; font-size:14px; line-height: 1; opacity: .7; }
   .disclaimer[open] .disclaimer-mark::after { content: "\2013"; }
-  .disclaimer p { max-width: 1080px; margin: 15px auto 0; font-size: 12.5px; color: #78705E; line-height: 1.78; }
+  .disclaimer p { max-width: 1080px; margin: 15px auto 0; font-size:14px; color: #78705E; line-height: 1.78; }
   @media (max-width: 860px) { .disclaimer { padding: 0 24px 48px; } }
 
   /* Hero · Schönheit als System — testata + claim */
   .hero h1 { font-style: italic; font-weight: 300; }
+  /* 08.08.2026 · L'occhiello dell'hero esce dal desktop: ripete la barra (logo „Rubedo Spa" + sottoriga „Longevity · Minden"), e un occhiello che ripete ciò che è già sullo schermo insegna alla prima riga che la pagina dirà cose già sapute. Resta SOTTO 860px, dove la sottoriga del logo è display:none (e sotto 460 anche la parola-marca): là è l'unico posto in cui quelle parole compaiono. */
+  @media (min-width: 861px) { .hero .eb { display: none; } }
   .hero .eb { color: #ECD9AC; font-size: 11.5px; text-shadow: 0 1px 10px rgba(20,14,10,.6); }
   .hero .eb::before { background: var(--burgundy); opacity: 1; }
   .hero-claim { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(20px, 2.4vw, 30px); color: var(--cream); letter-spacing: .005em; line-height: 1.2; margin: 0 0 16px; }
-  .hero-claim .art { color: var(--burgundy); text-shadow: 0 1px 14px rgba(251,248,241,.35); }
+  .hero-claim .art { color: var(--brass-l); }
   .hero .sub { margin: 0 0 16px; }
   .hero .eb .dia { color: var(--burgundy); margin: 0 .35em; font-size: .82em; vertical-align: middle; text-shadow: 0 1px 10px rgba(251,248,241,.3); }
   .hero-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: rgba(251,248,241,.74); margin: 0 0 30px; }
@@ -68,9 +112,9 @@
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -78,24 +122,25 @@
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
     <li class="has-drop">
-    <a href="/philosophie/">Philosophie</a>
+    <a href="/philosophie/">Studio</a>
     <div class="drop-panel mag">
-      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
-      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
     </div>
   </li>
     <li class="has-drop">
     <a href="/anwendungen/">Anwendungen</a>
     <div class="drop-panel">
-      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
-      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
       <span class="drop-div"></span>
       <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
     </div>
@@ -111,7 +156,6 @@
       <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
     </div>
   </li>
-    <li><a href="/monica/">Monica</a></li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -133,87 +177,200 @@
         <span>Geführt von Monica Galletti</span>
       </div>
       <div class="hero-ctas">
-        <a href="/termin-buchen/" class="btn-primary">Erstgespräch sichern</a>
+        <a href="#quattuor" class="btn-primary">Die vier Dimensionen</a>
         <a href="/philosophie/" class="btn-secondary">Konzept verstehen</a>
       </div>
     </div>
   </section>
 
   <!-- 2 · VIER DIMENSIONEN -->
-  <section class="sec" data-screen-label="Home · Vier Dimensionen">
+  <section class="sec" id="quattuor" data-screen-label="Home · Vier Dimensionen">
     <div class="sec-in">
       <span class="eb reveal">Quattuor · Haut · Aktivierung · Körper · Atem</span>
-      <h2 class="h2 reveal" style="max-width: 18ch;">Ein System, das Ihre Pflege trägt — von innen nach außen.</h2>
-      <p class="intro-thesis reveal">Unser Konzept ruht auf vier gleichwertigen Dimensionen. Sie greifen ineinander, sind aber jede für sich erfahrbar — als Einstieg oder als Ergänzung. Man beginnt bei einer Dimension und integriert die anderen, wenn es Zeit ist.</p>
+      <h2 class="h2 reveal" style="max-width: 18ch;">Von der Oberfläche zum Ursprung.</h2>
+      <!-- 08.08.2026 · Paragrafo asciugato da 7 righe a 3 movimenti. ARCHIVIATO IN LOCO (§mai eliminare):
+           la MAPPA interna („Cutis an Ihrer genetischen Karte, Vigor an der Vitalität, Corpus an der Spannung,
+           die der Körper hält, Origo an Ihren inneren Ressourcen") ANTICIPAVA le quattro carte sottostanti —
+           „genetische Karte" era duplicata parola per parola nella dim-lede di Cutis → le carte perdevano la
+           scoperta. E il motto latino NON entra qui: è già nell'hero-meta, promuoverlo renderebbe visibile una
+           ripetizione che oggi non si nota → resta la sua traduzione implicita („zeigt sich wieder an der Oberfläche"). -->
+      <p class="intro-thesis reveal">Vier gleichwertige Dimensionen, in eine Richtung geordnet: Wir beginnen dort, wo Sie hinsehen — bei der Haut — und arbeiten nach innen. Was innen geordnet ist, zeigt sich wieder an der Oberfläche. Die Richtung ist ein Weg — jede Dimension ist für sich erfahrbar.</p>
 
-      <div class="dim-cards reveal">
-        <a class="dim" href="/anwendungen/#cutis">
-          <div class="dim-img">
-            <img src="/img/dna-skin.webp" alt="Cutis — genombasierte Hautpflege und Gesichtsbehandlungen im Rubedo Spa Minden">
-            <span class="dim-cr" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
-          </div>
-          <div class="dim-body">
-            <span class="dim-essence">Dimension 01</span>
+      <div class="dim-spine reveal">
+        <a class="dim-row d1" href="/cutis/">
+          <span class="dim-num">01</span>
+          <span class="dim-text">
             <span class="dim-name">Cutis</span>
-            <span class="dim-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlungen</span>
-            <span class="dim-desc">Personalisierte Pflege auf Basis Ihrer genetischen Signatur: Hautanalyse, 12-Wochen-Plan und Mikronährstoffe.</span>
-            <span class="dim-link">Mehr zu Cutis →</span>
-          </div>
-        </a>
-
-        <a class="dim" href="/anwendungen/#vigor">
-          <div class="dim-img">
-            <img src="/img/kryo-vital.webp" alt="Vigor — Ganzkörper-Kryotherapie bis −196 °C im Rubedo Spa Minden">
+            <span class="dim-lede">Die genetische Karte Ihrer Haut.</span>
+            <span class="dim-desc">Hautanalyse, individuelle Pflegekonzepte und genombasierte Hautpflege — Pflege, die Ihrer biologischen Signatur folgt. Hier beginnt der Weg nach innen.</span>
+            <span class="dim-link">Cutis entdecken →</span>
+          </span>
+          <span class="dim-fig">
+            <img src="/img/dna-skin.webp" alt="Cutis — genombasierte Hautpflege und Gesichtsbehandlungen">
             <span class="dim-cr" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
-          </div>
-          <div class="dim-body">
-            <span class="dim-essence">Dimension 02</span>
+          </span>
+        </a>
+        <p class="dim-schwelle"><span class="ds-node"></span><span class="ds-text">Was die Oberfläche zeigt, entsteht tiefer.</span></p>
+        <a class="dim-row d2 rev" href="/vigor/">
+          <span class="dim-num">02</span>
+          <span class="dim-text">
             <span class="dim-name">Vigor</span>
-            <span class="dim-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span>
-            <span class="dim-desc">Kontrollierter Kältereiz: Ganzkörper-Kryotherapie, Kryo-Lokal, Druckwellen und Bandagen für spürbare Leichtigkeit.</span>
-            <span class="dim-link">Mehr zu Vigor →</span>
-          </div>
-        </a>
-
-        <a class="dim" href="/anwendungen/#corpus">
-          <div class="dim-img">
-            <img src="/img/mag-massage.webp" alt="Corpus — Massage und rituelle Körperarbeit im Rubedo Spa Minden">
+            <span class="dim-lede">Der Impuls, der Vitalität weckt.</span>
+            <span class="dim-desc">Kälte bis −196 °C, rhythmische Kompression, wirkstoffgestützte Bandagen. Ein wacher Reiz, der Leichtigkeit hinterlässt.</span>
+            <span class="dim-link">Vigor erleben →</span>
+          </span>
+          <span class="dim-fig">
+            <img src="/img/kryo-vital.webp" alt="Vigor — Ganzkörper-Kryotherapie bis −196 °C">
             <span class="dim-cr" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
-          </div>
-          <div class="dim-body">
-            <span class="dim-essence">Dimension 03</span>
+          </span>
+        </a>
+        <p class="dim-schwelle"><span class="ds-node"></span><span class="ds-text">Was wach geworden ist, will gehalten werden.</span></p>
+        <a class="dim-row d3" href="/corpus/">
+          <span class="dim-num">03</span>
+          <span class="dim-text">
             <span class="dim-name">Corpus</span>
-            <span class="dim-bridge">Massage &amp; rituelle Körperarbeit</span>
-            <span class="dim-desc">Rituelle Körperarbeit aus vier Traditionen — Abhyanga, Hot Stone, Raindrop, Schwedisch — und das Signature-Ritual.</span>
-            <span class="dim-link">Mehr zu Corpus →</span>
-          </div>
-        </a>
-
-        <a class="dim" href="/anwendungen/#origo">
-          <div class="dim-img">
-            <img src="/img/origo-quelle.webp" style="object-position: center 30%;" alt="Origo — Atemarbeit und geführte Tiefenentspannung im Rubedo Spa Minden">
+            <span class="dim-lede">Die Spannung, die der Körper hält.</span>
+            <span class="dim-desc">Berührung mit Zeit: ayurvedische Öle, vulkanischer Basalt, das Signature-Ritual Opus.</span>
+            <span class="dim-link">Corpus erfahren →</span>
+          </span>
+          <span class="dim-fig">
+            <img src="/img/mag-massage.webp" alt="Corpus — Massage und rituelle Körperarbeit">
             <span class="dim-cr" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
-          </div>
-          <div class="dim-body">
-            <span class="dim-essence">Dimension 04</span>
+          </span>
+        </a>
+        <p class="dim-schwelle"><span class="ds-node"></span><span class="ds-text">Und wenn der Körper ruhig wird, wird der Atem hörbar.</span></p>
+        <a class="dim-row d4 rev" href="/origo/">
+          <span class="dim-num">04</span>
+          <span class="dim-text">
             <span class="dim-name">Origo</span>
-            <span class="dim-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span>
-            <span class="dim-desc">Geführte Atemarbeit und Stille — im Studio als <em>Spiramen</em> und als digitale Bibliothek <em>Concentus</em> für zu Hause.</span>
-            <span class="dim-link">Mehr zu Origo →</span>
-          </div>
+            <span class="dim-lede">Ihre inneren Ressourcen.</span>
+            <span class="dim-desc">Atem und Klang. Spiramen im Studio, Concentus für zu Hause.</span>
+            <span class="dim-link">Origo spüren →</span>
+          </span>
+          <span class="dim-fig">
+            <img src="/img/origo-quelle.webp" style="object-position: center 30%;" alt="Origo — Atemarbeit und geführte Tiefenentspannung">
+            <span class="dim-cr" role="img" aria-label="KI-Hinweis zum Bild — siehe ki-bilder.html">cr</span>
+          </span>
         </a>
       </div>
     </div>
   </section>
 
+  <!-- 2-bis · WEGWEISER · VIER FRAGEN -->
+  <section class="sec" id="wegweiser" data-screen-label="Home · Vier Fragen" style="padding-top: 0;">
+    <div class="sec-in" id="wg">
+      <span class="eb wg-eb reveal">Vier Fragen</span>
+      <h2 class="h2 reveal" style="max-width: 14ch;">Wo beginnen?</h2>
+      <p class="wg-lead reveal">Vier Fragen führen zu einer der vier Dimensionen. Sie ordnen Ihre Antworten und nennen den Anfang, der heute naheliegt. Alles Weitere besprechen wir persönlich.</p>
+
+      <div class="wg-step on" data-step="0"><button type="button" class="wg-start" data-go="1">Die vier Fragen beginnen</button></div>
+
+      <div class="wg-step" data-step="1">
+        <div class="wg-prog"><i class="done"></i><i></i><i></i><i></i><span>Frage 1 von 4</span></div>
+        <p class="wg-q">Wohin geht heute Ihre Aufmerksamkeit?</p>
+        <div class="wg-opts">
+          <button type="button" class="wg-opt" data-d="c" data-next="2"><em>01</em>Zu meiner Haut.</button>
+          <button type="button" class="wg-opt" data-d="v" data-next="2"><em>02</em>Zu meiner Spannkraft.</button>
+          <button type="button" class="wg-opt" data-d="k" data-next="2"><em>03</em>Zu meinen Schultern, meinem Rücken, meinen Beinen.</button>
+          <button type="button" class="wg-opt" data-d="o" data-next="2"><em>04</em>Zu meinen Gedanken.</button>
+        </div>
+      </div>
+
+      <div class="wg-step" data-step="2">
+        <div class="wg-prog"><i class="done"></i><i class="done"></i><i></i><i></i><span>Frage 2 von 4</span></div>
+        <p class="wg-q">Was möchten Sie spüren, wenn Sie wieder hinausgehen?</p>
+        <div class="wg-opts">
+          <button type="button" class="wg-opt" data-d="c" data-next="3"><em>01</em>Ein klares, ruhiges Hautgefühl.</button>
+          <button type="button" class="wg-opt" data-d="v" data-next="3"><em>02</em>Frische und Wachheit.</button>
+          <button type="button" class="wg-opt" data-d="k" data-next="3"><em>03</em>Gelöste Spannung im ganzen Körper.</button>
+          <button type="button" class="wg-opt" data-d="o" data-next="3"><em>04</em>Stille im Kopf.</button>
+        </div>
+        <button type="button" class="wg-back" data-back="1">← Zurück</button>
+      </div>
+
+      <div class="wg-step" data-step="3">
+        <div class="wg-prog"><i class="done"></i><i class="done"></i><i class="done"></i><i></i><span>Frage 3 von 4</span></div>
+        <p class="wg-q">Welche Art von Zuwendung zieht Sie an?</p>
+        <div class="wg-opts">
+          <button type="button" class="wg-opt" data-d="c" data-next="4"><em>01</em>Präzision — verstehen, was meine Haut braucht.</button>
+          <button type="button" class="wg-opt" data-d="v" data-next="4"><em>02</em>Ein wacher Impuls, deutlich spürbar.</button>
+          <button type="button" class="wg-opt" data-d="k" data-next="4"><em>03</em>Berührung, Wärme, Zeit.</button>
+          <button type="button" class="wg-opt" data-d="o" data-next="4"><em>04</em>Atem und Klang.</button>
+        </div>
+        <button type="button" class="wg-back" data-back="2">← Zurück</button>
+      </div>
+
+      <div class="wg-step" data-step="4">
+        <div class="wg-prog"><i class="done"></i><i class="done"></i><i class="done"></i><i class="done"></i><span>Frage 4 von 4</span></div>
+        <p class="wg-q">Und wenn Sie heute Zeit für eine Sache hätten — für welche?</p>
+        <div class="wg-opts">
+          <button type="button" class="wg-opt" data-d="c" data-next="9"><em>01</em>Zeit für mein Gesicht.</button>
+          <button type="button" class="wg-opt" data-d="v" data-next="9"><em>02</em>Etwas, das mich wach macht.</button>
+          <button type="button" class="wg-opt" data-d="k" data-next="9"><em>03</em>Hände, die lösen — und eine Liege.</button>
+          <button type="button" class="wg-opt" data-d="o" data-next="9"><em>04</em>Stille, nur für mich.</button>
+        </div>
+        <button type="button" class="wg-back" data-back="3">← Zurück</button>
+      </div>
+
+      <div class="wg-step" data-step="9">
+        <span class="eb">Hier lässt sich beginnen</span>
+        <h3 class="wg-res-name" id="wgName">Cutis</h3>
+        <p class="wg-res-sub" id="wgSub"></p>
+        <p class="wg-res-body" id="wgBody"></p>
+        <div class="wg-acts">
+          <a class="wg-btn" id="wgBtn" href="/termin-buchen/">Termin vereinbaren</a>
+          <a class="wg-ghost" id="wgAlt" href="#quattuor">Alle vier Dimensionen ansehen</a>
+        </div>
+        <p class="wg-method"><b>So entsteht dieses Ergebnis:</b> Jede Antwort gehört zu einer Dimension. Genannt wird die, die Sie am häufigsten gewählt haben; bei Gleichstand die vierte Frage. Vier Fragen ordnen einen Wunsch — Ihre Haut, Ihren Rhythmus und Ihre Vorgeschichte sehen wir im Gespräch.</p>
+        <button type="button" class="wg-back" data-reset="1">← Noch einmal</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+  (function(){
+    var root = document.getElementById('wg'); if(!root) return;
+    var D = {
+      c: { name:'Cutis', sub:'Die Sprache Ihrer Haut.', body:'Ihre Antworten führen zur Haut. Cutis beginnt mit einer präzisen Hautanalyse und einem Pflegekonzept, das Ihrer biologischen Individualität folgt — bis hin zur genombasierten Hautpflege. Weil dieser Weg mit Ihrer Vorgeschichte beginnt, steht am Anfang ein Gespräch.', href:'/termin-buchen/', cta:'Termin vereinbaren', alt:'/cutis/', altLabel:'Cutis entdecken' },
+      v: { name:'Vigor', sub:'Die Sprache Ihrer Vitalität.', body:'Ihre Antworten führen zum Impuls. Vigor arbeitet mit Kälte bis −196 °C, rhythmischer Kompression und wirkstoffgestützten Bandagen — ein wacher Reiz, der Leichtigkeit hinterlässt. Vigor lebt vom Rhythmus: die Wiederholung trägt.', href:'/vigor/', cta:'Vigor erleben' },
+      k: { name:'Corpus', sub:'Die Sprache der Berührung.', body:'Ihre Antworten führen zur Berührung. Corpus nimmt sich Zeit: fließende ayurvedische Öle, die gleichmäßige Wärme vulkanischer Basaltsteine, das Signature-Ritual Opus. Langsam, präzise, mit Raum.', href:'/corpus/', cta:'Corpus erfahren' },
+      o: { name:'Origo', sub:'Die Sprache Ihrer inneren Ruhe.', body:'Ihre Antworten führen nach innen. Origo öffnet den Raum mit begleiteter Atemarbeit (Spiramen), geführter Imagination und komponierten Klangwelten — ein Weg, auf dem Klarheit wieder hörbar wird.', href:'/origo/', cta:'Origo spüren' }
+    }, ans = {};
+    function go(n){ root.querySelectorAll('.wg-step').forEach(function(s){ s.classList.toggle('on', s.dataset.step === String(n)); }); }
+    function show(){
+      var seq = [ans[1],ans[2],ans[3],ans[4]].filter(Boolean), t = {};
+      seq.forEach(function(k){ t[k] = (t[k]||0)+1; });
+      var best = seq[seq.length-1], max = t[best];
+      ['c','v','k','o'].forEach(function(k){ if((t[k]||0) > max){ max = t[k]; best = k; } });
+      var d = D[best];
+      root.querySelector('#wgName').textContent = d.name;
+      root.querySelector('#wgSub').textContent = d.sub;
+      root.querySelector('#wgBody').textContent = d.body;
+      var b = root.querySelector('#wgBtn'); b.href = d.href; b.textContent = d.cta;
+      var a = root.querySelector('#wgAlt'); a.href = d.alt || '#quattuor'; a.textContent = d.altLabel || 'Alle vier Dimensionen ansehen';
+    }
+    root.addEventListener('click', function(e){
+      var t = e.target.closest('button'); if(!t) return;
+      if(t.dataset.go){ go(+t.dataset.go); return; }
+      if(t.dataset.back){ var q = +t.dataset.back; delete ans[q]; go(q); return; }
+      if(t.dataset.reset){ ans = {}; go(0); return; }
+      if(t.dataset.d){ var n = +t.dataset.next; ans[n === 9 ? 4 : n - 1] = t.dataset.d; if(n === 9){ show(); } go(n); }
+    });
+  })();
+  </script>
+
   <!-- 3 · WARUM RUBEDO -->
   <section class="sec" data-screen-label="Home · Warum Rubedo" style="padding-top: 0;">
     <div class="sec-in">
       <span class="eb reveal">Warum Rubedo</span>
-      <h2 class="h2 reveal" style="max-width: 20ch;">Mehr Begleitung statt mehr Behandlung.</h2>
+      <h2 class="h2 reveal" style="max-width: 20ch;">Verstehen vor Behandlung.</h2>
       <div class="body warum-body reveal" style="margin-top: 26px;">
-        <p>Longevity, die ein System hat — kein Behandlungs-Katalog.</p>
-        <p>Schönheit folgt einem System — bei jedem Menschen ein anderes. <strong>Genetisch codiert.</strong></p>
+        <!-- 08.08.2026 · „Longevity mit System." TOLTA (archiviata qui): era un secondo titolo impilato sotto
+             l'H2, e ripeteva „System" per la terza volta in quattro righe. Nessun costo di posizionamento:
+             „Longevity" compare 9 volte sulla home (title · description · og · navbar · occhiello hero ·
+             dropdown · footer). Aggiunta l'ultima riga, che dice cosa FACCIAMO invece di cosa crediamo. -->
+        <p>Schönheit folgt einem System — bei jedem Menschen einem anderen. <strong>Genetisch codiert, im Alltag verändert.</strong></p>
+        <p>Wir beginnen damit, Ihres zu lesen.</p>
       </div>
     </div>
   </section>
@@ -222,12 +379,12 @@
   <section class="sec tone" data-screen-label="Home · Monica">
     <div class="sec-in">
       <div class="band">
-        <figure class="reveal"><img src="/img/monica.webp" alt="Monica Galletti, Gründerin von Rubedo Spa Minden"></figure>
+        <figure class="reveal"><img src="/img/monica.webp" alt="Monica Galletti, Gründerin"></figure>
         <div class="reveal">
           <span class="eb">Geführt von Monica Galletti</span>
-          <h2>Wahre Expertise zeigt sich in Präzision — nicht in der Anzahl der Methoden.</h2>
+          <h2>Die Ruhe, das Richtige zu wählen.</h2>
           <div class="body" style="max-width: 48ch;">
-            <p>Über zwanzig Jahre an der Haut, CIDESCO Beauty Therapist und Gründerin von Rubedo. Monica begleitet Menschen, die ihre Pflege nicht jedes Quartal wechseln, sondern wirklich verstehen wollen.</p>
+            <p>CIDESCO Beauty Therapist und Gründerin von Rubedo. Monica begleitet Menschen, die ihre Pflege nicht jedes Quartal wechseln, sondern wirklich verstehen wollen.</p>
           </div>
           <div class="band-attr">
             <span class="band-attr-line"></span>
@@ -245,20 +402,47 @@
   <!-- 5 · PULL-QUOTE -->
   <section class="sec lift" data-screen-label="Home · Zitat" style="padding-top: 0;">
     <div class="pullquote reveal">
-      <span class="pq-mark">„</span>
-      <blockquote>Wahre Expertise zeigt sich nicht in der Anzahl von Methoden — sondern in der Fähigkeit, sie <em>präzise und bewusst</em> einzusetzen.</blockquote>
-      <div class="pq-attr">Monica Galletti · Gründerin Rubedo Spa</div>
+      <blockquote>Expertise zeigt sich in der Fähigkeit,<br>wenige Methoden <em>präzise und bewusst</em> einzusetzen.</blockquote>
+      <div class="pq-attr">Monica Galletti</div>
     </div>
   </section>
 
   <!-- 6 · CTA CARD -->
-  <section class="sec" data-screen-label="Home · Erstgespräch">
+  <!-- DISKRETION · prova sociale nella forma della casa (decisione utente 31.07): la riservatezza si
+       DICHIARA, e la prova si sposta su fatti senza volti. Voce ripresa da §Stimmen di origo.html.
+       ⛔ Nessuna recensione, nessuna stella, nessun volto: due sole recensioni Google restano su Google.
+       Fatti confermati dalla utente: Rubedo dal 2023 · chi comincia un percorso torna a cicli · qualifiche verificabili. -->
+  <section class="sec" data-screen-label="Home · Diskretion" style="background:var(--cream-dark)">
+    <div class="sec-in">
+      <span class="eb reveal" style="color:var(--gold)">Diskretion</span>
+      <h2 class="reveal" style="font-family:var(--serif);font-weight:300;font-size:clamp(28px,3.6vw,42px);line-height:1.14;max-width:24ch;margin-top:16px;color:var(--text-1)">Wir zeigen keine Gesichter und keine Namen.</h2>
+      <p class="reveal" style="margin-top:20px;font-family:var(--sans);font-size:16.5px;line-height:1.8;color:var(--text-2);max-width:56ch">Was hier geschieht, bleibt hier. Auf diesen Seiten steht das, was sich belegen lässt.</p>
+      <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:rgba(28,23,18,.12);border:.5px solid rgba(28,23,18,.12);margin-top:34px">
+        <div style="background:var(--cream);padding:26px 24px">
+          <p style="margin:0;font-family:var(--serif);font-size:21px;line-height:1.25;color:var(--text-1)">Rubedo seit 2023 in Minden.</p>
+          <p style="margin:10px 0 0;font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--text-2)">Die Erfahrung dahinter: fast zwanzig Jahre an der Haut.</p>
+        </div>
+        <div style="background:var(--cream);padding:26px 24px">
+          <p style="margin:0;font-family:var(--serif);font-size:21px;line-height:1.25;color:var(--text-1)">Wer einen Weg beginnt, kommt in Zyklen wieder.</p>
+          <p style="margin:10px 0 0;font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--text-2)">Als Rhythmus.</p>
+        </div>
+        <div style="background:var(--cream);padding:26px 24px">
+          <!-- 08.08.2026 · La cella incollava due fatti estranei: titolo „Jede Anwendung wird vorbereitet, bevor
+               Sie kommen." + glossa sulle qualifiche. Ora un fatto per cella con la sua glossa vera; la riga sulla
+               preparazione è passata alla carta Prospectus, dove si parla di COME si lavora (non cancellata). -->
+          <p style="margin:0;font-family:var(--serif);font-size:21px;line-height:1.25;color:var(--text-1)">Qualifikationen, die sich nachprüfen lassen.</p>
+          <p style="margin:10px 0 0;font-family:var(--sans);font-size:14px;line-height:1.7;color:var(--text-2)">Nachzulesen bei <a href="/monica/" style="color:var(--gold)">Monica</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" data-screen-label="Home · Vorgespräch">
     <div class="cta-card reveal">
       <div>
-        <span class="eb">Das erste Gespräch</span>
-        <h3>Fünfzehn Minuten Orientierung — wir finden gemeinsam Ihre Dimension.</h3>
-        <p>Persönlich mit Monica, ohne Verpflichtung. Im Anschluss entscheiden Sie in Ruhe, ob und wie Sie beginnen möchten.</p>
-        <p class="cta-note">€ 49 · wird bei Buchung vollständig verrechnet.</p>
+        <span class="eb">Prospectus</span>
+        <h3>Ein Vorgespräch, bevor etwas beginnt.</h3>
+        <p>Fünfzehn Minuten, persönlich mit Monica: Sie sagen, worum es geht — wir sagen, welche Dimension trägt. Danach entscheiden Sie in Ruhe. Jede Anwendung wird vorbereitet, bevor Sie kommen.</p>
       </div>
       <div class="cta-actions">
         <a href="/termin-buchen/" class="btn-primary">Termin vereinbaren</a>
@@ -279,7 +463,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -304,10 +488,10 @@
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -315,7 +499,6 @@
       <ul>
         <li><a href="/philosophie/">Philosophie</a></li>
         <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
-        <li><a href="/monica/">Monica</a></li>
         <li><a href="/magazin/">Magazin</a></li>
       </ul>
     </div>
@@ -325,6 +508,7 @@
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>

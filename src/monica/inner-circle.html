@@ -14,13 +14,15 @@
 <meta property="og:image:width" content="1536">
 <meta property="og:image:height" content="1024">
 <meta property="og:image:alt" content="Klangbild zu Spiramen — Concentus, Rubedo Inner Circle, Minden">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/img/concentus-spiramen.webp">
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/styles.css">
 <style>
   main { background: var(--cream); }
   .sec { padding: 132px 40px; }
   .sec-in { max-width: 1080px; margin: 0 auto; }
-  .eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 34px; }
+  .eb { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color:var(--gold); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 34px; }
   .eb::before { content: ''; width: 40px; height: 1px; background: var(--brass); opacity: .7; }
   .h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.4vw, 54px); line-height: 1.1; letter-spacing: -.015em; color: var(--text-1); margin: 0; }
   .lead { font-size: 16.5px; line-height: 1.85; color: #463F33; max-width: 60ch; }
@@ -32,7 +34,7 @@
   /* HERO · zentriert (Variante A) */
   .hero { padding: 150px 40px 110px; border-bottom: 1px solid var(--border); }
   .hero-in { max-width: 1080px; margin: 0 auto; text-align: center; }
-  .hero .eb { justify-content: center; color: var(--brass); text-shadow: none; }
+  .hero .eb { justify-content: center; color:var(--gold); text-shadow: none; }
   .hero .eb::after { content: ''; width: 40px; height: 1px; background: var(--brass); opacity: .7; }
   .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(48px, 7vw, 104px); line-height: .98; letter-spacing: -.025em; color: var(--text-1); margin: 0 auto 26px; max-width: 16ch; }
   .hero .sub { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 2.2vw, 26px); color: var(--text-2); line-height: 1.5; max-width: 50ch; margin: 0 auto; }
@@ -45,15 +47,15 @@
   .track-play .tri { width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent var(--burgundy); margin-left: 3px; transition: border-color .2s; }
   .track-play:hover .tri { border-left-color: var(--cream); }
   .track-name { font-family: var(--serif); font-size: clamp(22px, 2.6vw, 30px); color: var(--text-1); line-height: 1.06; }
-  .track-meta { font-size: 12.5px; color: var(--text-3); margin-top: 6px; letter-spacing: .02em; }
-  .track-status { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); white-space: nowrap; }
+  .track-meta { font-size:14px; color:var(--text-2); margin-top: 6px; letter-spacing: .02em; }
+  .track-status { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); white-space: nowrap; }
   .track-status.soon { color: var(--text-3); }
   .track-audio { grid-column: 1 / -1; }
   .track-audio audio { width: 100%; margin-top: 10px; display: block; }
   .track.is-pending .track-play { opacity: .45; cursor: default; }
-  .bib-credit { margin-top: 26px; font-size: 11.5px; color: var(--text-3); letter-spacing: .02em; }
-  .page-credit { max-width: 1080px; margin: 0 auto; padding: 0 40px 54px; font-size: 11px; line-height: 1.6; color: var(--text-3); letter-spacing: .02em; opacity: .8; }
-  .page-credit a { color: var(--text-3); text-decoration: underline; text-underline-offset: 2px; }
+  .bib-credit { margin-top: 26px; font-size: 11.5px; color:var(--text-2); letter-spacing: .02em; }
+  .page-credit { max-width: 1080px; margin: 0 auto; padding: 0 40px 54px; font-size: 11px; line-height: 1.6; color:var(--text-2); letter-spacing: .02em; opacity: .8; }
+  .page-credit a { color: var(--text-3); text-decoration: none; }
 
   /* OPUS · the one available piece, in editorial focus */
   .opus { display: grid; grid-template-columns: 1.15fr 1fr; column-gap: clamp(32px, 4vw, 56px); align-items: center; padding: 8px 0 56px; border-bottom: 1px solid var(--border); }
@@ -61,10 +63,10 @@
   .opus-play:hover { background: var(--burgundy); border-color: var(--burgundy); }
   .opus-play .tri { width: 0; height: 0; border-style: solid; border-width: 8px 0 8px 13px; border-color: transparent transparent transparent var(--burgundy); margin-left: 3px; transition: border-color .25s; }
   .opus-play:hover .tri { border-left-color: var(--cream); }
-  .opus-eb { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); display: block; margin-bottom: 12px; }
+  .opus-eb { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color:var(--gold); display: block; margin-bottom: 12px; }
   .opus-name { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4.6vw, 50px); line-height: 1; letter-spacing: -.015em; color: var(--text-1); margin: 0; }
   .opus-desc { font-size: 15px; line-height: 1.7; color: #463F33; margin: 14px 0 0; max-width: 46ch; }
-  .opus-status { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); white-space: nowrap; align-self: start; padding-top: 6px; }
+  .opus-status { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color:var(--gold); white-space: nowrap; align-self: start; padding-top: 6px; }
   .opus-audio { grid-column: 1 / -1; }
   .opus-audio audio { width: 100%; margin-top: 26px; display: block; }
   .opus.is-pending .opus-play { opacity: .45; cursor: default; }
@@ -78,8 +80,8 @@
   .opus-seek { position: relative; flex: 1; height: 16px; background: none; border: none; padding: 0; cursor: pointer; }
   .opus-seek::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; height: 1.5px; transform: translateY(-50%); background: rgba(168,136,74,.22); }
   .opus-seek-fill { position: absolute; left: 0; top: 50%; transform: translateY(-50%); height: 1.5px; width: 0; background: var(--brass); transition: width .12s linear; }
-  .opus-time { display: block; margin-top: 16px; font-family: var(--serif); font-size: 14.5px; color: var(--brass); letter-spacing: .04em; white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .opus-atem { display: inline-block; margin-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-3); text-decoration: none; transition: color .25s; }
+  .opus-time { display: block; margin-top: 16px; font-family: var(--serif); font-size: 14.5px; color:var(--gold); letter-spacing: .04em; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .opus-atem { display: inline-block; margin-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color:var(--text-2); text-decoration: none; transition: color .25s; }
   .opus-atem:hover { color: var(--burgundy); }
   /* OPUS cover — editorial “Klangbild” with the play overlaid */
   .opus-cover { position: relative; width: 100%; aspect-ratio: 3 / 2; border-radius: 2px; overflow: hidden; background: var(--border); }
@@ -97,7 +99,7 @@
   .bib-sub { font-family: var(--serif); font-style: italic; font-size: clamp(17px, 1.9vw, 22px); color: var(--text-2); margin: 14px 0 0; }
   .genus { margin-top: 76px; }
   .genus-head { margin-bottom: 30px; }
-  .genus-eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--brass); }
+  .genus-eb { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color:var(--gold); }
   .genus-eb .tag { margin-left: 14px; color: var(--text-3); font-weight: 500; }
   .genus-eb .tag::before { content: '· '; color: var(--border-m); }
   .genus-motto { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(24px, 3vw, 36px); color: var(--burgundy); line-height: 1.15; margin: 12px 0 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 18px; }
@@ -119,11 +121,11 @@
   .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 60px; }
   .tier { border: 1px solid var(--border-m); border-radius: 2px; padding: 48px 44px; display: flex; flex-direction: column; }
   .tier.featured { background: var(--burgundy); border-color: var(--burgundy); color: var(--cream); }
-  .tier-eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; }
+  .tier-eb { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color:var(--gold); margin-bottom: 14px; }
   .tier.featured .tier-eb { color: var(--brass-l); }
   .tier-name { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 3vw, 34px); line-height: 1.08; color: var(--text-1); margin: 0 0 6px; }
   .tier.featured .tier-name { color: var(--cream); }
-  .tier-price { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--text-3); margin-bottom: 24px; }
+  .tier-price { font-family: var(--serif); font-style: italic; font-size: 18px; color:var(--text-2); margin-bottom: 24px; }
   .tier.featured .tier-price { color: rgba(251,248,241,.7); }
   .tier-list { list-style: none; margin: 0 0 30px; padding: 0; display: grid; gap: 12px; }
   .tier-list li { display: grid; grid-template-columns: 16px 1fr; gap: 12px; font-size: 14.5px; line-height: 1.55; color: var(--text-2); }
@@ -131,9 +133,9 @@
   .tier-list .mk { font-family: var(--serif); font-style: italic; color: var(--brass); }
   .tier.featured .tier-list .mk { color: var(--brass-l); }
   .tier-foot { margin-top: auto; }
-  .tier .btn-light { display: inline-block; background: var(--cream); color: var(--burgundy); padding: 13px 28px; border-radius: 2px; font-size: 13px; font-weight: 500; letter-spacing: .04em; text-decoration: none; transition: background .2s, transform .2s; cursor: pointer; border: none; }
+  .tier .btn-light { display: inline-block; background: var(--cream); color: var(--burgundy); padding: 13px 28px; border-radius: 2px; font-size:14px; font-weight: 500; letter-spacing: .04em; text-decoration: none; transition: background .2s, transform .2s; cursor: pointer; border: none; }
   .tier .btn-light:hover { background: #fff; transform: translateY(-1px); }
-  .tier-badge { display: inline-block; font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--text-3); border: 1px solid var(--border-m); border-radius: 2px; padding: 7px 14px; }
+  .tier-badge { display: inline-block; font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--text-2); border: 1px solid var(--border-m); border-radius: 2px; padding: 7px 14px; }
 
   /* GATE */
   .gate { max-width: 600px; margin-top: 14px; }
@@ -144,24 +146,24 @@
   .gate-field button { background: none; border: none; font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--burgundy); cursor: pointer; white-space: nowrap; transition: opacity .2s; }
   .gate-field button:hover { opacity: .7; }
   .gate-done { font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.2vw, 26px); color: var(--burgundy); line-height: 1.4; }
-  .gate-note { margin-top: 16px; font-size: 12px; color: var(--text-3); letter-spacing: .02em; }
+  .gate-note { margin-top: 16px; font-size:14px; color:var(--text-2); letter-spacing: .02em; }
 
   /* FOOTER */
   footer.dark { background: #221A14; color: rgba(251,248,241,.66); padding: 84px 40px 40px; border: none; }
   .fd-top { max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; gap: 64px; flex-wrap: wrap; }
   .fd-brand { max-width: 320px; }
   .fd-brand .name { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: .04em; color: var(--cream); margin-bottom: 14px; }
-  .fd-desc { font-size: 13px; line-height: 1.72; color: rgba(251,248,241,.58); margin: 0 0 24px; }
+  .fd-desc { font-size:14px; line-height: 1.72; color: rgba(251,248,241,.58); margin: 0 0 24px; }
   .fd-cols { display: flex; gap: 64px; }
   .fd-col h5 { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--brass-l); margin: 0 0 18px; }
   .fd-col ul { list-style: none; margin: 0; padding: 0; }
   .fd-col li { margin-bottom: 11px; }
-  .fd-col a { font-size: 13.5px; color: rgba(251,248,241,.66); text-decoration: none; transition: color .2s; }
+  .fd-col a { font-size:14px; color: rgba(251,248,241,.66); text-decoration: none; transition: color .2s; }
   .fd-col a:hover { color: var(--cream); }
-  .fd-bottom { max-width: 1080px; margin: 58px auto 0; padding-top: 24px; border-top: 1px solid rgba(251,248,241,.14); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: rgba(251,248,241,.45); flex-wrap: wrap; gap: 10px; }
+  .fd-bottom { max-width: 1080px; margin: 58px auto 0; padding-top: 24px; border-top: 1px solid rgba(251,248,241,.14); display: flex; justify-content: space-between; align-items: center; font-size:14px; color: rgba(251,248,241,.45); flex-wrap: wrap; gap: 10px; }
   .fd-bottom .claim { font-family: var(--serif); font-style: italic; font-size: 14px; color: rgba(251,248,241,.62); }
 
-  .staging { position: fixed; bottom: 16px; right: 16px; z-index: 999; background: var(--ink); color: var(--brass-l); font-family: ui-monospace, Menlo, monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; padding: 8px 14px; border-radius: 2px; opacity: .85; }
+  .staging { position: fixed; bottom: 16px; right: 16px; z-index: 999; background: var(--ink); color: var(--brass-l); font-family: ui-monospace, Menlo, monospace; font-size:11px; letter-spacing: .12em; text-transform: uppercase; padding: 8px 14px; border-radius: 2px; opacity: .85; }
 
   @media (max-width: 860px) {
     .sec { padding: 80px 24px; }
@@ -186,23 +188,23 @@
 footer.dark{background:#221A14;border:none;padding:64px 40px 36px;}
 footer.dark .footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;}
 footer.dark .footer-brand-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:500;letter-spacing:.04em;margin-bottom:6px;color:#FBF8F1;}
-footer.dark .footer-tagline{font-size:12px;color:rgba(251,248,241,.5);font-style:italic;margin-bottom:18px;}
-footer.dark .footer-address{font-size:12.5px;color:rgba(251,248,241,.55);line-height:1.85;}
+footer.dark .footer-tagline{font-size:14px;color:rgba(251,248,241,.5);font-style:italic;margin-bottom:18px;}
+footer.dark .footer-address{font-size:14px;color:rgba(251,248,241,.55);line-height:1.85;}
 footer.dark .footer-address a{color:inherit;text-decoration:none;}
 footer.dark .footer-address a:hover{color:#C4A568;}
 footer.dark .footer-col h5{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#C4A568;font-weight:500;margin-bottom:16px;}
 footer.dark .footer-col ul{list-style:none;margin:0;padding:0;}
 footer.dark .footer-col li{margin-bottom:9px;}
-footer.dark .footer-col a{font-size:13px;color:rgba(251,248,241,.66);text-decoration:none;}
+footer.dark .footer-col a{font-size:14px;color:rgba(251,248,241,.66);text-decoration:none;}
 footer.dark .footer-col a:hover{color:#FBF8F1;}
 footer.dark .foot-bridge{color:rgba(251,248,241,.4);font-size:11px;letter-spacing:.02em;}
-footer.dark .footer-bottom{max-width:1080px;margin:40px auto 0;padding-top:22px;border-top:.5px solid rgba(251,248,241,.14);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(251,248,241,.45);flex-wrap:wrap;gap:10px;}
+footer.dark .footer-bottom{max-width:1080px;margin:40px auto 0;padding-top:22px;border-top:.5px solid rgba(251,248,241,.14);display:flex;justify-content:space-between;align-items:center;font-size:14px;color:rgba(251,248,241,.45);flex-wrap:wrap;gap:10px;}
 footer.dark .footer-bottom a{color:inherit;text-decoration:none;}
 footer.dark .footer-bottom a:hover{color:#FBF8F1;}
-footer.dark .foot-legal{font-size:12px;}
+footer.dark .foot-legal{font-size:14px;}
 footer.dark .foot-legal summary{list-style:none;cursor:pointer;color:rgba(251,248,241,.5);letter-spacing:.04em;display:inline-flex;align-items:center;gap:7px;transition:color .2s;}
 footer.dark .foot-legal summary::-webkit-details-marker{display:none;}
-footer.dark .foot-legal summary::after{content:'+';color:#A8884A;font-size:13px;line-height:1;}
+footer.dark .foot-legal summary::after{content:'+';color:#A8884A;font-size:14px;line-height:1;}
 footer.dark .foot-legal[open] summary::after{content:'\2013';}
 footer.dark .foot-legal summary:hover{color:#FBF8F1;}
 footer.dark .foot-legal-links{display:flex;flex-wrap:wrap;gap:7px 16px;margin-top:11px;}
@@ -210,7 +212,7 @@ footer.dark .foot-legal-links a{color:rgba(251,248,241,.6);text-decoration:none;
 footer.dark .foot-legal-links a:hover{color:#FBF8F1;}
 footer.dark .foot-legal-note{flex-basis:100%;color:rgba(251,248,241,.4);font-size:11px;letter-spacing:.02em;margin-top:2px;}
 footer.dark .footer-seek{margin-top:22px;}
-footer.dark .seek-trigger{background:none;border:.5px solid rgba(196,165,104,.5);color:#C4A568;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.22em;text-transform:uppercase;padding:8px 18px;border-radius:2px;cursor:pointer;transition:background .28s,color .28s,border-color .28s,letter-spacing .28s;}
+footer.dark .seek-trigger{background:none;border:.5px solid rgba(196,165,104,.5);color:#C4A568;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.22em;text-transform:uppercase;padding:8px 18px;border-radius:2px;cursor:pointer;transition:background .28s,color .28s,border-color .28s,letter-spacing .28s;}
 footer.dark .seek-trigger:hover{background:#A8884A;color:#221A14;border-color:#A8884A;letter-spacing:.26em;}
 footer.dark .seek-panel{display:flex;flex-wrap:wrap;gap:10px;max-width:340px;opacity:0;max-height:0;overflow:hidden;transform:translateY(-6px);transition:opacity .4s,transform .4s,max-height .45s,margin-top .4s;pointer-events:none;margin-top:0;}
 footer.dark .footer-seek:hover .seek-panel,footer.dark .footer-seek:focus-within .seek-panel,footer.dark .footer-seek.open .seek-panel{opacity:1;max-height:130px;margin-top:16px;transform:none;pointer-events:auto;}
@@ -226,9 +228,9 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -236,40 +238,40 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
     <li class="has-drop">
-      <a href="/philosophie/">Philosophie</a>
-      <div class="drop-panel mag">
-        <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
-        <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
-      </div>
-    </li>
+    <a href="/philosophie/">Studio</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
+    </div>
+  </li>
     <li class="has-drop">
-      <a href="/anwendungen/">Anwendungen</a>
-      <div class="drop-panel">
-        <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-        <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
-        <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-        <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
-        <span class="drop-div"></span>
-        <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
-      </div>
-    </li>
+    <a href="/anwendungen/">Anwendungen</a>
+    <div class="drop-panel">
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
+    </div>
+  </li>
     <li class="has-drop">
-      <a href="/magazin/">Magazin</a>
-      <div class="drop-panel mag">
-        <a class="drop-item" href="/magazin/#kat=longevity"><span class="drop-text"><span class="drop-name">Longevity</span><span class="drop-bridge">Biologie, Alter &amp; Prävention</span></span></a>
-        <a class="drop-item" href="/magazin/#kat=haut"><span class="drop-text"><span class="drop-name">Haut &amp; Pflege</span><span class="drop-bridge">Wissen für die Haut</span></span></a>
-        <a class="drop-item" href="/magazin/#kat=ritual"><span class="drop-text"><span class="drop-name">Ritual</span><span class="drop-bridge">Berührung &amp; Körperarbeit</span></span></a>
-        <a class="drop-item" href="/magazin/#kat=inner"><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atem &amp; Stille</span></span></a>
-        <span class="drop-div"></span>
-        <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
-      </div>
-    </li>
-    <li><a href="/monica/">Monica</a></li>
+    <a href="/magazin/">Magazin</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/magazin/#kat=longevity"><span class="drop-text"><span class="drop-name">Longevity</span><span class="drop-bridge">Biologie, Alter &amp; Prävention</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=haut"><span class="drop-text"><span class="drop-name">Haut &amp; Pflege</span><span class="drop-bridge">Wissen für die Haut</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=ritual"><span class="drop-text"><span class="drop-name">Ritual</span><span class="drop-bridge">Berührung &amp; Körperarbeit</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=inner"><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atem &amp; Stille</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
+    </div>
+  </li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -311,7 +313,7 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
         </div>
         <article class="opus track" data-src="/audio/spiramen.mp3">
           <div class="opus-cover">
-            <img src="/img/concentus-spiramen.webp" width="1536" height="1024" alt="Frau mit Kopfhörern, Hand auf der Brust, in stiller Atemmeditation — Klangbild zur Ambient-Aufnahme Spiramen aus der Concentus Klang-Bibliothek (Origo · Atem), Rubedo Inner Circle, Rubedo Spa Minden" title="Spiramen — Concentus · Klang-Bibliothek | Rubedo Inner Circle, Minden" loading="lazy" decoding="async">
+            <img src="/img/concentus-spiramen.webp" width="1536" height="1024" alt="Frau mit Kopfhörern, Hand auf der Brust, in stiller Atemmeditation — Klangbild zur Ambient-Aufnahme Spiramen aus der Concentus Klang-Bibliothek (Origo · Atem), Rubedo Inner Circle" title="Spiramen — Concentus · Klang-Bibliothek | Rubedo Inner Circle, Minden" loading="lazy" decoding="async">
             <button class="track-play opus-play" type="button" aria-label="Spiramen abspielen"><span class="tri"></span></button>
             <a class="opus-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
           </div>
@@ -409,7 +411,7 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
           <input type="email" id="gateEmail" placeholder="ihre@e-mail.de" required aria-label="E-Mail-Adresse">
           <button type="submit">Eintreten →</button>
         </form>
-        <p class="gate-note">Jederzeit widerrufbar. Ihre Daten bleiben bei Rubedo · <a href="/datenschutz/" style="color:var(--text-3);">Datenschutz</a>.</p>
+        <p class="gate-note">Jederzeit widerrufbar. Ihre Daten bleiben bei Rubedo · <a href="/datenschutz/" style="color:var(--text-2);">Datenschutz</a>.</p>
       </div>
     </div>
   </section>
@@ -422,7 +424,7 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -439,10 +441,10 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -450,7 +452,6 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
       <ul>
         <li><a href="/philosophie/">Philosophie</a></li>
         <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
-        <li><a href="/monica/">Monica</a></li>
         <li><a href="/magazin/">Magazin</a></li>
       </ul>
     </div>
@@ -460,6 +461,7 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>
@@ -618,7 +620,7 @@ footer.dark .seek-panel svg{width:16px;height:16px;display:block;fill:currentCol
   var gate = document.getElementById('gate');
   var form = document.getElementById('gateForm');
   function showJoined(email){
-    gate.innerHTML = '<p class="gate-done">Willkommen im Circle.<br>Die Klang-Bibliothek ist für Sie geöffnet — wir schreiben nur, wenn eine neue Klangwelt bereitsteht.</p><p class="gate-note" style="margin-top:20px;">Eingetragen als ' + email + ' · <a href="#" id="gateReset" style="color:var(--text-3);">ändern</a></p>';
+    gate.innerHTML = '<p class="gate-done">Willkommen im Circle.<br>Die Klang-Bibliothek ist für Sie geöffnet — wir schreiben nur, wenn eine neue Klangwelt bereitsteht.</p><p class="gate-note" style="margin-top:20px;">Eingetragen als ' + email + ' · <a href="#" id="gateReset" style="color:var(--text-2);">ändern</a></p>';
     var rs = document.getElementById('gateReset');
     if (rs) rs.addEventListener('click', function(e){ e.preventDefault(); try{ localStorage.removeItem('rubedo_circle'); }catch(_){} location.reload(); });
   }

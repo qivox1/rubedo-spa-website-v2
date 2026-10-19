@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Transparenz & Vorbereitung — Hinweise zu einem sicheren Rahmen, Vorbereitung und Nachklang für alle Anwendungen im Rubedo Spa Minden.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://www.rubedo-spa.de/transparenz-vorbereitung.html">
+<title>Transparenz &amp; Vorbereitung | Rubedo Spa Minden</title>
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/system.css">
+<style>
+  .eyebrow-rule { color:var(--gold); border-bottom-color: rgba(168,136,74,.5); }
+  .sf-hero { padding: 72px 40px 26px; }
+  .sf-hero-inner { max-width: var(--maxw); margin: 0 auto; }
+  .sf-hero .eyebrow { margin-bottom: 18px; }
+  .sf-hero h1 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(38px, 5vw, 58px); line-height: 1.08; letter-spacing: -.01em; margin-bottom: 18px; }
+  .sf-hero h1 .art { font-style: normal; font-weight: 500; }
+  .sf-hero-lead { font-family: var(--serif); font-size: 20px; font-weight: 300; color: var(--text-2); line-height: 1.55; max-width: 640px; }
+  .sf-hero-fig { position: relative; margin: 0 0 30px; border-radius: 2px; overflow: hidden; }
+  .sf-hero-fig img { width: 100%; height: auto; display: block; }
+  .sf-hero-cr { position: absolute; left: 8px; bottom: 8px; width: 15px; height: 15px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--sans); font-size: 7px; font-weight: 600; text-transform: uppercase; letter-spacing: .02em; text-decoration: none; color: rgba(120,108,90,.5); border: 1px solid rgba(120,108,90,.26); transition: color .25s, border-color .25s; z-index: 2; }
+  .sf-hero-cr:hover { color: rgba(60,48,32,.9); border-color: rgba(60,48,32,.6); }
+  .sf-hero-play { position: absolute; left: 18.5%; top: 77%; transform: translate(-50%,-50%); width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(251,248,241,.55); background: rgba(107,30,42,.4); display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 0; z-index: 3; transition: background .2s, transform .2s; }
+  .sf-hero-play:hover { background: rgba(107,30,42,.7); transform: translate(-50%,-50%) scale(1.06); }
+  .sf-hero-play .pp-tri { width: 0; height: 0; border-style: solid; border-width: 7px 0 7px 11px; border-color: transparent transparent transparent var(--cream); margin-left: 3px; }
+  .sf-hero-play .pp-pause { display: none; gap: 4px; }
+  .sf-hero-play .pp-pause i { width: 4px; height: 15px; background: var(--cream); display: block; }
+  .sf-hero-play.playing .pp-tri { display: none; }
+  .sf-hero-play.playing .pp-pause { display: flex; }
+  .sf-hero-voice { display: none; font-family: var(--sans); font-size: 11.5px; letter-spacing: .08em; color:var(--text-2); margin: 12px 0 0; }
+  .sf-hero-voice.show { display: block; }
+  .sf-hero-voice .hv-name { color: var(--brass); font-weight: 600; }
+  .sf-hero-top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
+  .sf-hero-top .eyebrow { margin-bottom: 0; }
+  .sf-vh { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .sf-uebersicht { display: inline-flex; align-items: center; gap: 6px; background: none; border: 0; cursor: pointer; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color:var(--gold); padding: 0 0 18px; transition: color .2s; }
+  .sf-uebersicht:hover { color: var(--burgundy); }
+  .sf-index { display: none; max-width: 460px; margin: 8px auto 0; }
+  .sf-shell.index-mode { grid-template-columns: 1fr; }
+  /* ⚠️ 1.8 — la colonna .sf-nav è nascosta in ENTRAMBI i modi, quindi con JavaScript attivo non si vede MAI:
+     lo script assegna sempre `index-mode` (al caricamento) o `panel-mode` (alla selezione). Sopravvive come
+     FALLBACK SENZA JAVASCRIPT: senza JS lo shell non riceve nessuna classe e la colonna torna visibile,
+     restando l'unico modo di raggiungere le 12 schede. → non è codice morto, non si archivia,
+     e va tenuta leggibile come il resto (per questo porta gli stessi corpi dell'Übersicht). */
+  .sf-shell.index-mode .sf-nav { display: none; }
+  .sf-shell.index-mode .sf-index { display: block; }
+  .sf-top-back { display: none; }
+  .sf-shell.panel-mode { grid-template-columns: 1fr; }
+  .sf-shell.panel-mode .sf-nav { display: none; } /* vedi la nota sopra: visibile solo senza JavaScript */
+  .sf-shell.panel-mode .sf-top-back { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 26px; font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--gold); background: none; border: none; cursor: pointer; padding: 0; transition: color .2s; }
+  .sf-shell.panel-mode .sf-top-back:hover { color: var(--burgundy); }
+  .sf-index-lead { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 21px; color: var(--text-2); text-align: center; line-height: 1.5; max-width: 36ch; margin: 0 auto 46px; }
+  .sf-index-groups { display: grid; grid-template-columns: 1fr; gap: 30px; }
+  /* 1.8 · i nomi delle Dimensioni erano piccoli e grigi accanto a un numero in maiuscoletto: gerarchia invertita.
+     Ora il NOME è l'elemento dominante, il numero resta un indice, e la glossa tedesca lo accompagna come nell'Übersicht. */
+  .sf-index-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 3px 11px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); padding-bottom: 10px; margin-bottom: 8px; border-bottom: .5px solid var(--border); }
+  .sf-index-lat { font-family: var(--serif); font-size: 30px; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--gold); line-height: 1.1; }
+  .sf-index-de { font-family: var(--sans); font-style: normal; font-weight: 400; font-size: 17px; letter-spacing: .01em; text-transform: none; color: var(--text-2); }
+  .sf-index-item { display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer; font-family: var(--serif); font-size: 24px; color: var(--text-1); padding: 9px 0; min-height: 44px; line-height: 1.3; transition: color .2s; }
+  .sf-index-item:hover { color: var(--burgundy); }
+  .sf-pagenote { max-width: var(--maxw); margin: 0 auto; padding: 4px 40px 64px; font-size:14px; font-style: italic; color:var(--text-2); line-height: 1.65; }
+
+  .sf-shell { max-width: var(--maxw); margin: 0 auto; padding: 20px 40px 96px; display: grid; grid-template-columns: 278px 1fr; gap: 64px; align-items: start; }
+
+  /* NAV */
+  .sf-nav { position: sticky; top: 84px; }
+  .sf-nav-group { margin-bottom: 26px; }
+  .sf-nav-group:last-child { margin-bottom: 0; }
+  .sf-nav-head { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 9px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); padding-bottom: 8px; margin-bottom: 6px; border-bottom: .5px solid var(--border); }
+  .sf-nav-head .sf-nav-latin { font-family: var(--serif); font-style: normal; font-size: 26px; font-weight: 400; letter-spacing: .02em; text-transform: none; color: var(--gold); line-height: 1.1; margin-left: 0; }
+  .sf-nav-head .sf-nav-de { font-family: var(--sans); font-style: normal; font-size: 16px; font-weight: 400; letter-spacing: .01em; text-transform: none; color: var(--text-2); }
+  .sf-tab { display: block; width: 100%; text-align: left; background: none; border: 0; cursor: pointer; font-family: var(--serif); font-size: 22px; color: var(--text-1); padding: 9px 0; min-height: 44px; line-height: 1.3; transition: color .2s; }
+  .sf-tab:hover { color: var(--burgundy); }
+  .sf-tab.active { color: var(--burgundy); }
+  .sf-tab.active::before { content: "—"; color: var(--brass); margin-right: 9px; }
+
+  /* PANELS */
+  .sf-panel { display: none; }
+  .sf-panel.active { display: block; animation: sfIn .4s ease; }
+  @keyframes sfIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .sf-panel-eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); margin-bottom: 14px; }
+  .sf-panel h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(30px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -.01em; margin-bottom: 16px; }
+  .sf-panel h2 .art { font-style: italic; }
+  .sf-panel-intro { font-family: var(--serif); font-size: 19px; font-weight: 300; font-style: italic; color: var(--text-2); line-height: 1.55; max-width: 60ch; margin-bottom: 40px; }
+
+  .sf-block { padding: 26px 0; }
+  .sf-block:first-of-type { padding-top: 0; }
+  .sf-block h3 { font-family: var(--serif); font-size: 23px; font-weight: 400; margin-bottom: 12px; }
+  .sf-block h4 { font-family: var(--serif); font-style: italic; font-size: 18px; font-weight: 500; color: var(--burgundy); margin: 20px 0 8px; }
+  .sf-block p { font-size: 15.5px; color: var(--text-2); line-height: 1.75; max-width: 66ch; }
+  .sf-block p + p { margin-top: 12px; }
+  .sf-block ul { list-style: none; margin: 12px 0 0; max-width: 66ch; }
+  .sf-block li { position: relative; padding-left: 18px; font-size: 15.5px; color: var(--text-2); line-height: 1.7; margin-top: 8px; }
+  .sf-block li::before { content: ""; position: absolute; left: 0; top: 12px; width: 5px; height: 5px; border-radius: 50%; background: var(--brass); }
+  .sf-block li b { color: var(--text-1); font-weight: 500; }
+  .sf-note { margin-top: 40px; padding-top: 18px; border-top: .5px solid var(--border); font-size:14px; font-style: italic; color:var(--text-2); line-height: 1.65; max-width: 66ch; }
+
+  .sf-group { font-family: var(--serif); font-style: italic; font-size: 27px; color: var(--burgundy); margin: 44px 0 4px; padding-top: 26px; border-top: .5px solid var(--border); }
+  .sf-group:first-of-type { border-top: 0; padding-top: 8px; }
+  .sf-transp { margin-top: 30px; padding-top: 18px; border-top: .5px solid var(--border); max-width: 66ch; }
+  .sf-transp-k { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); margin-bottom: 8px; }
+  .sf-transp p { font-size:14px; font-style: italic; color:var(--text-2); line-height: 1.65; }
+  /* 29.07 · link in prosa: bordeaux + filetto capillare (mai il blu di sistema) */
+  a { color: var(--burgundy); text-decoration: none; }
+  a:hover { color: var(--brass); }
+  .sf-block p a, .sf-block li a { border-bottom: .5px solid rgba(107,30,42,.35); padding-bottom: 1px; transition: color .2s, border-color .2s; }
+  .sf-block p a:hover, .sf-block li a:hover { border-color: var(--brass); }
+  .sf-back { display: inline-flex; align-items: center; gap: 8px; margin-top: 46px; font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--gold); text-decoration: none; transition: color .2s; }
+  .sf-back:hover { color: var(--burgundy); }
+
+  .sf-mobile-sel { display: none; color: var(--burgundy); }
+  /* 1.8 · colori del selettore mobile — FUORI dalla media query: il colore non deve dipendere dalla larghezza,
+     solo il `display` lo fa. Longhand separate di proposito: una shorthand `background` con data URI mal
+     codificato viene scartata INTERA dal parser (difetto trovato dal verificatore, stesso turno). */
+  .sf-mobile-sel { background-color: var(--cream); background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2012%208%22%3E%3Cpath%20d%3D%22M1%201l5%205%205-5%22%20fill%3D%22none%22%20stroke%3D%22%23A8884A%22%20stroke-width%3D%221.4%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E"); background-repeat: no-repeat; background-position: right 15px center; background-size: 11px 8px; }
+  .sf-mobile-sel optgroup { font-family: var(--serif); font-style: italic; font-size: 16px; font-weight: 500; color: var(--burgundy); background-color: var(--cream); }
+  .sf-mobile-sel option { font-family: var(--sans); font-style: normal; font-size: 15px; font-weight: 400; color: var(--gold); background-color: #fff; }
+
+  /* Origo — Trittico orizzontale (snello) */
+  .sf-group.airy { border-top: 0; padding-top: 40px; }
+  .sf-group.airy:first-of-type { padding-top: 8px; }
+  .sf-trip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px; margin-top: 20px; }
+  .sf-trip-col .sf-trip-k { display: block; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color:var(--gold); margin-bottom: 12px; padding-bottom: 10px; border-bottom: .5px solid var(--border); }
+  .sf-trip-col p { font-size: 14.5px; color: var(--text-2); line-height: 1.72; }
+  .sf-kontra { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 48px; margin-top: 18px; align-items: start; }
+  .sf-kontra-group .sf-kontra-k { display: block; font-family: var(--serif); font-style: italic; font-size: 20px; color: var(--burgundy); margin-bottom: 10px; }
+  .sf-kontra-group .sf-kontra-k .sf-kontra-tag { font-family: var(--sans); font-style: normal; font-size:11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color:var(--gold); margin-left: 8px; vertical-align: middle; }
+  .sf-trip-note { font-size: 14px; font-style: italic; color:var(--text-2); line-height: 1.7; max-width: 66ch; margin-top: 16px; }
+  .sf-eyebrow-row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 14px; }
+  .sf-eyebrow-row .sf-panel-eyebrow { margin-bottom: 0; }
+  .sf-listen { display: inline-flex; align-items: center; gap: 10px; }
+  .sf-listen-btn { flex: none; width: 32px; height: 32px; border-radius: 50%; border: .5px solid var(--brass); background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; padding: 0; transition: background .2s; }
+  .sf-listen-btn:hover { background: rgba(168,136,74,.09); }
+  .sf-listen-tri { width: 0; height: 0; border-style: solid; border-width: 6px 0 6px 10px; border-color: transparent transparent transparent var(--brass); margin-left: 2px; }
+  .sf-listen-label { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color:var(--gold); }
+  .sf-listen.is-off .sf-listen-btn { opacity: .45; cursor: default; }
+  .sf-listen-bar { margin: 4px 0 22px; max-width: 560px; }
+  .sf-listen-bar audio { width: 100%; display: block; }
+  .sf-listen-credit { margin-top: 8px; font-size: 11px; letter-spacing: .04em; color:var(--text-2); }
+  .sf-kontra-group ul { margin-top: 0; }
+  @media (max-width: 860px) {
+    .sf-shell { grid-template-columns: 1fr; gap: 26px; padding-top: 8px; }
+    .sf-nav { display: none; }
+    /* 1.8 · il selettore mobile parlava in nero di sistema: le Dimensioni in bordeaux, i servizi in oro.
+       ⚠️ optgroup/option sono resi dal sistema operativo: Chrome/Firefox/Edge e Android li colorano, iOS Safari no. */
+    .sf-mobile-sel { display: block; width: 100%; font-family: var(--sans); font-size: 15px; font-weight: 500; padding: 14px 40px 14px 15px; min-height: 44px; border: .5px solid var(--border-m); border-radius: 2px; -webkit-appearance: none; appearance: none; }
+    .sf-mobile-sel:focus { outline: none; border-color: var(--brass); box-shadow: 0 0 0 2px rgba(168,136,74,.16); }
+    .sf-trip { grid-template-columns: 1fr; gap: 0; }
+    .sf-trip-col { padding: 22px 0; border-top: .5px solid var(--border); }
+    .sf-trip-col:first-child { border-top: 0; padding-top: 0; }
+    .sf-trip-col .sf-trip-k { border-bottom: 0; padding-bottom: 0; }
+    .sf-index-groups { grid-template-columns: 1fr; gap: 26px; }
+    .sf-shell.index-mode .sf-mobile-sel { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="main" aria-label="Hauptnavigation">
+  <a href="/" class="nav-logo">
+    <img src="/img/logo.webp" alt="Rubedo Spa Logo">
+    <span class="nav-logo-text">
+      <span class="nav-logo-name">Rubedo Spa</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
+    </span>
+  </a>
+  <ul class="nav-links">
+    <li class="has-drop">
+    <a href="/philosophie/">Studio</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
+    </div>
+  </li>
+    <li class="has-drop">
+    <a href="/anwendungen/" class="active">Anwendungen</a>
+    <div class="drop-panel">
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
+    </div>
+  </li>
+    <li class="has-drop">
+    <a href="/magazin/">Magazin</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/magazin/#kat=longevity"><span class="drop-text"><span class="drop-name">Longevity</span><span class="drop-bridge">Biologie, Alter &amp; Prävention</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=haut"><span class="drop-text"><span class="drop-name">Haut &amp; Pflege</span><span class="drop-bridge">Wissen für die Haut</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=ritual"><span class="drop-text"><span class="drop-name">Ritual</span><span class="drop-bridge">Berührung &amp; Körperarbeit</span></span></a>
+      <a class="drop-item" href="/magazin/#kat=inner"><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atem &amp; Stille</span></span></a>
+      <span class="drop-div"></span>
+      <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
+    </div>
+  </li>
+    <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<main id="main">
+  <section class="sf-hero">
+    <div class="sf-hero-inner">
+      <span class="eyebrow eyebrow-rule" style="display:inline-block;margin-bottom:16px;">Transparenz &amp; Vorbereitung</span>
+      <figure class="sf-hero-fig">
+        <img src="/img/sorgfalt-hero.png" alt="Transparenz &amp; Vorbereitung — Ein sicherer Rahmen. Ihre Sicherheit und Ihr Wohlbefinden stehen für uns an erster Stelle.">
+        <button class="sf-hero-play" id="heroPlay" type="button" data-src="/audio/transparenz-vorbereitung-intro.mp3" aria-label="Einführung anhören — gesprochen von Monica Galletti"><span class="pp-tri"></span><span class="pp-pause"><i></i><i></i></span></button>
+        <a class="sf-hero-cr" href="/ki-bilder/" aria-label="KI-Hinweis zum Bild">cr</a>
+      </figure>
+      <p class="sf-hero-voice" id="heroVoice">Gesprochen von <span class="hv-name">Monica Galletti</span> · Gründerin · Rubedo Spa</p>
+      <h1 class="sf-vh">Transparenz &amp; Vorbereitung — Ein sicherer Rahmen.</h1>
+      <p class="sf-hero-lead">Ein persönliches Vorgespräch ist fester Bestandteil jedes Weges. Dabei besprechen wir gemeinsam Ihre individuelle Situation, mögliche gesundheitliche Besonderheiten und klären, ob die gewählte Anwendung für Sie geeignet ist oder gegebenenfalls angepasst werden sollte.</p>
+      <p class="sf-hero-lead" style="margin-top:18px;">Unsere Anwendungen dienen der Pflege, dem Wohlbefinden und der Entspannung. Sie ersetzen keine ärztliche oder psychotherapeutische Behandlung.</p>
+    </div>
+  </section>
+
+  <div class="sf-shell">
+    <nav class="sf-nav" aria-label="Anwendungen">
+      <button class="sf-uebersicht" type="button">← Übersicht</button>
+      <div class="sf-nav-group">
+        <div class="sf-nav-head">01 <span class="sf-nav-latin">Cutis</span> <span class="sf-nav-de">Haut</span></div>
+        <button class="sf-tab" data-target="cutis-peeling">Peeling &amp; Fruchtsäure-Routine</button>
+        <button class="sf-tab" data-target="cutis-dna">DNA-Hautanalyse</button>
+      </div>
+      <div class="sf-nav-group">
+        <div class="sf-nav-head">02 <span class="sf-nav-latin">Vigor</span> <span class="sf-nav-de">Aktivierung</span></div>
+        <button class="sf-tab" data-target="vigor-kryo">Ganzkörper-Kryotherapie</button>
+        <button class="sf-tab" data-target="vigor-kryo-lokal">Kryo lokal · Gesicht</button>
+        <button class="sf-tab" data-target="vigor-presso">Presso-Massage</button>
+        <button class="sf-tab" data-target="vigor-wraps">Beine-Bandagen &amp; Body Wraps</button>
+      </div>
+      <div class="sf-nav-group">
+        <div class="sf-nav-head">03 <span class="sf-nav-latin">Corpus</span> <span class="sf-nav-de">Körper</span></div>
+        <button class="sf-tab" data-target="corpus-abhyanga">Abhyanga</button>
+        <button class="sf-tab" data-target="corpus-hotstone">Hot Stone</button>
+        <button class="sf-tab" data-target="corpus-raindrop">Raindrop-Aroma-Ritual</button>
+        <button class="sf-tab" data-target="corpus-schwedisch">Schwedische Massage</button>
+      </div>
+      <div class="sf-nav-group">
+        <div class="sf-nav-head">04 <span class="sf-nav-latin">Origo</span> <span class="sf-nav-de">Atem</span></div>
+        <button class="sf-tab" data-target="origo">Breathwork &amp; Hypnose · Imago</button>
+      </div>
+    </nav>
+
+    <select class="sf-mobile-sel" aria-label="Anwendung wählen">
+      <optgroup label="Cutis · Haut"><option value="cutis-peeling">Peeling &amp; Fruchtsäure-Routine</option><option value="cutis-dna">DNA-Hautanalyse</option></optgroup>
+      <optgroup label="Vigor · Aktivierung">
+        <option value="vigor-kryo">Ganzkörper-Kryotherapie</option>
+        <option value="vigor-kryo-lokal">Kryo lokal · Gesicht</option>
+        <option value="vigor-presso">Presso-Massage</option>
+        <option value="vigor-wraps">Beine-Bandagen &amp; Body Wraps</option>
+      </optgroup>
+      <optgroup label="Corpus · Körper">
+        <option value="corpus-abhyanga">Abhyanga</option>
+        <option value="corpus-hotstone">Hot Stone</option>
+        <option value="corpus-raindrop">Raindrop-Aroma-Ritual</option>
+        <option value="corpus-schwedisch">Schwedische Massage</option>
+      </optgroup>
+      <optgroup label="Origo · Atem">
+        <option value="origo">Breathwork &amp; Hypnose · Imago</option>
+      </optgroup>
+    </select>
+
+    <div class="sf-panels">
+
+      <button class="sf-top-back" type="button">← Übersicht</button>
+
+      <div class="sf-index">
+        <p class="sf-index-lead">Wählen Sie eine Anwendung — Sie finden Hinweise zu Vorbereitung, Ablauf und einem sicheren Rahmen.</p>
+        <div class="sf-index-groups">
+          <div class="sf-index-group">
+            <div class="sf-index-head">01 <span class="sf-index-lat">Cutis</span> <span class="sf-index-de">Haut</span></div>
+            <button class="sf-index-item" type="button" data-target="cutis-peeling">Peeling &amp; Fruchtsäure-Routine</button>
+            <button class="sf-index-item" type="button" data-target="cutis-dna">DNA-Hautanalyse</button>
+          </div>
+          <div class="sf-index-group">
+            <div class="sf-index-head">02 <span class="sf-index-lat">Vigor</span> <span class="sf-index-de">Aktivierung</span></div>
+            <button class="sf-index-item" type="button" data-target="vigor-kryo">Ganzkörper-Kryotherapie</button>
+            <button class="sf-index-item" type="button" data-target="vigor-kryo-lokal">Kryo lokal · Gesicht</button>
+            <button class="sf-index-item" type="button" data-target="vigor-presso">Presso-Massage</button>
+            <button class="sf-index-item" type="button" data-target="vigor-wraps">Beine-Bandagen &amp; Body Wraps</button>
+          </div>
+          <div class="sf-index-group">
+            <div class="sf-index-head">03 <span class="sf-index-lat">Corpus</span> <span class="sf-index-de">Körper</span></div>
+            <button class="sf-index-item" type="button" data-target="corpus-abhyanga">Abhyanga</button>
+            <button class="sf-index-item" type="button" data-target="corpus-hotstone">Hot Stone</button>
+            <button class="sf-index-item" type="button" data-target="corpus-raindrop">Raindrop-Aroma-Ritual</button>
+            <button class="sf-index-item" type="button" data-target="corpus-schwedisch">Schwedische Massage</button>
+          </div>
+          <div class="sf-index-group">
+            <div class="sf-index-head">04 <span class="sf-index-lat">Origo</span> <span class="sf-index-de">Atem</span></div>
+            <button class="sf-index-item" type="button" data-target="origo">Breathwork &amp; Hypnose · Imago</button>
+          </div>
+        </div>
+      </div>
+
+      <article class="sf-panel" id="cutis-peeling">
+        <div class="sf-panel-eyebrow">Cutis · Transparenz &amp; Vorbereitung</div>
+        <h2>Peeling &amp; <span class="art">Fruchtsäure-Routine</span></h2>
+        <p class="sf-panel-intro">Ein Fruchtsäure-Peeling ist eine kosmetische Hautanwendung, bei der die obersten Hautschichten kontrolliert und schonend exfoliert werden. Die Haut kann dadurch vorübergehend empfindlicher auf äußere Einflüsse reagieren.</p>
+        <div class="sf-block">
+          <p>Damit Ihre Haut die Anwendung bestmöglich verträgt, beginnen wir jede Behandlung mit einer kurzen Hautanalyse und einem persönlichen Vorgespräch. Gemeinsam besprechen wir Ihren aktuellen Hautzustand, Ihre Pflegeroutine und mögliche Besonderheiten, um die Behandlung individuell anzupassen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Eine gute Vorbereitung unterstützt ein gleichmäßiges und angenehmes Behandlungserlebnis. Wir empfehlen:</p>
+          <ul>
+            <li>Retinol, Retinal sowie AHA-, BHA- oder andere exfolierende Produkte etwa 3–5 Tage vor der Behandlung auszusetzen;</li>
+            <li>auf mechanische Peelings, Bürsten oder stark reizende Pflegeprodukte einige Tage vorher zu verzichten;</li>
+            <li>intensive Sonneneinstrahlung und Solarium möglichst 48 Stunden vor der Behandlung zu vermeiden;</li>
+            <li>Waxing, Sugaring oder Rasur im Behandlungsbereich mindestens 24 Stunden vorher nicht mehr durchzuführen;</li>
+            <li>am Behandlungstag möglichst ohne Make-up oder mit gereinigter Haut zu erscheinen.</li>
+          </ul>
+          <h4>Wann am schönsten</h4>
+          <p>Wenn Ihr Tag es zulässt, legen wir das Peeling gern auf den <strong>späten Nachmittag</strong>. Der Grund ist einfach: frisch exfolierte Haut reagiert empfindlicher auf Licht — ein Termin am Nachmittag schenkt ihr die ganze Nacht, um zur Ruhe zu kommen, bevor sie wieder ins Tageslicht geht.</p>
+          <p>Hinzu kommt, dass die Haut einer eigenen Tagesrhythmik folgt: Sie arbeitet tagsüber eher schützend und in den Abend- und Nachtstunden eher erneuernd — die Zellteilung in der Oberhaut ist zu dieser Zeit deutlich lebhafter als um die Mittagszeit.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einem Fruchtsäure-Peeling benötigt die Haut einige Tage, um sich zu regenerieren. Während dieser Zeit empfehlen wir:</p>
+          <ul>
+            <li>täglich einen Sonnenschutz mit mindestens SPF 50 anzuwenden und direkte Sonneneinstrahlung möglichst zu vermeiden;</li>
+            <li>die Haut mit einer milden, parfumfreien Pflege und ausreichend Feuchtigkeit zu unterstützen;</li>
+            <li>für etwa 5–7 Tage auf Retinol, Fruchtsäuren, Peelings und andere stark aktive Wirkstoffe zu verzichten;</li>
+            <li>die Haut nicht zu reiben oder zu stark zu beanspruchen;</li>
+            <li>Sauna, Dampfbad, Solarium sowie intensive sportliche Belastung am Behandlungstag möglichst zu vermeiden.</li>
+          </ul>
+          <p>Eine leichte Rötung, ein Spannungsgefühl oder eine feine Schuppung können in den ersten Tagen auftreten und gehören zu den möglichen Reaktionen der Haut. Bitte lösen oder entfernen Sie sich ablösende Hautschüppchen nicht mechanisch.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Hautsituationen</h3>
+          <p>Jede Haut ist einzigartig. Einige Hautzustände oder gesundheitliche Besonderheiten können Einfluss auf die Behandlung haben. Bitte weisen Sie uns vor der Behandlung auf folgende Punkte hin:</p>
+          <ul>
+            <li>gereizte, verletzte oder sonnenverbrannte Haut</li>
+            <li>aktive Entzündungen, Ekzeme oder Neurodermitis im Behandlungsbereich</li>
+            <li>Herpes simplex oder andere akute Hautinfektionen</li>
+            <li>frische Rasur, Waxing oder Sugaring im Behandlungsbereich</li>
+            <li>kürzlich durchgeführte kosmetische oder dermatologische Behandlungen (z. B. Laser, Microneedling oder chemische Peelings)</li>
+            <li>Einnahme oder kürzlich abgeschlossene Therapie mit Isotretinoin (z. B. Aknenormin®, Roaccutan®)</li>
+            <li>regelmäßige Anwendung hochdosierter Retinoide oder verschreibungspflichtiger Wirkstoffcremes</li>
+            <li>Schwangerschaft oder Stillzeit</li>
+            <li>bekannte Allergien oder Unverträglichkeiten gegenüber kosmetischen Inhaltsstoffen</li>
+          </ul>
+          <p>Bitte sprechen Sie uns diese Punkte vorab an, damit wir die Anwendung achtsam darauf abstimmen können. Bei bestehenden Erkrankungen, laufender ärztlicher Behandlung oder Unsicherheiten klären Sie die Eignung bitte vorab mit Ihrer Ärztin oder Ihrem Arzt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Das Behandlungsergebnis entwickelt sich individuell und hängt unter anderem vom Hautzustand, der anschließenden Pflege und dem konsequenten Sonnenschutz ab.</p>
+          <p>Sollten nach der Behandlung ungewöhnlich starke oder anhaltende Beschwerden auftreten, empfehlen wir, die Anwendung geeigneter Pflegeprodukte zunächst zu pausieren und sich ärztlich beraten zu lassen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Zwei Menschen, dieselbe Anwendung, zwei verschiedene Tage danach — was die Haut daraus macht, entscheidet sie selbst.</p>
+          <p><strong>Der Rhythmus.</strong> Die Oberhaut erneuert sich in etwa vier Wochen — und sie tut es weiter, ein Leben lang, nur langsamer, je älter wir werden. Deshalb folgt die Pflege dem Zyklus der Haut: <strong>alle zehn bis vierzehn Tage</strong>, nah genug, um die Erneuerung zu treffen, und weit genug, damit die Hautbarriere sich zwischendurch vollständig aufbaut. Wie viele Anwendungen aufeinander folgen, richtet sich nach Ihrer Haut — vier bis sechs sind ein guter Anfang, und danach trägt der Rhythmus weiter.</p>
+          <p><strong>Was sich wann zeigt — und was es hält.</strong> Glätte und Frische beschreiben viele bereits nach der ersten Anwendung; das Hautbild als Ganzes — Ebenmäßigkeit, Struktur — zeigt sich ab der dritten bis vierten. Danach geht es ums <strong>Halten</strong>: mit einem ruhigeren Takt, oft <strong>drei bis vier Anwendungen im Jahr</strong>, trägt die Pflege die Erneuerung weiter. Und was zwischen den Terminen geschieht, entscheidet mit: täglicher Sonnenschutz ist die Hälfte des Ergebnisses — und die wirksamste Vorbeugung, die wir kennen.</p>
+        </div>
+        <a class="sf-back" href="/cutis/">Cutis erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Unsere Fruchtsäure-Routine ist eine kosmetische Anwendung. Sie dient der Hautpflege und ersetzt keine dermatologische Diagnose oder medizinische Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="cutis-dna">
+        <div class="sf-panel-eyebrow">Cutis · Transparenz &amp; Vorbereitung</div>
+        <h2>DNA-<span class="art">Hautanalyse</span></h2>
+        <p class="sf-panel-intro">Die DNA-Hautanalyse ist eine kosmetische, genombasierte Hautberatung: Aus einer Speichelprobe werden hautalterungsrelevante Erbanlagen wissenschaftlich ausgewertet — als Orientierung für eine Pflege, die zu Ihrer Haut passt.</p>
+        <div class="sf-block">
+          <p>Monica Galletti ist zertifizierte DNA Skin Expert. Die Auswertung erfolgt in einem europaweit anerkannten, staatlich zugelassenen Labor. Alles beginnt mit einem persönlichen Vorgespräch, in dem wir Ablauf, Ziele und offene Fragen gemeinsam klären.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Ablauf</h3>
+          <ul>
+            <li>Persönliches Vorgespräch — Ablauf, Ziele und Einwilligung.</li>
+            <li>Kurzer Lifestyle-Fragebogen, anschließend die Speichelprobe im Studio.</li>
+            <li>Auswertung in einem europaweit anerkannten, staatlich zugelassenen Labor (in der Regel etwa zwei bis drei Wochen).</li>
+            <li>Ihr DNA Report wird von Ihrer DNA Skin Expert gelesen und gedeutet — verständlich und in Ruhe.</li>
+            <li>Auf dieser Grundlage stimmen wir Ihre Pflege und Ihre Studio-Behandlungen individuell auf Sie ab — als fester Bestandteil Ihres persönlichen Konzepts.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung — Speichelprobe</h3>
+          <p>Damit die Probe gut auswertbar ist, bitten wir Sie, rund 30 Minuten vor der Entnahme:</p>
+          <ul>
+            <li>nichts zu essen oder zu trinken (außer Wasser),</li>
+            <li>nicht zu rauchen,</li>
+            <li>keine Zähne zu putzen und keinen Kaugummi zu kauen.</li>
+          </ul>
+          <p>Mehr Vorbereitung braucht es nicht — die Entnahme ist einfach, schmerzfrei und dauert nur wenige Minuten. Alle weiteren Details und Ihre Fragen besprechen wir ausführlich im persönlichen Gespräch.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Personalisierte Kosmetik &amp; Mikronährstoffe</h3>
+          <p>Auf Grundlage Ihrer Analyse, Ihres Hautbedarfs und des Gesprächs können Sie Ihr Konzept von Anfang an mit zwei aufeinander abgestimmten Bausteinen ergänzen:</p>
+          <ul>
+            <li><b>Genbasierte Naturkosmetik</b> — im Labor auf Ihre Beauty-Gene und Ihren Hautbedarf abgestimmt und frisch gemischt.</li>
+            <li><b>Mikronährstoffe</b> — eine Nahrungsergänzung, die zu Ihren Anlagen und Ihrem Lebensstil passt.</li>
+          </ul>
+          <p>Die Zusammensetzung wird exklusiv für Sie komponiert — Ihre eigene Rezeptur. INCI &amp; Allergene zu Ihrer jeweiligen Formulierung auf Anfrage.</p>
+          <p><strong>Der Rhythmus.</strong> Diese beiden Bausteine sind ihrem Wesen nach <em>fortlaufend</em>: die Haut erneuert sich täglich, und Mikronährstoffe wirken über die Versorgung — also über die <strong>Regelmäßigkeit</strong>. Deshalb sprechen wir hier von <strong>Kontinuität</strong>: Ihre Formulierung wird frisch gemischt, wenn sie zur Neige geht — und bei jeder Neubestellung prüfen wir gemeinsam mit Ihnen, ob sie noch präzise zu Ihrer Haut und Ihrer Lebensphase passt. Nach etwa <strong>zwölf Wochen</strong> nehmen wir uns dafür Zeit im Studio: Wir sprechen darüber, was sich verändert hat, und daraus entsteht die nächste Formulierung. Diese Zwischenbilanz ist Teil Ihres Konzepts.</p>
+          <p><strong>Was das Halten leichter macht.</strong> Anlage ist ein <strong>Rahmen</strong>. Was Ihre Analyse zeigt, bleibt — die Empfehlungen dagegen stützen Ihren Alltag: Schlaf, Sonne, Ernährung, Ruhe. Deshalb ist der Sinn dieses Weges eine Grundlage, die man <strong>behält</strong>. Vorbeugen ist hier der ganze Gedanke.</p>
+        </div>
+        <div class="sf-block">
+          <h3>DNA Lifestyle Analysen</h3>
+          <p>Die DNA-Hautanalyse lässt sich um weitere DNA Lifestyle Analysen erweitern — der Blick reicht dann über die Haut hinaus:</p>
+          <ul>
+            <li>Beauty · Nutrition · Weight · Toxo · Burnout · Performance · Biologisches Alter</li>
+          </ul>
+          <p>Beauty ist Teil der DNA-Hautanalyse; die weiteren Analysen und das Beauty-Bundle stellen wir im Detail unter <a href="/genomis/">Genomis</a> vor.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Die DNA-Hautanalyse ist für Personen ab 18 Jahren vorgesehen. Bitte sagen Sie uns vorab Bescheid, wenn Sie sich in ärztlicher Behandlung befinden oder Fragen zur Eignung haben — bei gesundheitlichen Themen klären Sie diese bitte mit Ihrer Ärztin oder Ihrem Arzt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Datenschutz</h3>
+          <p>Genetische Daten sind besonders schützenswert. Ihre Probe und Ihre Ergebnisse werden ausschließlich für das vereinbarte kosmetische Konzept verwendet — auf Grundlage Ihrer ausdrücklichen Einwilligung und im Rahmen der geltenden Datenschutzbestimmungen. Ihre Einwilligung können Sie jederzeit widerrufen. Einzelheiten besprechen wir im Vorgespräch und in unserer Datenschutzerklärung.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Die DNA-Hautanalyse dient der kosmetischen Orientierung für Ihre Hautpflege. Sie ist keine medizinische, diagnostische oder GenDG-relevante Untersuchung und trifft keine Aussagen über Krankheiten oder Gesundheitsrisiken. Die genetische Auswertung beschreibt Anlagen; wie sich Ihre Haut zeigt, hängt darüber hinaus von Lebensstil, Umwelt und Pflege ab. Die daraus abgeleiteten Empfehlungen sind begründete Schlussfolgerungen aus Ihrem Profil, keine durch kontrollierte Studien für den Einzelfall belegten Ergebnisse.</p>
+        </div>
+        <a class="sf-back" href="/cutis/">Cutis erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Kosmetische, genombasierte Hautberatung zur Orientierung — keine medizinische Diagnose und keine Analyse im Sinne des Gendiagnostikgesetzes. Durchgeführt mit zertifizierten Partnern; Auswertung in einem europaweit anerkannten, staatlich zugelassenen Labor.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="vigor-kryo">
+        <div class="sf-panel-eyebrow">Vigor · Transparenz &amp; Vorbereitung</div>
+        <h2>Ganzkörper-<span class="art">Kryotherapie</span></h2>
+        <p class="sf-panel-intro">Die Ganzkörper-Kryotherapie ist eine kosmetische Anwendung mit intensivem Kältereiz, bei der der Körper für wenige Minuten sehr kalter, trockener Luft ausgesetzt wird.</p>
+        <div class="sf-block">
+          <p>Die Anwendung erfolgt kontrolliert: Wir bleiben während der ganzen Sitzung an der Kabine. Vor jeder Sitzung besprechen wir Ihre aktuelle Situation und stimmen die Anwendung individuell auf Sie ab; gesundheitliche Fragen zur Eignung klären Sie bitte mit Ihrer Ärztin oder Ihrem Arzt. Eine sorgfältige Vorbereitung und die richtige Nachpflege unterstützen ein angenehmes und sicheres Anwendungserlebnis.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Damit Sie die Anwendung angenehm und sicher erleben können, bitten wir Sie, folgende Hinweise zu beachten.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Auf Rasur, Peelings, Waxing oder Laserbehandlungen an den zu behandelnden Hautarealen sollte am Behandlungstag möglichst verzichtet werden.</li>
+            <li>Kommen Sie mit sauberer und vollständig trockener Haut sowie geeigneter Unterwäsche zur Anwendung.</li>
+            <li>Verzichten Sie am Behandlungstag auf Körperöle, reichhaltige Cremes oder Lotionen.</li>
+            <li>Vermeiden Sie unmittelbar vor der Anwendung größere Mengen Koffein.</li>
+            <li>Nach einem Schwimmbadbesuch oder intensiver Sonneneinstrahlung empfehlen wir, der Haut ausreichend Zeit zur Erholung zu geben.</li>
+            <li>Bei akuten Infekten, Fieber oder wenn Sie sich am Behandlungstag nicht vollständig wohl fühlen, empfehlen wir, die Anwendung zu verschieben.</li>
+          </ul>
+          <h4>Im Institut</h4>
+          <p>Wir bereiten Sie vor — Schritt für Schritt, bevor die Kabine öffnet. Bitte beachten Sie:</p>
+          <ul>
+            <li>Schmuck, Uhren, Brillen sowie andere metallische Gegenstände werden vor der Anwendung abgelegt.</li>
+            <li>Können Piercings nicht entfernt werden, werden diese zum Schutz der Haut sorgfältig mit einem geeigneten Pflaster abgedeckt.</li>
+            <li>Sie erhalten die für die Anwendung vorgesehene Schutzkleidung, einschließlich Handschuhen und Schuhschutz.</li>
+            <li>Besonders kälteempfindliche Körperbereiche wie Hände und Füße werden entsprechend geschützt.</li>
+            <li>Vor dem Betreten der Kabine prüfen wir gemeinsam, dass die Haut vollständig trocken ist und alle Vorbereitungen abgeschlossen sind.</li>
+          </ul>
+          <p>Während der gesamten Anwendung bleiben Sie über Sicht- und Sprechkontakt mit uns verbunden.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach der Kälteanwendung benötigt der Körper Zeit, um wieder in seinen normalen Wärmehaushalt zurückzukehren. Für einen angenehmen Übergang empfehlen wir:</p>
+          <ul>
+            <li>sich nach der Anwendung einige Minuten leicht und entspannt zu bewegen;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>unmittelbar danach möglichst auf Sauna, Dampfbad oder sehr heiße Bäder zu verzichten;</li>
+            <li>intensive Hitzeeinwirkungen am selben Tag zu vermeiden;</li>
+            <li>direkt nach der Anwendung auf intensive oder reizende Pflegeprodukte zu verzichten.</li>
+          </ul>
+          <p>Je nach individueller Hautempfindlichkeit kann die Haut vorübergehend gerötet sein, sich kühl anfühlen oder leicht kribbeln. Diese Wahrnehmungen sind individuell verschieden.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut und jeder Körper sind einzigartig. Bestimmte persönliche Situationen, Hautzustände oder gesundheitliche Besonderheiten können bei der Planung und Durchführung der Anwendung eine Rolle spielen.</p>
+          <p>Die Anwendung ist für Personen unter 18 Jahren nicht vorgesehen.</p>
+          <p>Bitte sprechen Sie uns vor der Behandlung auf folgende Punkte an, damit wir die Anwendung sicher und individuell auf Sie abstimmen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Herz und Kreislauf</span>
+              <ul>
+                <li>Herz-Kreislauf-Erkrankungen</li>
+                <li>unbehandelter oder schwer einstellbarer Bluthochdruck</li>
+                <li>relevante Herzrhythmusstörungen</li>
+                <li>koronare Herzerkrankung</li>
+                <li>Angina pectoris</li>
+                <li>Herzschwäche</li>
+                <li>Herzschrittmacher oder implantierter Defibrillator</li>
+                <li>kürzlich erlittener Herzinfarkt</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Gefäße und Durchblutung</span>
+              <ul>
+                <li>Durchblutungsstörungen</li>
+                <li>periphere arterielle Verschlusskrankheit</li>
+                <li>aktuelle oder kürzlich aufgetretene Thrombose</li>
+                <li>Lungenembolie</li>
+                <li>Gefäßentzündungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Kälteempfindlichkeit</span>
+              <ul>
+                <li>Kälteallergie bzw. Kälteurtikaria</li>
+                <li>ausgeprägte Kälteunverträglichkeit</li>
+                <li>Raynaud-Syndrom</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Haut und allgemeine Gesundheit</span>
+              <ul>
+                <li>offene Wunden oder frische Hautverletzungen</li>
+                <li>akute Hautentzündungen</li>
+                <li>akute Infekte oder Fieber</li>
+                <li>Schwangerschaft</li>
+                <li>kürzlich erfolgte Operationen</li>
+                <li>ausgeprägte Kreislaufprobleme oder Schwindel</li>
+                <li>bekannte Klaustrophobie</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bitte sprechen Sie uns diese Punkte vorab an, damit wir die Anwendung achtsam darauf abstimmen können. Bei bestehenden Erkrankungen, laufender ärztlicher Behandlung oder Unsicherheiten klären Sie die Eignung bitte vorab mit Ihrer Ärztin oder Ihrem Arzt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Bitte informieren Sie uns jederzeit während der Anwendung, wenn Sie sich unwohl fühlen. Ihre Sicherheit und Ihr persönliches Empfinden stehen während der gesamten Behandlung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Drei Minuten Kälte erlebt jeder Mensch anders: für die eine sind sie lang, für die andere fast zu kurz.</p>
+          <p>Manche Menschen beschreiben die Anwendung als eine intensive Sinneserfahrung, andere nehmen sie vor allem als besonderen Moment bewusster Körperwahrnehmung wahr.</p>
+          <p><strong>Der Rhythmus.</strong> Kälte wirkt über <em>Wiederholung</em>. Ein bis drei Mal pro Woche ist ein guter Takt; wie lange, entscheidet Ihre Ausgangslage. Was viele nach den ersten Anwendungen beschreiben, ist ein Körper, der auf den Reiz gelassener antwortet — er kennt ihn dann. Das ist Gewöhnung im guten Sinn: die Aufregung nimmt ab, die Regelmäßigkeit trägt. Deshalb sprechen wir von einem Rhythmus, den man <strong>beibehält</strong>.</p>
+          <p>Wenn Sie die Ganzkörper-Kryotherapie regelmäßig in Ihre persönliche Routine integrieren möchten, beraten wir Sie gerne zu sinnvollen Anwendungsabständen und einer auf Ihre Bedürfnisse abgestimmten Anwendung.</p>
+        </div>
+        <a class="sf-back" href="/vigor/">Vigor erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Ganzkörper-Kryotherapie ist eine kosmetische Anwendung im Bereich Wohlbefinden und Körperpflege. Sie ersetzt keine ärztliche Diagnose, medizinische Behandlung oder Therapie.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="vigor-kryo-lokal">
+        <div class="sf-panel-eyebrow">Vigor · Transparenz &amp; Vorbereitung</div>
+        <h2>Kryo lokal · <span class="art">Gesicht</span></h2>
+        <p class="sf-panel-intro">Die lokale Kryotherapie im Gesichtsbereich ist eine präzise kosmetische Anwendung mit trockenem Stickstoffdampf, bei der die Haut für kurze Zeit einem kontrollierten Kältereiz ausgesetzt wird.</p>
+        <div class="sf-block">
+          <p>Die Temperaturführung wird während der gesamten Anwendung kontinuierlich überwacht, sodass der Kältereiz präzise und individuell abgestimmt erfolgt. Die Intensität wird an Ihre Hautempfindlichkeit und den jeweiligen Behandlungsbereich angepasst und orientiert sich am aktuellen Zustand Ihrer Haut.</p>
+          <p>Vor jeder Anwendung besprechen wir Ihre Hautsituation und stimmen die Anwendung individuell auf Sie ab; gesundheitliche Fragen zur Eignung klären Sie bitte mit Ihrer Ärztin oder Ihrem Arzt. Eine sorgfältige Vorbereitung und eine angepasste Nachpflege unterstützen ein angenehmes Hautgefühl und eine sichere Anwendung.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine lokale Kryo-Anwendung im Gesicht ist unkompliziert. Einige einfache Hinweise helfen dabei, die Haut optimal auf die Behandlung vorzubereiten.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Die Anwendung kann mit oder ohne Make-up durchgeführt werden.</li>
+            <li>Verzichten Sie einige Tage vor der Anwendung auf stark abtragende oder reizende Pflegeprodukte wie intensive Peelings, Retinol oder hochkonzentrierte Säuren.</li>
+            <li>Kommen Sie möglichst mit einer ruhigen und unverletzten Haut zur Behandlung.</li>
+            <li>Bei Sonnenbrand, akuten Hautreizungen oder deutlich empfindlicher Haut empfehlen wir, die Anwendung zu verschieben.</li>
+          </ul>
+          <h4>Im Institut</h4>
+          <p>Vor der Anwendung schätzen wir gemeinsam den aktuellen Zustand Ihrer Haut ein. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>die individuelle Hautempfindlichkeit,</li>
+            <li>den aktuellen Hautzustand,</li>
+            <li>empfindliche oder besonders reaktive Bereiche,</li>
+            <li>die passende Intensität der Anwendung.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer lokalen Kälteanwendung kann sich die Haut vorübergehend anders anfühlen. Je nach individueller Hautempfindlichkeit können leichte Rötungen, ein Frischegefühl oder eine erhöhte Sensibilität auftreten. Die Wahrnehmung ist individuell verschieden.</p>
+          <p>Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>direkte Sonneneinstrahlung und Solarium unmittelbar nach der Behandlung zu vermeiden;</li>
+            <li>ebenfalls unmittelbar danach auf Laserbehandlungen oder Waxing im behandelten Bereich zu verzichten;</li>
+            <li>am selben Tag möglichst auf intensive Hitze wie Sauna oder Dampfbäder zu verzichten;</li>
+            <li>direkt anschließend stark reizende Wirkstoffe oder intensive Peelings zu vermeiden;</li>
+            <li>für eine kurze Zeit auf mechanische Reize wie intensive Massagen oder starkes Reiben der Haut zu verzichten.</li>
+          </ul>
+          <p>Geben Sie Ihrer Haut Zeit, sich nach der Anwendung wieder zu stabilisieren.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut ist einzigartig. Bestimmte Hautzustände oder gesundheitliche Besonderheiten können Einfluss auf die Anwendung haben. Bitte sprechen Sie uns vor der Behandlung auf folgende Punkte an, damit wir die Anwendung sicher und individuell auf Ihre Haut abstimmen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Kälteempfindlichkeit</span>
+              <ul>
+                <li>Kälteallergie bzw. Kälteurtikaria</li>
+                <li>ausgeprägte Kälteunverträglichkeit</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Hautzustand</span>
+              <ul>
+                <li>offene Wunden oder frische Hautverletzungen im Behandlungsbereich</li>
+                <li>akute Entzündungen oder Infektionen der Haut</li>
+                <li>ausgeprägte Hautreizungen</li>
+                <li>aktueller Sonnenbrand</li>
+                <li>ausgeprägte Rosazea oder entzündliche Couperose im Behandlungsbereich</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Ästhetische Behandlungen</span>
+              <ul>
+                <li>kürzlich erfolgte Peelings oder Fruchtsäurebehandlungen</li>
+                <li>intensive kosmetische Behandlungen</li>
+                <li>Laserbehandlungen im Gesichtsbereich</li>
+                <li>Microneedling oder vergleichbare hautreizende Anwendungen</li>
+                <li>frische Injektionen oder ästhetische Behandlungen im Gesichtsbereich</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Allgemeine gesundheitliche Situationen</span>
+              <ul>
+                <li>akute Infekte oder Fieber</li>
+                <li>relevante Erkrankungen des Herz-Kreislauf-Systems</li>
+                <li>Erkrankungen der Blutgefäße</li>
+                <li>Schwangerschaft</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bitte sprechen Sie uns diese Punkte vorab an, damit wir die Anwendung achtsam darauf abstimmen können. Bei bestehenden Erkrankungen, laufender ärztlicher oder dermatologischer Behandlung oder Unsicherheiten klären Sie die Eignung bitte vorab mit Ihrer Ärztin oder Ihrem Arzt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jede Haut reagiert individuell auf Kältereize. Deshalb wird die Anwendung immer auf Ihre persönliche Hautsituation abgestimmt. Ihre Sicherheit und Ihr persönliches Empfinden stehen während der gesamten Behandlung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Kälte wird sehr persönlich empfunden — was für eine Person belebend ist, ist für eine andere schlicht kalt.</p>
+          <p>Viele Menschen beschreiben die Anwendung als eine besondere Sinneserfahrung und nehmen anschließend ein verändertes Hautgefühl wahr.</p>
+          <p><strong>Der Rhythmus.</strong> Das Besondere dieser Anwendung ist ihre <strong>Unmittelbarkeit</strong>: Der Eindruck stellt sich sofort ein. Deshalb ist sie die Anwendung <em>vor einem Anlass</em> — und deshalb richtet sich ihr Takt nach Ihrem Leben: alle ein bis zwei Wochen, wenn Sie mögen, sonst einmal im Monat als ruhige Gewohnheit.</p>
+        </div>
+        <a class="sf-back" href="/vigor/">Vigor erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die lokale Kryotherapie ist eine kosmetische Anwendung zur Pflege und zum Wohlbefinden der Haut. Sie ersetzt keine dermatologische Diagnose, medizinische Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="vigor-presso">
+        <div class="sf-panel-eyebrow">Vigor · Transparenz &amp; Vorbereitung</div>
+        <h2>Presso-<span class="art">Massage</span></h2>
+        <p class="sf-panel-intro">Die Presso-Massage ist eine sanfte, rhythmische Kompressionsanwendung, bei der gezielter Druck auf bestimmte Körperbereiche ausgeübt wird.</p>
+        <div class="sf-block">
+          <p>Die Anwendung wird individuell abgestimmt und kann insbesondere an Beinen, Armen oder anderen geeigneten Körperregionen eingesetzt werden. Viele Menschen empfinden die rhythmische Kompression als angenehm und beschreiben danach ein Gefühl von Leichtigkeit und Entspannung. Eine sorgfältige Vorbereitung und die richtige Nachsorge unterstützen ein angenehmes Anwendungserlebnis.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine Presso-Massage ist unkompliziert. Einige einfache Hinweise helfen dabei, die Anwendung besonders angenehm zu gestalten.</p>
+          <h4>Ihr Zeitrahmen</h4>
+          <p>Planen Sie für Ihren Termin bitte etwa <strong>eine Stunde</strong> ein. Ankommen, die Anwendung und ein paar ruhige Minuten danach gehören zusammen — der Nachklang ist Teil der Anwendung, nicht ein Anhang.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Tragen Sie bequeme Kleidung oder passende Unterwäsche für die Anwendung.</li>
+            <li>Legen Sie enge oder einschnürende Kleidungsstücke vor der Behandlung ab.</li>
+            <li>Entfernen Sie Ringe, Fußkettchen, Uhren oder andere Schmuckstücke an Armen und Beinen.</li>
+            <li>Vermeiden Sie unmittelbar vor der Anwendung sehr üppige Mahlzeiten.</li>
+            <li>Trinken Sie ausreichend Wasser und kommen Sie möglichst gut hydriert zur Behandlung.</li>
+          </ul>
+          <h4>Im Institut</h4>
+          <p>Vor der Anwendung besprechen wir kurz Ihre aktuelle Situation und stimmen die Behandlung individuell auf Sie ab. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>die zu behandelnden Körperbereiche,</li>
+            <li>Ihr persönliches Empfinden,</li>
+            <li>die passende Intensität der Kompression,</li>
+            <li>eventuelle Besonderheiten, die bei der Anwendung berücksichtigt werden sollten.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer Presso-Massage kann sich der behandelte Körperbereich vorübergehend anders anfühlen. Viele Menschen beschreiben ein Gefühl von Leichtigkeit oder Entspannung. Die Wahrnehmung ist individuell verschieden.</p>
+          <p>Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>mit einigen ruhigen Schritten sanft in Bewegung zu bleiben;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>am selben Tag möglichst lange unbewegte Sitz- oder Stehphasen zu vermeiden;</li>
+            <li>Ihrem Körper Zeit zu geben, die Anwendung in Ruhe nachwirken zu lassen.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Person ist einzigartig. Bestimmte gesundheitliche Situationen oder körperliche Besonderheiten können Einfluss auf die Anwendung haben. Bitte sprechen Sie uns vor der Behandlung auf folgende Punkte an, damit wir die Presso-Massage sicher und individuell auf Sie abstimmen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Gefäße und Durchblutung</span>
+              <ul>
+                <li>akute Thrombosen oder Verdacht darauf</li>
+                <li>aktuelle oder kürzlich aufgetretene Gefäßentzündungen</li>
+                <li>ausgeprägte Durchblutungsstörungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Herz und Kreislauf</span>
+              <ul>
+                <li>schwere Herzinsuffizienz</li>
+                <li>schwere Herz-Kreislauf-Erkrankungen</li>
+                <li>relevante Kreislaufprobleme</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Nieren und allgemeine Gesundheit</span>
+              <ul>
+                <li>schwere Niereninsuffizienz</li>
+                <li>akute Infekte oder Fieber</li>
+                <li>akute Entzündungen im behandelten Bereich</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Haut und lokale Situationen</span>
+              <ul>
+                <li>offene Hautstellen oder Verletzungen im Behandlungsbereich</li>
+                <li>Erysipel (Wundrose)</li>
+                <li>ausgeprägte Hautreizungen oder entzündliche Veränderungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Besondere Lebenssituationen</span>
+              <ul>
+                <li>Schwangerschaft</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bitte sprechen Sie uns diese Punkte vorab an, damit wir die Anwendung achtsam darauf abstimmen können. Bei bestehenden Erkrankungen, laufender ärztlicher Behandlung oder Unsicherheiten klären Sie die Eignung bitte vorab mit Ihrer Ärztin oder Ihrem Arzt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jede Person reagiert individuell auf mechanische Kompression. Deshalb wird die Anwendung immer an Ihre persönliche Situation und Ihr Empfinden angepasst. Ihre Sicherheit und Ihr Wohlbefinden stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Die Wellen werden unterschiedlich erlebt: manche nehmen den Druck kaum wahr, andere spüren jede einzelne Kammer.</p>
+          <p>Viele Menschen erleben die rhythmische Kompression als angenehm und entspannend.</p>
+          <p><strong>Der Rhythmus.</strong> Das Lymphsystem hat keine eigene Pumpe — es bewegt sich mit Muskelarbeit und Atem. Wo diese Bewegung fehlt, sammelt sich Flüssigkeit; die Kompression übernimmt von außen, was Bewegung von innen täte. Der Eindruck ist deshalb <em>echt und vorübergehend</em>: der Alltag geht weiter, und mit ihm kehrt zurück, was ihn ausmacht. Ein guter Takt zum Einstieg ist <strong>ein bis zwei Mal pro Woche</strong>; wenn sich das Bein leichter anfühlt, hält ein Termin <strong>alle zwei bis vier Wochen</strong> diesen Zustand — das ist der Teil, der vorbeugt. Die beste Ergänzung ist kostenlos: gehen, Beine hochlegen, ruhig atmen.</p>
+        </div>
+        <a class="sf-back" href="/vigor/">Vigor erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Presso-Massage ist eine kosmetische Anwendung im Bereich Wohlbefinden und Körperpflege. Sie ersetzt keine medizinische Diagnose, ärztliche Beratung oder Behandlung — insbesondere keine medizinische Lymphtherapie.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="vigor-wraps">
+        <div class="sf-panel-eyebrow">Vigor · Transparenz &amp; Vorbereitung</div>
+        <h2>Beine-Bandagen &amp; <span class="art">Body Wraps</span></h2>
+        <p class="sf-panel-intro">Die Beine-Bandagen &amp; Body Wraps sind eine kosmetische Pflegeanwendung, bei der die Beine oder der Körper mit speziell abgestimmten Bandagen umhüllt werden.</p>
+        <div class="sf-block">
+          <p>Die Anwendung kann als eigenständiges Pflegeerlebnis oder ergänzend zu einer Presso-Massage eingesetzt werden. Die umhüllende Anwendung und die enthaltenen Pflegewirkstoffe können ein angenehmes Hautgefühl sowie ein Gefühl von Leichtigkeit und Pflege unterstützen. Vor jeder Anwendung stimmen wir die Behandlung individuell auf Ihre Bedürfnisse, Ihre Hautsituation und Ihr persönliches Empfinden ab.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine Bandagen-Anwendung ist unkompliziert. Einige einfache Hinweise helfen dabei, die Behandlung besonders angenehm zu gestalten.</p>
+          <h4>Ihr Zeitrahmen</h4>
+          <p>Für die Beine Bandagen planen Sie bitte etwa <strong>eineinhalb Stunden</strong> ein, für den Body Wrap am ganzen Körper etwa <strong>zweieinhalb Stunden</strong>. Das Ankommen, die Ruhephase unter den Bandagen und der Nachklang gehören zur Anwendung — sie sind das, was ihr Ruhe gibt.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Kommen Sie möglichst mit sauberer, trockener und ungecremter Haut an den zu behandelnden Bereichen.</li>
+            <li>Verzichten Sie unmittelbar vor der Anwendung auf Körperöle, reichhaltige Cremes oder stark okklusive Pflegeprodukte.</li>
+            <li>Entfernen Sie Schmuckstücke an Beinen und Füßen, wie Fußkettchen oder enge Ringe.</li>
+            <li>Trinken Sie vor der Anwendung ausreichend Wasser.</li>
+          </ul>
+          <h4>Im Institut</h4>
+          <p>Vor dem Anlegen der Bandagen besprechen wir kurz Ihre aktuelle Situation und stimmen die Anwendung individuell ab. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>den gewünschten Behandlungsbereich,</li>
+            <li>den aktuellen Zustand der Haut,</li>
+            <li>Ihre persönliche Empfindlichkeit,</li>
+            <li>die passende Auswahl der verwendeten Pflegewirkstoffe.</li>
+          </ul>
+          <p>Die Bandagen werden sorgfältig angelegt und so angepasst, dass sie angenehm sitzen und ein komfortables Anwendungserlebnis ermöglichen.</p>
+          <h4>Wann am schönsten</h4>
+          <p>Wir empfehlen die Beine Bandagen — und besonders das <strong>Velamen</strong> am ganzen Körper — als <strong>Abschluss des Tages</strong>. Nach der Anwendung wird der verbliebene Wirkstoff eingearbeitet und nicht abgewaschen: Was auf der Haut bleibt, bleibt über Nacht.</p>
+          <p>Das hat einen sachlichen Hintergrund. Die Haut folgt einer eigenen inneren Uhr: Am Tag steht das Schützen im Vordergrund, zu den Abend- und Nachtstunden das Erneuern — die Zellteilung in der Oberhaut ist dann deutlich lebhafter als mittags, und die Hautbarriere ist in dieser Zeit durchlässiger. Ein Abendtermin nutzt die ruhigere Hälfte des Tages.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer Bandagen-Anwendung kann sich die Haut gepflegt und angenehm umhüllt anfühlen. Für die Zeit nach der Behandlung empfehlen wir:</p>
+          <ul>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>mit einigen ruhigen Schritten sanft in Bewegung zu bleiben;</li>
+            <li>unmittelbar nach der Anwendung Duschen oder Bäder zu vermeiden, damit die verwendeten Pflegewirkstoffe möglichst lange auf der Haut verbleiben können;</li>
+            <li>am selben Tag möglichst auf intensive Reize wie starke Hitze, Sauna oder starkes Reiben der behandelten Bereiche zu verzichten.</li>
+          </ul>
+          <p>Bei empfindlicher Haut empfehlen wir, auf zusätzliche intensive Pflegeprodukte oder mechanische Reize direkt nach der Anwendung zu verzichten.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut und jeder Körper sind einzigartig. Bestimmte gesundheitliche Situationen, Hautzustände oder persönliche Besonderheiten können Einfluss auf die Anwendung haben. Bitte sprechen Sie uns vor der Behandlung auf folgende Punkte an, damit wir die Anwendung entsprechend berücksichtigen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Gefäße und Durchblutung</span>
+              <ul>
+                <li>akute Thrombosen oder Verdacht darauf</li>
+                <li>ausgeprägte Venenerkrankungen</li>
+                <li>starke Krampfadern oder entzündliche Veränderungen im Venenbereich</li>
+                <li>relevante Durchblutungsstörungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Herz und Kreislauf</span>
+              <ul>
+                <li>schwere Herzinsuffizienz</li>
+                <li>schwere Herz-Kreislauf-Erkrankungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Nieren und allgemeine Gesundheit</span>
+              <ul>
+                <li>schwere Niereninsuffizienz</li>
+                <li>akute Infekte oder Fieber</li>
+                <li>akute Entzündungen im behandelten Bereich</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Hautzustand</span>
+              <ul>
+                <li>offene Hautstellen oder Verletzungen</li>
+                <li>Erysipel (Wundrose)</li>
+                <li>akute Hautreizungen oder entzündliche Hautveränderungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Verträglichkeit und besondere Situationen</span>
+              <ul>
+                <li>bekannte Unverträglichkeiten gegenüber verwendeten Wirkstoffen</li>
+                <li>bekannte Reaktionen auf Sole oder Pflegebestandteile</li>
+                <li>Schwangerschaft</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bei gesundheitlichen Besonderheiten klären Sie Fragen zur Eignung bitte vorab mit Ihrer behandelnden Ärztin oder Ihrem behandelnden Arzt. Sagen Sie uns solche Hinweise im Vorfeld — so stimmen wir die Anwendung achtsam auf Ihre persönliche Situation ab.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jede Haut reagiert individuell auf Pflegewirkstoffe, Umhüllungen und die Anwendung der Bandagen. Deshalb wird die Behandlung immer auf Ihre persönliche Situation abgestimmt. Ihre Sicherheit und Ihr Wohlbefinden stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Wie sich die Umhüllung anfühlt, ist persönlich: für die eine ist es Halt, für die andere vor allem Wärme und Stille.</p>
+          <p>Viele Menschen empfinden die umhüllende Anwendung als angenehm, pflegend und entspannend.</p>
+          <p><strong>Der Rhythmus.</strong> Was sich einstellt, stellt sich nicht an einem Nachmittag ein. Sinnvoll ist ein Takt von <strong>einer Anwendung pro Woche</strong> — ein Hautgefühl baut sich über Wochen auf; wie lange, sagt uns Ihr Hautbild, und die gewählte Linie darf dabei wechseln. Ist das Gefühl da, trägt ein ruhigerer Takt es weiter: <strong>ein bis zwei Mal im Monat</strong>. Das ist der Teil, der pflegt, bevor etwas fehlt.</p>
+        </div>
+        <a class="sf-back" href="/vigor/">Vigor erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Beine-Bandagen &amp; Body Wraps sind eine kosmetische Pflegeanwendung im Bereich Körperpflege und Wohlbefinden. Sie ersetzen keine medizinische Diagnose, ärztliche Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="corpus-abhyanga">
+        <div class="sf-panel-eyebrow">Corpus · Transparenz &amp; Vorbereitung</div>
+        <h2><span class="art">Abhyanga</span></h2>
+        <p class="sf-panel-intro">Die Abhyanga ist eine ruhige Ganzkörper-Ölmassage mit warmem Sesamöl, die traditionell einen festen Bestandteil der ayurvedischen Massagekunst bildet.</p>
+        <div class="sf-block">
+          <p>Die Anwendung verbindet achtsame Berührungen, Wärme und eine entspannte Atmosphäre zu einem besonderen Pflegeerlebnis für Körper und Haut. Vor jeder Anwendung nehmen wir uns Zeit für ein persönliches Vorgespräch, in dem wir Ihre Wünsche, Ihr persönliches Empfinden und relevante Hinweise besprechen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine Abhyanga ist unkompliziert. Einige einfache Hinweise unterstützen ein angenehmes und entspanntes Erlebnis.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Kommen Sie möglichst nicht mit vollem Magen zur Anwendung.</li>
+            <li>Vermeiden Sie unmittelbar davor schwere Mahlzeiten.</li>
+            <li>Tragen Sie möglichst bequeme Kleidung, die sich nach der Anwendung gut mit der Ölpflege kombinieren lässt.</li>
+          </ul>
+          <p>Besondere Empfindlichkeiten, Wünsche zur Intensität der Berührung sowie bekannte Unverträglichkeiten besprechen wir vorab im persönlichen Gespräch.</p>
+          <h4>Im Institut</h4>
+          <p>Vor Beginn der Massage besprechen wir kurz Ihre Wünsche und Ihr persönliches Empfinden. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>Ihre bevorzugte Intensität der Berührung,</li>
+            <li>persönliche Bedürfnisse während der Anwendung,</li>
+            <li>relevante Hinweise zu Haut und Verträglichkeiten.</li>
+          </ul>
+          <p>Für die klassische Abhyanga verwenden wir traditionell warmes Sesamöl. In der ayurvedischen Tradition wird Sesamöl aufgrund seiner besonderen Eigenschaften geschätzt und als ausgleichend für die drei Doshas Vata, Pitta und Kapha beschrieben. Die Anwendung wird in einer ruhigen Atmosphäre durchgeführt und individuell an Ihr persönliches Empfinden angepasst.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer Abhyanga kann sich die Haut gepflegt und angenehm warm anfühlen. Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>sich eine ruhige Übergangszeit zu gönnen;</li>
+            <li>möglichst keine unmittelbar anschließenden anstrengenden Aktivitäten einzuplanen;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>der Haut Zeit zu lassen, das verwendete Öl in Ruhe aufzunehmen;</li>
+            <li>wenn möglich eine sofortige Dusche oder ein Bad zu vermeiden, damit das Pflegeerlebnis möglichst lange erhalten bleibt.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut und jeder Körper sind einzigartig. Bestimmte persönliche Situationen, Hautzustände oder gesundheitliche Besonderheiten können Einfluss auf die Anwendung haben. Bitte informieren Sie uns vor der Behandlung über folgende Punkte, damit wir die Anwendung entsprechend berücksichtigen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Haut und lokale Situationen</span>
+              <ul>
+                <li>offene Wunden oder Verletzungen im Behandlungsbereich</li>
+                <li>akute Hauterkrankungen oder entzündliche Hautveränderungen</li>
+                <li>starke Hautreizungen</li>
+                <li>Sonnenbrand oder frisch gereizte Haut</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Allgemeine Situationen</span>
+              <ul>
+                <li>akute Infekte oder Fieber</li>
+                <li>starke Erkältung mit ausgeprägter Verschleimung</li>
+                <li>allgemeines Unwohlsein am Behandlungstag</li>
+                <li>kürzlich erfolgte Operationen oder besondere körperliche Belastungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Verträglichkeit und besondere Situationen</span>
+              <ul>
+                <li>bekannte Allergien oder Unverträglichkeiten gegenüber Sesamöl oder anderen Bestandteilen</li>
+                <li>Schwangerschaft</li>
+                <li>besondere gesundheitliche Situationen, die Sie vorab mit uns besprechen möchten</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bei gesundheitlichen Besonderheiten klären Sie Fragen zur Eignung bitte vorab mit Ihrer behandelnden Ärztin oder Ihrem behandelnden Arzt. Sagen Sie uns solche Hinweise im Vorfeld — so gestalten wir die Anwendung achtsam und individuell für Sie.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jeder Mensch empfindet Berührung, Wärme und Massage unterschiedlich. Deshalb wird die Anwendung immer an Ihre persönlichen Wünsche und Ihr Empfinden angepasst. Ihre Sicherheit, Ihr Wohlbefinden und eine angenehme Atmosphäre stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Warmes Öl und langsame Bewegung wirken auf jeden Menschen anders — oft deutlicher am Abend als unmittelbar danach.</p>
+          <p>Viele Menschen erleben die Anwendung als wohltuend, entspannend und als besonderen Moment der Ruhe.</p>
+          <p><strong>Der Rhythmus.</strong> In der ayurvedischen Tradition ist Abhyanga eine <em>tägliche</em> Praxis — allerdings als Selbstmassage. Das klassische Bild ist beides zusammen: regelmäßig selbst, dazu <strong>eine Sitzung im Monat</strong> bei uns im Studio. Wer die Selbstmassage zwei bis vier Mal pro Woche übernimmt, braucht seltener einen Termin und bekommt mehr davon. Gern zeigen wir Ihnen die Bewegungen.</p>
+        </div>
+        <a class="sf-back" href="/corpus/">Corpus erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Abhyanga ist eine traditionelle ayurvedische Ölmassage — eine kosmetische Wellnessanwendung zur Entspannung und zum Wohlbefinden. Sie ersetzt keine medizinische Diagnose, ärztliche Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="corpus-hotstone">
+        <div class="sf-panel-eyebrow">Corpus · Transparenz &amp; Vorbereitung</div>
+        <h2>Hot <span class="art">Stone</span></h2>
+        <p class="sf-panel-intro">Die Hot-Stone-Anwendung verbindet eine wohltuende Massage mit der angenehmen Wärme sorgfältig erwärmter Basaltsteine.</p>
+        <div class="sf-block">
+          <p>Die Wärme kann dabei helfen, ein tiefes Gefühl von Ruhe und Entspannung entstehen zu lassen. Die Temperatur der Steine wird während der Anwendung immer an Ihr persönliches Empfinden angepasst. Vor jeder Anwendung nehmen wir uns Zeit für ein kurzes persönliches Gespräch, um Ihre Wünsche und relevante Hinweise zu berücksichtigen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine Hot-Stone-Anwendung ist unkompliziert. Einige einfache Hinweise helfen dabei, die Behandlung besonders angenehm zu gestalten.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Kommen Sie möglichst nicht mit vollem Magen zur Anwendung.</li>
+            <li>Vermeiden Sie unmittelbar davor schwere Mahlzeiten.</li>
+            <li>Trinken Sie ausreichend Wasser.</li>
+            <li>Tragen Sie bequeme Kleidung, in der Sie sich vor und nach der Anwendung wohlfühlen.</li>
+          </ul>
+          <p>Ihre persönliche Wahrnehmung der Wärme ist entscheidend. Teilen Sie uns gerne mit, wenn Sie Wärme besonders intensiv oder eher sanft bevorzugen.</p>
+          <h4>Im Institut</h4>
+          <p>Vor Beginn der Anwendung besprechen wir kurz Ihre Wünsche und Ihr persönliches Empfinden. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>Ihre bevorzugte Wärmeintensität,</li>
+            <li>empfindliche Körperbereiche,</li>
+            <li>persönliche Besonderheiten Ihrer Haut oder Ihres Körpers,</li>
+            <li>Hinweise zu aktuellen Beschwerden oder Einschränkungen.</li>
+          </ul>
+          <p>Die Steine werden sorgfältig vorbereitet und die Wärme wird während der gesamten Anwendung an Ihr Empfinden angepasst. Die Anwendung erfolgt in einer ruhigen Atmosphäre und wird individuell auf Ihr Wohlbefinden abgestimmt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer Hot-Stone-Anwendung kann sich der Körper angenehm warm und entspannt anfühlen. Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>sich eine ruhige Übergangszeit zu gönnen;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>möglichst keine unmittelbar anschließenden anstrengenden Aktivitäten einzuplanen;</li>
+            <li>am selben Tag zusätzliche intensive Wärmereize wie Sauna, Dampfbad oder sehr heiße Bäder zu vermeiden;</li>
+            <li>Ihrem Körper Zeit zu geben, die Wärme und Entspannung in Ruhe nachwirken zu lassen.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut und jeder Körper sind einzigartig. Bestimmte gesundheitliche Situationen, Hautzustände oder persönliche Besonderheiten können Einfluss auf eine Wärmeanwendung haben. Bitte informieren Sie uns vor der Behandlung über folgende Punkte, damit wir die Anwendung entsprechend berücksichtigen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Wärmeempfinden und Haut</span>
+              <ul>
+                <li>eingeschränktes Wärmeempfinden oder veränderte Sensibilität der Haut</li>
+                <li>ausgeprägte Hautreizungen</li>
+                <li>offene Wunden oder Verletzungen im Behandlungsbereich</li>
+                <li>akute Hautentzündungen oder Infektionen</li>
+                <li>Sonnenbrand oder frisch gereizte Haut</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Kreislauf und Gefäße</span>
+              <ul>
+                <li>relevante Herz-Kreislauf-Erkrankungen</li>
+                <li>schwer einstellbarer Bluthochdruck</li>
+                <li>Herzschwäche</li>
+                <li>akute Thrombosen oder Verdacht darauf</li>
+                <li>ausgeprägte Venenerkrankungen oder stark ausgeprägte Krampfadern</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Besondere gesundheitliche Situationen</span>
+              <ul>
+                <li>Diabetes mit verändertem Wärme- oder Schmerzempfinden</li>
+                <li>Osteoporose</li>
+                <li>akute Infekte oder Fieber</li>
+                <li>Schwangerschaft</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Aktuelle Behandlungen</span>
+              <ul>
+                <li>kürzlich erfolgte intensive kosmetische Behandlungen im behandelten Bereich</li>
+                <li>frische Verletzungen oder besondere Hautsituationen</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bei gesundheitlichen Besonderheiten klären Sie Fragen zur Eignung bitte vorab mit Ihrer behandelnden Ärztin oder Ihrem behandelnden Arzt. Sagen Sie uns solche Hinweise im Vorfeld — so gestalten wir die Anwendung achtsam und individuell für Sie.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jeder Mensch empfindet Wärme, Berührung und Massage unterschiedlich. Deshalb wird die Anwendung immer an Ihre persönlichen Wünsche und Ihr Empfinden angepasst. Ihre Sicherheit, Ihr Wohlbefinden und eine angenehme Atmosphäre stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Wärme ist eine Frage des Empfindens: manche mögen sie deutlich, andere nur als leisen Grundton.</p>
+          <p>Viele Menschen erleben die Kombination aus Wärme und Massage als wohltuend, entspannend und als besonderen Moment der Ruhe.</p>
+          <p><strong>Der Rhythmus.</strong> Der Stein gibt Wärme länger ab als die Hand — die Muskulatur bekommt mehr Zeit, sich zu lösen, bei gleichem Druck. Eine Anwendung wirkt für sich, und sie wirkt besser, wenn sie wiederkehrt: <strong>alle drei bis vier Wochen</strong> ist ein angenehmer Abstand — im Winter näher, im Sommer weiter. Ihr Rhythmus ist der des Jahres.</p>
+        </div>
+        <a class="sf-back" href="/corpus/">Corpus erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Hot-Stone-Anwendung ist eine kosmetische Wellness- und Pflegeanwendung zur Entspannung und zum Wohlbefinden. Sie ersetzt keine medizinische Diagnose, ärztliche Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="corpus-raindrop">
+        <div class="sf-panel-eyebrow">Corpus · Transparenz &amp; Vorbereitung</div>
+        <h2>Raindrop-<span class="art">Aroma-Ritual</span></h2>
+        <p class="sf-panel-intro">Das Raindrop-Aroma-Ritual ist eine besondere Aroma-Anwendung, bei der ausgewählte ätherische Öle tropfenweise entlang des Rückens aufgetragen und mit sanften Massagegriffen eingearbeitet werden.</p>
+        <div class="sf-block">
+          <p>Die Kombination aus warmen Berührungen, hochwertigen Ölen und einer ruhigen Atmosphäre schafft ein besonderes Pflegeerlebnis für Körper und Sinne. Vor jeder Anwendung nehmen wir uns Zeit für ein persönliches Gespräch, um Ihre Wünsche, Ihre Hautsituation und relevante Hinweise zu berücksichtigen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf das Raindrop-Aroma-Ritual ist unkompliziert. Einige einfache Hinweise unterstützen ein angenehmes und entspanntes Erlebnis.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Kommen Sie möglichst mit sauberer und ungecremter Haut am Rücken zur Anwendung.</li>
+            <li>Verzichten Sie unmittelbar davor auf Körperöle oder reichhaltige Pflegeprodukte im Behandlungsbereich.</li>
+            <li>Tragen Sie bequeme Kleidung, in der Sie sich vor und nach der Anwendung wohlfühlen.</li>
+          </ul>
+          <p>Bekannte Empfindlichkeiten, Unverträglichkeiten oder besondere Wünsche besprechen wir gerne vorab im persönlichen Gespräch.</p>
+          <h4>Im Institut</h4>
+          <p>Vor Beginn der Anwendung besprechen wir kurz Ihre Wünsche und relevante Hinweise. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>Ihre Hautempfindlichkeit,</li>
+            <li>bekannte Duftstoff- oder Öl-Unverträglichkeiten,</li>
+            <li>persönliche Vorlieben hinsichtlich Intensität und Atmosphäre.</li>
+          </ul>
+          <p>Die verwendeten ätherischen Öle werden sorgfältig ausgewählt und entsprechend der individuellen Situation eingesetzt. Bei Unsicherheiten hinsichtlich der Hautverträglichkeit kann vorab ein kleiner Verträglichkeitstest (Patch-Test) durchgeführt werden.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach dem Raindrop-Aroma-Ritual kann sich die Haut gepflegt anfühlen und das Aroma der verwendeten Öle noch einige Zeit wahrnehmbar bleiben. Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>den Ölen ausreichend Zeit zum Nachwirken zu lassen;</li>
+            <li>möglichst eine ruhige Übergangszeit einzuplanen;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>unmittelbar danach intensive äußere Reize zu vermeiden;</li>
+            <li>eine Dusche oder ein Bad erst am Folgetag einzuplanen, damit das Pflegeerlebnis möglichst lange erhalten bleibt.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Haut und jeder Körper sind einzigartig. Bestimmte persönliche Situationen, Hautzustände oder gesundheitliche Besonderheiten können Einfluss auf die Anwendung haben. Bitte informieren Sie uns vor der Behandlung über folgende Punkte, damit wir die Anwendung entsprechend berücksichtigen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Haut und Verträglichkeit</span>
+              <ul>
+                <li>bekannte Allergien oder Unverträglichkeiten gegenüber Duftstoffen oder ätherischen Ölen</li>
+                <li>sehr empfindliche oder reaktive Haut</li>
+                <li>offene Hautstellen oder Verletzungen im Behandlungsbereich</li>
+                <li>akute Hautreizungen oder entzündliche Hautveränderungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Besondere gesundheitliche Situationen</span>
+              <ul>
+                <li>Epilepsie</li>
+                <li>Schwangerschaft</li>
+                <li>Stillzeit</li>
+                <li>besondere gesundheitliche Situationen, die Sie vorab mit uns besprechen möchten</li>
+              </ul>
+            </div>
+          </div>
+          <p>Da bestimmte ätherische Öle in Schwangerschaft und Stillzeit nicht empfohlen werden, informieren Sie uns bitte vorab, damit wir die Anwendung entsprechend berücksichtigen können.</p>
+          <p>Bei gesundheitlichen Besonderheiten klären Sie Fragen zur Eignung bitte vorab mit Ihrer behandelnden Ärztin oder Ihrem behandelnden Arzt. Sagen Sie uns solche Hinweise im Vorfeld — so gestalten wir die Anwendung achtsam und individuell für Sie.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jeder Mensch reagiert unterschiedlich auf Düfte, Berührung und natürliche Inhaltsstoffe. Deshalb wird die Anwendung immer an Ihre persönlichen Bedürfnisse und Ihr Empfinden angepasst. Ihre Sicherheit, Ihr Wohlbefinden und eine angenehme Atmosphäre stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Düfte sind Erinnerung: dasselbe Öl kann bei zwei Menschen sehr Verschiedenes auslösen.</p>
+          <p>Viele Menschen erleben die Anwendung als wohltuend, entspannend und als besonderes Aroma-Ritual.</p>
+          <p><strong>Der Rhythmus.</strong> Dieses Ritual lebt vom Duft und von der leichten Berührung — beides wirkt am Tag selbst, auf Stimmung und Schlaf. Sein Takt ist der der <strong>Übergänge</strong>: ein Wechsel der Jahreszeit, eine Woche, die zu viel war, ein Neuanfang. Zu Hause bitte keine unverdünnten ätherischen Öle auftragen — dafür ist dieses Ritual da.</p>
+        </div>
+        <a class="sf-back" href="/corpus/">Corpus erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Das Raindrop-Aroma-Ritual ist eine kosmetische Wellness- und Pflegeanwendung mit ätherischen Ölen zur Entspannung und zum Wohlbefinden. Sie ersetzt keine medizinische Diagnose, ärztliche Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+      <article class="sf-panel" id="corpus-schwedisch">
+        <div class="sf-panel-eyebrow">Corpus · Transparenz &amp; Vorbereitung</div>
+        <h2>Schwedische <span class="art">Massage</span></h2>
+        <p class="sf-panel-intro">Die Schwedische Massage ist eine klassische Ganzkörper- oder Teilkörpermassage mit fließenden, rhythmischen Griffen und individuell abgestimmter Intensität.</p>
+        <div class="sf-block">
+          <p>Die Kombination aus achtsamer Berührung, Wärme und verschiedenen Massagetechniken schafft ein wohltuendes Pflegeerlebnis für Körper und Sinne. Vor jeder Anwendung nehmen wir uns Zeit für ein persönliches Gespräch, um Ihre Wünsche, Ihre bevorzugte Intensität und relevante Hinweise zu berücksichtigen.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Vorbereitung</h3>
+          <p>Die Vorbereitung auf eine Schwedische Massage ist unkompliziert. Einige einfache Hinweise unterstützen ein angenehmes und entspanntes Erlebnis.</p>
+          <h4>Vor dem Termin</h4>
+          <ul>
+            <li>Kommen Sie möglichst nicht mit vollem Magen zur Anwendung.</li>
+            <li>Vermeiden Sie unmittelbar davor schwere Mahlzeiten.</li>
+            <li>Trinken Sie ausreichend Wasser.</li>
+            <li>Teilen Sie uns mit, welche Körperbereiche besondere Aufmerksamkeit benötigen.</li>
+            <li>Informieren Sie uns über Ihre bevorzugte Druckstärke und über Bereiche, die besonders empfindlich reagieren.</li>
+          </ul>
+          <p>Ihre persönlichen Wünsche und Ihr Empfinden stehen im Mittelpunkt. Die Intensität der Massage wird individuell abgestimmt.</p>
+          <h4>Im Institut</h4>
+          <p>Vor Beginn der Massage besprechen wir kurz Ihre Wünsche und relevante Hinweise. Dabei berücksichtigen wir:</p>
+          <ul>
+            <li>gewünschte Intensität und Druckstärke,</li>
+            <li>empfindliche oder zu schonende Körperbereiche,</li>
+            <li>aktuelle körperliche Besonderheiten,</li>
+            <li>Ihre persönlichen Vorstellungen für die Anwendung.</li>
+          </ul>
+          <p>Die Massage wird individuell angepasst und in einer ruhigen Atmosphäre durchgeführt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Nach der Anwendung</h3>
+          <p>Nach einer Schwedischen Massage kann sich der Körper angenehm gelockert und entspannt anfühlen. Für die Zeit nach der Anwendung empfehlen wir:</p>
+          <ul>
+            <li>sich einen ruhigen Übergang zurück in den Alltag zu gönnen;</li>
+            <li>ausreichend Wasser zu trinken;</li>
+            <li>direkt danach intensive körperliche Belastungen zu vermeiden;</li>
+            <li>sanfte Bewegung und ausreichend Ruhe einzuplanen.</li>
+          </ul>
+        </div>
+        <div class="sf-block">
+          <h3>Individuelle Voraussetzungen</h3>
+          <p>Jede Person und jeder Körper sind einzigartig. Bestimmte gesundheitliche Situationen, Hautzustände oder persönliche Besonderheiten können Einfluss auf eine Massageanwendung haben. Bitte informieren Sie uns vor der Behandlung über folgende Punkte, damit wir die Anwendung entsprechend berücksichtigen können:</p>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Gefäße und Durchblutung</span>
+              <ul>
+                <li>akute Thrombosen oder Verdacht darauf</li>
+                <li>Venenentzündungen oder akute venöse Beschwerden</li>
+                <li>relevante arterielle Durchblutungsstörungen</li>
+                <li>ausgeprägte Gefäßerkrankungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Allgemeine gesundheitliche Situationen</span>
+              <ul>
+                <li>schwere Herz-Kreislauf-Erkrankungen</li>
+                <li>Fieber oder akute Infekte</li>
+                <li>akute Entzündungen im Körper</li>
+                <li>kürzlich erfolgte Operationen oder Verletzungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Haut und Gewebe</span>
+              <ul>
+                <li>offene Wunden</li>
+                <li>akute Hautinfektionen</li>
+                <li>entzündliche Hautveränderungen im Massagebereich</li>
+                <li>frische Verletzungen oder starke Reizungen</li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Besondere Situationen</span>
+              <ul>
+                <li>ausgeprägte Osteoporose</li>
+                <li>Einnahme von blutverdünnenden Medikamenten</li>
+                <li>Schwangerschaft</li>
+              </ul>
+            </div>
+          </div>
+          <p>Bitte informieren Sie uns ebenfalls über besondere gesundheitliche Situationen oder laufende Behandlungen, damit wir die Anwendung entsprechend berücksichtigen können.</p>
+          <p>Bei gesundheitlichen Besonderheiten klären Sie Fragen zur Eignung bitte vorab mit Ihrer behandelnden Ärztin oder Ihrem behandelnden Arzt. Sagen Sie uns solche Hinweise im Vorfeld — so gestalten wir die Anwendung achtsam und individuell für Sie.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wichtige Hinweise</h3>
+          <p>Jeder Mensch empfindet Berührung, Druck und Massage unterschiedlich. Deshalb wird die Anwendung immer an Ihre persönlichen Wünsche und Ihr Empfinden angepasst. Ihre Sicherheit, Ihr Wohlbefinden und eine angenehme Atmosphäre stehen während der gesamten Anwendung im Mittelpunkt.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Realistische Erwartungen</h3>
+          <p>Wie viel Druck angenehm ist, weiß nur Ihr Körper — und er weiß es an verschiedenen Tagen unterschiedlich.</p>
+          <p>Viele Menschen erleben die Anwendung als wohltuend, entspannend und als besonderen Moment der Ruhe.</p>
+          <p><strong>Der Rhythmus — die Dosis macht den Unterschied.</strong> Die Forschung zur klassischen Massage zeigt etwas Bemerkenswertes: <em>einmal</em> pro Woche über fünf Wochen und <em>zweimal</em> pro Woche führen zu <strong>zwei unterschiedlichen Antworten</strong> des Körpers — jede mit ihrem eigenen Profil. Der Nutzen hängt an der Dosis, und die richtige Dosis ist eine Frage der Passung. Für uns heißt das: ein <strong>dichterer Takt zum Einstieg</strong> — wöchentlich über vier bis sechs Wochen, wenn sich etwas ändern soll — und danach <strong>einmal im Monat</strong> als Grundton. <em>Vorsorge beginnt bei der Berührung:</em> das Nervensystem lernt den Weg in die Ruhe, und es geht ihn leichter, je öfter es ihn geht. Geben Sie sich vier bis acht Wochen Regelmäßigkeit, bevor Sie urteilen.</p>
+        </div>
+        <a class="sf-back" href="/corpus/">Corpus erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Die Schwedische Massage ist eine kosmetische Wellness- und Pflegeanwendung zur Entspannung und zum Wohlbefinden. Sie ersetzt keine medizinische Diagnose, ärztliche Beratung oder Behandlung.</p>
+        </div>
+      </article>
+
+            <article class="sf-panel" id="origo">
+        <div class="sf-eyebrow-row">
+          <div class="sf-panel-eyebrow">Origo · Transparenz &amp; Vorbereitung</div>
+        </div>
+<!-- ARCHIVIATO (2026-07-28) — riga „Anhören" del pannello Origo (§mai eliminare, archiviare sempre).
+     Era: <div class="sf-listen" id="origoListen" data-src="/audio/sorgfalt-origo-rubedo-spa-minden.mp3"> + bottone + label „Anhören".
+     Nata il 19.07 come player PER PANNELLO, in attesa di una traccia dedicata a Origo che non è mai stata registrata.
+     Perché tolta: il file non esiste → in pagina si leggeva „Hörprobe folgt in Kürze" accanto all'occhiello, cioè
+     un annuncio di attesa in uno dei punti più visibili della pagina. L'audio della pagina è UNO: la voce di Monica
+     sul play dell'emblema nell'immagine hero (/audio/transparenz-vorbereitung-intro.mp3), che accompagna TUTTI i pannelli.
+     Stato: sospesa. Ripristino: se un giorno esiste una traccia propria di Origo, si rimette questo blocco con il src giusto. -->
+        <h2>Breathwork &amp; <span class="art">Hypnose · Imago</span></h2>
+        <p class="sf-panel-intro">In Origo arbeiten wir mit zwei unterschiedlichen Erfahrungsformaten: Breathwork und Hypnose · Imago. Beide dienen der Entspannung und der bewussten Selbstwahrnehmung. Jede Sitzung beginnt mit einem persönlichen Vorgespräch, in dem wir Ihre individuelle Situation kennenlernen und gemeinsam klären, welche der beiden Formen für Sie geeignet ist.</p>
+        <p class="sf-panel-intro" style="margin-top:14px"><b>Individuelle Vorbereitung.</b> Zu jeder Origo-Sitzung gehören ein persönliches Vorgespräch und eine individuelle Konzeption Ihrer Sitzung. Beides ist Teil Ihrer Buchung.</p>
+
+        <div class="sf-group airy">Breathwork</div>
+        <div class="sf-trip">
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Vorbereitung</span>
+            <p>Kommen Sie möglichst ausgeruht und tragen Sie bequeme Kleidung, die Ihre Atmung nicht einschränkt. Verzichten Sie idealerweise zwei Stunden vor der Sitzung auf eine größere Mahlzeit sowie am selben Tag auf Alkohol oder größere Mengen Koffein.</p>
+          </div>
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Während</span>
+            <p>Jede Erfahrung verläuft individuell. Viele Menschen berichten von tiefer Entspannung, einem intensiveren Körperbewusstsein oder einem Gefühl von innerer Klarheit. Während der gesamten Sitzung bestimmen Sie jederzeit Ihr eigenes Tempo.</p>
+          </div>
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Nachklang</span>
+            <p>Geben Sie sich Zeit, das Erlebte nachwirken zu lassen. Trinken Sie ausreichend Wasser und planen Sie möglichst keine unmittelbar anschließenden Termine ein. Ein ruhiger Ausklang hilft, die Erfahrung gut zu integrieren.</p>
+          </div>
+        </div>
+
+        <div class="sf-group airy">Hypnose · Imago</div>
+        <div class="sf-trip">
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Vorbereitung</span>
+            <p>Kommen Sie möglichst entspannt und mit ausreichend Zeit. Bequeme Kleidung unterstützt ein angenehmes Erleben. Es sind keine besonderen Vorkenntnisse erforderlich.</p>
+          </div>
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Während</span>
+            <p>Hypnose · Imago verbindet geführte Imagination mit fokussierter Aufmerksamkeit und angenehmer Entspannung. Manche erleben innere Bilder besonders lebendig, andere nehmen vor allem Ruhe, Klarheit oder neue Perspektiven wahr — stets Ihrem eigenen Erleben folgend.</p>
+          </div>
+          <div class="sf-trip-col">
+            <span class="sf-trip-k">Nachklang</span>
+            <p>Nehmen Sie sich etwas Zeit, bevor Sie in den Alltag zurückkehren. Ein ruhiger Übergang, ausreichend Wasser und wenige äußere Reize helfen vielen Menschen, die Erfahrung in ihrem eigenen Tempo nachklingen zu lassen.</p>
+          </div>
+        </div>
+
+        <div class="sf-block">
+          <h3>Rhythmus &amp; Vorbereitung</h3>
+          <p>Kommen Sie nach Möglichkeit nicht direkt aus dem Auto in die Sitzung. Zehn Minuten vorher anzukommen genügt meist, damit der Atem ruhiger werden und der Alltag langsam in den Hintergrund treten kann.</p>
+          <p>Tragen Sie bequeme Kleidung und verzichten Sie in der Stunde davor möglichst auf eine schwere Mahlzeit. So fällt es dem Körper leichter, sich auf die Atemarbeit einzulassen.</p>
+          <p><strong>Der Rhythmus.</strong> Atemarbeit ist keine Behandlung, sondern eine <em>Fähigkeit</em>. Und wie jede Fähigkeit wird sie leichter, je öfter der Körper den Weg kennt.</p>
+          <p>Deshalb begleiten wir Sie über einen gewissen Zeitraum: zunächst meist <strong>wöchentlich</strong>, später <strong>alle zwei Wochen</strong> und schließlich <strong>einmal im Monat</strong>. Dazwischen genügt oft eine kurze eigene Praxis von wenigen Minuten am Tag.</p>
+          <p>Wie viele Sitzungen sinnvoll sind, entscheiden wir gemeinsam. Es gibt keinen festen Plan, den man einfach abhakt.</p>
+          <p>Dass die Abstände mit der Zeit größer werden, ist kein Abschluss — sondern das eigentliche Ziel. Denn mit jeder Phase wächst die Fähigkeit, den Zustand auch ohne unsere Begleitung wiederzufinden. <em>Was trägt, braucht weniger Nähe. Was noch wachsen darf, erhält mehr Zeit.</em></p>
+          <p>Wenn möglich, empfehlen wir immer denselben Wochentag und dieselbe Uhrzeit. Nicht aus organisatorischen Gründen, sondern weil der Körper Rhythmen erinnert. Er verbindet Ort, Zeit und Atmosphäre miteinander — und findet mit jeder Wiederholung schneller in den vertrauten Zustand zurück.</p>
+          <p>Regelmäßigkeit ist deshalb kein Selbstzweck. Sie ist Teil der Arbeit.</p>
+        </div>
+        <div class="sf-block">
+          <h3>Wann eine Sitzung nicht geeignet ist</h3>
+          <p>Ein persönliches Vorgespräch ist Bestandteil jeder Sitzung. In manchen Fällen ist eine Sitzung nicht geeignet. Bitte sagen Sie uns daher vorab, wenn eines der folgenden Themen auf Sie zutrifft:</p>
+          <div class="hinweis-buchung" style="margin-top:26px;padding:22px 24px;background:var(--cream,#FBF8F1);border:.5px solid rgba(28,23,18,.18);border-left:2px solid var(--gold,#7A6830);max-width:640px">
+            <span style="display:block;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--gold,#7A6830);margin-bottom:10px">Hinweis zur Buchung</span>
+            <p style="margin:0;font-family:var(--sans);font-size:14px;line-height:1.8;color:var(--text-2,#5C5347)">Jede Anfrage wird vorab persönlich geprüft. Damit eine Sitzung sicher und sinnvoll ist, müssen die körperlichen und persönlichen Voraussetzungen sowie Ihr Thema zur Methode passen. Origo arbeitet nicht mit Themen, die nicht in unser Feld gehören — in diesem Fall sagen wir es Ihnen und nennen, was stattdessen trägt.</p>
+          </div>
+          <div class="sf-kontra">
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Körperlich</span>
+              <ul>
+                <li>Herz-Kreislauf-Erkrankungen, frühere Herzinfarkte oder Angina pectoris</li>
+                <li>schwer einstellbarer oder unbehandelter <b>Bluthochdruck</b></li>
+                <li>Herzrhythmusstörungen</li>
+                <li>Aneurysma oder andere Gefäßerkrankungen</li>
+                <li>zurückliegende Schlaganfälle</li>
+                <li>schwere Atemwegserkrankungen wie <b>Asthma</b> oder COPD</li>
+                <li><b>Epilepsie</b> oder bekannte Krampfanfälle</li>
+                <li><b>Glaukom</b> (grüner Star), erhöhter Augeninnendruck oder Netzhautablösung</li>
+                <li><b>Diabetes</b></li>
+                <li>Osteoporose</li>
+                <li>kürzlich erfolgte Operationen oder Verletzungen</li>
+                <li>Einnahme blutverdünnender Medikamente</li>
+                <li>eine bestehende <b>Schwangerschaft</b></li>
+              </ul>
+            </div>
+            <div class="sf-kontra-group">
+              <span class="sf-kontra-k">Seelisch</span>
+              <ul>
+                <li>akute psychische Krisen</li>
+                <li><b>Psychosen</b> oder psychotische Episoden</li>
+                <li>Schizophrenie oder bipolare Erkrankungen</li>
+                <li>ausgeprägte Angst- oder Panikzustände</li>
+                <li>Einnahme von <b>Psychopharmaka</b></li>
+                <li>laufende psychiatrische oder <b>psychotherapeutische Behandlung</b></li>
+              </ul>
+            </div>
+          </div>
+          <p>Hypnose · Imago ist eine Form der geführten Entspannung — keine medizinische Hypnose. Bei gesundheitlichen Fragen oder bestehenden Erkrankungen empfehlen wir die Rücksprache mit Ihrer behandelnden Ärztin, Ihrem behandelnden Arzt oder Ihrer Therapeutin bzw. Ihrem Therapeuten.</p>
+        </div>
+        <a class="sf-back" href="/origo/">Origo erleben →</a>
+        <div class="sf-transp">
+          <span class="sf-transp-k">Transparenz</span>
+          <p>Breathwork und Hypnose · Imago sind Angebote zur Entspannung und bewussten Selbstwahrnehmung. Sie ersetzen keine ärztliche, psychologische oder psychotherapeutische Behandlung, Diagnose oder Therapie.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</main>
+
+<footer class="dark">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-name">Rubedo Spa</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
+      <div class="footer-address">
+        Marienstraße 58 · 32427 Minden<br>
+        Mo–Fr 08:00–17:00 Uhr<br>
+        <a href="tel:+4957178343423">+49 571 78343423</a><br>
+        <a href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Dimensionen</h5>
+      <ul>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Studio</h5>
+      <ul>
+        <li><a href="/philosophie/">Philosophie</a></li>
+        <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
+        <li><a href="/monica/">Monica</a></li>
+        <li><a href="/magazin/">Magazin</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Service</h5>
+      <ul>
+        <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
+        <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
+        <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+        <li><a href="/agb/">AGB</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rubedo Spa · Monica Galletti · Minden</span>
+  </div>
+</footer>
+
+<script src="/app.js"></script>
+<script>
+(function () {
+  var panels = Array.prototype.slice.call(document.querySelectorAll('.sf-panel'));
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.sf-tab'));
+  var sel = document.querySelector('.sf-mobile-sel');
+  var shell = document.querySelector('.sf-shell');
+  var ids = panels.map(function (p) { return p.id; });
+
+  function show(id, push) {
+    if (ids.indexOf(id) === -1) { showIndex(push); return; }
+    if (shell) shell.classList.remove('index-mode');
+    if (shell) shell.classList.add('panel-mode');
+    panels.forEach(function (p) { p.classList.toggle('active', p.id === id); });
+    tabs.forEach(function (t) { t.classList.toggle('active', t.getAttribute('data-target') === id); });
+    if (sel) sel.value = id;
+    if (push && ('#' + id) !== location.hash) history.replaceState(null, '', '#' + id);
+    var main = document.getElementById('main');
+    if (push && main) window.scrollTo({ top: main.offsetTop - 60, behavior: 'smooth' });
+  }
+  function showIndex(push) {
+    if (shell) shell.classList.add('index-mode');
+    if (shell) shell.classList.remove('panel-mode');
+    panels.forEach(function (p) { p.classList.remove('active'); });
+    tabs.forEach(function (t) { t.classList.remove('active'); });
+    if (push && location.hash !== '#uebersicht') history.replaceState(null, '', '#uebersicht');
+    var main = document.getElementById('main');
+    if (push && main) window.scrollTo({ top: main.offsetTop - 60, behavior: 'smooth' });
+  }
+
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () { show(t.getAttribute('data-target'), true); });
+  });
+  document.querySelectorAll('.sf-index-item').forEach(function (b) {
+    b.addEventListener('click', function () { show(b.getAttribute('data-target'), true); });
+  });
+  var ub = document.querySelector('.sf-uebersicht');
+  if (ub) ub.addEventListener('click', function () { showIndex(true); });
+  var tb = document.querySelector('.sf-top-back');
+  if (tb) tb.addEventListener('click', function () { showIndex(true); });
+  if (sel) sel.addEventListener('change', function () { show(sel.value, true); });
+  window.addEventListener('hashchange', function () {
+    var hash = location.hash.replace('#', '');
+    if (ids.indexOf(hash) !== -1) show(hash, false); else showIndex(false);
+  });
+
+  (function () {
+    var hash = location.hash.replace('#', '');
+    if (ids.indexOf(hash) !== -1) { show(hash, false); window.scrollTo(0, 0); } else showIndex(false);
+  })();
+
+  // Sorgfalt — Audio (KI-Stimme), Config ①: kein Poster, Play → Leiste darunter
+  document.querySelectorAll('.sf-listen').forEach(function (box) {
+    var btn = box.querySelector('.sf-listen-btn');
+    var label = box.querySelector('.sf-listen-label');
+    var src = box.getAttribute('data-src');
+    if (!btn || !src) return;
+    btn.addEventListener('click', function () {
+      if (box.classList.contains('is-off') || box.dataset.loaded) return;
+      var audio = document.createElement('audio');
+      audio.controls = true; audio.preload = 'none'; audio.src = src;
+      audio.play().then(function () {
+        box.dataset.loaded = '1';
+        var bar = document.createElement('div');
+        bar.className = 'sf-listen-bar';
+        bar.appendChild(audio);
+        var credit = document.createElement('p');
+        credit.className = 'sf-listen-credit';
+        credit.textContent = box.getAttribute('data-credit') || 'Vorgelesen · KI-Stimme';
+        bar.appendChild(credit);
+        box.parentNode.insertAdjacentElement('afterend', bar);
+        btn.style.display = 'none'; label.style.display = 'none';
+        try { audio.volume = 0.9; } catch (e) {}
+      }).catch(function () {
+        box.classList.add('is-off');
+        if (label) label.textContent = 'Hörprobe folgt in Kürze';
+      });
+    });
+  });
+  var hp = document.getElementById('heroPlay');
+  if (hp) {
+    var ha = null;
+    hp.addEventListener('click', function () {
+      if (!ha) {
+        ha = new Audio(hp.getAttribute('data-src'));
+        var hv = document.getElementById('heroVoice');
+        ha.addEventListener('play', function () { hp.classList.add('playing'); if (hv) hv.classList.add('show'); });
+        ha.addEventListener('pause', function () { hp.classList.remove('playing'); if (hv) hv.classList.remove('show'); });
+        ha.addEventListener('ended', function () { hp.classList.remove('playing'); if (hv) hv.classList.remove('show'); });
+      }
+      if (ha.paused) { ha.play().catch(function () {}); } else { ha.pause(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

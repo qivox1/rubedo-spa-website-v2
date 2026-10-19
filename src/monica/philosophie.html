@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Verstehen statt reparieren: der Rubedo-Ansatz in Minden. Identität, Methode und die vier Dimensionen Cutis, Vigor, Corpus, Origo — Personalisierung, Prävention, Longevity.">
+<meta property="og:title" content="Philosophie — Verstehen statt reparieren | Rubedo Spa Minden">
+<meta property="og:description" content="Der Rubedo-Ansatz in Minden: Personalisierung, Prävention, Longevity — vier Dimensionen, eine Begleitung.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.rubedo-spa.de/img/philosophie.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.rubedo-spa.de/img/philosophie.webp">
 <link rel="canonical" href="https://www.rubedo-spa.de/philosophie.html">
     <title>Philosophie — Verstehen statt reparieren | Rubedo Spa Minden</title>
 <link rel="stylesheet" href="/fonts/fonts.css">
@@ -13,7 +19,7 @@
   /* ── SYSTEM v2 reskin · crema unica · eyebrow ottone · un solo cremisi (Begegnung-Siegel) ── */
   .section-alt { background: var(--cream); }
   .monica-sec { background: var(--cream-dark); }
-  .eyebrow-rule { color: var(--brass); border-bottom-color: rgba(168,136,74,.5); }
+  .eyebrow-rule { color:var(--gold); border-bottom-color: rgba(168,136,74,.5); }
 
   /* PAGE HERO */
   .page-hero { padding: 84px 40px 50px; text-align: center; }
@@ -21,8 +27,8 @@
   .page-hero .eyebrow { margin-bottom: 22px; }
   .page-hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 5.5vw, 68px); line-height: 1.08; letter-spacing: -.015em; margin-bottom: 22px; }
   .page-hero h1 em { font-style: italic; color: var(--burgundy); }
-  .page-hero-lead { font-family: var(--serif); font-size: clamp(19px, 2.2vw, 23px); font-weight: 300; font-style: italic; color: var(--text-2); line-height: 1.5; max-width: 590px; margin: 0 auto; }
-  .page-hero-sig { display: block; margin-top: 18px; font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: var(--text-3); }
+  .page-hero-lead { font-family: var(--serif); font-size: clamp(19px, 2.2vw, 23px); font-weight: 400; font-style: italic; color: #463F33; line-height: 1.5; max-width: 590px; margin: 0 auto; }
+  .page-hero-sig { display: block; margin-top: 18px; font-style: normal; font-family: var(--sans); font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color:var(--text-2); }
   .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
 
   /* DER NAME — two col */
@@ -36,6 +42,17 @@
   .idea .section-body em { font-style: italic; color: var(--burgundy-deep); }
   .drop::first-letter { font-family: var(--serif); font-size: 64px; line-height: .8; float: left; color: var(--burgundy); padding: 8px 12px 0 0; font-weight: 500; }
 
+  /* WARUM RUBEDO — gesprochene Kadenz, mittig, Kammer der Stille (flüstert, ruft nicht) */
+  .warum { background: var(--cream); }
+  .warum .section-inner { max-width: 600px; margin: 0 auto; text-align: center; padding-top: clamp(20px,3.5vh,44px); padding-bottom: clamp(40px,7vh,84px); }
+  .warum .eyebrow { margin-bottom: 22px; display: inline-block; }
+  .warum h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.14; margin-bottom: clamp(28px,4vh,40px); }
+  .warum h2 em { font-style: italic; color: var(--burgundy); }
+  .warum-verse { font-family: var(--serif); font-weight: 300; font-size: clamp(17px, 1.7vw, 20.5px); line-height: 1.8; color: #4A4034; }
+  .warum-verse p { margin: 0; max-width: none; }
+  .warum-verse p + p { margin-top: 1.7em; }
+  .warum-verse em { font-style: italic; color: var(--burgundy); }
+
   /* HALTUNG — auf Creme (Bordeaux wandert zum Begegnung-Siegel) */
   .haltung { background: var(--cream); }
   .haltung-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 76px; align-items: center; }
@@ -44,10 +61,17 @@
   .haltung h2 em { font-style: italic; color: var(--burgundy); }
   .haltung-body p { font-size: 16.5px; line-height: 1.88; color: var(--text-2); max-width: 44ch; }
   .haltung-note { margin-top: 22px; font-family: var(--serif); font-style: italic; font-size: clamp(16px,1.6vw,19px); line-height: 1.5; color: var(--text-1); max-width: 42ch; }
+  /* Mission — chiusura di §Haltung (rientrata 29.07 dalla geo-page).
+     Mutterclaim: minuscolo, serif corsivo, ART in --gold (fondo crema). */
+  .haltung-mission { margin-top: 96px; padding-top: 0; display: grid; justify-items: start; gap: 20px; max-width: 66ch; }
+  .haltung-mission h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(27px, 3.2vw, 36px); line-height: 1.16; color: var(--text-1); margin: 0; }
+  .haltung-mission p:not(.mission-claim) { font-size: 16.5px; line-height: 1.88; color: var(--text-2); margin: 0; }
+  .haltung-mission .mission-claim { margin: 0; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(19px, 2vw, 23px); line-height: 1.5; text-transform: lowercase; color: var(--text-1); }
+  .haltung-mission .mission-claim .art { text-transform: uppercase; color: var(--gold); }
   .antithese { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
-  .antithese li { display: flex; align-items: baseline; gap: .6ch; padding: 17px 0; border-bottom: .5px solid var(--border); }
+  .antithese li { display: flex; align-items: baseline; gap: .6ch; padding: 21px 0; }
   .antithese li:first-child { padding-top: 0; }
-  .antithese li:last-child { border-bottom: none; padding-bottom: 0; }
+  .antithese li:last-child { padding-bottom: 0; }
   .antithese .pos { font-family: var(--serif); font-size: clamp(23px, 2.5vw, 32px); font-weight: 400; line-height: 1; color: var(--text-1); }
   .antithese .neg { font-family: var(--serif); font-style: italic; font-size: clamp(16px, 1.7vw, 20px); color: var(--text-2); letter-spacing: .01em; }
 
@@ -58,11 +82,11 @@
   .beginn-intro { font-size: 16.5px; line-height: 1.85; color: #463F33; max-width: 62ch; margin-top: 20px; }
   .beginn-intro em { font-style: italic; color: var(--burgundy-deep); }
   .approach-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
-  .ap-step { padding: 24px 22px 26px; border: .5px solid var(--border-m); border-radius: 2px; background: #fff; }
-  .ap-step .num { font-family: var(--serif); font-style: italic; font-size: 15px; font-weight: 400; color: var(--brass); line-height: 1; margin-bottom: 13px; letter-spacing: .04em; }
-  .ap-step h4 { font-family: var(--serif); font-size: 19px; font-weight: 400; margin-bottom: 8px; color: var(--brass); }
-  .ap-step p { font-size: 13px; color: var(--text-2); line-height: 1.65; }
-  .approach-note { font-size: 13px; color: var(--text-3); font-style: italic; margin-top: 26px; max-width: 640px; }
+  .ap-step { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 11px; padding: 28px 24px 26px; border: .5px solid var(--border-m); border-radius: 2px; background: #fff; }
+  .ap-step .num { font-family: var(--serif); font-style: italic; font-size: 30px; font-weight: 400; color: var(--brass); line-height: 1; margin-bottom: 0; letter-spacing: .04em; }
+  .ap-step h4 { font-family: var(--serif); font-size: 22px; font-weight: 400; margin-bottom: 0; color:var(--gold); }
+  .ap-step p { flex-basis: 100%; width: 100%; font-size:14px; color: var(--text-2); line-height: 1.7; margin-top: 12px; }
+  .approach-note { font-size: 14.5px; color:var(--text-2); font-style: italic; margin-top: 26px; max-width: 640px; }
 
   /* PRINCIPLES */
   .principles { display: grid; grid-template-columns: 1fr; gap: 0; margin-top: 64px; }
@@ -83,7 +107,7 @@
   .monica-img { aspect-ratio: 4/5; }
   .monica-text .eyebrow { margin-bottom: 18px; }
   .monica-text h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.16; margin-bottom: 16px; }
-  .monica-cred { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); margin-bottom: 22px; }
+  .monica-cred { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color:var(--gold); margin-bottom: 22px; }
   .monica-text h2 em { font-style: italic; color: var(--burgundy); }
   .monica-body p { font-size: 16.5px; line-height: 1.85; color: #463F33; max-width: 50ch; }
   .monica-body p + p { margin-top: 14px; }
@@ -123,9 +147,9 @@
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -133,24 +157,25 @@
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
     <li class="has-drop">
-    <a href="/philosophie/" class="active">Philosophie</a>
+    <a href="/philosophie/" class="active">Studio</a>
     <div class="drop-panel mag">
-      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
-      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
     </div>
   </li>
     <li class="has-drop">
     <a href="/anwendungen/">Anwendungen</a>
     <div class="drop-panel">
-      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
-      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
       <span class="drop-div"></span>
       <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
     </div>
@@ -166,7 +191,6 @@
       <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
     </div>
   </li>
-    <li><a href="/monica/">Monica</a></li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -187,7 +211,7 @@
   <section class="section idea" data-screen-label="Philosophie · Der Name">
     <div class="section-inner">
       <div class="idea-grid">
-        <figure class="img-fill idea-img reveal"><img src="/img/philo-quote.webp" alt="Stille im Rubedo Spa Minden — ruhiger Moment in warmem, museal gedämpftem Licht"></figure>
+        <figure class="img-fill idea-img reveal"><img src="/img/philo-quote.webp" alt="Stille — ruhiger Moment in warmem, museal gedämpftem Licht"></figure>
         <div class="reveal">
           <span class="eyebrow eyebrow-rule">Der Name</span>
           <h2><em>Rubedo</em> — das Rot,<br>in dem <em>Wissen<br>Form wird</em>.</h2>
@@ -201,6 +225,19 @@
     </div>
   </section>
 
+  <!-- 2b · WARUM RUBEDO -->
+  <section class="section warum" data-screen-label="Philosophie · Warum Rubedo">
+    <div class="section-inner reveal">
+      <span class="eyebrow eyebrow-rule">Der Sinn</span>
+      <h2>Warum wir <em>Rubedo</em> heißen.</h2>
+      <div class="warum-verse">
+        <p>Der Name <em>Rubedo</em> stammt aus der Alchemie. Viele verbinden Alchemie mit Mystik. Historisch betrachtet war sie jedoch vor allem die Suche nach Transformation. Nicht nach Perfektion. Sondern nach Entwicklung.</p>
+        <p>Rubedo bezeichnet die letzte Phase dieses Weges — den Moment, in dem verschiedene Elemente zu einer neuen Einheit finden.</p>
+        <p>Genau diese Idee inspiriert unseren Namen. Nicht, weil wir Menschen verändern möchten, sondern weil wir daran glauben, dass Wohlbefinden entsteht, wenn Haut, Körper, Atem, Zeit und Aufmerksamkeit <em>wieder miteinander verbunden werden.</em></p>
+      </div>
+    </div>
+  </section>
+
   <!-- 3 · HALTUNG -->
   <section class="section haltung" data-screen-label="Philosophie · Haltung">
     <div class="section-inner">
@@ -209,7 +246,7 @@
           <span class="eyebrow eyebrow-rule">Haltung</span>
           <h2><em>Verstehen</em><br>statt reparieren.</h2>
           <div class="haltung-body">
-            <p>Rubedo begleitet Menschen, die ihre Haut, ihren Körper und ihre Entwicklung bewusst begleiten möchten. Die früh und überlegt handeln, bevor Veränderung sichtbar wird — und bereit sind, ihrer Pflege Zeit zu geben.</p>
+            <p>Rubedo ist für Menschen, die Haut, Körper und Entwicklung zusammen denken. Für jene, die früh und überlegt handeln, bevor Veränderung sichtbar wird — und bereit sind, ihrer Pflege Zeit zu geben.</p>
           </div>
           <p class="haltung-note">Das Ergebnis ist kein schnelles Versprechen, sondern eine Haut und ein Körper, die mit der Zeit stimmiger und präsenter wirken.</p>
         </div>
@@ -219,11 +256,18 @@
           <li><span class="pos">Entwicklung</span> <span class="neg">statt Perfektion</span></li>
         </ul>
       </div>
+      <div class="haltung-mission reveal">
+        <span class="eyebrow eyebrow-rule">Mission</span>
+        <h3>Sichtbar, spürbar, beständig.</h3>
+        <p class="mission-claim">sm<span class="art">ART</span> Beauty for Conscious Humans</p>
+        <p>Für uns ist Schönheit eine langfristige Entwicklung — präzise, persönlich, präsent. Skin Science und Ritual stehen hier gleichberechtigt nebeneinander: das eine erklärt, das andere trägt. Was wir kultivieren, ist Ihre Resilienz — jene innere Stimmigkeit, die aus Verständnis wächst und mit der Zeit Bestand hat. Denn wer seine Anlagen kennt, entscheidet bewusst — und gewinnt die Freiheit, seine Zeit souverän zu gestalten.</p>
+        <p>Darüber sprechen wir in klarer Sprache: Was gemessen ist, nennen wir Messung. Was wir beobachten, nennen wir Beobachtung.</p>
+      </div>
     </div>
   </section>
 
   <!-- 4 · DER BEGINN -->
-  <section class="section section-alt beginn" data-screen-label="Philosophie · Der Beginn">
+  <section class="section section-alt beginn" id="beginn" data-screen-label="Philosophie · Der Beginn">
     <div class="section-inner">
       <div class="beginn-head reveal">
         <span class="eyebrow eyebrow-rule">Der Beginn</span>
@@ -310,17 +354,17 @@
   <style>
   .quattuor { padding-top: clamp(94px,13vh,158px); padding-bottom: clamp(96px,13vh,150px); background: var(--cream); }
   .quat-open { text-align: center; max-width: 780px; margin: 0 auto; }
-  .quat-eyebrow { display: block; font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .42em; text-transform: uppercase; color: var(--brass); margin-bottom: clamp(28px,5vh,48px); }
+  .quat-eyebrow { display: block; font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .42em; text-transform: uppercase; color:var(--gold); margin-bottom: clamp(28px,5vh,48px); }
   .quat-title { font-family: var(--serif); font-weight: 300; font-size: clamp(40px,6.6vw,84px); line-height: .95; letter-spacing: -.015em; color: var(--text-1); }
   .quat-title .quat-rubeo { color: var(--burgundy); }
   .quat-sub { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(19px,2.1vw,26px); line-height: 1.44; color: var(--text-1); margin: clamp(24px,3.4vh,36px) auto 0; max-width: 600px; }
   .quat-sub .words { color: var(--burgundy); }
-  .quat-lead { font-family: var(--sans); font-weight: 400; font-size: clamp(14px,1.5vw,16.5px); line-height: 1.8; color: var(--text-3); margin: clamp(18px,2.6vh,26px) auto 0; max-width: 510px; letter-spacing: .01em; }
+  .quat-lead { font-family: var(--sans); font-weight: 400; font-size: clamp(14px,1.5vw,16.5px); line-height: 1.8; color:var(--text-2); margin: clamp(18px,2.6vh,26px) auto 0; max-width: 510px; letter-spacing: .01em; }
   .quat-benefit { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(16px,1.8vw,21px); line-height: 1.5; color: var(--burgundy-deep); margin: clamp(16px,2.2vh,22px) auto 0; max-width: 540px; }
   /* living emblem — surface → core (Rubedo) */
   .quat-emblem { position: relative; width: clamp(232px,28vw,310px); height: clamp(232px,28vw,310px); margin: clamp(40px,6vh,60px) auto clamp(40px,6vh,58px); }
   .quat-emblem svg { display: block; width: 100%; height: 100%; }
-  .quat-emblem .e-lab { position: absolute; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--text-3); }
+  .quat-emblem .e-lab { position: absolute; left: 50%; transform: translateX(-50%); font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color:var(--text-2); }
   .quat-emblem .e-lab.outer { top: -7px; }
   .quat-emblem .e-lab.inner { bottom: -7px; color: var(--burgundy); }
   .quat-emblem svg circle { transform-box: fill-box; transform-origin: center; }
@@ -347,14 +391,37 @@
   .quat-num { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(17px,1.9vw,24px); color: var(--brass); line-height: 1; }
   .quat-col-rule { display: none; }
   .quat-name { font-family: var(--serif); font-weight: 400; font-size: clamp(22px,2.2vw,31px); letter-spacing: .18em; text-transform: uppercase; color: var(--text-1); line-height: 1; margin-top: 0; padding-left: .18em; }
-  .quat-bridge { font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); margin-top: 20px; }
+  .quat-bridge { font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color:var(--gold); margin-top: 20px; }
   .quat-desc { font-family: var(--serif); font-style: italic; font-size: 17.5px; line-height: 1.64; color: var(--text-1); margin-top: 17px; max-width: 20ch; }
-  .quat-seal { background: var(--burgundy); padding: clamp(74px,11vh,118px) 40px; text-align: center; }
-  .quat-seal-inner { max-width: 720px; margin: 0 auto; }
-  .quat-seal h2 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(28px,4vw,48px); line-height: 1.16; color: var(--cream); letter-spacing: .005em; }
-  .quat-seal h2 em { color: var(--brass-l); }
-  .quat-seal .seal-rule { width: 44px; height: 1px; background: var(--brass-l); opacity: .85; margin: clamp(26px,4vh,40px) auto; }
-  .quat-seal p { font-family: var(--serif); font-style: italic; font-size: clamp(17px,1.9vw,23px); line-height: 1.6; color: rgba(251,248,241,.86); max-width: 600px; margin: 0 auto; }
+  .quat-seal { background: var(--cream); padding: clamp(48px,8vh,88px) 40px; text-align: center; }
+  .quat-seal-inner { max-width: 660px; margin: 0 auto; }
+  .quat-seal h2 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(25px,3.4vw,40px); line-height: 1.18; color: var(--text-1); letter-spacing: .005em; }
+  .quat-seal h2 em { color: var(--burgundy); }
+  .quat-seal .seal-rule { width: 44px; height: 1px; background: var(--brass); opacity: .7; margin: clamp(24px,3.6vh,36px) auto; }
+  .quat-seal p { font-family: var(--serif); font-style: italic; font-size: clamp(16px,1.8vw,21px); line-height: 1.62; color: var(--text-2); max-width: 600px; margin: 0 auto; }
+  /* FINALE — druckfreie Einladung: Neugier → Magazin → vier Türen */
+  .finale { background: var(--cream); padding: clamp(20px,3.5vh,48px) 40px clamp(48px,7vh,88px); text-align: center; }
+  .gespraech-schluss { background: var(--cream); text-align: center; padding: clamp(8px,2vh,24px) 40px clamp(72px,12vh,120px); }
+  .gespraech-schluss .finale-gespraech { margin-top: 0; }
+  .finale-inner { max-width: 760px; margin: 0 auto; }
+  .finale .eyebrow { margin-bottom: 22px; display: inline-block; }
+  .finale h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(34px,5vw,60px); line-height: 1.06; letter-spacing: -.01em; color: var(--text-1); margin-bottom: clamp(30px,4.5vh,46px); }
+  .finale h2 em { font-style: italic; color: var(--burgundy); }
+  .finale-mag { display: inline-block; font-family: var(--serif); font-style: italic; font-size: clamp(20px,2.2vw,27px); color: var(--burgundy); text-decoration: none; border-bottom: 1px solid rgba(107,30,42,.3); padding-bottom: 3px; transition: border-color .25s; }
+  .finale-mag:hover { border-color: var(--burgundy); }
+  .finale-doors { display: flex; justify-content: center; flex-wrap: wrap; gap: clamp(20px,4vw,52px); margin-top: clamp(38px,6vh,60px); }
+  .finale-doors a { font-family: var(--serif); font-size: clamp(20px,2.1vw,26px); font-weight: 400; letter-spacing: .14em; text-transform: uppercase; color: var(--text-1); text-decoration: none; display: flex; align-items: baseline; gap: .5em; transition: color .25s; }
+  .finale-doors a:hover { color: var(--burgundy); }
+  .finale-doors .fd-num { font-style: italic; font-weight: 300; font-size: .6em; letter-spacing: 0; color: var(--brass); text-transform: none; }
+  .finale-gespraech { display: inline-block; margin-top: clamp(44px,7vh,72px); font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); text-decoration: none; border-bottom: 1px solid rgba(168,136,74,.4); padding-bottom: 3px; transition: border-color .25s; }
+  .finale-gespraech:hover { border-color: var(--brass); }
+  /* CREDO — stiller Sigill auf Creme (aus dem Bordeaux herausgelöst) */
+  .quat-credo { background: var(--cream); padding: clamp(30px,5vh,58px) 40px clamp(66px,12vh,122px); text-align: center; }
+  .quat-credo-inner { max-width: 720px; margin: 0 auto; }
+  .qc-rule { width: 44px; height: 1px; background: var(--brass); opacity: .7; margin: 0 auto clamp(28px,4vh,40px); }
+  .qc-line { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(23px,3.3vw,39px); line-height: 1.3; color: var(--text-1); }
+  .qc-line em { font-style: italic; color: var(--burgundy); }
+  .qc-sign { display: block; margin-top: clamp(20px,3vh,30px); font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color:var(--gold); }
   .quat-after { text-align: center; background: var(--cream); padding: clamp(40px,6vh,64px) 40px clamp(6px,2vh,14px); }
   .quat-after-link { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .25s; }
   .quat-after-link:hover { border-color: var(--brass); }
@@ -411,48 +478,45 @@
     </div>
   </section>
 
-  <!-- 7 · BEGEGNUNG (Sigill + Ponte) -->
-  <section class="quat-seal" data-screen-label="Philosophie · Begegnung">
-    <div class="quat-seal-inner reveal">
-      <h2>Wo das System zur <em>Erfahrung</em> wird.</h2>
-      <div class="seal-rule"></div>
-      <p>Alles beginnt bei der individuellen Verfassung — ein kontinuierlicher Prozess, der die natürliche Vitalität in den Mittelpunkt stellt, vom orientierenden Erstgespräch bis hinein ins Ritual.</p>
-      <p style="margin-top:14px;">Schönheit ist kein bloßes Resultat, sondern der lebendige Prozess einer Beziehung: zur biologischen Zeit, zum eigenen Körper, zur persönlichen Wahrnehmung. Ästhetik als bewusste Kultivierung von <em>Präsenz</em> — durch achtsame Pflege, Aktivierung und Ritual.</p>
+  <!-- 6a · EINLADUNG (Türen: Neugier → Magazin → vier Dimensionen; direkt nach dem Quattuor = höchste Aufmerksamkeit) -->
+  <section class="finale" data-screen-label="Philosophie · Einladung">
+    <div class="finale-inner reveal">
+      <span class="eyebrow eyebrow-rule">Einladung</span>
+      <h2>Sie dürfen <em>neugierig</em> sein.</h2>
+      <a href="/magazin/" class="finale-mag">Das Rubedo Magazin →</a>
     </div>
   </section>
 
-  <div class="quat-after">
-    <a href="/anwendungen/" class="quat-after-link">Anwendungen entdecken →</a>
-  </div>
+  <!-- 6b · CREDO (stiller Sigill, aus dem Bordeaux herausgelöst) -->
+  <section class="quat-credo" data-screen-label="Philosophie · Credo">
+    <div class="quat-credo-inner reveal">
+      <div class="qc-rule"></div>
+      <p class="qc-line">Die feinste Form der Präzision ist, den Menschen wirklich <em>wahrzunehmen</em>.</p>
+      <span class="qc-sign">Monica Galletti</span>
+    </div>
+  </section>
 
   <!-- 8 · MONICA -->
   <section class="section section-alt monica-sec" data-screen-label="Philosophie · Monica">
     <div class="section-inner">
       <div class="monica-grid">
-        <figure class="img-fill monica-img reveal"><img src="/img/monica-portrait.webp" alt="Monica Galletti, Gründerin von Rubedo in Minden"></figure>
+        <figure class="img-fill monica-img reveal"><img src="/img/monica-portrait.webp" alt="Monica Galletti, Gründerin"></figure>
         <div class="monica-text reveal">
           <span class="eyebrow eyebrow-rule">Monica</span>
           <h2><em>Erfahrung</em> wird Haltung.</h2>
-          <div class="monica-cred">20 Jahre Erfahrung · Ästhetik &amp; Körperarbeit · Minden</div>
+          <div class="monica-cred">Ästhetik · Körperintelligenz · Genomik · Minden</div>
           <div class="monica-body">
-            <p>Seit über zwanzig Jahren verbindet Monica Galletti Ästhetik, Körperverständnis und langfristige Entwicklung zu einer eigenen Methode — heute erweitert um einen genombasierten Ansatz.</p>
-            <p>Rubedo entstand aus einer Überzeugung: dass Schönheit weder Zufall noch Produkt ist, sondern das Ergebnis bewusster Entscheidungen über die Zeit.</p>
+            <p>Monica Galletti verbindet ästhetisches Feingefühl, fundierte Körperarbeit und wissenschaftliche Erkenntnisse zu einem ganzheitlichen Ansatz. Im Mittelpunkt steht der Mensch – mit seiner biologischen Individualität, seinem Potenzial und seiner natürlichen Ausstrahlung.</p>
           </div>
-          <a href="/monica/" class="monica-link">Mehr über Monica →</a>
+          <a class="monica-link" href="/monica/">Wer Sie empfängt →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 9 · CTA FINALE -->
-  <section class="cta-band" data-screen-label="Philosophie · CTA">
-    <span class="eyebrow eyebrow-rule">Die Haltung erleben</span>
-    <h2>Eine Überzeugung<br>wird zur <em>Erfahrung</em>.</h2>
-    <p>Was hier als System beschrieben ist, beginnt mit einem Gespräch. Persönlich, präzise, ohne Verpflichtung. Der erste Schritt ist keine Behandlung — sondern Verstehen.</p>
-    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="/termin-buchen/" class="btn-primary">Termin vereinbaren</a>
-      <a href="/anwendungen/" class="btn-secondary">Anwendungen entdecken</a>
-    </div>
+  <!-- 9 · GESPRÄCH (leiser Schluss, peak-end) -->
+  <section class="gespraech-schluss" data-screen-label="Philosophie · Gespräch">
+    <a href="/termin-buchen/" class="finale-gespraech">Wenn Sie möchten, beginnt der Weg mit einem Gespräch →</a>
   </section>
 
 </main>
@@ -461,7 +525,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -486,10 +550,10 @@
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -497,7 +561,6 @@
       <ul>
         <li><a href="/philosophie/">Philosophie</a></li>
         <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
-        <li><a href="/monica/">Monica</a></li>
         <li><a href="/magazin/">Magazin</a></li>
       </ul>
     </div>
@@ -507,6 +570,7 @@
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>

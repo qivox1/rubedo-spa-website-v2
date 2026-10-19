@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/styles.css">
 <link rel="stylesheet" href="/system.css">
-<style>.eyebrow-rule{color:var(--brass);border-bottom-color:rgba(168,136,74,.5);}</style>
+<style>.eyebrow-rule{color:var(--gold);border-bottom-color:rgba(168,136,74,.5);}</style>
 <style>
   .legal-hero { padding: 80px 40px 0; }
   .legal-inner { max-width: 760px; margin: 0 auto; }
@@ -26,13 +26,13 @@
   .legal-body ol li { font-size: 14.5px; line-height: 1.78; color: var(--text-2); padding: 6px 0 6px 30px; position: relative; counter-increment: clause; }
   .legal-body ol li::before { content: '(' counter(clause) ')'; position: absolute; left: 0; color: var(--brass); font-variant-numeric: tabular-nums; }
   .legal-body a { color: var(--burgundy); text-decoration: none; }
-  .legal-body a:hover { text-decoration: underline; }
+  .legal-body a:hover { color: var(--brass); }
   .legal-body strong { color: var(--text-1); font-weight: 500; }
   .widerruf { background: var(--cream-dark); border: .5px solid var(--border-m); border-radius: 2px; padding: 26px 28px; margin-top: 8px; }
   .widerruf h3 { font-family: var(--serif); font-size: 19px; font-weight: 400; margin: 16px 0 8px; color: var(--text-1); }
   .widerruf h3:first-child { margin-top: 0; }
-  .legal-stand { font-size: 12.5px; color: var(--text-3); font-style: italic; margin-top: 18px; }
-  .legal-note { margin-top: 12px; font-size: 12.5px; color: var(--text-3); font-style: italic; line-height: 1.6; }
+  .legal-stand { font-size:14px; color:var(--text-2); font-style: italic; margin-top: 18px; }
+  .legal-note { margin-top: 12px; font-size:14px; color:var(--text-2); font-style: italic; line-height: 1.6; }
   @media (max-width: 720px) {
     .legal-hero { padding: 56px 20px 0; }
     .legal-body { padding: 32px 20px 64px; }
@@ -44,9 +44,9 @@
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -54,24 +54,25 @@
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
     <li class="has-drop">
-    <a href="/philosophie/">Philosophie</a>
+    <a href="/philosophie/">Studio</a>
     <div class="drop-panel mag">
-      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie · Übersicht</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
-      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Haltung &amp; Standort</span></span></a>
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
     </div>
   </li>
     <li class="has-drop">
     <a href="/anwendungen/">Anwendungen</a>
     <div class="drop-panel">
-      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
-      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
       <span class="drop-div"></span>
       <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
     </div>
@@ -87,7 +88,6 @@
       <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
     </div>
   </li>
-    <li><a href="/monica/">Monica</a></li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -99,7 +99,7 @@
     <div class="legal-inner">
       <span class="eyebrow eyebrow-rule">Rechtliches</span>
       <h1>Allgemeine Geschäfts&shy;bedingungen</h1>
-      <p class="lead">Rubedo Spa · Monica Galletti, Marienstraße 58, 32427 Minden. Diese AGB gelten für alle Verträge über unsere Wellness-Dienstleistungen, Kosmetikprodukte, Nahrungsergänzungsmittel, Gutscheine und Beratungsleistungen.</p>
+      <p class="lead">Rubedo Spa · Monica Galletti, Marienstraße 58, 32427 Minden. Diese AGB gelten für alle Verträge über unsere Wellness-Dienstleistungen, Kosmetikprodukte, Nahrungsergänzungsmittel, genombasierte Analysen, individuell nach genetischem Profil gefertigte Produkte, Gutscheine und Beratungsleistungen.</p>
     </div>
   </section>
 
@@ -109,7 +109,7 @@
       <section>
         <h2>§ 1 Geltungsbereich</h2>
         <ol>
-          <li>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Monica Galletti, Rubedo Spa, Marienstraße 58, 32427 Minden (nachfolgend „Rubedo Spa" oder „wir") und unseren Kunden (nachfolgend „Kunde" oder „Sie") über Wellness-Dienstleistungen, Kosmetikprodukte, Nahrungsergänzungsmittel, Gutscheine sowie damit verbundene Beratungsleistungen.</li>
+          <li>Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Verträge zwischen Monica Galletti, Rubedo Spa, Marienstraße 58, 32427 Minden (nachfolgend „Rubedo Spa" oder „wir") und unseren Kunden (nachfolgend „Kunde" oder „Sie") über Wellness-Dienstleistungen, Kosmetikprodukte, Nahrungsergänzungsmittel, <b>genombasierte Analysen und individuell nach genetischem Profil gefertigte Produkte</b>, Gutscheine sowie damit verbundene Beratungsleistungen.</li>
           <li>Abweichende Bedingungen des Kunden erkennen wir nicht an, es sei denn, wir haben ihrer Geltung ausdrücklich schriftlich zugestimmt.</li>
         </ol>
       </section>
@@ -131,11 +131,12 @@
       </section>
 
       <section>
-        <h2>§ 4 Terminbuchung, Stornierung und Umbuchung</h2>
+        <h2 id="terminbedingungen">§ 4 Terminbuchung, Stornierung und Umbuchung</h2>
         <ol>
           <li>Termine für Einzelanwendungen ohne individuelle Vorbereitung sind bis zu 48 Stunden vor dem vereinbarten Termin kostenfrei zu stornieren oder umzubuchen. Bei späterer Absage oder Nichterscheinen werden 50 % des vereinbarten Leistungspreises als Ausfallhonorar berechnet, es sei denn, der Kunde weist ein unverschuldetes Hindernis oder einen geringeren bzw. keinen Schaden nach (etwa weil der Termin anderweitig vergeben werden konnte).</li>
-          <li>Für individuell vorbereitete Leistungen — insbesondere die auf die Person zugeschnittenen Sartorial-Programme (Prooemium / Konzept-Vorbereitung) — beträgt die kostenfreie Stornofrist 7 Tage. Da Rubedo Spa hierfür bereits im Vorfeld individuelle Vorbereitungsarbeit erbringt (u. a. Konzeption sowie Auswahl und Abstimmung von Ablauf, Techniken und Materialien), ist die entrichtete Vorbereitungspauschale bei späterer Absage nicht erstattungsfähig; sie wird jedoch bei Buchung des Programms innerhalb von 14 Tagen vollständig angerechnet.</li>
-          <li>Für geführte Einzelsitzungen der Dimension Origo (Atem- und Tiefenentspannungs-Sitzungen), die individuell für den Kunden vorbereitet und komponiert werden, gilt: Eine vereinbarte Sitzung kann bis 24 Stunden vorher kostenfrei abgesagt oder verschoben werden; bei späterer Absage werden 50 %, bei Nichterscheinen ohne Absage 100 % des Sitzungspreises als Ausfallhonorar berechnet. Dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein geringerer Schaden entstanden ist. Die für die individuelle Vorbereitung entrichtete Vorbereitungspauschale ist bei Absage nicht erstattungsfähig; sie wird bei Buchung einer Sitzung innerhalb von 3 Tagen zu 100 % angerechnet.</li>
+          <li>Individuell komponierte Leistungen setzen eine <b>eigenständige Vorbereitungsleistung</b> voraus: Vor dem Termin werden Ablauf, Atem- und Bewegungsführung, Klang- und Musikauswahl sowie die verwendeten Materialien eigens für den Kunden konzipiert und zusammengestellt. Diese Vorbereitung nimmt regelmäßig mehrere Stunden in Anspruch und erfolgt vollständig vor dem vereinbarten Termin. Sie wird mit der Vorbereitungspauschale vergütet und ist mit ihrer Erbringung erbracht; die Pauschale ist daher bei einer späteren Absage nicht erstattungsfähig. Als Entgegenkommen rechnen wir sie vollständig an, wenn der Termin innerhalb von 14 Tagen nachgeholt wird.</li>
+          <li>Für den Anwendungstermin individuell vorbereiteter Anwendungen selbst beträgt die kostenfreie Stornofrist 7 Tage. Bei späterer Absage berechnen wir 50 % des Leistungspreises, soweit der Termin nicht anderweitig vergeben werden kann; dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein geringerer Schaden entstanden ist.</li>
+          <li>Für geführte Einzelsitzungen der Dimension Origo (Atem- und Tiefenentspannungs-Sitzungen), die individuell für den Kunden vorbereitet und komponiert werden, gilt: Eine vereinbarte Sitzung kann bis 24 Stunden vorher kostenfrei abgesagt oder verschoben werden; bei späterer Absage werden 50 %, bei Nichterscheinen ohne Absage 100 % des Sitzungspreises als Ausfallhonorar berechnet. Dem Kunden bleibt der Nachweis vorbehalten, dass kein oder ein geringerer Schaden entstanden ist. Für die zugehörige Vorbereitungsleistung gilt Ziffer 2 entsprechend; die entrichtete Vorbereitungspauschale wird bei Buchung einer Sitzung innerhalb von 3 Tagen zu 100 % angerechnet.</li>
           <li>Bei Stornierung durch Rubedo Spa (z. B. Krankheit der Behandlerin) wird ein Ersatztermin angeboten oder der bereits gezahlte Betrag vollständig erstattet.</li>
         </ol>
       </section>
@@ -143,8 +144,8 @@
       <section>
         <h2>§ 5 Widerrufsrecht (Fernabsatz)</h2>
         <ol>
-          <li>Wird ein Gutschein im Fernabsatz (online, per E-Mail oder telefonisch ohne gleichzeitige physische Anwesenheit) bestellt, besteht ein gesetzliches Widerrufsrecht gemäß § 312g BGB von 14 Tagen ab Vertragsschluss.</li>
-          <li>Das Widerrufsrecht erlischt vorzeitig bei individuell hergestellten Produkten, sobald mit der Herstellung begonnen wurde und der Kunde ausdrücklich zugestimmt hat (§ 312g Abs. 2 Nr. 1 BGB).</li>
+          <li>Wird ein Vertrag — insbesondere über einen Gutschein, eine genombasierte Analyse oder individuell nach Ihrem Profil gefertigte Produkte — im Fernabsatz (online, per E-Mail oder telefonisch ohne gleichzeitige physische Anwesenheit) geschlossen, besteht ein gesetzliches Widerrufsrecht gemäß § 312g BGB von 14 Tagen ab Vertragsschluss.</li>
+          <li>Das Widerrufsrecht erlischt vorzeitig bei individuell hergestellten Produkten, sobald mit der Herstellung begonnen wurde und der Kunde ausdrücklich zugestimmt hat (§ 312g Abs. 2 Nr. 1 BGB). Bei Dienstleistungen — einschließlich der genombasierten Analyse und ihrer Auswertung — erlischt es, wenn wir die Leistung vollständig erbracht haben und der Kunde vor Beginn ausdrücklich zugestimmt und seine Kenntnis vom Erlöschen bestätigt hat (§ 356 Abs. 4 BGB).</li>
           <li>Die vollständige Widerrufsbelehrung ist Bestandteil dieser AGB und nachstehend abgedruckt.</li>
         </ol>
       </section>
@@ -161,12 +162,29 @@
       </section>
 
       <section>
-        <h2>§ 7 Datenschutz</h2>
+        <h2 id="genanalysen">§ 7 Genombasierte Analysen, Speichelprobe und individuell gefertigte Produkte</h2>
+        <ol>
+          <li><b>Zweck und Abgrenzung.</b> Genombasierte Analysen werden ausschließlich zu <b>kosmetischen und Wellnesszwecken</b> angeboten. Sie sind <b>keine genetische Untersuchung zu medizinischen Zwecken</b> im Sinne des Gendiagnostikgesetzes (GenDG) und dienen nicht der Feststellung, Vorhersage oder Behandlung von Krankheiten oder gesundheitlichen Störungen. Eine Diagnose, ein Krankheitsrisiko oder eine Therapieempfehlung wird nicht erstellt. Fragen medizinischer Art gehören zur Ärztin oder zum Arzt.</li>
+          <li><b>Volljährigkeit und Einwilligungsfähigkeit.</b> Die Analyse wird nur für <b>einwilligungsfähige Personen ab 18 Jahren</b> durchgeführt, die die Einwilligung für sich selbst erteilen. Eine Analyse für Dritte, für Minderjährige oder ohne persönliche Anwesenheit bei der Probenahme ist ausgeschlossen.</li>
+          <li><b>Aufklärung und schriftliche Einwilligung.</b> Vor der Probenahme findet ein persönliches Aufklärungsgespräch statt: Gegenstand und Grenzen der Analyse, Art der ausgewerteten Merkmale, Empfänger der Probe, Aufbewahrung und Vernichtung. Die Analyse beginnt erst nach Ihrer <b>schriftlichen Einwilligung</b>. Die Einwilligung ist <b>jederzeit und ohne Angabe von Gründen ganz oder teilweise widerruflich</b>; maßgeblich ist der Zugang des Widerrufs bei uns.</li>
+          <li><b>Recht auf Nichtwissen.</b> Sie können jederzeit erklären, dass Sie einzelne oder alle Ergebnisse nicht zur Kenntnis nehmen möchten. In diesem Fall werden die betreffenden Ergebnisse nicht mitgeteilt und nicht besprochen.</li>
+          <li><b>Empfänger der Probe und Auswertung.</b> Die Speichelprobe wird zur Auswertung an unseren Vertragspartner <b>Beauty ID Switzerland AG, Schweiz</b>, und von dort an ein von diesem beauftragtes, zertifiziertes Partnerlabor weitergeleitet. Rubedo Spa führt selbst <b>keine Laboranalyse</b> durch. Umfang, Rechtsgrundlage und die Übermittlung in die Schweiz sind in der <a href="/datenschutz/">Datenschutzerklärung</a> beschrieben.</li>
+          <li><b>Aufbewahrung und Vernichtung der Probe.</b> Die Speichelprobe wird ausschließlich für die vereinbarte Analyse verwendet und nach Erreichen dieses Zwecks vernichtet. Eine Aufbewahrung für spätere, nicht vereinbarte Analysen erfolgt nur auf Ihren ausdrücklichen Wunsch. Bei Widerruf der Einwilligung vor Abschluss der Auswertung wird die Probe unverzüglich vernichtet.</li>
+          <li><b>Ergebnis und Mitwirkung.</b> Die Analyse beschreibt <b>Anlagen</b>, also Tendenzen. Sie sagt kein Ergebnis für den einzelnen Fall voraus. Ein bestimmter kosmetischer Erfolg wird nicht zugesagt; er hängt von Ihren individuellen Voraussetzungen und Ihrer Mitwirkung ab. Die abgeleiteten Pflege-, Ernährungs- und Lebensstilempfehlungen sind <b>sinnvolle Schlussfolgerungen</b>, keine medizinischen Anweisungen.</li>
+          <li><b>Zeitlicher Ablauf.</b> Zwischen Probenahme und Vorliegen des Reports liegen mehrere Wochen; die Bearbeitung Ihres persönlichen Protokolls erfolgt anschließend. Angaben zur Dauer sind <b>Richtwerte</b>. Verzögerungen im Labor oder im Versand, die wir nicht zu vertreten haben, begründen keinen Anspruch auf Rücktritt oder Minderung, solange die Leistung in angemessener Frist erbracht wird.</li>
+          <li><b>Preise und Zahlung.</b> Analyse, individuell gefertigte Naturkosmetik und individuell zusammengestellte Mikronährstoffe werden <b>vor Beginn der Herstellung bzw. vor Einsendung der Probe</b> in Rechnung gestellt. Zwei Rechnungen können entstehen: eine für die Leistungen des Studios, eine für Analyse und Produkte.</li>
+          <li><b>Widerrufsrecht bei Fernabsatz.</b> Wird der Vertrag im Fernabsatz geschlossen, gilt § 5 dieser AGB. Bei der Analyse als Dienstleistung <b>erlischt das Widerrufsrecht</b>, wenn wir die Leistung vollständig erbracht haben und Sie vor Beginn ausdrücklich zugestimmt und Ihre Kenntnis vom Erlöschen bestätigt haben (§ 356 Abs. 4 BGB). Bei <b>individuell nach Ihrem Profil gefertigten Produkten</b> erlischt es mit Beginn der Herstellung (§ 312g Abs. 2 Nr. 1 BGB). Bereits an das Labor übermittelte Proben können nicht zurückgeholt werden; die Analyse-Gebühr ist ab Laboreingang nicht erstattungsfähig.</li>
+          <li><b>Diskriminierungsverbot.</b> Ergebnisse genombasierter Analysen werden nicht an Dritte weitergegeben — insbesondere nicht an Arbeitgeber oder Versicherungen — und von uns weder verlangt noch entgegengenommen.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>§ 8 Datenschutz</h2>
         <p>Die Verarbeitung personenbezogener Daten erfolgt gemäß unserer <a href="/datenschutz/">Datenschutzerklärung</a>, die Bestandteil dieser AGB ist.</p>
       </section>
 
       <section>
-        <h2>§ 8 Anwendbares Recht und Gerichtsstand</h2>
+        <h2>§ 9 Anwendbares Recht und Gerichtsstand</h2>
         <ol>
           <li>Es gilt ausschließlich deutsches Recht unter Ausschluss des UN-Kaufrechts.</li>
           <li>Für Streitigkeiten mit Verbrauchern ist eine einvernehmliche Lösung angestrebt. Wir sind weder verpflichtet noch bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. EU-Streitschlichtungsplattform: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a></li>
@@ -179,9 +197,9 @@
           <h3>Widerrufsrecht</h3>
           <p>Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsabschlusses. Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (Monica Galletti, Rubedo Spa, Marienstraße 58, 32427 Minden, <a href="mailto:info@rubedo-spa.de">info@rubedo-spa.de</a>, <a href="tel:+4957178343423">+49 571 78343423</a>) mittels einer eindeutigen Erklärung (z. B. ein mit der Post versandter Brief oder eine E-Mail) über Ihren Entschluss, diesen Vertrag zu widerrufen, informieren. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.</p>
           <h3>Ausnahmen vom Widerrufsrecht</h3>
-          <p>Das Widerrufsrecht erlischt bei individuell hergestellten Produkten (§ 312g Abs. 2 Nr. 1 BGB), sobald mit der Herstellung begonnen wurde und Sie ausdrücklich zugestimmt haben. Für persönlich und vor Ort vereinbarte Gutscheine (Präsenzgeschäft) besteht kein Widerrufsrecht gemäß § 312b Abs. 1 BGB.</p>
+          <p>Das Widerrufsrecht erlischt bei individuell hergestellten Produkten (§ 312g Abs. 2 Nr. 1 BGB), sobald mit der Herstellung begonnen wurde und Sie ausdrücklich zugestimmt haben — dazu gehören die nach Ihrem genetischen Profil gefertigte Naturkosmetik und die individuell zusammengestellten Mikronährstoffe. Bei <b>Dienstleistungen</b> — einschließlich der genombasierten Analyse und ihrer Auswertung — erlischt das Widerrufsrecht, wenn wir die Leistung vollständig erbracht haben und Sie vor Beginn der Ausführung ausdrücklich zugestimmt und Ihre Kenntnis davon bestätigt haben, dass Sie Ihr Widerrufsrecht bei vollständiger Vertragserfüllung verlieren (§ 356 Abs. 4 BGB). Eine bereits an das Labor übermittelte Speichelprobe kann nicht zurückgeholt werden. Für persönlich und vor Ort vereinbarte Gutscheine (Präsenzgeschäft) besteht kein Widerrufsrecht gemäß § 312b Abs. 1 BGB.</p>
         </div>
-        <p class="legal-stand">Stand: Mai 2026 · Rubedo Spa · Monica Galletti, Marienstraße 58, 32427 Minden</p>
+        <p class="legal-stand">Stand: August 2026 · Rubedo Spa · Monica Galletti, Marienstraße 58, 32427 Minden</p>
         <p class="legal-note">Vor dem Go-live empfehlen wir eine abschließende Prüfung durch eine fachkundige Person (z. B. Rechtsanwalt für Wettbewerbs-/Medizinrecht).</p>
       </section>
 
@@ -194,7 +212,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -211,10 +229,10 @@
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -222,7 +240,6 @@
       <ul>
         <li><a href="/philosophie/">Philosophie</a></li>
         <li><a href="/longevity-studio-minden/">Longevity-Studio Minden</a></li>
-        <li><a href="/monica/">Monica</a></li>
         <li><a href="/magazin/">Magazin</a></li>
       </ul>
     </div>
@@ -232,6 +249,7 @@
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>

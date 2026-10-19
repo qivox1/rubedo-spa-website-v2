@@ -1,10 +1,10 @@
 # Rubedo Spa — Longevity-Studio Minden
 
-> Rubedo Spa ist ein Longevity- und Wellness-Studio in Minden (Deutschland), gegründet von Monica Galletti (CIDESCO Beauty Therapist). Leitidee: „smART Beauty for Conscious Humans" — personalisierte, präventive und auf Langlebigkeit ausgerichtete Pflege auf Basis des genetischen Profils. Rubedo Spa ist ausdrücklich KEINE medizinische Praxis: keine Diagnosen, keine Heilversprechen.
+> Rubedo Spa ist ein kosmetisches Longevity- und Wellness-Studio in Minden (Deutschland), geführt von Monica Galletti (CIDESCO Beauty Therapist). Leitidee: „smART Beauty for Conscious Humans" — personalisierte, präventive und auf Langlebigkeit ausgerichtete Pflege, auf Grundlage des genetischen Profils. Die Leistungen sind kosmetische Lifestyle-Anwendungen ohne medizinische Diagnostik.
 
 ## Eckdaten
 - Name: Rubedo Spa (Rubedo Longevity-Studio Minden)
-- Inhaberin: Monica Galletti, CIDESCO Beauty Therapist
+- Inhaberin: Monica Galletti — CIDESCO Beauty Therapist · NLP Master · Hypnosomatic Breathwork Master · Yoga Instructor · DNA Skin Expert
 - Adresse: Marienstraße 58, 32427 Minden, Deutschland
 - Öffnungszeiten: Mo–Fr 08:00–17:00 Uhr (Termine nach Vereinbarung)
 - Telefon: +49 571 78343423
@@ -12,44 +12,76 @@
 - Claim: smART Beauty for Conscious Humans
 - Werte: Personalisierung · Prävention · Longevity
 - Zielgruppe: Frauen und Männer von 20 bis 65 Jahren
+- Anfahrt: ab Hauptbahnhof Minden rund 2,5 km (zu Fuß rund 30 Minuten, mit Bus über den ZOB wenige Minuten); vom Stadtzentrum rund 1,5 km. Kundenparkplätze am Haus, überdachter Fahrradstellplatz.
 
-## Die vier Säulen (Anwendungen)
-- Cutis (Haut) — Genombasierte Hautpflege & Gesichtsbehandlung. Enthält das Sub-Angebot „Genomis — DNA Lifestyle Analysen" (genetische Anlagen & Profile für Haut, Körper & Leistung; keine medizinische Diagnose).
-- Vigor (Aktivierung) — Kryotherapie bis −196 °C, Kryo-Facial, Presso-Massage, Wirkstoff-Bandage & Body Wrap. Inklusive der „Rubedo Sequenz" (Kryo · Presso · Wirkstoffe).
-- Corpus (Körper) — Massage & rituelle Körperarbeit: Abhyanga, Hot Stone, Raindrop, Schwedische Massage, Opus Magnum (Signature).
-- Origo (Atem) — Atemarbeit & geführte Tiefenentspannung: Spiramen (Atem-Protokoll), Stille-Sitzung, digitale Bibliothek.
+## Die vier Dimensionen (Quattuor)
+- Cutis (Haut) — Genombasierte Hautpflege & Gesichtsbehandlung. Landing: cutis.html. Enthält die DNA-Hautanalyse und „Genomis — DNA Lifestyle Analysen" (genomis.html): genetische Anlagen & Profile als Grundlage für Pflege- und Lifestyle-Empfehlungen, keine medizinische Diagnose.
+- Vigor (Aktivierung) — Kryotherapie bis −196 °C, Kryo Lokal, Kryo-Facial, Presso-Massage, Beine Bandagen, Body Wraps & Velamen. Landing: vigor.html.
+- Corpus (Körper) — Massage & rituelle Körperarbeit: Abhyanga, Hot Stone, Raindrop-Aroma-Ritual, Schwedische Massage, Opus (Signature). Landing: corpus.html.
+- Origo (Atem) — Atemarbeit & geführte Tiefenentspannung: Spiramen (Atem-Ritual), Imago (geführte Imagination), Concentus (Klang-Bibliothek). Landing: origo.html.
 
 ## Erster Schritt
-- Einstieg in Stufen: Magazin (frei lesbar) → Prospectus (15-Minuten-Orientierung, € 49, bei Buchung voll verrechenbar) → Prooemium (persönliche Konzept-Vorbereitung, € 159 Vorbereitungspauschale, bei Programmbuchung zu 100 % verrechnet) → Programm. Einzelne Sitzungen enthalten eine 15-minütige Standortbestimmung. Erst danach erfolgt eine Empfehlung — ohne Verpflichtung.
+- Einstieg in Stufen: Magazin (frei lesbar) → Prospectus (15-Minuten-Orientierung, € 49, bei Buchung voll verrechenbar) → Prooemium (persönliche Konzept-Vorbereitung, € 160 Vorbereitungspauschale, bei Buchung zu 100 % verrechnet) → die weitere Begleitung, einzeln oder im Zyklus.
+- Einzelne Sitzungen enthalten eine 15-minütige Standortbestimmung. Die Empfehlung folgt danach, ohne Verpflichtung.
 - Viele Angebote werden „Ad personam" (im persönlichen Gespräch) geplant statt über einen öffentlichen Katalog.
+- Ablauf, Rhythmus und Abstände jeder Anwendung stehen in transparenz-vorbereitung.html.
 
 ## Wichtige rechtliche Hinweise (HWG / Heilmittelwerbegesetz)
 - Rubedo Spa erbringt Wellness- und Pflegedienstleistungen, keine medizinischen Leistungen.
-- Die DNA Lifestyle Analysen zeigen genetische Anlagen & Profile als Grundlage für Lifestyle-, Pflege- und Ernährungsempfehlungen. Sie sind keine medizinische Diagnose und ersetzen keine ärztliche Beratung.
+- Die DNA Lifestyle Analysen zeigen genetische Anlagen & Profile als Grundlage für Lifestyle-, Pflege- und Ernährungsempfehlungen. Die Auswertung erfolgt in einem zertifizierten europäischen Labor. Sie sind keine medizinische Diagnose und ersetzen keine ärztliche Beratung.
 - Die Presso-Massage ist eine kosmetische Anwendung und nicht identisch mit medizinischer Lymphdrainage.
 - „Prävention" und „Longevity" werden im kosmetischen/lifestylebezogenen Sinn verstanden (z. B. Prävention von Hautalterung), nicht als Krankheitsvorsorge oder Heilversprechen.
 
 ## Seiten
-- Startseite: /
-- Philosophie: /philosophie/
-- Anwendungen (Übersicht): /anwendungen/
-- Origo — Atem & Stille (Landing, Säule 04): /origo/
-- Genomis — DNA Lifestyle Analysen: /genomis/
-- Presso-Massage: /presso-massage/
-- Magazin (Übersicht): /magazin/
-- Über Monica: /monica/
-- Gutscheine: /gutscheine/
-- Termin & Kontakt: /termin-buchen/
-- AGB (Allgemeine Geschäftsbedingungen): /agb/
-- Impressum: /impressum/
-- Datenschutzerklärung: /datenschutz/
-- KI-Bild-Hinweis & Content Credentials (Transparenz, EU AI Act / C2PA): /ki-bilder/
+- Startseite: index.html
+- Philosophie (Haltung, Name & Methode): philosophie.html
+- Longevity-Studio Minden (Studio, Ankommen & Standort): longevity-studio-minden.html
+- Über Monica: monica.html
+- Das Rubedo Prinzip (Haltung zu Zeit & Terminen): das-rubedo-prinzip.html
+- Anwendungen (Übersicht & Preise): anwendungen.html
+- Preisliste (Übersicht zum Ausdrucken): preisliste.html
+- Transparenz & Vorbereitung (Ablauf, Rhythmus, Abstände): transparenz-vorbereitung.html
+- Cutis — Haut (Landing, Dimension 01): cutis.html
+- Vigor — Aktivierung (Landing, Dimension 02): vigor.html
+- Corpus — Körper (Landing, Dimension 03): corpus.html
+- Origo — Atem & Stille (Landing, Dimension 04): origo.html
+- Genomis — DNA Lifestyle Analysen: genomis.html
+- Psychokosmetik (Haut & Psyche): psychokosmetik.html
+- Presso-Massage: presso-massage.html
+- Magazin (Übersicht): magazin.html
+- Gutscheine: gutscheine.html
+- Termin & Kontakt: termin-buchen.html
+- AGB (Allgemeine Geschäftsbedingungen): agb.html
+- Impressum: impressum.html
+- Datenschutzerklärung: datenschutz.html
+- KI-Bild-Hinweis & Content Credentials (Transparenz, EU AI Act / C2PA): ki-bilder.html
+- Sitemap: sitemap.html
 
 ## Magazin (redaktionelle Beiträge, Bildungsinhalt)
-- Die Haut als Ökosystem — Mikrobiom, Epigenetik und personalisierte Pflege: /magazin-mikrobiom/
-- Atem & Haut — was das Nervensystem mit dem Teint zu tun hat: /magazin-atem-haut/
-- Berührung als Wirkstoff — die Biologie der Massage: /magazin-beruehrung/
-- Sonnenschutz, neu gedacht — Prävention für die Haut: /magazin-sonnenschutz/
+- Was bedeutet Rubedo? — smART Beauty for Conscious Humans: magazin-was-ist-rubedo.html
+- Modernes Wellness in Minden — was Longevity wirklich bedeutet: magazin-wellness-minden.html
+- Longevity — Schönheit & Zellgesundheit: magazin-longevity-zellgesundheit.html
+- Die Haut als Ökosystem — Mikrobiom, Epigenetik und personalisierte Pflege: magazin-mikrobiom.html
+- Hauttyp & Hautzustand — welche Haut ist Ihre Haut?: magazin-hauttyp-hautzustand.html
+- Was Ihre DNA über Ihre Haut verrät — acht Faktoren: magazin-dna-acht-faktoren.html
+- DNA Lifestyle Analyse: sich selbst verstehen: magazin-dna-lifestyle-analyse.html
+- Peeling in Minden — die Haut und ihr Erneuerungsrhythmus: magazin-peeling-minden.html
+- Sonnenschutz & Longevity: magazin-sonnenschutz.html
+- Die Ära der überreizten Haut — Signalqualität statt Reizüberflutung: magazin-ueberreizte-haut.html
+- Psyche & Haut — die unsichtbare Schicht der Schönheit: magazin-psyche-haut.html
+- Ganzkörper-Kryotherapie in Minden — kontrollierter Kältereiz: magazin-kryotherapie-minden.html
+- Kryo-Facial Minden — Kälte für die Gesichtshaut: magazin-kryo-facial-minden.html
+- Das Lymphsystem und die Haut — Presso-Massage und warum Druck zählt: magazin-lymphsystem.html
+- Beine Bandagen Minden — die entlastende Kompression: magazin-beine-bandagen-minden.html
+- Beine Bandagen & Body Wraps in Minden — kosmetische Wickelanwendungen: magazin-koerperwickel-minden.html
+- Berührung als Wirkstoff — die unterschätzte Biologie der Massage: magazin-beruehrung.html
+- Abhyanga in Minden — die ayurvedische Ölmassage: magazin-abhyanga-minden.html
+- Hot Stone Massage — die Geometrie der Wärme: magazin-hot-stone.html
+- Raindrop-Massage — die Sprache der Essenzen: magazin-raindrop-massage.html
+- Schwedische Massage — die Ästhetik der Klassik: magazin-schwedische-massage.html
+- Atem & Haut — was Ihr Nervensystem mit zellulärer Schönheit zu tun hat: magazin-atem-haut.html
+- Atem & Schlaf — die Kunst des nächtlichen Übergangs: magazin-atem-schlaf.html
+- Hundert Atemzüge — den Kopf leiser stellen: magazin-hundert-atemzuege.html
 
 ## Kontaktaufnahme
-- Bevorzugt über das Formular auf /termin-buchen/, per E-Mail (info@rubedo-spa.de) oder Telefon (+49 571 78343423).
+- Bevorzugt über das Formular auf termin-buchen.html, per E-Mail (info@rubedo-spa.de) oder Telefon (+49 571 78343423).

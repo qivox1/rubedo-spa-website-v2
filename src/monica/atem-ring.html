@@ -13,7 +13,7 @@
   body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 64px 24px; }
 
   .atem { width: 100%; max-width: 640px; text-align: center; }
-  .atem-eb { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+  .atem-eb { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color:var(--gold); display: inline-flex; align-items: center; gap: 16px; margin-bottom: 26px; }
   .atem-eb::before, .atem-eb::after { content: ''; width: 34px; height: 1px; background: var(--brass); opacity: .65; }
   .atem-title { font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 6vw, 52px); line-height: 1; letter-spacing: -.015em; color: var(--text-1); margin: 0; }
   .atem-title .latin { font-style: italic; color: var(--burgundy); font-weight: 500; }
@@ -25,7 +25,7 @@
   .pat:hover { border-color: var(--text-2); color: var(--text-1); }
   .pat.active { border-color: var(--brass); background: rgba(168,136,74,.07); color: var(--text-1); }
   .pat-name { font-family: var(--serif); font-size: 17px; line-height: 1; }
-  .pat-rhythm { font-size: 10px; letter-spacing: .14em; color: var(--brass); font-variant-numeric: tabular-nums; }
+  .pat-rhythm { font-size:11px; letter-spacing: .14em; color:var(--gold); font-variant-numeric: tabular-nums; }
 
   /* ── stage ── */
   .stage { position: relative; width: min(320px, 78vw); aspect-ratio: 1; margin: 44px auto 0; display: grid; place-items: center; cursor: pointer; }
@@ -40,16 +40,16 @@
     will-change: transform; pointer-events: none; }
 
   .stage-center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; pointer-events: none; }
-  .phase-label { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color: var(--brass); min-height: 14px; opacity: 0; transition: opacity .4s; }
+  .phase-label { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; color:var(--gold); min-height: 14px; opacity: 0; transition: opacity .4s; }
   .phase-count { font-family: var(--serif); font-size: clamp(46px, 11vw, 64px); line-height: 1; color: var(--text-1); font-variant-numeric: tabular-nums; opacity: 0; transition: opacity .4s; }
-  .stage-hint  { font-family: var(--serif); font-style: italic; font-size: 18px; color: var(--text-3); transition: opacity .4s; }
+  .stage-hint  { font-family: var(--serif); font-style: italic; font-size: 18px; color:var(--text-2); transition: opacity .4s; }
 
   .atem.running .phase-label, .atem.running .phase-count { opacity: 1; }
   .atem.running .stage-hint { opacity: 0; }
 
-  .atem-foot { margin-top: 40px; font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); }
+  .atem-foot { margin-top: 40px; font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--text-2); }
   .atem-foot .dot { color: var(--brass); margin: 0 8px; }
-  .atem-back { display: inline-block; margin-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color: var(--text-3); text-decoration: none; transition: color .25s; }
+  .atem-back { display: inline-block; margin-top: 18px; font-family: var(--sans); font-size: 11.5px; letter-spacing: .1em; color:var(--text-2); text-decoration: none; transition: color .25s; }
   .atem-back:hover { color: var(--burgundy); }
 
   @media (prefers-reduced-motion: reduce) {

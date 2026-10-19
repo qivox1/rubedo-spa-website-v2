@@ -17,7 +17,7 @@
 .col      { max-width: 62ch; }
 
 /* eyebrow — brass, no crimson */
-.eb { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--brass); display: inline-flex; align-items: center; gap: 12px; margin-bottom: 26px; }
+.eb { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color:var(--gold); display: inline-flex; align-items: center; gap: 12px; margin-bottom: 26px; }
 .eb::before { content: ''; width: 28px; height: 1px; background: var(--brass); opacity: .75; }
 
 .h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 4vw, 48px); line-height: 1.12; letter-spacing: -.01em; color: var(--text-1); margin: 0; }
@@ -49,7 +49,12 @@
 .bleed { width: 100%; font-size: 0; }
 .bleed img { width: 100%; height: auto; display: block; }
 
-/* ── DIMENSION CARDS (photo-led, on cream) ─ */
+/* ── DIMENSION CARDS (photo-led, on cream) ─
+   ARCHIV 28.07.2026 · nicht mehr im Live-Einsatz. Ersetzt durch
+   „DIMENSION SPINE" (Variante D): der Abstieg an einem Messing-
+   Rückgrat statt eines 2×2-Rasters — ein Raster liest sich als
+   Katalog (gleichzeitiger Vergleich), eine Folge als System.
+   Aufbewahrt als Arbeitsgedächtnis, nicht gelöscht. */
 .dim-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 56px; }
 .dim { background: #fff; border: .5px solid var(--border); border-radius: 2px; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: inherit; position: relative; transition: box-shadow .3s, transform .3s, border-color .3s; }
 .dim::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .4s ease; z-index: 3; }
@@ -59,11 +64,11 @@
 .dim-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .dim:hover .dim-img img { transform: scale(1.04); }
 .dim-body { padding: 30px 32px 32px; display: flex; flex-direction: column; flex: 1; }
-.dim-essence { font-family: var(--sans); font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); margin-bottom: 12px; }
+.dim-essence { font-family: var(--sans); font-size:11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); margin-bottom: 12px; }
 .dim-name { font-family: var(--serif); font-size: 31px; font-weight: 400; line-height: 1.05; color: var(--text-1); margin-bottom: 11px; }
-.dim-bridge { font-size: 13.5px; color: var(--text-2); line-height: 1.45; margin-bottom: 16px; display: flex; align-items: baseline; gap: 9px; }
+.dim-bridge { font-size:14px; color: var(--text-2); line-height: 1.45; margin-bottom: 16px; display: flex; align-items: baseline; gap: 9px; }
 .dim-bridge::before { content: ''; flex-shrink: 0; width: 16px; height: 1px; background: var(--brass); transform: translateY(-4px); }
-.dim-desc { font-size: 13.5px; color: var(--text-3); line-height: 1.7; flex: 1; margin-bottom: 22px; }
+.dim-desc { font-size:14px; color:var(--text-2); line-height: 1.7; flex: 1; margin-bottom: 22px; }
 .dim-link { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brass); display: inline-flex; gap: 7px; transition: gap .2s; }
 .dim:hover .dim-link { gap: 12px; }
 /* KI „cr" pin — LOCKED spec: Ø15px, dead-zone bottom-left, 8px offset */
@@ -73,13 +78,52 @@
   .dim-cr { width:13px; height:13px; font-size:6px; opacity:.45; transition: opacity .25s, color .25s, border-color .25s; }
   .dim-cr:hover { opacity:1; }
 
+/* ── DIMENSION SPINE · Abstieg von der Oberfläche zum Ursprung ──
+   Vier gleichwertige Zeilen an einem Messing-Rückgrat. Keine Rahmen,
+   keine Schatten, KEINE grauen Trennlinien: den Rhythmus macht der
+   Abstand, nicht das Gitter. Bildklingen alle gleich groß (Parität);
+   das Gefälle liegt in Wortmenge und wachsender Luft. */
+.dim-spine { position: relative; margin-top: 58px; }
+.dim-spine::before { content: ''; position: absolute; left: 27px; top: 12px; bottom: 30px; width: 1px; background: linear-gradient(to bottom, var(--brass) 0%, rgba(168,136,74,.55) 64%, rgba(168,136,74,0) 100%); }
+.dim-row { display: grid; grid-template-columns: 56px 1fr 260px; align-items: center; gap: 34px; padding: 40px 0; text-decoration: none; color: inherit; transition: padding-left .35s ease; }
+.dim-row.rev { grid-template-columns: 56px 260px 1fr; }
+.dim-row.rev .dim-text { grid-column: 3; }
+.dim-row.rev .dim-fig { grid-column: 2; grid-row: 1; }
+.dim-row:hover { padding-left: 14px; }
+.dim-row.d1 { padding-top: 10px; }
+.dim-row.d2 { padding-top: 46px; }
+.dim-row.d3 { padding-top: 54px; }
+.dim-row.d4 { padding-top: 62px; padding-bottom: 16px; }
+.dim-num { align-self: start; font-family: var(--serif); font-size: 30px; font-weight: 300; line-height: 1; color: transparent; width: 56px; text-align: center; background: var(--cream); padding: 4px 0 8px; position: relative; z-index: 2; transition: color .35s ease; }
+.dim-num::before { content: ''; position: absolute; left: 50%; top: 12px; width: 7px; height: 7px; margin-left: -3.5px; background: var(--brass); transform: rotate(45deg); transition: opacity .35s ease; }
+.dim-row:hover .dim-num { color: var(--brass); }
+.dim-row:hover .dim-num::before { opacity: 0; }
+/* Schwellen · der Übergang selbst, nicht die Ankündigung des Nächsten */
+.dim-schwelle { display: grid; grid-template-columns: 56px 1fr; gap: 34px; align-items: center; margin: 0; padding: 4px 0; }
+.ds-node { position: relative; z-index: 2; width: 56px; height: 22px; background: var(--cream); }
+.ds-node::before { content: ''; position: absolute; left: 50%; top: 50%; width: 5px; height: 5px; margin: -2.5px 0 0 -2.5px; border: 1px solid var(--brass); transform: rotate(45deg); }
+.ds-text { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 17px; line-height: 1.5; color: var(--text-2); max-width: 42ch; }
+.dim-text { min-width: 0; }
+.dim-row .dim-name { display: block; font-family: var(--serif); font-size: clamp(30px, 3.6vw, 44px); font-weight: 400; line-height: 1.02; color: var(--text-1); margin-bottom: 10px; }
+.dim-row .dim-lede { display: block; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; line-height: 1.34; color: var(--burgundy); margin-bottom: 14px; }
+.dim-row .dim-desc { display: block; font-size: 15.5px; line-height: 1.72; color: var(--text-2); max-width: 46ch; margin-bottom: 18px; flex: none; }
+.dim-row .dim-link { font-size: 11.5px; color: var(--brass); }
+.dim-row:hover .dim-link { gap: 13px; }
+.dim-fig { position: relative; height: 300px; overflow: hidden; }
+.dim-fig img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.dim-row:hover .dim-fig img { transform: scale(1.04); }
+
 /* ── EDITORIAL PULL-QUOTE · open on cream (no box, no band) ── */
 .sec.lift { background: var(--cream); }
-.pullquote { max-width: 880px; margin: 0 auto; text-align: center; }
+.pullquote { max-width: 880px; margin: 104px auto 0; text-align: center; }
 .pullquote blockquote { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(26px, 3.6vw, 42px); line-height: 1.3; color: var(--text-1); margin: 0; letter-spacing: -.005em; }
 .pullquote blockquote em { font-style: italic; color: var(--burgundy); }
+/* ARCHIV 28.07.2026 · .pq-mark (Anführungsglyphe) außer Gebrauch:
+   die typografische Behandlung IST das Anführungszeichen (LOCKED).
+   Regel behalten als Arbeitsgedächtnis — sie trug zugleich den
+   oberen Abstand (margin-bottom 32px), der jetzt an .pullquote hängt. */
 .pullquote .pq-mark { display: block; font-family: var(--serif); font-size: 60px; line-height: 0; color: var(--brass); opacity: .55; margin-bottom: 32px; }
-.pullquote .pq-attr { margin-top: 30px; font-family: var(--sans); font-size: 11px; letter-spacing: .15em; text-transform: uppercase; color: var(--brass); }
+.pullquote .pq-attr { margin-top: 30px; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: .15em; text-transform: uppercase; color: var(--burgundy); }
 
 /* ── TWO-COLUMN PORTRAIT BAND ────────────── */
 .band { display: grid; grid-template-columns: .85fr 1.15fr; gap: 68px; align-items: center; }
@@ -88,8 +132,8 @@
 .band h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.16; color: var(--text-1); margin: 0 0 20px; }
 .band-attr { display: flex; align-items: center; gap: 14px; margin: 26px 0; }
 .band-attr-line { width: 32px; height: 1px; background: var(--brass); }
-.band-attr-name { font-size: 13px; font-weight: 500; color: var(--text-1); }
-.band-attr-role { font-size: 12px; color: var(--text-3); }
+.band-attr-name { font-size:14px; font-weight: 500; color: var(--text-1); }
+.band-attr-role { font-size:14px; color:var(--text-2); }
 
 /* ── NUMBERED MODULE ROWS (Quattuor, methods) ── */
 .quat { border-top: 1px solid var(--border); margin-top: 56px; }
@@ -98,7 +142,7 @@
 .q-num { font-family: var(--serif); font-size: 20px; color: var(--brass); }
 .q-name { font-family: var(--serif); font-size: clamp(24px, 3vw, 32px); font-weight: 400; color: var(--text-1); line-height: 1.05; }
 .q-name span { font-family: var(--sans); font-size: 14px; color: var(--text-2); font-weight: 400; }
-.q-arrow { align-self: center; font-family: var(--serif); font-size: 22px; color: var(--text-3); transition: color .2s, transform .2s; }
+.q-arrow { align-self: center; font-family: var(--serif); font-size: 22px; color:var(--text-2); transition: color .2s, transform .2s; }
 .q-row:hover .q-arrow { color: var(--brass); transform: translateX(5px); }
 
 /* ── BORDERED CTA CARD (on cream) ────────── */
@@ -106,19 +150,19 @@
 .cta-card .eb { margin-bottom: 18px; }
 .cta-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.12; color: var(--text-1); margin: 0 0 14px; }
 .cta-card p { font-size: 15.5px; line-height: 1.72; color: var(--text-2); max-width: 48ch; margin: 0; }
-.cta-card .cta-note { margin-top: 16px; font-family: var(--sans); font-size: 12px; letter-spacing: .03em; color: var(--text-3); }
+.cta-card .cta-note { margin-top: 16px; font-family: var(--sans); font-size:14px; letter-spacing: .03em; color:var(--text-2); }
 .cta-actions { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; white-space: nowrap; }
-.cta-actions .ghost { font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); text-decoration: none; }
+.cta-actions .ghost { font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--text-2); text-decoration: none; }
 .cta-actions .ghost:hover { color: var(--brass); }
 
 /* ── MAGAZIN CARDS ───────────────────────── */
 .mag-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 48px; }
 .mag-card { border: 1px solid var(--border); border-radius: 2px; padding: 34px 34px 36px; text-decoration: none; transition: border-color .2s, background .2s; }
 .mag-card:hover { border-color: var(--border-m); background: #fff; }
-.mag-card .kat { font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+.mag-card .kat { font-size:11px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color:var(--gold); }
 .mag-card h4 { font-family: var(--serif); font-weight: 400; font-size: 23px; line-height: 1.22; color: var(--text-1); margin: 14px 0 8px; }
-.mag-card p { font-size: 13.5px; line-height: 1.6; color: var(--text-2); margin: 0; }
-.mag-all { display: inline-block; margin-top: 32px; font-family: var(--sans); font-size: 12px; letter-spacing: .04em; color: var(--text-3); text-decoration: none; transition: color .2s; }
+.mag-card p { font-size:14px; line-height: 1.6; color: var(--text-2); margin: 0; }
+.mag-all { display: inline-block; margin-top: 32px; font-family: var(--sans); font-size:14px; letter-spacing: .04em; color:var(--text-2); text-decoration: none; transition: color .2s; }
 .mag-all:hover { color: var(--brass); }
 
 /* ── DARK FOOTER · the single dark anchor ──
@@ -150,6 +194,15 @@ footer.dark .seek-panel a:hover { background: var(--brass); color: #221A14; bord
   .sec { padding: 80px 24px; }
   .hero-in { padding: 0 24px 52px; }
   .dim-cards { grid-template-columns: 1fr; }
+  .dim-spine::before { display: none; }
+  .dim-row, .dim-row.rev { grid-template-columns: 1fr; gap: 18px; padding-top: 44px !important; }
+  .dim-row.d1 { padding-top: 8px !important; }
+  .dim-row.rev .dim-text { grid-column: 1; }
+  .dim-row.rev .dim-fig { grid-column: 1; grid-row: auto; }
+  .dim-num { width: auto; text-align: left; }
+  .dim-schwelle { grid-template-columns: 1fr; gap: 0; padding: 26px 0 4px; }
+  .ds-node { display: none; }
+  .dim-fig { height: 230px; }
   .band { grid-template-columns: 1fr; gap: 40px; }
   .band figure { max-width: 360px; aspect-ratio: 4/4.4; }
   .mag-cards { grid-template-columns: 1fr; }

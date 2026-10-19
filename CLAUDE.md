@@ -19,12 +19,29 @@ Monicas Seiten sind statisches HTML und werden **1:1 unverändert** ausgeliefert
   `set:html` unverändert ausgeben. **Inhaltliche Änderungen IMMER in `src/monica/*.html`
   machen, nie in den .astro-Dateien.**
 - `public/` — Monicas Assets (`img/`, `audio/`, `styles.css`, `system.css`, `app.js`,
-  `llms.txt`) + `robots.txt` (Disallow all) + `_headers` (CSP erlaubt Google Fonts; unpkg/unsafe-eval seit 2026-07-14 entfernt). Zusätzlich: `src/monica/404.html` (404-Seite, nicht von Monica — Markenlook-Ergänzung) und Favicon aus Monicas `logo-hires.png`.
+  `llms.txt`) + `robots.txt` (Disallow all) + `_headers` (CSP nur 'self' — Fonts seit 2026-07-24 self-hosted unter `/fonts/`; unpkg/unsafe-eval seit 2026-07-14 entfernt). Zusätzlich: `src/monica/404.html` (404-Seite, nicht von Monica — Markenlook-Ergänzung) und Favicon aus Monicas `logo-hires.png`.
 
 **Nicht übernommen** (Monicas eigene Publikations-Plancia, „nie öffentlich"): alle `_*.html`
 Arbeitsdokumente, Audits, Preis-Master, Backups, `sitemap.html`, Design-System- und
 Lab-Werkzeuge. Sie liegen weiterhin im Workspace-Ordner
 `2026-07-14 Anpassungen Monica Claude/Rubedo Spa (1)/rubedo/`.
+
+## Stand 19.10.2026 — Monicas Übergabe eingespielt
+
+- Quelle: Workspace-Ordner `2026-10-19 Übergabe aktueller Stand Monica/github-export/rubedo-spa/`,
+  unverändert archiviert im privaten Repo `qivox1/rubedo-spa-monica` (Commit `39ef3f3`).
+- 52 Seiten übernommen (14 neu: cutis, vigor, corpus, das-rubedo-prinzip, dna-skin-concept,
+  transparenz-vorbereitung, 8 Magazinartikel). Nicht übernommen, weil laut Monicas `.htaccess`
+  intern: `lab-prinzipien.html`, `luxury-kompass.html`, `sitemap.html`; außerdem ihre
+  `sitemap.xml`, `.htaccess`, `README.md`, `robots.txt`, `tweaks-panel.jsx`.
+- Dabei wieder angewendet: Links/Assets root-absolut, **Google Fonts → `/fonts/fonts.css`**
+  (Monicas Export lädt wieder von Google), React/Babel-Tweaks-Panel entfernt (anwendungen,
+  genomis, vier-schichten), Nav-CTA-Fix in `styles.css` (jetzt vor den Media-Queries,
+  weil Monica eigene Mobil-Regeln für den Button hat).
+- Nichts gelöscht: ältere Bilder, `breathwork-vorbereitung` (nicht mehr verlinkt), 404, Favicon,
+  Fonts, `_headers`, `robots.txt` bleiben.
+- **Nächste Lieferung von Monica:** `python3 tools/monica-import/apply.py <export-ordner>`
+  im Repo-Root ausführen — wendet alle obigen Anpassungen automatisch an, löscht nichts.
 
 ## Build & Deploy
 

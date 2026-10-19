@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Genomis — DNA Lifestyle Analysen im Rubedo Spa Minden. Maßgeschneiderte Genanalysen für Haut, Körper &amp; Leistung als Grundlage personalisierter Pflege. Genetische Anlagen &amp; Profile — keine medizinische Diagnose. Ad personam.">
 <meta property="og:title" content="Genomis — Die 7 DNA Lifestyle Analysen | Rubedo Spa Minden">
-<meta property="og:description" content="Maßgeschneiderte Genanalysen für Haut, Körper & Leistung. Sieben Sensoren, ein personalisierter Plan — im Rubedo Spa Minden.">
+<meta property="og:description" content="Maßgeschneiderte Genanalysen für Haut, Körper &amp; Leistung. Sieben Analysen, ein persönlicher Plan — im Rubedo Spa Minden.">
 <meta property="og:locale" content="de_DE">
 <meta property="og:image" content="/img/dna-skin.webp">
-<meta name="robots" content="noindex, nofollow">
-<script>try{if(!localStorage.getItem('rubedo_genomis_access')){document.documentElement.classList.add('gated');}}catch(e){}</script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="/img/dna-skin.webp">
+<meta name="robots" content="index, follow">
+<!-- genomis öffentlich (2026-07-24): Gate vollständig entfernt (CSS + Overlay + Script). Design im Backup _backup-genomis-2026-07-23.html -->
 <link rel="canonical" href="https://www.rubedo-spa.de/genomis.html">
     <title>7 DNA Lifestyle Analysen in Minden | Rubedo Spa</title>
 <link rel="stylesheet" href="/fonts/fonts.css">
@@ -20,18 +22,26 @@
   "@type": "Service",
   "serviceType": "DNA Lifestyle Analyse — Genanalyse für Haut, Körper & Leistung",
   "provider": { "@type": "HealthAndBeautyBusiness", "name": "Rubedo Spa", "address": { "@type": "PostalAddress", "streetAddress": "Marienstraße 58", "postalCode": "32427", "addressLocality": "Minden", "addressCountry": "DE" } },
-  "areaServed": "Minden",
+  "areaServed": [
+    { "@type": "City", "name": "Minden" },
+    { "@type": "City", "name": "Porta Westfalica" },
+    { "@type": "City", "name": "Bad Oeynhausen" },
+    { "@type": "City", "name": "Bückeburg" },
+    { "@type": "City", "name": "Lübbecke" },
+    { "@type": "City", "name": "Petershagen" },
+    { "@type": "City", "name": "Hille" }
+  ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "DNA Lifestyle Analysen",
     "itemListElement": [
-      { "@type": "Service", "name": "Beauty Sensor — Hautgesundheit" },
-      { "@type": "Service", "name": "Nutrition Sensor — Ernährung" },
-      { "@type": "Service", "name": "Weight Sensor — Gewicht" },
-      { "@type": "Service", "name": "Toxo Sensor — Entgiftung" },
-      { "@type": "Service", "name": "Burnout Sensor — Stress & Balance" },
-      { "@type": "Service", "name": "Performance Sensor — Sport & Leistung" },
-      { "@type": "Service", "name": "Biological Age Sensor — Biologisches Alter" }
+      { "@type": "Service", "name": "Genombasierte Hautanalyse" },
+      { "@type": "Service", "name": "Analyse: Stoffwechsel und Ernährung" },
+      { "@type": "Service", "name": "Analyse: Gewicht und Stoffwechsel" },
+      { "@type": "Service", "name": "Analyse: Umweltbelastung und Stoffwechsel" },
+      { "@type": "Service", "name": "Analyse: Stressverarbeitung" },
+      { "@type": "Service", "name": "Analyse: Leistung und Regeneration" },
+      { "@type": "Service", "name": "Analyse: Zellalterung" }
     ]
   }
 }
@@ -39,31 +49,39 @@
 <style>
   .page-hero { padding: 80px 40px 0; }
   .page-hero-inner { max-width: var(--maxw); margin: 0 auto; }
-  .page-hero .crumb { font-size: 12px; color: var(--text-3); margin-bottom: 20px; letter-spacing: .02em; }
+  .page-hero .crumb { font-size:14px; color:var(--text-2); margin-bottom: 20px; letter-spacing: .02em; }
   .page-hero .crumb a { color: var(--burgundy); text-decoration: none; }
   .page-hero .eyebrow { margin-bottom: 18px; }
   .page-hero h1 { font-family: var(--serif); font-weight: 300; font-style: italic; font-size: clamp(40px, 5.5vw, 66px); line-height: 1.06; letter-spacing: -.01em; margin-bottom: 18px; max-width: 760px; }
   .page-hero h1 .roman { font-style: normal; font-weight: 500; }
   .page-hero-lead { font-family: var(--serif); font-size: 21px; font-weight: 300; color: var(--text-2); line-height: 1.5; max-width: 600px; }
-  .hwg-banner { max-width: var(--maxw); margin: 32px auto 0; border-top: .5px solid var(--border); padding: 18px 0 0; font-size: 12.5px; color: #78705E; font-style: italic; line-height: 1.6; display: flex; gap: 12px; align-items: baseline; }
-  .hwg-banner b { font-style: normal; font-weight: 500; color: var(--brass); text-transform: uppercase; letter-spacing: .1em; font-size: 10.5px; white-space: nowrap; }
+  .hwg-banner { max-width: var(--maxw); margin: 32px auto 0; border-top: .5px solid var(--border); padding: 18px 0 0; font-size: 14px; color: #78705E; font-style: italic; line-height: 1.65; display: flex; gap: 12px; align-items: baseline; }
+  .hwg-banner b { font-style: normal; font-weight: 500; color:var(--gold); text-transform: uppercase; letter-spacing: .1em; font-size: 11px; white-space: nowrap; }
 
   .process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: .5px solid var(--border-m); border-radius: 2px; overflow: hidden; margin-top: 8px; }
   .proc-step { padding: 30px 26px; border-right: .5px solid var(--border-m); background: #fff; }
   .proc-step:last-child { border-right: none; }
   .proc-step .n { font-family: var(--serif); font-size: 30px; font-weight: 300; color: var(--brass); line-height: 1; margin-bottom: 14px; }
   .proc-step h4 { font-family: var(--serif); font-size: 20px; font-weight: 400; margin-bottom: 7px; }
-  .proc-step p { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+  .proc-step p { font-size: 14px; color: var(--text-2); line-height: 1.62; }
+
+  .fragen-lead { font-size: 15px; color: var(--text-2); line-height: 1.7; max-width: 620px; margin-top: 14px; }
+  .fragen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .frage-card { background: #fff; border: .5px solid var(--border-m); border-radius: 2px; padding: 34px 30px 32px; }
+  .frage-card .fn { font-family: var(--serif); font-size: 30px; font-weight: 300; color:var(--gold); line-height: 1; margin-bottom: 20px; }
+  .frage-card .fq { font-family: var(--serif); font-size: 21px; font-weight: 400; line-height: 1.3; color: var(--text-1); margin-bottom: 14px; }
+  .frage-card .fnote { font-size: 14.5px; color: var(--text-2); line-height: 1.62; }
+  @media (max-width: 900px) { .fragen-grid { grid-template-columns: 1fr; } }
 
   .gen-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .gen-card { background: #fff; border: .5px solid var(--border-m); border-radius: 2px; padding: 30px 28px 30px; display: flex; flex-direction: column; position: relative; transition: box-shadow .25s, transform .25s; }
   .gen-card:hover { box-shadow: 0 16px 40px rgba(28,23,18,.08); transform: translateY(-3px); }
   .gen-card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--brass); transform: scaleX(0); transform-origin: left; transition: transform .35s; }
   .gen-card:hover::before { transform: scaleX(1); }
-  .gen-num { font-family: var(--serif); font-size: 13px; color: var(--brass); letter-spacing: .12em; margin-bottom: 12px; }
-  .gen-domain { font-size: 10px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+  .gen-num { font-family: var(--serif); font-size:14px; color: var(--brass); letter-spacing: .12em; margin-bottom: 12px; }
+  .gen-domain { font-size:11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color:var(--text-2); margin-bottom: 8px; }
   .gen-name { font-family: var(--serif); font-size: 26px; font-weight: 400; line-height: 1.1; margin-bottom: 12px; }
-  .gen-desc { font-size: 13.5px; color: var(--text-2); line-height: 1.68; margin-bottom: 18px; flex: 1; }
+  .gen-desc { font-size: 15px; color: var(--text-2); line-height: 1.68; margin-bottom: 18px; flex: 1; }
   .gen-markers { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
   .gen-markers li { font-size: 11px; color: var(--text-2); background: var(--cream-dark); border: .5px solid var(--border); border-radius: 100px; padding: 4px 11px; letter-spacing: .01em; }
   .gen-card.feat { grid-column: span 3; display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: center; background: var(--burgundy); color: var(--cream); border-color: var(--burgundy); }
@@ -86,15 +104,15 @@
   .prod-card { background: #fff; border: .5px solid var(--border-m); border-radius: 2px; padding: 32px 32px 34px; }
   .prod-card .eyebrow { margin-bottom: 12px; }
   .prod-card h3 { font-family: var(--serif); font-size: 25px; font-weight: 400; margin-bottom: 6px; }
-  .prod-card .sub { font-size: 12.5px; color: var(--brass); font-style: italic; margin-bottom: 14px; }
-  .prod-card p { font-size: 13.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 16px; }
+  .prod-card .sub { font-size:14px; color:var(--gold); font-style: italic; margin-bottom: 14px; }
+  .prod-card p { font-size: 14.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 16px; }
   .prod-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
-  .prod-tags li { font-size: 10.5px; color: var(--text-3); border: .5px solid var(--border); border-radius: 100px; padding: 4px 10px; letter-spacing: .04em; }
+  .prod-tags li { font-size:11px; color:var(--text-2); border: .5px solid var(--border); border-radius: 100px; padding: 4px 10px; letter-spacing: .04em; }
 
   .cta-band { background: var(--cream-dark); border-top: .5px solid var(--border); padding: 84px 40px; text-align: center; }
   .cta-band .eyebrow { margin-bottom: 16px; }
   .cta-band h2 { font-family: var(--serif); font-size: clamp(28px, 3.8vw, 46px); font-weight: 400; line-height: 1.14; margin-bottom: 12px; }
-  .cta-band .cta-bridge { font-size: 14px; color: var(--text-3); margin-bottom: 28px; }
+  .cta-band .cta-bridge { font-size: 15px; color:var(--text-2); margin-bottom: 28px; }
 
   @media (max-width: 900px) {
     .process { grid-template-columns: 1fr 1fr; }
@@ -119,21 +137,21 @@
   footer.dark{background:#221A14;border:none;padding:64px 40px 36px;}
   footer.dark .footer-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:44px;}
   footer.dark .footer-brand-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:24px;font-weight:500;letter-spacing:.04em;margin-bottom:6px;color:#FBF8F1;}
-  footer.dark .footer-tagline{font-size:12px;color:rgba(251,248,241,.5);font-style:italic;margin-bottom:18px;}
-  footer.dark .footer-address{font-size:12.5px;color:rgba(251,248,241,.55);line-height:1.85;}
+  footer.dark .footer-tagline{font-size:14px;color:rgba(251,248,241,.5);font-style:italic;margin-bottom:18px;}
+  footer.dark .footer-address{font-size:14px;color:rgba(251,248,241,.55);line-height:1.85;}
   footer.dark .footer-address a{color:inherit;text-decoration:none;}
   footer.dark .footer-address a:hover{color:#C4A568;}
   footer.dark .footer-col h5{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#C4A568;font-weight:500;margin-bottom:16px;}
   footer.dark .footer-col ul{list-style:none;margin:0;padding:0;}
   footer.dark .footer-col li{margin-bottom:9px;}
-  footer.dark .footer-col a{font-size:13px;color:rgba(251,248,241,.66);text-decoration:none;}
+  footer.dark .footer-col a{font-size:14px;color:rgba(251,248,241,.66);text-decoration:none;}
   footer.dark .footer-col a:hover{color:#FBF8F1;}
   footer.dark .foot-bridge{color:rgba(251,248,241,.4);font-size:11px;letter-spacing:.02em;}
-  footer.dark .footer-bottom{max-width:1080px;margin:40px auto 0;padding-top:22px;border-top:.5px solid rgba(251,248,241,.14);display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(251,248,241,.45);flex-wrap:wrap;gap:10px;}
+  footer.dark .footer-bottom{max-width:1080px;margin:40px auto 0;padding-top:22px;border-top:.5px solid rgba(251,248,241,.14);display:flex;justify-content:space-between;align-items:center;font-size:14px;color:rgba(251,248,241,.45);flex-wrap:wrap;gap:10px;}
   footer.dark .footer-bottom a{color:inherit;text-decoration:none;}
   footer.dark .footer-bottom a:hover{color:#FBF8F1;}
   footer.dark .footer-seek{margin-top:22px;}
-  footer.dark .seek-trigger{background:none;border:.5px solid rgba(196,165,104,.5);color:#C4A568;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;letter-spacing:.22em;text-transform:uppercase;padding:8px 18px;border-radius:2px;cursor:pointer;transition:background .28s,color .28s,border-color .28s,letter-spacing .28s;}
+  footer.dark .seek-trigger{background:none;border:.5px solid rgba(196,165,104,.5);color:#C4A568;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;letter-spacing:.22em;text-transform:uppercase;padding:8px 18px;border-radius:2px;cursor:pointer;transition:background .28s,color .28s,border-color .28s,letter-spacing .28s;}
   footer.dark .seek-trigger:hover{background:#A8884A;color:#221A14;border-color:#A8884A;letter-spacing:.26em;}
   footer.dark .seek-panel{display:flex;flex-wrap:wrap;gap:10px;max-width:340px;opacity:0;max-height:0;overflow:hidden;transform:translateY(-6px);transition:opacity .4s,transform .4s,max-height .45s,margin-top .4s;pointer-events:none;margin-top:0;}
   footer.dark .footer-seek:hover .seek-panel,footer.dark .footer-seek:focus-within .seek-panel,footer.dark .footer-seek.open .seek-panel{opacity:1;max-height:130px;margin-top:16px;transform:none;pointer-events:auto;}
@@ -143,41 +161,15 @@
   @media (max-width:900px){footer.dark .footer-inner{grid-template-columns:1fr 1fr;gap:32px;}}
   @media (max-width:720px){footer.dark{padding:48px 20px 28px;}footer.dark .footer-inner{grid-template-columns:1fr;gap:28px;}}
 </style>
-<style>
-  html.gated body { overflow: hidden; }
-  html.gated #main, html.gated footer { filter: blur(9px); pointer-events: none; user-select: none; }
-  .gate-overlay { display: none; }
-  html.gated .gate-overlay { display: flex; }
-  .gate-overlay { position: fixed; inset: 0; z-index: 2000; background: rgba(251,248,241,.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); align-items: center; justify-content: center; padding: 24px; }
-  .gate-card { max-width: 470px; width: 100%; background: #fff; border: .5px solid var(--border-m); border-radius: 3px; padding: 46px 44px 42px; box-shadow: 0 34px 90px rgba(28,23,18,.18); }
-  .gate-seal { width: 46px; height: 46px; border: .5px solid var(--brass); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-  .gate-seal svg { width: 20px; height: 20px; fill: var(--brass); }
-  .gate-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; }
-  .gate-card h2 { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.14; color: var(--text-1); margin-bottom: 12px; }
-  .gate-card .gate-lead { font-size: 14.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 26px; }
-  .gate-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
-  .gate-field label { font-size: 10.5px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-3); font-weight: 500; }
-  .gate-field input { background: var(--cream); border: .5px solid var(--border-m); border-radius: 2px; padding: 12px 14px; font-family: inherit; font-size: 14px; color: var(--text-1); transition: border-color .2s; }
-  .gate-field input:focus { outline: none; border-color: var(--burgundy); }
-  .gate-consent { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 22px; }
-  .gate-consent input { margin-top: 3px; accent-color: var(--burgundy); flex-shrink: 0; }
-  .gate-consent label { font-size: 12px; color: var(--text-3); line-height: 1.55; }
-  .gate-consent a { color: var(--burgundy); }
-  .gate-btn { width: 100%; background: var(--burgundy); color: var(--cream); border: none; border-radius: 2px; padding: 14px; font-size: 13px; font-weight: 500; letter-spacing: .04em; cursor: pointer; font-family: inherit; transition: background .2s; }
-  .gate-btn:hover { background: var(--burgundy-l); }
-  .gate-note { font-size: 11px; color: var(--text-3); margin-top: 16px; line-height: 1.6; text-align: center; }
-  .gate-back { display: inline-block; margin-top: 14px; font-size: 12px; color: var(--text-3); text-decoration: none; }
-  .gate-back:hover { color: var(--burgundy); }
-  @media (max-width: 520px) { .gate-card { padding: 36px 26px 32px; } }
-</style>
+
 <body>
 
 <div class="topbar">
   <span>Marienstraße 58 · 32427 Minden</span>
   <span class="topbar-dot">·</span>
-  <span>Mo–Fr 08:00–17:00 Uhr</span>
+  <span class="topbar-accent">Nach Vereinbarung</span>
   <span class="topbar-dot">·</span>
-  <span class="topbar-accent">nach Vereinbarung</span>
+  <span>Mo–Fr 08:00–17:00</span>
 </div>
 
 <nav class="main" aria-label="Hauptnavigation">
@@ -185,18 +177,25 @@
     <img src="/img/logo.webp" alt="Rubedo Spa Logo">
     <span class="nav-logo-text">
       <span class="nav-logo-name">Rubedo Spa</span>
-      <span class="nav-logo-sub">Longevity-Studio · Minden</span>
+      <span class="nav-logo-sub">Longevity · Minden</span>
     </span>
   </a>
   <ul class="nav-links">
-    <li><a href="/philosophie/">Philosophie</a></li>
+    <li class="has-drop">
+    <a href="/philosophie/">Studio</a>
+    <div class="drop-panel mag">
+      <a class="drop-item" href="/philosophie/"><span class="drop-text"><span class="drop-name">Philosophie</span><span class="drop-bridge">Haltung, Name &amp; Methode</span></span></a>
+      <a class="drop-item" href="/longevity-studio-minden/"><span class="drop-text"><span class="drop-name">Longevity-Studio Minden</span><span class="drop-bridge">Studio, Longevity &amp; Standort</span></span></a>
+      <a class="drop-item" href="/monica/"><span class="drop-text"><span class="drop-name">Monica</span><span class="drop-bridge">Wer Sie empfängt</span></span></a>
+    </div>
+  </li>
     <li class="has-drop">
     <a href="/anwendungen/" class="active">Anwendungen</a>
     <div class="drop-panel">
-      <a class="drop-item" href="/anwendungen/#cutis"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
-      <a class="drop-item" href="/anwendungen/#vigor"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
-      <a class="drop-item" href="/anwendungen/#corpus"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
-      <a class="drop-item" href="/anwendungen/#origo"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
+      <a class="drop-item" href="/cutis/"><span class="drop-num">01</span><span class="drop-text"><span class="drop-name">Cutis</span><span class="drop-bridge">Genombasierte Hautpflege &amp; Gesichtsbehandlung</span></span></a>
+      <a class="drop-item" href="/vigor/"><span class="drop-num">02</span><span class="drop-text"><span class="drop-name">Vigor</span><span class="drop-bridge">Kryotherapie bis −196 °C · Frische &amp; Tonus</span></span></a>
+      <a class="drop-item" href="/corpus/"><span class="drop-num">03</span><span class="drop-text"><span class="drop-name">Corpus</span><span class="drop-bridge">Massage &amp; rituelle Körperarbeit</span></span></a>
+      <a class="drop-item" href="/origo/"><span class="drop-num">04</span><span class="drop-text"><span class="drop-name">Origo</span><span class="drop-bridge">Atemarbeit &amp; geführte Tiefenentspannung</span></span></a>
       <span class="drop-div"></span>
       <a class="drop-cta" href="/termin-buchen/">Termin vereinbaren →</a>
     </div>
@@ -212,7 +211,6 @@
       <a class="drop-cta" href="/magazin/">Alle Beiträge →</a>
     </div>
   </li>
-    <li><a href="/monica/">Monica</a></li>
     <li><a href="/termin-buchen/" class="nav-cta">Termin vereinbaren</a></li>
   </ul>
   <button class="nav-toggle" aria-label="Menü"><span></span><span></span><span></span></button>
@@ -223,53 +221,51 @@
   <!-- HERO -->
   <section class="page-hero" data-screen-label="Genomis · Hero">
     <div class="page-hero-inner">
-      <div class="crumb"><a href="/anwendungen/#cutis">Anwendungen · Cutis</a> &nbsp;›&nbsp; Genomis</div>
+      <div class="crumb"><a href="/cutis/">Anwendungen · Cutis</a> &nbsp;›&nbsp; Genomis</div>
       <span class="eyebrow eyebrow-rule">Genomis · DNA Lifestyle Analysen</span>
       <h1>Die <span class="roman">7</span> DNA Lifestyle<br>Analysen.</h1>
-      <p class="page-hero-lead">Maßgeschneiderte Genanalysen für Haut, Körper &amp; Leistung. Alle Analysen basieren auf Ihrer persönlichen DNA — das Ergebnis: exakt auf Sie zugeschnittene Empfehlungen. Kein Raten mehr.</p>
+      <p class="page-hero-lead">Maßgeschneiderte Genanalysen für Haut, Körper &amp; Leistung. Alle Analysen basieren auf Ihrer persönlichen DNA — daraus abgeleitet: auf Sie abgestimmte Empfehlungen. Kein Raten mehr.</p>
     </div>
   </section>
 
-  <!-- PROCESS -->
-  <section class="section" data-screen-label="Genomis · Ablauf">
+  <!-- DREI FRAGEN VORWEG -->
+  <section class="section" data-screen-label="Genomis · Drei Fragen">
     <div class="section-inner">
-      <div class="sec-head reveal" style="max-width:680px;margin-bottom:8px;">
-        <span class="eyebrow eyebrow-rule" style="margin-bottom:16px;">So funktioniert es</span>
-        <h2 class="section-title" style="margin-bottom:0;">Eine Speichelprobe.<br>Ein persönlicher Plan.</h2>
+      <div class="sec-head reveal" style="max-width:680px;">
+        <span class="eyebrow eyebrow-rule" style="margin-bottom:16px;">Drei Fragen vorweg</span>
+        <h2 class="section-title" style="margin-bottom:0;">Wie gut kennen Sie sich selbst?</h2>
+        <p class="fragen-lead">Die meisten von uns kennen ihre Körpergröße, ihre Schuhgröße, ihre Blutgruppe — und doch nicht die Anlagen, die täglich mitbestimmen, wie wir essen, uns erholen und altern.</p>
       </div>
-      <div class="process reveal">
-        <div class="proc-step">
-          <div class="n">01</div>
-          <h4>Speichelprobe</h4>
-          <p>Einfache, schmerzfreie Entnahme im Studio — einmalig, kein Bluttest.</p>
+      <div class="fragen-grid reveal">
+        <div class="frage-card">
+          <div class="fn">01</div>
+          <div class="fq">Welche Lebensmittel verträgt Ihr Körper wirklich — und wie arbeitet Ihr Stoffwechsel?</div>
+          <div class="fnote">Ernährung wirkt nicht bei allen gleich. Ein Teil der Antwort liegt in Ihren Anlagen.</div>
         </div>
-        <div class="proc-step">
-          <div class="n">02</div>
-          <h4>Labor</h4>
-          <p>Auswertung im zertifizierten Labor (ISO-Standard) Ihrer relevanten Gene.</p>
+        <div class="frage-card">
+          <div class="fn">02</div>
+          <div class="fq">Wie geht Ihr Körper mit Stress und Belastung um?</div>
+          <div class="fnote">Belastbarkeit ist genetisch mitbestimmt. Wer seine Anlage kennt, kann früher zur Ruhe finden.</div>
         </div>
-        <div class="proc-step">
-          <div class="n">03</div>
-          <h4>Auswertung</h4>
-          <p>Schriftliche Auswertung &amp; persönliche Beratung durch Ihre DNA Skin Expert.</p>
-        </div>
-        <div class="proc-step">
-          <div class="n">04</div>
-          <h4>Ihr Plan</h4>
-          <p>12-Wochen Beauty- &amp; Lifestyle-Plan mit epigenetischer Begleitung.</p>
+        <div class="frage-card">
+          <div class="fn">03</div>
+          <div class="fq">Altern Sie schneller, langsamer — oder genau nach Ausweis?</div>
+          <div class="fnote">Das biologische Alter lässt sich erstmals bestimmen — und es ist veränderbar.</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- PROCESS entfernt: Ablauf lebt in der DNA-Hautanalyse (Anti-Doppel) -->
 
   <!-- 7 ANALYSES -->
   <section class="section section-alt" data-screen-label="Genomis · 7 Analysen">
     <div class="section-inner">
       <div class="sec-head reveal" style="max-width:680px;">
         <span class="eyebrow eyebrow-rule">Die 7 Analysen im Überblick</span>
-        <h2 class="section-title">Sieben Sensoren,<br>ein Bild von Ihnen.</h2>
-        <p class="section-lead">Von der Haut über Stoffwechsel und Entgiftung bis zu Leistung und biologischem Alter — jede Analyse beleuchtet eine andere Anlage.</p>
-        <p style="margin-top:16px;font-size:14px;"><a href="/magazin-longevity-zellgesundheit/" style="color:var(--brass);text-decoration:none;border-bottom:.5px solid var(--brass);padding-bottom:1px;">Wissenschaftlicher Hintergrund: Interiora regunt exteriora — Schönheit als Ausdruck zellulärer Gesundheit →</a></p>
+        <h2 class="section-title">Sieben Analysen,<br>ein Bild von Ihnen.</h2>
+        <p class="section-lead">Von der Haut über Stoffwechsel und Umweltbelastung bis zu Leistung und Zellalterung — jede Analyse beleuchtet eine andere Anlage.</p>
+        <p style="margin-top:16px;font-size:14px;"><a href="/magazin-longevity-zellgesundheit/" style="color:var(--gold);text-decoration:none;border-bottom:.5px solid var(--brass);padding-bottom:1px;">Wissenschaftlicher Hintergrund: Interiora regunt exteriora — Schönheit als Ausdruck zellulärer Gesundheit →</a></p>
       </div>
 
       <div class="gen-grid">
@@ -278,8 +274,8 @@
           <div>
             <div class="gen-num">Analyse 01</div>
             <div class="gen-domain">Hautgesundheit</div>
-            <h3 class="gen-name">Beauty Sensor</h3>
-            <p class="gen-desc">Analysiert 20 Beauty-Gene und ihren Einfluss auf 8 Hautalterungsfaktoren — von Kollagen über UV-Schutz bis zum biologischen Alter. Die Basis für maßgeschneiderte Naturkosmetik und Mikronährstoffe direkt aus dem Labor.</p>
+            <h3 class="gen-name">Genombasierte Hautanalyse</h3>
+            <p class="gen-desc">Liest über zwanzig genetische Variationen und ihren Einfluss auf acht Hautalterungsfaktoren — von Kollagen über UV-Schutz bis zur Zellalterung. Die Grundlage für Naturkosmetik und Mikronährstoffe nach Ihrem Profil.</p>
           </div>
           <ul class="gen-markers">
             <li>Kollagen &amp; Feuchtigkeit</li>
@@ -293,7 +289,7 @@
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 02</div>
           <div class="gen-domain">Ernährung</div>
-          <h3 class="gen-name">Nutrition Sensor</h3>
+          <h3 class="gen-name">Analyse: Stoffwechsel und Ernährung</h3>
           <p class="gen-desc">Zeigt, welche Lebensmittel Ihr Körper wirklich verträgt und wie Ihre Gene den Stoffwechsel beeinflussen. Was für andere gesund ist, kann bei Ihnen anders wirken — jetzt wissen Sie warum.</p>
           <ul class="gen-markers">
             <li>Ernährungsrelevante Gene</li>
@@ -305,23 +301,23 @@
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 03</div>
           <div class="gen-domain">Gewicht</div>
-          <h3 class="gen-name">Weight Sensor</h3>
-          <p class="gen-desc">Bestimmt Ihren genetischen Sport- und Ernährungstyp für ein dauerhaftes Wunschgewicht. Warum Diäten bei anderen wirken, bei Ihnen aber nicht — die Antwort liegt in Ihren Genen.</p>
+          <h3 class="gen-name">Analyse: Gewicht und Stoffwechsel</h3>
+          <p class="gen-desc">Zeigt Ihren genetischen Sport- und Ernährungstyp — welche Veranlagung Ihr Stoffwechsel mitbringt. Warum manche Strategien bei anderen wirken, bei Ihnen aber nicht — ein Teil der Antwort liegt in Ihren Genen.</p>
           <ul class="gen-markers">
             <li>Gewichtsrelevante Gene</li>
             <li>Sport- &amp; Ernährungstyp</li>
-            <li>Diätprogramm</li>
+            <li>Stoffwechsel-Typ</li>
             <li>Hunger &amp; Sättigung</li>
           </ul>
         </article>
 
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 04</div>
-          <div class="gen-domain">Entgiftung</div>
-          <h3 class="gen-name">Toxo Sensor</h3>
-          <p class="gen-desc">Beschreibt Ihre genetische Entgiftungsfähigkeit gegenüber Schwermetallen, Pestiziden und Umweltstoffen. Wer seine Anlage kennt, kann gezielt gegensteuern — mit Ernährung und Lebensstil.</p>
+          <div class="gen-domain">Umweltbelastung</div>
+          <h3 class="gen-name">Analyse: Umweltbelastung und Stoffwechsel</h3>
+          <p class="gen-desc">Beschreibt, wie Ihr Körper genetisch mit Umweltstoffen umgeht — Schwermetalle, Pestizide, Belastungen aus dem Alltag. Wer seine Anlage kennt, kann sie in Ernährung und Lebensstil berücksichtigen.</p>
           <ul class="gen-markers">
-            <li>Entgiftungs-Gene</li>
+            <li>Umweltrelevante Gene</li>
             <li>Schadstoffbelastung</li>
             <li>Ernährungstipps</li>
           </ul>
@@ -330,8 +326,8 @@
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 05</div>
           <div class="gen-domain">Stress &amp; Balance</div>
-          <h3 class="gen-name">Burnout Sensor</h3>
-          <p class="gen-desc">Beleuchtet Ihre genetische Stressverarbeitung und Belastbarkeit. Wer seine Anlage kennt, kann früh handeln — mit konkreten Empfehlungen zur Stressreduktion im Alltag.</p>
+          <h3 class="gen-name">Analyse: Stressverarbeitung</h3>
+          <p class="gen-desc">Beleuchtet Ihre genetische Stressverarbeitung und Belastbarkeit. Wer seine Anlage kennt, kann sie im Alltag berücksichtigen — mit konkreten Empfehlungen zur Ruhe zwischen den Tagen.</p>
           <ul class="gen-markers">
             <li>Stress-Gene</li>
             <li>Belastbarkeit</li>
@@ -341,8 +337,8 @@
 
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 06</div>
-          <div class="gen-domain">Sport &amp; Leistung</div>
-          <h3 class="gen-name">Performance Sensor</h3>
+          <div class="gen-domain">Leistung &amp; Regeneration</div>
+          <h3 class="gen-name">Analyse: Leistung und Regeneration</h3>
           <p class="gen-desc">Bestimmt Ihren Muskelfasertyp, Ihre optimale Trainingsform und genetische Belastungsanlagen. Ob Ausdauer oder Kraft — Ihre Gene zeigen, wie Ihr Körper sein Potenzial entfaltet.</p>
           <ul class="gen-markers">
             <li>Muskelfasertyp</li>
@@ -354,9 +350,9 @@
 
         <article class="gen-card reveal">
           <div class="gen-num">Analyse 07</div>
-          <div class="gen-domain">Biologisches Alter · Longevity</div>
-          <h3 class="gen-name">Biological Age Sensor</h3>
-          <p class="gen-desc">Analysiert die Gene, die die Länge Ihrer Telomere beeinflussen — die Schutzkappen der Chromosomen. Er zeigt, welche genetischen Anlagen zur Telomer-Pflege vorhanden sind und welche Maßnahmen im Einzelfall sinnvoll sind.</p>
+          <div class="gen-domain">Zellalterung · Longevity</div>
+          <h3 class="gen-name">Analyse: Zellalterung</h3>
+          <p class="gen-desc">Liest die Gene, die die Länge Ihrer Telomere beeinflussen — die Schutzkappen der Chromosomen. Sie zeigt, welche Anlagen zur Telomer-Pflege vorhanden sind und welche Maßnahmen im Einzelfall sinnvoll sind.</p>
           <ul class="gen-markers">
             <li>Alterungsprozess-Gene</li>
             <li>Telomeren-Analyse</li>
@@ -375,12 +371,12 @@
       <div class="bundle reveal">
         <div>
           <span class="lockup-essence">Das Complete Bundle</span>
-          <h3>Beauty, Nutrition &amp; Weight — kombiniert.</h3>
-          <p>Die drei Lifestyle-Analysen in einem Programm, mit persönlicher Auswertung, maßgeschneidertem Beautyplan und epigenetischer SELF-CARE-Beratung. Die Entgiftung (Toxo) ist im Nutrition Sensor enthalten.</p>
+          <h3>Haut, Ernährung &amp; Gewicht — kombiniert.</h3>
+          <p>Die drei genombasierten Analysen zusammen, mit persönlicher Auswertung, Ihrem Pflegeplan und epigenetischer SELF-CARE-Beratung. Die Analyse der Umweltbelastung ist in der Ernährungsanalyse enthalten.</p>
         </div>
         <ul class="bundle-list">
-          <li><span class="ck">◇</span><span>Beauty · Nutrition · Weight in einem Paket</span></li>
-          <li><span class="ck">◇</span><span>Persönliche Auswertung &amp; Beautyplan</span></li>
+          <li><span class="ck">◇</span><span>Haut · Ernährung · Gewicht in einem Paket</span></li>
+          <li><span class="ck">◇</span><span>Persönliche Auswertung &amp; Pflegeplan</span></li>
           <li><span class="ck">◇</span><span>Epigenetische SELF-CARE-Beratung</span></li>
           <li><span class="ck">◇</span><span>12-Wochen-Begleitung, inkl. 2 Beratungen</span></li>
         </ul>
@@ -388,39 +384,14 @@
     </div>
   </section>
 
-  <!-- PRODUCTS -->
-  <section class="section section-alt" data-screen-label="Genomis · Produkte">
+  <!-- BRÜCKE zur DNA-Hautanalyse (Verfahren + Pflege, Anti-Doppel) -->
+  <section class="section section-alt" data-screen-label="Genomis · Verfahren &amp; Pflege">
     <div class="section-inner">
       <div class="sec-head reveal" style="max-width:680px;">
-        <span class="eyebrow eyebrow-rule">Ihre Gene. Ihr Produkt.</span>
-        <h2 class="section-title">Aus der Analyse<br>wird Ihr Produkt.</h2>
-        <p class="section-lead">Genbasierte Naturkosmetik und personalisierte Mikronährstoffe — individuell auf Basis Ihrer Genanalyse produziert. Kein Einheitsprodukt.</p>
-      </div>
-      <div class="prod-grid">
-        <div class="prod-card reveal">
-          <span class="eyebrow">Naturkosmetik · Face &amp; Body</span>
-          <h3>Genbasierte Naturkosmetik</h3>
-          <div class="sub">96 % natürliche Inhaltsstoffe · für 3 Monate</div>
-          <p>Entwickelt direkt auf Basis Ihrer Beauty-Gen-Analyse — keine Einheitsformel, sondern eine präzise Wirkstoffmischung für Ihre genetischen Hautbedürfnisse. Produziert nach ISO 22716.</p>
-          <ul class="prod-tags">
-            <li>96 % Naturinhaltsstoffe</li>
-            <li>Genetische Präzision</li>
-            <li>ISO 22716</li>
-            <li>Hautfreundlich</li>
-          </ul>
-        </div>
-        <div class="prod-card reveal">
-          <span class="eyebrow">Mikronährstoffe</span>
-          <h3>NutriMe Complete</h3>
-          <div class="sub">Mikronährstoffe nach Ihrem genetischen Profil</div>
-          <p>Ihre Gene bestimmen, wie viel Ihr Körper von Vitaminen, Mineralstoffen und Spurenelementen benötigt. NutriMe Complete wird exakt auf Ihr genetisches Profil zusammengestellt — bedarfsgerecht, ohne Mangel und ohne Überversorgung.</p>
-          <ul class="prod-tags">
-            <li>Laktosefrei</li>
-            <li>Glutenfrei</li>
-            <li>Ohne Zuckerzusatz</li>
-            <li>Mikrotransporter</li>
-          </ul>
-        </div>
+        <span class="eyebrow eyebrow-rule">Verfahren &amp; Pflege</span>
+        <h2 class="section-title">Von der Probe<br>zur Pflege.</h2>
+        <p class="section-lead">Der Ablauf — eine einmalige Speichelprobe, die Auswertung im zertifizierten Labor und Ihr persönlicher Plan — sowie die daraus entstehende genbasierte Naturkosmetik und die Mikronährstoffe sind in der DNA-Hautanalyse ausführlich beschrieben.</p>
+        <p style="margin-top:18px;font-size:14px;"><a href="/cutis/" style="color:var(--gold);text-decoration:none;border-bottom:.5px solid var(--brass);padding-bottom:1px;">Ablauf &amp; Pflegeprodukte — in der DNA-Hautanalyse →</a></p>
       </div>
     </div>
   </section>
@@ -429,10 +400,10 @@
   <section class="cta-band" data-screen-label="Genomis · CTA">
     <span class="eyebrow eyebrow-rule">Primo Contactu</span>
     <h2>Welche Analyse passt zu Ihnen?</h2>
-    <p class="cta-bridge">Erstgespräch &amp; persönliche Beratung — wir finden gemeinsam den richtigen Sensor.</p>
+    <p class="cta-bridge">Ein Vorgespräch klärt, welche Analyse trägt — wir sehen uns Ihre Ziele an, bevor eine Probe genommen wird.</p>
     <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
-      <a href="/termin-buchen/" class="btn-primary">Beratung anfragen</a>
-      <a href="/anwendungen/#cutis" class="btn-secondary">Zurück zu Cutis</a>
+      <a href="/termin-buchen/" class="btn-primary">Termin vereinbaren</a>
+      <a href="/cutis/" class="btn-secondary">Zur DNA-Hautanalyse</a>
     </div>
   </section>
 
@@ -440,7 +411,7 @@
   <section style="padding: 0 40px 56px;">
     <div class="hwg-banner">
       <b>Transparenz</b>
-      <span>Die DNA Lifestyle Analysen zeigen genetische <strong>Anlagen &amp; Profile</strong> und dienen als Grundlage für Lifestyle-, Pflege- und Ernährungsempfehlungen. Sie sind <strong>keine medizinische Diagnose</strong> und ersetzen keine ärztliche Beratung. Analysen in Partnerschaft mit einem zertifizierten Labor.</span>
+      <span>Die untersuchten genetischen <strong>Anlagen</strong> gelten wissenschaftlich als gesichert. Die daraus abgeleiteten <strong>Pflege-, Ernährungs- und Lifestyle-Empfehlungen</strong> sind als sinnvolle Schlussfolgerungen zu verstehen — <strong>keine medizinische Diagnose</strong>, kein Heilversprechen; sie ersetzen keine ärztliche Beratung. Die genetische Laboranalyse erfolgt in zertifizierten Partnerlaboren.</span>
     </div>
   </section>
 
@@ -450,7 +421,7 @@
   <div class="footer-inner">
     <div>
       <div class="footer-brand-name">Rubedo Spa</div>
-      <div class="footer-tagline">smART Beauty for Conscious Humans.</div>
+      <div class="footer-tagline">sm<span class="art">ART</span> Beauty for Conscious Humans.</div>
       <div class="footer-address">
         Marienstraße 58 · 32427 Minden<br>
         Mo–Fr 08:00–17:00 Uhr<br>
@@ -475,10 +446,10 @@
     <div class="footer-col">
       <h5>Dimensionen</h5>
       <ul>
-        <li><a href="/anwendungen/#cutis">Cutis <span class="foot-bridge">· Haut</span></a></li>
-        <li><a href="/anwendungen/#vigor">Vigor <span class="foot-bridge">· Kryo</span></a></li>
-        <li><a href="/anwendungen/#corpus">Corpus <span class="foot-bridge">· Körper</span></a></li>
-        <li><a href="/anwendungen/#origo">Origo <span class="foot-bridge">· Atem</span></a></li>
+        <li><a href="/cutis/">Cutis <span class="foot-bridge">· Haut</span></a></li>
+        <li><a href="/vigor/">Vigor <span class="foot-bridge">· Kryo</span></a></li>
+        <li><a href="/corpus/">Corpus <span class="foot-bridge">· Körper</span></a></li>
+        <li><a href="/origo/">Origo <span class="foot-bridge">· Atem</span></a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -496,6 +467,7 @@
         <li><a href="/anwendungen/">Anwendungen &amp; Preise</a></li>
         <li><a href="/termin-buchen/">Termin vereinbaren</a></li>
         <li><a href="/gutscheine/">Geschenk-Gutscheine</a></li>
+        <li><a href="/anwendungen/#broschure">Broschüre auf Anfrage</a></li>
         <li><a href="/impressum/">Impressum</a></li>
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>
@@ -510,113 +482,5 @@
 
 <script src="/app.js"></script>
 
-<div class="gate-overlay" role="dialog" aria-modal="true" aria-labelledby="gate-title">
-  <div class="gate-card">
-    <div class="gate-seal" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 1 3 5v6c0 5.25 3.84 10.17 9 11 5.16-.83 9-5.75 9-11V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
-    <div class="gate-eyebrow">Vertraulich · Zugang auf Anfrage</div>
-    <h2 id="gate-title">Diese Inhalte sind<br>einem kleinen Kreis vorbehalten.</h2>
-    <p class="gate-lead">Genomis und die DNA Lifestyle Analysen besprechen wir bewusst nicht öffentlich. Hinterlassen Sie Ihren Namen und Ihre E-Mail, um Zugang zu erhalten.</p>
-    <form id="gate-form" novalidate>
-      <div class="gate-field">
-        <label for="gate-name">Name</label>
-        <input type="text" id="gate-name" name="name" autocomplete="name" required>
-      </div>
-      <div class="gate-field">
-        <label for="gate-email">E-Mail</label>
-        <input type="email" id="gate-email" name="email" autocomplete="email" required>
-      </div>
-      <div class="gate-field">
-        <label for="gate-phone">Telefon <span style="text-transform:none;letter-spacing:0;color:var(--text-3);">(optional)</span></label>
-        <input type="tel" id="gate-phone" name="phone" autocomplete="tel">
-      </div>
-      <div class="gate-field">
-        <label for="gate-pref">Bevorzugter Kontakt</label>
-        <select id="gate-pref" name="praeferenz" style="background:var(--cream);border:.5px solid var(--border-m);border-radius:2px;padding:12px 14px;font-family:inherit;font-size:14px;color:var(--text-1);">
-          <option value="E-Mail">E-Mail</option>
-          <option value="Telefon">Telefon</option>
-          <option value="Egal">Egal</option>
-        </select>
-      </div>
-      <div class="gate-consent">
-        <input type="checkbox" id="gate-age" required>
-        <label for="gate-age">Ich bestätige, dass ich <strong>18 Jahre oder älter</strong> bin. Die DNA Lifestyle Analysen sind ausschließlich für Erwachsene.</label>
-      </div>
-      <div class="gate-consent">
-        <input type="checkbox" id="gate-ok" required>
-        <label for="gate-ok">Ich möchte zu Genomis kontaktiert werden und stimme zu, dass meine Angaben hierfür gespeichert und verarbeitet werden. Es gilt die <a href="/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</label>
-      </div>
-      <button type="submit" class="gate-btn">Zugang erhalten →</button>
-    </form>
-    <p class="gate-note">Kein Spam. Ihre Daten werden vertraulich behandelt und nicht weitergegeben.</p>
-    <div style="text-align:center;"><a href="/anwendungen/#cutis" class="gate-back">← Zurück zu Cutis</a></div>
-  </div>
-</div>
-
-<script>
-  (function () {
-    var form = document.getElementById('gate-form');
-    if (!form) return;
-
-    // ── Web3Forms access key ──────────────────────────────
-    // 1. Konto erstellen auf https://web3forms.com (kostenlos)
-    // 2. E-Mail info@rubedo-spa.de angeben → Access Key per Mail erhalten
-    // 3. Den Key unten zwischen die Anführungszeichen einsetzen.
-    var WEB3FORMS_KEY = ''; // ← hier den Access Key einfügen
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-
-      var name = document.getElementById('gate-name').value;
-      var email = document.getElementById('gate-email').value;
-      var phone = document.getElementById('gate-phone').value;
-      var pref = document.getElementById('gate-pref').value;
-      var btn = form.querySelector('.gate-btn');
-
-      function grantAccess() {
-        try {
-          localStorage.setItem('rubedo_genomis_access', '1');
-          localStorage.setItem('rubedo_genomis_lead', JSON.stringify({ name: name, email: email, phone: phone, praeferenz: pref, ts: new Date().toISOString() }));
-        } catch (err) {}
-        document.documentElement.classList.remove('gated');
-        window.scrollTo(0, 0);
-      }
-
-      // ── Strenger Modus: Zugang NUR nach erfolgreichem Versand an info@rubedo-spa.de ──
-      if (WEB3FORMS_KEY) {
-        if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet …'; }
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            access_key: WEB3FORMS_KEY,
-            subject: 'Neuer Genomis-Zugang — ' + name,
-            from_name: 'Rubedo Genomis Gate',
-            name: name,
-            email: email,
-            telefon: phone || '—',
-            bevorzugter_kontakt: pref,
-            volljaehrig: 'Ja (18+ bestätigt)'
-          })
-        }).then(function (r) { return r.json(); })
-          .then(function (data) {
-            if (data && data.success) {
-              grantAccess(); // ✓ E-Mail zugestellt → Zugang frei
-            } else {
-              if (btn) { btn.disabled = false; btn.textContent = 'Zugang erhalten →'; }
-              alert('Übermittlung fehlgeschlagen. Bitte versuchen Sie es erneut.');
-            }
-          })
-          .catch(function () {
-            if (btn) { btn.disabled = false; btn.textContent = 'Zugang erhalten →'; }
-            alert('Verbindung fehlgeschlagen. Bitte versuchen Sie es erneut.');
-          });
-      } else {
-        // Kein Key hinterlegt (Vorschau/Test) — Zugang lokal gewähren.
-        grantAccess();
-      }
-    });
-  })();
-</script>
 </body>
 </html>
